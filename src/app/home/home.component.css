@@ -1,0 +1,95 @@
+/*-- Image Status CSS --*/
+body{background-color:#deeefd;}
+.bg-reported {
+  background-color: #6699cc;
+}
+
+.bg-submitted {
+  background-color: #6699cc;
+}
+
+.bg-rejected {
+  background-color: #6699cc;
+}
+
+#box {
+  /* xbackground-color: #6699cc; */
+  float: left;
+  /* xpadding: 20px; */
+  width: 100%;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.status_left {
+  border-left: 2px solid #99ccff;
+}
+
+.label {
+  font-size: 100%;
+  /* xtext-align: right; */
+}
+
+.value {
+  font-size: 500%;
+  font-weight: bold;
+  text-align: right;
+  padding: 0;
+  line-height: 100%;
+}
+
+.font_icon {
+  font-size: 500%;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  line-height: 100%;
+}
+
+.eye_thumbnail {
+  width: 90%;
+  height: auto;
+  /* xmax-height: 120px; */
+  /* xmax-width: 120px; */
+  /* xopacity: 0.75; */
+  border-radius: 5px;
+}
+
+@media screen and (max-width:1024px) {
+  .eye_thumbnail {
+    /* xheight: 100%; */
+    height: auto;
+    width: auto;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+}
+
+.modal-dialog {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+.pview {
+  background-color: #f8f9fa;
+}
+
+.pview:hover {
+  background-color: #d9f1ff;
+}
+
+.txt-ember {
+  color: #f05e1b;
+}
+
+.main-margin {
+  margin-top: 120px;
+}

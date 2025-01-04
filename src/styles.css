@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-today-class {
+  background-color: burlywood;
+  color: black;
+}
+
+.guide-modal {
+  max-width: 1100px !important;
+  width: 1100px;
+}
+
+.acquire-image-modal {
+  max-width: 600px;
+  width: 600px;
+}

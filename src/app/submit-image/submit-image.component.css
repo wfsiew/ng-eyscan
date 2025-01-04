@@ -1,0 +1,92 @@
+body {
+  background-color: #deeefd;
+}
+
+.bg-assessment {
+  background-color: #7092be;
+}
+
+.bg-hd1 {
+  background-color: #4f6a99;
+}
+
+.b-divider {
+  border-right: 3px solid lightgrey;
+  /* xborder-width: thick; */
+}
+
+.grading_img {
+  width: 28px;
+  height: 28px;
+}
+
+.img_holder {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-color: #757575;
+}
+
+.grading_green {
+  color: #81b900;
+}
+
+.grading_red {
+  color: #f7521c;
+}
+
+.grading_moderate {
+  color: #f7b029;
+}
+
+.disease_checkbox {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+body {
+  /* xfont-family: "Montserrat", sans-serif; */
+}
+
+#result_div {
+  font-family: "Montserrat", sans-serif;
+}
+
+.result_div {
+  font-family: "Montserrat", sans-serif;
+}
+
+.result_header {
+  font-family: inherit;
+  font-weight: 700;
+  /* xletter-spacing: 0.5em; */
+}
+
+.xresult_label {
+  font-family: inherit;
+  /* Xfont-weight: 700; */
+  font-size: 0.9em;
+  /* xletter-spacing: 0.5em; */
+}
+
+.xresult_detail {
+  font-family: inherit;
+  /* xfont-weight: 100; */
+  font-size: 0.8em;
+  /* xletter-spacing: 0.5em; */
+}
+
+.duration {
+  width: 100px;
+  display: inline;
+}
+
+.age_of_onset {
+  width: 130px;
+  display: inline;
+}
+
+.main-margin {
+  margin-top: 120px;
+}

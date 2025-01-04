@@ -1,0 +1,504 @@
+<div class=" fixed-top bg-white">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
+    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="onHome()">
+      <img class="d-inline-block align-middle " style="xmax-width:160px; max-height:50px;"
+        src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
+
+
+    </a>
+    <button class="navbar-toggler collapsed hidden-lg-up " type="button" data-toggle="collapse"
+      data-target="#navbarsMenu" aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pl-4 " id="navbarsMenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" id="fn1">
+          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="onHome()">Home</a>
+        </li>
+
+
+
+        <li class="nav-item" id="fn3">
+          <a class="nav-link" data-target="fn3" href="#" (click)="onSubmitImage()">Submit Image</a>
+        </li>
+
+
+
+        <li class="nav-item active" id="fn2">
+          <a class="nav-link" data-target="fn2" href="#" (click)="onPrimary()">Primary Care</a>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown" id="fn5">
+          <a class="nav-link dropdown-toggle" data-target="fn5" href="" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Reports</a>
+          <div class="dropdown-menu p-0" aria-labelledby="fn5">
+            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="onReportsMgmt()">Primary Management Report</a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+      <ul class="nav navbar-nav xnavbar-right">
+        <li class="nav-item dropdown">
+          <a href="" class="nav-link dropdown-toggle" data-target="fnprof" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-user fa-lg"></i> KC
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right p-0">
+            <li>
+              <div class="pt-1 pb-2" style="width:280px;">
+                <div class="row px-1 ">
+                  <div class="col-lg-12 py-2">
+                    <p class="m-0 text-center">Kian Cheong Lam</p>
+                    <p class="m-0 text-center small">kiancheong.lam&#64;nova-hub.com</p>
+                    <p class="m-0 text-center pt-2">
+                      <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="#" (click)="onAccInfo()">
+                        Account Info
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" id="fn7">
+          <a class="nav-link" data-target="fn7" href="" title="Help"><i class="fas fa-question xtext-white xfa-lg"></i>
+          </a>
+        </li>
+
+        <li class="nav-item" id="fn8">
+          <a class="nav-link" data-target="fn8" href="" title="Log Out"><i
+              class="fas fa-sign-out-alt xtext-white fa-lg"></i> </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="row align-items-center">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+      <h2 id="hd_text" class="container-fluid py-1">Image Report</h2>
+    </div>
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 " id="image_centre">
+      <div class="row container-fluid align-items-center">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-md-right">
+
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+          <select class="form-control custom-select d-none" name="collect_company_id" id="collect_company_id"
+            style="width: 95%;">
+
+            <option value="" selected></option>
+
+            <option value="1">
+              EyRIS
+            </option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog" aria-labelledby="__nhAboutBox_title"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+        <h5 class="modal-title" id="__nhAboutBox_title"></h5>
+        <button id="__nhAboutBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
+        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0" style="width:700px; height:620px; "></iframe>
+      </div>
+      <div class="modal-footer m-0 p-0 d-none">
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+      <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
+        <h5 class="modal-title" id="__nhPopWindow_title"></h5>
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0">
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
+      </div>
+      <div class="modal-footer d-none">
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog" aria-labelledby="__nhMessageBox_title"
+  aria-hidden="true" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
+        <h5 class="modal-title" id="__nhMessageBox_title"></h5>
+        <button id="__nhMessageBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0" style="overflow: hidden;">
+        <iframe id="__nhMessageBox_iframe" width="500px" height="230px" scrolling="no" frameborder="0"></iframe>
+      </div>
+      <div class="modal-footer d-none">
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog" aria-labelledby="__nhErrorBox_title"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-1 bg-header text-white">
+        <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
+        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
+        style="width: 100%;max-height: 500px; overflow-y: auto;">
+      </div>
+      <div class="modal-footer justify-content-center m-0 p-1 ">
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true"
+  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgba(0,0,0,.0001); border: none;">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none;overflow: hidden; ">
+      </div>
+      <div class="modal-body m-4 p-4">
+
+        <div class="nhAnimator"></div>
+      </div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<main role="main" class="container-fluid pt-3 main-margin">
+  <div class="container-fluid pb-4">
+    <div class="row pb-1">
+      <div id="filter" class="container-fluid py-2 pl-0 ">
+        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform" xclass="form-inline" action="/bn_moh_uat/application/primary/index.cfm"
+          method="post">
+          <input type="hidden" name="recno" id="recno" value="25">
+          <input type="hidden" name="image_from" id="image_from" value="">
+          <input type="hidden" name="hfindings" id="hfindings" value="">
+          <input type="hidden" name="hdateoption" id="hdateoption" value="">
+          <input type="hidden" name="haction" id="haction" value="">
+          <input type="hidden" name="result_status" id="result_status" value="">
+          <input type="hidden" name="fdg_status" id="fdg_status" value="">
+          <input type="hidden" name="report_status" id="report_status" value="">
+
+          <div class="row xd-none " id="advfilter_panel">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+              <div class="form-row">
+
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 px-2">
+                  <div class="form-row">
+                    <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
+                      <div class="form-row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
+                          Diseases
+                        </div>
+                      </div>
+
+                      <div class="form-row border rounded bg-white">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small">
+
+                          <div class="form-row ">
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input " type="checkbox" id="disease_dr" name="disease_dr"
+                                  value="DR" style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="disease_dr" style="cursor: pointer;">
+                                  Diabetic Retinopathy
+                                </label>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="disease_glaucoma"
+                                  name="disease_glaucoma" value="GLAUCOMA"
+                                  style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="disease_glaucoma" style="cursor: pointer;">
+                                  Glaucoma Suspect
+                                </label>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="disease_amd" name="disease_amd"
+                                  value="AMD" style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="disease_amd" style="cursor: pointer;">
+                                  Age-Related Macular Degeneration
+                                </label>
+                              </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="disease_ckd" name="disease_ckd"
+                                  value="CKD" style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="disease_ckd" style="cursor: pointer;">
+                                  Chronic Kidney Disease
+                                </label>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 px-2">
+                  <div class="form-row">
+                    <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
+
+                      <div class="form-row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
+                          Result
+                        </div>
+                      </div>
+                      <div class="form-row  border rounded bg-white">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small">
+                          <div class="form-row ">
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input sel_result" type="checkbox" id="referable"
+                                  name="referable"
+                                  data-result-code="R,RDR,VTDR,Referable,A,Clinically Significant,elevated"
+                                  style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="referable"
+                                  style="cursor: pointer;">Referable/Clinically Significant</label>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input sel_result" type="checkbox" id="non-referable"
+                                  name="nonreferable"
+                                  data-result-code="N,Non Referable,Non-clinically Significant,non-elevated"
+                                  style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="non-referable" style="cursor: pointer;">Non
+                                  Referable/Non-clinically Significant</label>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input sel_result" type="checkbox" id="ungradable"
+                                  name="ungradable" data-result-code="U"
+                                  style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="ungradable"
+                                  style="cursor: pointer;">Ungradable</label>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input sel_result" type="checkbox" id="fail" name="fail"
+                                  data-result-code="F" style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="fail" style="cursor: pointer;">Error</label>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input class="form-check-input sel_result" type="checkbox" id="all-nr" name="allnr"
+                                  data-result-code="ANR" style="cursor: pointer; height:16px; width:16px;">
+                                <label class="form-check-label pl-1" for="all-nr" style="cursor: pointer;">All Non
+                                  Referable/Non-clinically Significant</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="row pt-2">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+
+              <div class="form-group ">
+                <label class="control-label mb-1 ">Case Reference ID </label>
+                <input name="pid" id="pid" type="text" class="form-control " placeholder="" value="">
+              </div>
+
+
+
+              <div class="form-group ">
+                <label class="control-label mb-1 ">&nbsp;</label>
+                <select class="form-control custom-select" name="selDate" id="selDate">
+                  <option value="DS" data-date-option="Date Submitted">Date Submitted</option>
+                  <option value="DR" data-date-option="Date Reported">Date Reported</option>
+                  <option value="DI" data-date-option="Date of Image">Date of Image</option>
+                </select>
+              </div>
+
+              <div class="form-group ">
+                <label class="control-label mb-1 ">From </label>
+                <div class="input-group">
+                  <input
+                    name="date_from"
+                    type="text"
+                    class="form-control"
+                    style="max-width: 145px;"
+                    maxlength="11"
+                    readonly
+                    #datepickerFrom="bsDatepicker"
+                    bsDatepicker
+                    placement="bottom"
+                    formControlName="date_from"
+                    [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+                  <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
+                    maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
+                </div>
+              </div>
+
+              <div class="form-group ">
+                <label class="control-label mb-1 ">To </label>
+                <div class="input-group">
+                  <input
+                    name="date_to"
+                    type="text"
+                    class="form-control"
+                    style="max-width: 145px;"
+                    maxlength="11"
+                    readonly
+                    #datepickerTo="bsDatepicker"
+                    bsDatepicker
+                    placement="bottom"
+                    formControlName="date_to"
+                    [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+                  <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
+                    maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
+                </div>
+              </div>
+
+              <div class="form-group ">
+                <label class="control-label mb-1 ">&nbsp;</label>
+                <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white" value="Search">
+                  <i class="fa fa-search"></i> Search</button>
+              </div>
+
+
+
+              <div class="form-group">
+                <label class="control-label mb-1 ">&nbsp;</label>
+                <button name="btnDownload" id="btnDownload" class="form-control btn bg-primary text-white"
+                  value="Download Images" disabled>
+                  <i class="fa fa-cloud-download-alt"></i> Download Image</button>
+              </div>
+
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="row box-shadow">
+      <div class="col-xl-12 col-lg-12 ">
+
+        <div class="row p-1 bg-header text-white">
+          <div class="col-xl-2 col-md-2 col-lg-2 ">
+            <div class="row">
+
+              <div class="col" style="max-width:30px;">
+                <div class="checkbox">
+                  <input name="chk_all" id="chk_all" type="checkbox" style="cursor: pointer;" disabled>
+                </div>
+              </div>
+
+              <div class="col">
+                Case Reference ID
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-2 col-lg-2 ">Report Status</div>
+          <div class="col-xl-2 col-md-2 col-lg-2 ">Date Submitted <i class="fa fa-sort-down"></i>
+            <br>Submitted by
+          </div>
+          <div class="col-xl-2 col-md-2 col-lg-2 ">Date of Image<br>Date Reported</div>
+          <div class="col-xl-2 col-md-2 col-lg-2 ">Capture Site</div>
+          <div class="col-md-2 col-lg-2 ">Findings</div>
+        </div>
+
+
+
+        <div class="row py-1 border-bottom text-center bg-white">
+          <div class="col-md-12 col-lg-12 ">No Record Found.</div>
+        </div>
+      </div> <!-- /.col-12 -->
+
+    </div>
+
+  </div> <!-- /.container-fluid -->
+
+  <div class="clearfix"></div>
+
+</main> <!-- /.main -->

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ng-eyscan';
+
+  title = 'EyRIS - Transforming AI Vision into Reality';
+
+  constructor() {
+    setTheme('bs4');
+  }
 }

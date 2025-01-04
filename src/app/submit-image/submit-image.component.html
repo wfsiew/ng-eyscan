@@ -1,0 +1,1785 @@
+<div class="fixed-top bg-white">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
+    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="onHome()">
+      <img class="d-inline-block align-middle " style="xmax-width:160px; max-height:50px;"
+        src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
+
+
+    </a>
+    <button class="navbar-toggler collapsed hidden-lg-up " type="button" data-toggle="collapse"
+      data-target="#navbarsMenu" aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pl-4 " id="navbarsMenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" id="fn1">
+          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="onHome()">Home</a>
+        </li>
+
+
+
+        <li class="nav-item active" id="fn3">
+          <a class="nav-link" data-target="fn3" href="#" (click)="onSubmitImage()">Submit Image</a>
+        </li>
+
+
+
+        <li class="nav-item" id="fn2">
+          <a class="nav-link" data-target="fn2" href="#" (click)="onPrimary()">Primary Care</a>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown" id="fn5">
+          <a class="nav-link dropdown-toggle" data-target="fn5" href="" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Reports</a>
+          <div class="dropdown-menu p-0" aria-labelledby="fn5">
+            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="onReportsMgmt()">Primary Management Report</a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+      <ul class="nav navbar-nav xnavbar-right">
+        <li class="nav-item dropdown">
+          <a href="" class="nav-link dropdown-toggle" data-target="fnprof" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-user fa-lg"></i> KC
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right p-0">
+            <li>
+              <div class="pt-1 pb-2" style="width:280px;">
+                <div class="row px-1 ">
+                  <div class="col-lg-12 py-2">
+                    <p class="m-0 text-center">Kian Cheong Lam</p>
+                    <p class="m-0 text-center small">kiancheong.lam&#64;nova-hub.com</p>
+                    <p class="m-0 text-center pt-2">
+                      <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="#" (click)="onAccInfo()">
+                        Account Info
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" id="fn7">
+          <a class="nav-link" data-target="fn7" href="" title="Help"><i class="fas fa-question xtext-white xfa-lg"></i> </a>
+        </li>
+
+        <li class="nav-item" id="fn8">
+          <a class="nav-link" data-target="fn8" href="" title="Log Out"><i class="fas fa-sign-out-alt xtext-white fa-lg"></i> </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="row align-items-center">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+      <h2 id="hd_text" class="container-fluid py-1">Submit Image</h2>
+    </div>
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 " id="image_centre">
+      <div class="row container-fluid align-items-center">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-md-right">
+
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+          <select class="form-control custom-select d-none" name="collect_company_id" id="collect_company_id"
+            style="width: 95%;">
+
+            <option value="1" selected>
+              EyRIS
+            </option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog" aria-labelledby="__nhAboutBox_title"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+        <h5 class="modal-title" id="__nhAboutBox_title"></h5>
+        <button id="__nhAboutBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
+        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0" style="width:700px; height:620px; "></iframe>
+      </div>
+      <div class="modal-footer m-0 p-0 d-none">
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+      <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
+        <h5 class="modal-title" id="__nhPopWindow_title"></h5>
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0">
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
+      </div>
+      <div class="modal-footer d-none">
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog" aria-labelledby="__nhMessageBox_title"
+  aria-hidden="true" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
+        <h5 class="modal-title" id="__nhMessageBox_title"></h5>
+        <button id="__nhMessageBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0" style="overflow: hidden;">
+        <iframe id="__nhMessageBox_iframe" width="500px" height="230px" scrolling="no" frameborder="0"></iframe>
+      </div>
+      <div class="modal-footer d-none">
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog" aria-labelledby="__nhErrorBox_title"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content"
+      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-1 bg-header text-white">
+        <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
+        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
+        style="width: 100%;max-height: 500px; overflow-y: auto;">
+      </div>
+      <div class="modal-footer justify-content-center m-0 p-1 ">
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true"
+  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgba(0,0,0,.0001); border: none;">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none;overflow: hidden; ">
+      </div>
+      <div class="modal-body m-4 p-4">
+
+        <div class="nhAnimator"></div>
+      </div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main_container" role="main" class="container-fluid pt-3 main-margin">
+
+  <div class="row">
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <div class="form-group">
+            <label for="report_id">Case Reference ID</label>
+            <input id="report_id" name="report_id" type="text" class="form-control" maxlength="50"
+              onblur="_retrieveInfo(this);">
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="form-group">
+            <label for="date_of_image">Date of Image</label>
+            <input
+              name="date_of_image"
+              type="text"
+              class="form-control"
+              style="max-width: 160px;"
+              maxlength="11"
+              readonly
+              #datepickerIm="bsDatepicker"
+              bsDatepicker
+              placement="bottom"
+              [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+            <!-- <input id="date_of_image" name="date_of_image" type="text" class="form-control" style="max-width: 160px;"
+              maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" class="custom-select">
+              <option value="" selected></option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <div class="form-group">
+            <label for="race">Race</label>
+            <select id="race" name="race" class="custom-select">
+              <option value="" selected></option>
+
+              <option value="1">Chinese</option>
+
+              <option value="2">Malay</option>
+
+              <option value="3">Indian</option>
+
+              <option value="45">Vietnamese</option>
+
+              <option value="46">Filipino</option>
+
+              <option value="47">White</option>
+
+              <option value="48">Bangladeshi</option>
+
+              <option value="49">Burma</option>
+
+              <option value="4">Others</option>
+
+              <option value="8">Acehnese</option>
+
+              <option value="9">African Americans</option>
+
+              <option value="10">Americans</option>
+
+              <option value="11">Arabs</option>
+
+              <option value="12">Asian American</option>
+
+              <option value="13">Balinese</option>
+
+              <option value="14">Bamar</option>
+
+              <option value="15">Batak</option>
+
+              <option value="16">British</option>
+
+              <option value="17">Danes</option>
+
+              <option value="18">Dutch</option>
+
+              <option value="19">English</option>
+
+              <option value="20">European Americans</option>
+
+              <option value="21">Finns</option>
+
+              <option value="22">French</option>
+
+              <option value="23">Germans</option>
+
+              <option value="24">Greeks</option>
+
+              <option value="25">Hispanic</option>
+
+              <option value="26">Hmong</option>
+
+              <option value="27">Iban</option>
+
+              <option value="28">Icelanders</option>
+
+              <option value="29">Irish</option>
+
+              <option value="30">Italians</option>
+
+              <option value="31">Japanese</option>
+
+              <option value="32">Javanese</option>
+
+              <option value="33">Khmer</option>
+
+              <option value="34">Korean</option>
+
+              <option value="35">Lao</option>
+
+              <option value="50">Mongol</option>
+
+              <option value="36">Norwegians</option>
+
+              <option value="37">Polish</option>
+
+              <option value="38">Portuguese</option>
+
+              <option value="39">Scottish</option>
+
+              <option value="40">Shan</option>
+
+              <option value="41">Sinhalese</option>
+
+              <option value="42">Spaniards</option>
+
+              <option value="43">Thais</option>
+
+              <option value="44">Welsh</option>
+
+              <option value="99">Unknown</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <div class="form-group">
+            <label for="birth_year">Year of Birth</label>
+            <select id="birth_year" name="birth_year" class="custom-select">
+              <option value="" selected></option>
+
+              <option value="2024">2024</option>
+
+              <option value="2023">2023</option>
+
+              <option value="2022">2022</option>
+
+              <option value="2021">2021</option>
+
+              <option value="2020">2020</option>
+
+              <option value="2019">2019</option>
+
+              <option value="2018">2018</option>
+
+              <option value="2017">2017</option>
+
+              <option value="2016">2016</option>
+
+              <option value="2015">2015</option>
+
+              <option value="2014">2014</option>
+
+              <option value="2013">2013</option>
+
+              <option value="2012">2012</option>
+
+              <option value="2011">2011</option>
+
+              <option value="2010">2010</option>
+
+              <option value="2009">2009</option>
+
+              <option value="2008">2008</option>
+
+              <option value="2007">2007</option>
+
+              <option value="2006">2006</option>
+
+              <option value="2005">2005</option>
+
+              <option value="2004">2004</option>
+
+              <option value="2003">2003</option>
+
+              <option value="2002">2002</option>
+
+              <option value="2001">2001</option>
+
+              <option value="2000">2000</option>
+
+              <option value="1999">1999</option>
+
+              <option value="1998">1998</option>
+
+              <option value="1997">1997</option>
+
+              <option value="1996">1996</option>
+
+              <option value="1995">1995</option>
+
+              <option value="1994">1994</option>
+
+              <option value="1993">1993</option>
+
+              <option value="1992">1992</option>
+
+              <option value="1991">1991</option>
+
+              <option value="1990">1990</option>
+
+              <option value="1989">1989</option>
+
+              <option value="1988">1988</option>
+
+              <option value="1987">1987</option>
+
+              <option value="1986">1986</option>
+
+              <option value="1985">1985</option>
+
+              <option value="1984">1984</option>
+
+              <option value="1983">1983</option>
+
+              <option value="1982">1982</option>
+
+              <option value="1981">1981</option>
+
+              <option value="1980">1980</option>
+
+              <option value="1979">1979</option>
+
+              <option value="1978">1978</option>
+
+              <option value="1977">1977</option>
+
+              <option value="1976">1976</option>
+
+              <option value="1975">1975</option>
+
+              <option value="1974">1974</option>
+
+              <option value="1973">1973</option>
+
+              <option value="1972">1972</option>
+
+              <option value="1971">1971</option>
+
+              <option value="1970">1970</option>
+
+              <option value="1969">1969</option>
+
+              <option value="1968">1968</option>
+
+              <option value="1967">1967</option>
+
+              <option value="1966">1966</option>
+
+              <option value="1965">1965</option>
+
+              <option value="1964">1964</option>
+
+              <option value="1963">1963</option>
+
+              <option value="1962">1962</option>
+
+              <option value="1961">1961</option>
+
+              <option value="1960">1960</option>
+
+              <option value="1959">1959</option>
+
+              <option value="1958">1958</option>
+
+              <option value="1957">1957</option>
+
+              <option value="1956">1956</option>
+
+              <option value="1955">1955</option>
+
+              <option value="1954">1954</option>
+
+              <option value="1953">1953</option>
+
+              <option value="1952">1952</option>
+
+              <option value="1951">1951</option>
+
+              <option value="1950">1950</option>
+
+              <option value="1949">1949</option>
+
+              <option value="1948">1948</option>
+
+              <option value="1947">1947</option>
+
+              <option value="1946">1946</option>
+
+              <option value="1945">1945</option>
+
+              <option value="1944">1944</option>
+
+              <option value="1943">1943</option>
+
+              <option value="1942">1942</option>
+
+              <option value="1941">1941</option>
+
+              <option value="1940">1940</option>
+
+              <option value="1939">1939</option>
+
+              <option value="1938">1938</option>
+
+              <option value="1937">1937</option>
+
+              <option value="1936">1936</option>
+
+              <option value="1935">1935</option>
+
+              <option value="1934">1934</option>
+
+              <option value="1933">1933</option>
+
+              <option value="1932">1932</option>
+
+              <option value="1931">1931</option>
+
+              <option value="1930">1930</option>
+
+              <option value="1929">1929</option>
+
+              <option value="1928">1928</option>
+
+              <option value="1927">1927</option>
+
+              <option value="1926">1926</option>
+
+              <option value="1925">1925</option>
+
+              <option value="1924">1924</option>
+
+              <option value="1923">1923</option>
+
+              <option value="1922">1922</option>
+
+              <option value="1921">1921</option>
+
+              <option value="1920">1920</option>
+
+              <option value="1919">1919</option>
+
+              <option value="1918">1918</option>
+
+              <option value="1917">1917</option>
+
+              <option value="1916">1916</option>
+
+              <option value="1915">1915</option>
+
+              <option value="1914">1914</option>
+
+              <option value="1913">1913</option>
+
+              <option value="1912">1912</option>
+
+              <option value="1911">1911</option>
+
+              <option value="1910">1910</option>
+
+              <option value="1909">1909</option>
+
+              <option value="1908">1908</option>
+
+              <option value="1907">1907</option>
+
+              <option value="1906">1906</option>
+
+              <option value="1905">1905</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 text-right">
+
+      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire" (click)="onModalAcquireImage()"><i class="fas fa-camera"></i> Acquire Image</button>
+
+      <button id="imgSubmit" type="button" class="btn btn-primary m-1 form_submit"><i class="fa fa-cloud-upload-alt"></i> Submit</button>
+      <button id="btnReset" type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()"><i class="fa fa-redo"></i> Reset</button>
+      <button id="btnReport" type="button" class="btn btn-primary m-1 form_report" disabled><i class="fa fa-file-alt"></i> View Report</button>
+      <button id="btnGuide" type="button" class="btn btn-primary m-1" (click)="onModalGuide()"><i class="fa fa-file-alt"></i> Guide</button>
+      <input id="eye_img_right" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none;"
+        data-img-obj="img_container_right" data-img-id="">
+      <input id="eye_img_left" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none;"
+        data-img-obj="img_container_left" data-img-id="">
+      <input id="reference_id" name="reference_id" type="hidden" value="">
+
+    </div>
+  </div>
+  <div class="row diseases-label d-none">
+    <div class="col-12">Diseases</div>
+  </div>
+
+  <div class="row py-4">
+    <div class="col-12 ">
+      <div class="row">
+        <div class="col-3 xp-4 ai-group " data-ai-group="01">
+          <div class="row">
+            <div class="col-12 px-4  ">
+              <div class="row">
+                <div class="col-12 xp-2 xborder  xrounded xbg-white">
+
+                  <div class="card">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdSelena" data-toggle="collapse"
+                      data-target="#collapseSelena" aria-expanded="true" aria-controls="collapseSelena"
+                      style="cursor:pointer;">
+                      <div class="row py-0">
+                        <div class="col-10 my-0 ">SELENA+</div>
+                        <div class="col-2 text-right"><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
+                      </div>
+                    </div>
+
+                    <div id="collapseSelena" class="collapse xshow multi-collapse" aria-labelledby="hdSelena">
+                      <div class="card-body pl-1">
+                        <div class="form-group col-12 my-0">
+
+
+                          <div class="form-row  ">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1 ">
+                              <div class="form-check">
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_1"
+                                  name="disease_1" value="Y" xstyle="cursor: pointer;" data-disease-cd="DR"
+                                  data-disease-desc="Diabetic Retinopathy" checked>
+                                <label class="form-check-label" for="disease_1" style="cursor: pointer;">
+                                  Diabetic Retinopathy
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row  d-none">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1 ">
+                              <div class="form-check">
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_2"
+                                  name="disease_2" value="Y" xstyle="cursor: pointer;" data-disease-cd="GLAUCOMA"
+                                  data-disease-desc="Glaucoma Suspect">
+                                <label class="form-check-label" for="disease_2" style="cursor: pointer;">
+                                  Glaucoma Suspect
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row  d-none">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1 ">
+                              <div class="form-check">
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_3"
+                                  name="disease_3" value="Y" xstyle="cursor: pointer;" data-disease-cd="AMD"
+                                  data-disease-desc="Age-Related Macular Degeneration">
+                                <label class="form-check-label" for="disease_3" style="cursor: pointer;">
+                                  Age-Related Macular Degeneration
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 xp-4 ai-group d-none" data-ai-group="02">
+          <div class="row">
+            <div class="col-12 px-4 ">
+              <div class="row">
+                <div class="col-12 xp-2 ">
+                  <div class="card ">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdVuno" data-toggle="collapse"
+                      data-target="#collapseVuno" aria-expanded="true" aria-controls="collapseVuno"
+                      style="cursor:pointer;">
+                      <div class="row py-0">
+                        <div class="col-10 my-0 ">VUNO Med-Fundus AI</div>
+                        <div class="col-2 text-right"><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
+                      </div>
+                    </div>
+
+                    <div id="collapseVuno" class="collapse xshow multi-collapse " aria-labelledby="hdVuno">
+                      <div class="card-body pl-1">
+                        <div class="form-group col-12 my-0">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 xp-4 ai-group " data-ai-group="04">
+          <div class="row">
+            <div class="col-12 px-4 ">
+              <div class="row">
+                <div class="col-12 xp-2 ">
+                  <div class="card ">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdckd" data-toggle="collapse"
+                      data-target="#collapseckd" aria-expanded="true" aria-controls="collapseckd"
+                      style="cursor:pointer;">
+                      <div class="row py-0">
+                        <div class="col-10 my-0">RetiKid</div>
+                        <div class="col-2 text-right"><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
+                      </div>
+                    </div>
+
+                    <div id="collapseckd" class="collapse xshow  multi-collapse" aria-labelledby="hdckd">
+                      <div class="card-body pl-1">
+                        <div class="form-group col-12 my-0">
+
+                          <div class="form-row ">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1 ">
+                              <div class="form-check">
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_4"
+                                  name="disease_4" value="Y" data-disease-cd="CKD"
+                                  data-disease-desc="Chronic Kidney Disease" checked>
+                                <label class="form-check-label" for="disease_4" style="cursor: pointer;">
+                                  Chronic Kidney Disease
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-3 xp-4 ai-group d-none" data-ai-group="03">
+          <div class="row">
+            <div class="col-12 px-4 ">
+              <div class="row">
+                <div class="col-12 xp-2 ">
+                  <div class="card ">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdmediwhale" data-toggle="collapse"
+                      data-target="#collapsemediwhale" aria-expanded="true" aria-controls="collapsemediwhale"
+                      style="cursor:pointer;">
+                      <div class="row py-0">
+                        <div class="col-10 my-0 ">DrNoon</div>
+                        <div class="col-2 text-right "><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
+                      </div>
+                    </div>
+
+                    <div id="collapsemediwhale" class="collapse xshow multi-collapse " aria-labelledby="hdmediwhale">
+                      <div class="card-body pl-1">
+                        <div class="form-group col-12 my-0">
+
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-3 xp-4 ai-group d-none" data-ai-group="05">
+          <div class="row">
+            <div class="col-12 px-4 ">
+              <div class="row">
+                <div class="col-12 xp-2 ">
+                  <div class="card ">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdmediwhale" data-toggle="collapse"
+                      data-target="#collapsebioage" aria-expanded="true" aria-controls="collapsebioage"
+                      style="cursor:pointer;">
+                      <div class="row py-0">
+                        <div class="col-10 my-0 ">Toku Eyes</div>
+                        <div class="col-2 text-right "><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
+                      </div>
+                    </div>
+
+                    <div id="collapsebioage" class="collapse xshow multi-collapse " aria-labelledby="hdbioage">
+                      <div class="card-body pl-1">
+                        <div class="form-group col-12 my-0">
+
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 xh5 font-weight-bold">Selected Findings</div>
+  </div>
+  <div class="row pb-2 d-none">
+    <div class="col-12 pl-4 font-italic">
+      <span id="spantext">Diabetic Retinopathy, Chronic Kidney Disease</span>
+
+
+    </div>
+  </div>
+  <div class="row pb-2 pl-4">
+    <div class="choices rounded" data-type="select-multiple" dir="ltr">
+      <div class="choices__inner">
+        <div class="choices__list choices__list--multiple">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <input id="selected_diseases" name="selected_diseases" type="hidden"
+    value="Diabetic Retinopathy, Chronic Kidney Disease">
+
+  <div class="row mt-1 mx-1 border rounded border-secondary">
+    <div class="col-12 text-center">
+      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1 box-shadow"
+        style="cursor: pointer;">
+        <div class="col-1"></div>
+        <div class="col-10">Subject Medical History</div>
+        <div class="col-1 text-right"><i id="collapseIcon" class="fa  fa-chevron-down xfa-angle-double-down"></i></div>
+
+      </div>
+    </div>
+    <div class="collapse col-12 px-2 xbg-light xbox-shadow" id="additionalInfo">
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-1">
+          Unaided/Aided with Glasses
+        </div>
+        <div class="col-sm-2 col-12">
+          <select id="va_left_glasses" class="custom-select">
+            <option value=""></option>
+            <option value="Y">Aided</option>
+            <option value="N">Unaided</option>
+          </select>
+        </div>
+        <div class="col-sm-2 col-12">
+          <select id="va_right_glasses_grade" class="custom-select">
+            <option value="" selected>Right Eye</option>
+
+            <option value="1">6/6</option>
+
+            <option value="2">6/7.5</option>
+
+            <option value="3">6/9</option>
+
+            <option value="4">6/12</option>
+
+            <option value="5">6/15</option>
+
+            <option value="6">6/18</option>
+
+            <option value="7">6/24</option>
+
+            <option value="8">6/30</option>
+
+            <option value="11">6/45</option>
+
+            <option value="9">6/60</option>
+
+            <option value="10">6/120</option>
+
+            <option value="CF">Counting Fingers</option>
+
+            <option value="HM">Hand Movements</option>
+
+            <option value="LP">Light Perception</option>
+
+            <option value="NLP">No Light Perception</option>
+
+            <option value="UA">Unable to assess</option>
+
+            <option value="0">Unknown</option>
+
+          </select>
+        </div>
+        <div class="col-sm-2 col-12">
+          <select id="va_right_glasses" class="custom-select d-none">
+            <option value=""></option>
+            <option value="Y">Aided</option>
+            <option value="N">Unaided</option>
+          </select>
+
+          <select id="va_left_glasses_grade" class="custom-select">
+            <option value="" selected>Left Eye</option>
+
+            <option value="1">6/6</option>
+
+            <option value="2">6/7.5</option>
+
+            <option value="3">6/9</option>
+
+            <option value="4">6/12</option>
+
+            <option value="5">6/15</option>
+
+            <option value="6">6/18</option>
+
+            <option value="7">6/24</option>
+
+            <option value="8">6/30</option>
+
+            <option value="11">6/45</option>
+
+            <option value="9">6/60</option>
+
+            <option value="10">6/120</option>
+
+            <option value="CF">Counting Fingers</option>
+
+            <option value="HM">Hand Movements</option>
+
+            <option value="LP">Light Perception</option>
+
+            <option value="NLP">No Light Perception</option>
+
+            <option value="UA">Unable to assess</option>
+
+            <option value="0">Unknown</option>
+
+          </select>
+        </div>
+        <div class="col-sm-2 col-12">
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-1">
+          Pinhole
+        </div>
+        <div class="col-sm-2 col-12">
+        </div>
+        <div class="col-sm-2 col-12">
+          <select id="va_right_pinhole" class="custom-select">
+            <option value="" selected>Right Eye</option>
+
+            <option value="1">6/6</option>
+
+            <option value="2">6/7.5</option>
+
+            <option value="3">6/9</option>
+
+            <option value="4">6/12</option>
+
+            <option value="5">6/15</option>
+
+            <option value="6">6/18</option>
+
+            <option value="7">6/24</option>
+
+            <option value="8">6/30</option>
+
+            <option value="11">6/45</option>
+
+            <option value="9">6/60</option>
+
+            <option value="10">6/120</option>
+
+            <option value="CF">Counting Fingers</option>
+
+            <option value="HM">Hand Movements</option>
+
+            <option value="LP">Light Perception</option>
+
+            <option value="NLP">No Light Perception</option>
+
+            <option value="UA">Unable to assess</option>
+
+            <option value="0">Unknown</option>
+
+          </select>
+        </div>
+        <div class="col-sm-2 col-12">
+          <select id="va_left_pinhole" class="custom-select">
+            <option value="" selected>Left Eye</option>
+
+            <option value="1">6/6</option>
+
+            <option value="2">6/7.5</option>
+
+            <option value="3">6/9</option>
+
+            <option value="4">6/12</option>
+
+            <option value="5">6/15</option>
+
+            <option value="6">6/18</option>
+
+            <option value="7">6/24</option>
+
+            <option value="8">6/30</option>
+
+            <option value="11">6/45</option>
+
+            <option value="9">6/60</option>
+
+            <option value="10">6/120</option>
+
+            <option value="CF">Counting Fingers</option>
+
+            <option value="HM">Hand Movements</option>
+
+            <option value="LP">Light Perception</option>
+
+            <option value="NLP">No Light Perception</option>
+
+            <option value="UA">Unable to assess</option>
+
+            <option value="0">Unknown</option>
+
+          </select>
+        </div>
+        <div class="col-sm-2 col-12">
+        </div>
+      </div>
+
+
+      <div class="row mt-2">
+
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="diabete_ind">
+          Diabetes
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="diabete_ind_y" name="diabete_ind"
+                  value="Y">
+                <label class="custom-control-label" for="diabete_ind_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="diabete_ind_n" name="diabete_ind"
+                  value="N">
+                <label class="custom-control-label" for="diabete_ind_n">No</label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <input id="diabete_duration" name="diabete_duration" type="text" class="form-control duration"
+                maxlength="3"
+                onkeyup="chkposval(this,2,'diabete_duration');_calculateOnsetDateDuration('diabete_duration','diabete_duration_year');"
+                placeholder="Duration" title="Duration" disabled>
+              <input id="diabete_duration_year" name="diabete_duration_year" type="text"
+                class="form-control age_of_onset" maxlength="3"
+                onkeyup="chkposval(this,2,'diabete_duration_year');_calculateOnsetDateDuration('diabete_duration_year','diabete_duration');"
+                placeholder="Age of Onset" title="Age of Onset" disabled>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="hypertension">
+          Hypertension
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="hypertension_y" name="hypertension" value="Y">
+                <label class="custom-control-label" for="hypertension_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="hypertension_n" name="hypertension" value="N">
+                <label class="custom-control-label" for="hypertension_n">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-12 mt-1">
+          HbA1c
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col-sm-2">
+              <input id="hba1c" name="hba1c" type="text" class="form-control" maxlength="3"
+                onkeyup="chkposval(this,2,'hba1c');">
+            </div>
+            <div class="col mt-1">
+              mmol/mol
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="hypercholesteremia">
+          Hypercholesteremia
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="hypercholesteremia_y" name="hypercholesteremia"
+                  value="Y">
+                <label class="custom-control-label" for="hypercholesteremia_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="hypercholesteremia_n" name="hypercholesteremia"
+                  value="N">
+                <label class="custom-control-label" for="hypercholesteremia_n">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="smoking">
+          Smoking
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="smoking_y" name="smoking" value="Y">
+                <label class="custom-control-label" for="smoking_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input" id="smoking_n" name="smoking" value="N">
+                <label class="custom-control-label" for="smoking_n">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="stroke_ind">
+          Stroke History
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="stroke_ind_y" name="stroke_ind"
+                  value="Y">
+                <label class="custom-control-label" for="stroke_ind_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="stroke_ind_n" name="stroke_ind"
+                  value="N">
+                <label class="custom-control-label" for="stroke_ind_n">No</label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <input id="stroke_duration" name="stroke_duration" type="text" class="form-control duration" maxlength="3"
+                onkeyup="chkposval(this,2,'stroke_duration');_calculateOnsetDateDuration('stroke_duration','stroke_year');"
+                placeholder="Duration" title="Duration" disabled>
+              <input id="stroke_year" name="stroke_year" type="text" class="form-control age_of_onset" maxlength="3"
+                onkeyup="chkposval(this,2,'stroke_year');_calculateOnsetDateDuration('stroke_year','stroke_duration');"
+                placeholder="Age of Onset" title="Age of Onset" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="heart_ind">
+          Heart Disease History
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="heart_ind_y" name="heart_ind" value="Y">
+                <label class="custom-control-label" for="heart_ind_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="heart_ind_n" name="heart_ind" value="N">
+                <label class="custom-control-label" for="heart_ind_n">No</label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <input id="heart_duration" name="heart_duration" type="text" class="form-control duration" maxlength="3"
+                onkeyup="chkposval(this,2,'heart_duration');_calculateOnsetDateDuration('heart_duration','heart_year');"
+                placeholder="Duration" title="Duration" disabled>
+              <input id="heart_year" name="heart_year" type="text" class="form-control age_of_onset" maxlength="3"
+                onkeyup="chkposval(this,2,'heart_year');_calculateOnsetDateDuration('heart_year','heart_duration');"
+                placeholder="Age of Onset" title="Age of Onset" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-2">
+
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="chronic_ind">
+          Chronic History
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="chronic_ind_y" name="chronic_ind"
+                  value="Y">
+                <label class="custom-control-label" for="chronic_ind_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="chronic_ind_n" name="chronic_ind"
+                  value="N">
+                <label class="custom-control-label" for="chronic_ind_n">No</label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <input id="chronic_duration" name="chronic_duration" type="text" class="form-control duration"
+                maxlength="3"
+                onkeyup="chkposval(this,2,'chronic_duration');_calculateOnsetDateDuration('chronic_duration','chronic_year');"
+                placeholder="Duration" title="Duration" disabled>
+              <input id="chronic_year" name="chronic_year" type="text" class="form-control age_of_onset" maxlength="3"
+                onkeyup="chkposval(this,2,'chronic_year');_calculateOnsetDateDuration('chronic_year','chronic_duration');"
+                placeholder="Age of Onset" title="Age of Onset" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="kidney_ind">
+          Kidney Disease History
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="kidney_ind_y" name="kidney_ind"
+                  value="Y">
+                <label class="custom-control-label" for="kidney_ind_y">Yes</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="custom-control custom-radio mt-1">
+                <input type="radio" class="custom-control-input radio_year" id="kidney_ind_n" name="kidney_ind"
+                  value="N">
+                <label class="custom-control-label" for="kidney_ind_n">No</label>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <input id="kidney_duration" name="kidney_duration" type="text" class="form-control duration" maxlength="3"
+                onkeyup="chkposval(this,2,'kidney_duration');_calculateOnsetDateDuration('kidney_duration','kidney_year');"
+                placeholder="Duration" title="Duration" disabled>
+              <input id="kidney_year" name="kidney_year" type="text" class="form-control age_of_onset" maxlength="3"
+                onkeyup="chkposval(this,2,'kidney_year');_calculateOnsetDateDuration('kidney_year','kidney_duration');"
+                placeholder="Age of Onset" duration="Age of Onset" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <textarea class="form-control" id="remarks" name="remarks" rows="3" maxlength="500"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-1">
+    <div class="col-lg-6 col-md-12 text-left p-0 m-0">
+      <div class="container-fluit border rounded border-secondary p-0 ml-0 mr-lg-2 mr-md-0 mr-sm-0">
+        <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
+          Right Eye (OD)
+        </div>
+        <div class="row m-0 p-0" id="img_container_right" data-file-obj="eye_img_right" data-var-obj="_right_files">
+          <div class="col-md-12 col-12 m-0 p-0">
+            <div class="row p-0 m-0">
+              <div class="col-md-6 col-12 mt-3 p-0">
+                <div class="text-center">
+                  Optic-Centred
+                </div>
+              </div>
+              <div class="col-md-6 col-12 mt-3 p-0">
+                <div class="text-center">
+                  Macula-Centred
+                </div>
+              </div>
+            </div>
+            <div class="row p-0 m-0">
+              <div class="col-md-6 col-12 mt-3 pl-1">
+                <div id="r1"
+                  class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
+                  data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px;">
+                  <img align="middle" class="img-fluid " src="assets/img/submit-image/RO.png"
+                    style="height:80%; xvertical-align: middle;">
+                  <div class="col-12 text-center">
+                    Click or drag image here
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 mt-3 p-1">
+                <div id="r2"
+                  class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
+                  data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px;">
+                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/RM.png"
+                    style="height:80%; xvertical-align: middle;">
+                  <div class="col-12 text-center">
+                    Click or drag image here
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 m-0 p-0 invisible">
+            <div id="right_result" class="container-fluit ml-2 mr-0 my-0 p-0 invisible">
+              <div class="row bg-secondary text-white m-1 p-0 justify-content-center result_title">Grading Result</div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 text-right p-0 m-0">
+      <div class="container-fluit border rounded border-secondary p-0 ml-lg-2 ml-md-0 ml-sm-0 mt-lg-0 mt-md-2 mt-sm-2">
+        <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
+          Left Eye (OS)
+        </div>
+        <div class="row m-0 p-0" id="img_container_left" data-file-obj="eye_img_left" data-var-obj="_left_files">
+          <div class="col-md-12 col-12 m-0 p-0">
+            <div class="row p-0 m-0">
+              <div class="col-md-6 col-12 mt-3 p-0">
+                <div class="col-12 text-center">
+                  Optic-Centred
+                </div>
+              </div>
+              <div class="col-md-6 col-12 mt-3 p-0">
+                <div class="text-center">
+                  Macula-Centred
+                </div>
+              </div>
+            </div>
+            <div class="row p-0 m-0">
+              <div class="col-md-6 col-12 mt-3 p-1">
+                <div id="l1"
+                  class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
+                  data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px;">
+                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/LO.png"
+                    style="height:80%; xvertical-align: middle;">
+                  <div class="col-12 text-center">
+                    Click or drag image here
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 mt-3 p-1">
+                <div id="l2"
+                  class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
+                  data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px;">
+                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/LM.png"
+                    style="height:80%; xvertical-align: middle;">
+                  <div class="col-12 text-center">
+                    Click or drag image here
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 m-0 p-0 invisible">
+            <div id="left_result" class="container-fluit ml-2 mr-0 my-0 p-0 invisible">
+              <div class="row bg-secondary text-white m-1 p-0 justify-content-center result_title">Grading Result</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row mt-4 mx-1 result_div d-none" id="result_eye">
+
+    <div class="col-12 bg-assessment">
+
+      <div class="row pt-2 px-2">
+        <div
+          class="col-12 bg-hd1 text-white xtext-center xd-flex xjustify-content-center py-1 d-flex align-items-center">
+
+          <i class="fa fa-eye fa-lg"></i>&nbsp;&nbsp;SELENA+ Assessment
+          <div class="pl-2 d-none" id="unverify_banner">(Unverified Result)</div>
+        </div>
+
+      </div>
+
+      <div class="row p-2 xpx-2">
+        <div class="col-12">
+
+          <div class="row">
+            <div class="col-12 ">
+
+              <div class="row bg-white">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12 xborder-right xb-divider">
+                      <div class="row">
+                        <div class="col-4">&nbsp;</div>
+                        <div class="col-4 py-2 xborder result_label font-weight-bold xtext-center">RIGHT EYE </div>
+                        <div class="col-4 py-2 xborder result_label font-weight-bold xtext-center">LEFT EYE </div>
+                      </div>
+
+                      <div class="row d-none" id="result_dr">
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">Diabetic Retinopathy </div>
+                        <div class="col-4 py-1 xborder result_detail">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="rt_dr_icon"></td>
+                              <td id="rt_dr_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col-4 py-1 xborder result_detail">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="lt_dr_icon"></td>
+                              <td id="lt_dr_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row d-none" id="result_gla">
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">Glaucoma Suspect </div>
+                        <div class="col-4 py-1 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="rt_gla_icon"></td>
+                              <td id="rt_gla_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col-4 py-1 xborder result_detail xtext-right ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="lt_gla_icon"></td>
+                              <td id="lt_gla_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row d-none" id="result_amd">
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">AMD </div>
+                        <div class="col-4 py-1 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="rt_amd_icon"></td>
+                              <td id="rt_amd_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="col-4 py-1 xborder result_detail xtext-right ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="lt_amd_icon"></td>
+                              <td id="lt_amd_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2 mx-1 result_div d-none" id="result_vuno">
+
+    <div class="col-12 bg-assessment">
+
+      <div class="row pt-2 px-2">
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
+
+          <i class="fa fa-eye fa-lg"></i>&nbsp;&nbsp;VUNO Med-Fundus AI Assessment
+        </div>
+
+      </div>
+
+      <div class="row p-2 ">
+        <div class="col-12">
+
+          <div class="row">
+            <div class="col-12 ">
+
+              <div class="row bg-white">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12 xborder-right xb-divider">
+
+
+                      <div class="row">
+                        <div class="col-12 ">
+
+                          <div class="row py-2">
+                            <div class="col-4 text-center font-weight-bold">
+                              &nbsp;
+                            </div>
+                            <div class="col-4 xtext-center font-weight-bold ">
+                              Right Eye (OD)
+                            </div>
+                            <div class="col-4 xtext-center font-weight-bold ">
+                              Left Eye (OS)
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-4 font-weight-bold pt-4">
+                              Retinal Findings
+                            </div>
+                            <div class="col-4 xtext-center ">
+
+                              <div class="row xp-0 xm-0">
+                                <div class="col-lg-12 col-md-12 col-12 pt-4" id="vuno_result_right">
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 xtext-center ">
+                              <div class="row xp-0 xm-0">
+                                <div class="col-lg-12 col-md-12 col-12 pt-4" id="vuno_result_left">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mt-2 mx-1 result_div d-none" id="result_kidney">
+
+    <div class="col-12 bg-assessment">
+
+      <div class="row pt-2 px-2">
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
+          <img id="" align="middle" class="img-fluid pr-1" src="assets/img/submit-image/kidney.png"
+            style="max-height:30px; xheight:80%; xvertical-align: middle;">RetiKid Assessment
+        </div>
+
+      </div>
+
+      <div class="row p-2 xpx-2">
+        <div class="col-12">
+
+          <div class="row">
+            <div class="col-12 ">
+
+              <div class="row bg-white">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12 xborder-right xb-divider">
+
+                      <div class="row ">
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">Chronic Kidney Disease </div>
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="ckd_icon"></td>
+                              <td id="ckd_result"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mt-2 mx-1 result_div d-none" id="result_mediwhale">
+
+    <div class="col-12 bg-assessment">
+
+      <div class="row pt-2 px-2">
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
+
+          <i class="fa fa-heartbeat fa-lg"></i>&nbsp;&nbsp;DrNoon Reti-CVD Assessment
+        </div>
+
+      </div>
+
+      <div class="row p-2 xpx-2">
+        <div class="col-12">
+
+          <div class="row">
+            <div class="col-12 ">
+
+              <div class="row bg-white">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12 xborder-right xb-divider">
+
+                      <div class="row ">
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">Cardiovascular Disease Risk
+                          Outcome </div>
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="cvd_icon"></td>
+                              <td id="medi_cvd_result" style="text-transform: capitalize;"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mt-2 mx-1 result_div d-none" id="result_bioage">
+    <div class="col-12 bg-assessment">
+
+      <div class="row pt-2 px-2">
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
+          <i class="fa fa-heartbeat fa-lg"></i>&nbsp;&nbsp;Toku Eyes Assessment
+        </div>
+      </div>
+
+      <div class="row p-2 xpx-2">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 ">
+              <div class="row bg-white">
+                <div class="col-12">
+                  <div class="row d-none" id="toku_bioage_ai">
+                    <div class="col-12 xborder-right xb-divider">
+                      <div class="row ">
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">Biological Age </div>
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="bioage_icon"></td>
+                              <td id="bioage_result" style="text-transform: capitalize;"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-none" id="toku_cvd_ai">
+                    <div class="col-12 xborder-right xb-divider">
+                      <div class="row ">
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">Cardiovascular Risk </div>
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success ">
+                          <table>
+                            <tr>
+                              <td style="width: 30px;" id="toku_cvd_icon"></td>
+                              <td id="toku_cvd_result" style="text-transform: capitalize;"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="row mt-3 mx-1 invisible" id="result_footer">
+    <div class="col-12 text-danger">
+      This screening assessment will be validated by our Secondary Grader before the report is released. Validated
+      reports can be retrieved from the Primary Care page.
+    </div>
+  </div>
+  <div id="bottom_btns" class="row mt-1 d-none ">
+    <div class="col-12 text-right">
+
+      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire"><i class="fas fa-camera"></i> Acquire Image</button>
+
+      <button id="imgSubmit" type="button" class="btn btn-primary m-1 form_submit"><i class="fa fa-cloud-upload-alt"></i> Submit</button>
+      <button id="btnReset" type="button" class="btn btn-primary m-1 form_reset"><i class="fa fa-redo"></i> Reset</button>
+      <button id="btnReport" type="button" class="btn btn-primary m-1 form_report" disabled><i class="fa fa-file-alt"></i> View Report</button>
+    </div>
+  </div>
+
+</main>
