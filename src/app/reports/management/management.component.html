@@ -219,12 +219,12 @@
                 class="form-control"
                 style="max-width: 145px;"
                 maxlength="11"
-                readonly
+                onkeydown="return false"
                 #datepickerFrom="bsDatepicker"
                 bsDatepicker
                 placement="right"
                 formControlName="date_from"
-                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
               <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
@@ -239,12 +239,12 @@
                 class="form-control"
                 style="max-width: 145px;"
                 maxlength="11"
-                readonly
+                onkeydown="return false"
                 #datepickerTo="bsDatepicker"
                 bsDatepicker
                 placement="right"
                 formControlName="date_to"
-                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
               <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>

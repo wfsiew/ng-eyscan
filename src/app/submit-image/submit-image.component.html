@@ -240,11 +240,11 @@
               class="form-control"
               style="max-width: 160px;"
               maxlength="11"
-              readonly
+              onkeydown="return false"
               #datepickerIm="bsDatepicker"
               bsDatepicker
               placement="bottom"
-              [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, customTodayClass: 'custom-today-class' }">
+              [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
             <!-- <input id="date_of_image" name="date_of_image" type="text" class="form-control" style="max-width: 160px;"
               maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
           </div>
