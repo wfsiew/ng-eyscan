@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from "@ngx-translate/core";
 import { DOCUMENT } from '@angular/common';
@@ -11,7 +11,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './login.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   lang = 'en';
 
@@ -26,10 +26,6 @@ export class LoginComponent implements OnInit {
     }
 
     this.initCss();
-  }
-
-  ngOnInit() {
-    
   }
 
   initCss() {

@@ -6,5 +6,7 @@
   "login.forgotpwd": "Esqueceu a senha?",
   "login.importer": "Detalhes do importador",
   "login.tnc": "termos e Condições",
-  "login.privacy": "Política de Privacidade"
+  "login.privacy": "Política de Privacidade",
+  "fpwd.title": "Recuperação de Senha",
+  "fpwd.reset": "Redefinir senha"
 }

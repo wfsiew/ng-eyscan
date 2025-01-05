@@ -6,5 +6,7 @@
   "login.forgotpwd": "忘记密码？",
   "login.importer": "进口商详情",
   "login.tnc": "条款和条件",
-  "login.privacy": "隐私政策"
+  "login.privacy": "隐私政策",
+  "fpwd.title": "忘记密码",
+  "fpwd.reset": "忘记密码"
 }

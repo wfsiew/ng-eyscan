@@ -6,5 +6,7 @@
   "login.forgotpwd": "Quên mật khẩu?",
   "login.importer": "Thông tin chi tiết về nhà nhập khẩu",
   "login.tnc": "Điều khoản và điều kiện",
-  "login.privacy": "Chính sách bảo mật"
+  "login.privacy": "Chính sách bảo mật",
+  "fpwd.title": "Quên mật khẩu",
+  "fpwd.reset": "Đặt lại mật khẩu"
 }

@@ -6,5 +6,7 @@
   "login.forgotpwd": "Forgot password?",
   "login.importer": "Importer Details",
   "login.tnc": "Terms & Conditions",
-  "login.privacy": "Privacy Policy"
+  "login.privacy": "Privacy Policy",
+  "fpwd.title": "Forgot Password",
+  "fpwd.reset": "Reset Password"
 }

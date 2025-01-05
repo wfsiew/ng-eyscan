@@ -6,5 +6,7 @@
   "login.forgotpwd": "Lupa kata sandi?",
   "login.importer": "Rincian Importir",
   "login.tnc": "Syarat & Ketentuan",
-  "login.privacy": "Kebijakan Peribadi"
+  "login.privacy": "Kebijakan Peribadi",
+  "fpwd.title": "Lupa Kata Sandi",
+  "fpwd.reset": "Mengatur Ulang Kata Sandi"
 }
