@@ -57,4 +57,18 @@ export class PrimaryCareComponent implements OnInit {
     this.router.navigate(['/reports/mgmt']);
     return false;
   }
+
+  onKeyupFrom(event: KeyboardEvent) {
+    const key = event.key;
+    if (key === 'Backspace') {
+      this.mform?.patchValue({ date_from: '' });
+    }
+  }
+
+  onKeyupTo(event: KeyboardEvent) {
+    const key = event.key;
+    if (key === 'Backspace') {
+      this.mform?.patchValue({ date_to: '' });
+    }
+  }
 }

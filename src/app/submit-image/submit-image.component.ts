@@ -87,4 +87,11 @@ export class SubmitImageComponent implements OnInit {
     this.router.navigate(['/reports/mgmt']);
     return false;
   }
+
+  onKeyupDateImage(event: KeyboardEvent) {
+    const key = event.key;
+    if (key === 'Backspace') {
+      this.date_of_image = '';
+    }
+  }
 }

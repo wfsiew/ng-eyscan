@@ -1,15 +1,24 @@
 <div id="login">
-  <div class="xtext-center px-0 pb-4 xborder">
+  <ng-container *ngIf="lang === 'cn'">
+    <div class="xtext-center px-0 pb-4 xborder">
+			
+      <img class="p-0 xborder" src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7" style="xwidth:100%; xheight:auto; max-width:200px;" alt="">
+    
+    </div>
+  </ng-container>
+  <ng-container *ngIf="lang !== 'cn'">
+    <div class="xtext-center px-0 pb-4 xborder">
 
-    <a href="https://eyris.io" target="_blank" title="">
-      <img class="p-0 xborder" src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
-        style="xwidth:100%; xmax-height:700px; max-width:400px;" alt="">
-
-      <img class="pl-4 xp-0 xborder" src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
-        style="max-width: 320px; xwidth:100%; xheight:auto;" alt="">
-    </a>
-
-  </div>
+      <a href="https://eyris.io" target="_blank" title="">
+        <img class="p-0 xborder" src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
+          style="xwidth:100%; xmax-height:700px; max-width:400px;" alt="">
+  
+        <img class="pl-4 xp-0 xborder" src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
+          style="max-width: 320px; xwidth:100%; xheight:auto;" alt="">
+      </a>
+  
+    </div>
+  </ng-container>
   <div name="dispMsg" id="dispMsg" class="alert alert-danger text-center small py-1" role="alert" style="display:none;">
 
   </div>
@@ -17,39 +26,39 @@
   <form name="frm_signon" id="frm_signon" method="post">
     <input type="hidden" name="hdnPwd" id="hdnPwd" value="">
     <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" class="form-control" name="inEmail" id="inEmail" value="" placeholder="Email address"
+      <label>{{ 'login.email' | translate }}</label>
+      <input type="email" class="form-control" name="inEmail" id="inEmail" value="" [placeholder]="'login.email-ph' | translate"
         required="required" autofocus oninvalid="this.setCustomValidity('Please enter a valid email address.')"
         oninput="setCustomValidity('')" title="Email address" autocomplete="off">
     </div>
     <div class="form-group">
-      <label>Password</label>
-      <input type="password" class="form-control" name="inPassword" id="inPassword" placeholder="Password"
+      <label>{{ 'login.pwd' | translate }}</label>
+      <input type="password" class="form-control" name="inPassword" id="inPassword" [placeholder]="'login.pwd' | translate"
         required="required" oninvalid="this.setCustomValidity('Please fill out this field.')"
         oninput="setCustomValidity('')" autocomplete="off">
     </div>
     <div class="form-group">
-      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login" (click)="onSubmit()">Log In</button>
+      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login" (click)="onSubmit()">{{ 'login.btn' | translate }}</button>
     </div>
     <div class="row">
       <div class="col text-left">
 
-        <select class="form-control custom-select custom-select-sm" name="inLang" id="inLang" style="width: auto;">
+        <select class="form-control custom-select custom-select-sm" name="inLang" id="inLang" style="width: auto;" (change)="onChangeLang($event)" [(ngModel)]="lang">
 
-          <option value="EN" selected>English</option>
+          <option value="en" [selected]="lang === 'en'">English</option>
 
-          <option value="CHINESE">简体中文</option>
+          <option value="cn" [selected]="lang === 'cn'">简体中文</option>
 
-          <option value="VIETNAMESE">Tiếng Việt</option>
+          <option value="vn" [selected]="lang === 'vn'">Tiếng Việt</option>
 
-          <option value="PORTUGUESE">Português</option>
+          <option value="po" [selected]="lang === 'po'">Português</option>
 
           <option value="INDONESIAN">Bahasa Indonesia</option>
 
         </select>
       </div>
       <div class="col text-right">
-        <a href="#" (click)="onForgotPwd()">Forgot password?</a>
+        <a href="#" (click)="onForgotPwd()">{{ 'login.forgotpwd' | translate }}</a>
       </div>
     </div>
 
@@ -102,11 +111,11 @@
       <div class="col-12 p-0 xsmall px-0 " style="font-size: 0.7rem;">
         <nav class="nav ">
           <a class="nav-link " target="_blank" style="text-decoration: none; "
-            href="/bn_moh_uat/importer/EN_IMPD-001.pdf">Importer Details</a>
+            href="/bn_moh_uat/importer/EN_IMPD-001.pdf">{{ 'login.importer' | translate }}</a>
           <a class="nav-link xpl-0 " target="_blank" style="text-decoration: none; "
-            href="/bn_moh_uat/legal/EN_TAC-001.pdf">Terms & Conditions</a>
+            href="/bn_moh_uat/legal/EN_TAC-001.pdf">{{ 'login.tnc' | translate }}</a>
           <a class="nav-link xpx-0 " target="_blank" style="text-decoration: none;"
-            href="/bn_moh_uat/legal/EN_PRIVPOLICY-001.pdf">Privacy Policy</a>
+            href="/bn_moh_uat/legal/EN_PRIVPOLICY-001.pdf">{{ 'login.privacy' | translate }}</a>
 
         </nav>
       </div>

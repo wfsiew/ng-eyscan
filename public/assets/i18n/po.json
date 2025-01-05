@@ -1,0 +1,10 @@
+{
+	"login.email": "Endereço de e-mail",
+	"login.email-ph": "Endereço de e-mail",
+	"login.pwd": "Senha",
+  "login.btn": "Log In",
+  "login.forgotpwd": "Esqueceu a senha?",
+  "login.importer": "Detalhes do importador",
+  "login.tnc": "termos e Condições",
+  "login.privacy": "Política de Privacidade"
+}

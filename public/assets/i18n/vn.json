@@ -1,0 +1,10 @@
+{
+	"login.email": "Địa chỉ Email",
+	"login.email-ph": "Địa chỉ Email",
+	"login.pwd": "Mật khẩu",
+  "login.btn": "Đăng nhập",
+  "login.forgotpwd": "Quên mật khẩu?",
+  "login.importer": "Thông tin chi tiết về nhà nhập khẩu",
+  "login.tnc": "Điều khoản và điều kiện",
+  "login.privacy": "Chính sách bảo mật"
+}

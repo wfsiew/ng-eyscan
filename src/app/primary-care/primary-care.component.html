@@ -408,6 +408,7 @@
                     style="max-width: 145px;"
                     maxlength="11"
                     onkeydown="return false"
+                    (keyup)="onKeyupFrom($event)"
                     #datepickerFrom="bsDatepicker"
                     bsDatepicker
                     placement="bottom"
@@ -428,6 +429,7 @@
                     style="max-width: 145px;"
                     maxlength="11"
                     onkeydown="return false"
+                    (keyup)="onKeyupTo($event)"
                     #datepickerTo="bsDatepicker"
                     bsDatepicker
                     placement="bottom"
@@ -441,7 +443,8 @@
               <div class="form-group ">
                 <label class="control-label mb-1 ">&nbsp;</label>
                 <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white" value="Search">
-                  <i class="fa fa-search"></i> Search</button>
+                  <i class="fa fa-search"></i> Search
+                </button>
               </div>
 
 
@@ -450,7 +453,8 @@
                 <label class="control-label mb-1 ">&nbsp;</label>
                 <button name="btnDownload" id="btnDownload" class="form-control btn bg-primary text-white"
                   value="Download Images" disabled>
-                  <i class="fa fa-cloud-download-alt"></i> Download Image</button>
+                  <i class="fa fa-cloud-download-alt"></i> Download Image
+                </button>
               </div>
 
 

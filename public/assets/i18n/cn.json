@@ -1,0 +1,10 @@
+{
+	"login.email": "邮件地址",
+	"login.email-ph": "邮件地址",
+	"login.pwd": "密码",
+  "login.btn": "登录",
+  "login.forgotpwd": "忘记密码？",
+  "login.importer": "进口商详情",
+  "login.tnc": "条款和条件",
+  "login.privacy": "隐私政策"
+}
