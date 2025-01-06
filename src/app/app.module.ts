@@ -22,6 +22,8 @@ import { GuideComponent } from './submit-image/guide/guide.component';
 import { AcquireImageComponent } from './submit-image/acquire-image/acquire-image.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 
+import { AppTranslateService } from './services/app-translate.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,7 @@ import { AccountInfoComponent } from './account-info/account-info.component';
       }
   })
   ],
-  providers: [BsModalService, provideHttpClient()],
+  providers: [BsModalService, provideHttpClient(), AppTranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

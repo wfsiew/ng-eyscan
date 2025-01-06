@@ -1,7 +1,8 @@
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
+import { AppTranslateService } from '../services/app-translate.service';
 
 @Component({
   selector: 'app-login',
@@ -18,9 +19,10 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private translate: TranslateService,
+    private appTranslate: AppTranslateService,
     @Inject(DOCUMENT) private document: Document
   ) {
-    const lang = localStorage.getItem('lang');
+    const lang = appTranslate.getLang();
     if (lang) {
       this.lang = lang;
     }
@@ -66,7 +68,7 @@ export class LoginComponent {
   onChangeLang(ev: any) {
     this.lang = ev.target.value;
     this.translate.use(ev.target.value);
-    localStorage.setItem('lang', ev.target.value);
+    this.appTranslate.setLang(this.lang);
     location.href = location.href;
   }
 }
