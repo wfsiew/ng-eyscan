@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 
@@ -16,6 +16,7 @@ export class SubmitImageComponent implements OnInit {
 
   date_of_image: any = null;
   bsModalRef?: BsModalRef;
+  @ViewChild('nhxMessageBox', { static: false }) nhxMessageBox?: ModalDirective;
 
   constructor(
     private router: Router,
@@ -41,7 +42,7 @@ export class SubmitImageComponent implements OnInit {
     this.bsModalRef.content.onClose.subscribe((res: any) => {
       if (res.result === true) {
         const s = res.list.join(',');
-        
+        this.nhxMessageBox?.show();
       }
     });
   }

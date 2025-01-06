@@ -110,6 +110,40 @@
 
 </div>
 
+<div class="modal" id="__nhxMessageBox" tabindex="-1" role="dialog" aria-labelledby="__nhxMessageBox_title" aria-hidden="true" data-keyboard="false"
+  bsModal #nhxMessageBox="bs-modal" [config]="{backdrop: 'static'}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+      <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
+        <h5 class="modal-title" id="__nhxMessageBox_title">Error</h5>
+        <button type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white" data-dismiss="modal" aria-label="Close" (click)="nhxMessageBox.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0" style="overflow: hidden;">
+      	<div class="modal-dialog p-0 m-0 error-dialog" role="document">
+          <div class="modal-content p-0 m-0 border-0">
+            <div class="modal-body p-0 m-0 ">
+              <div class="container">
+                <div class="row pt-3 d-flex">
+                  <div class="col-2 justify-content-center "><img src="assets/img/eyris_logo.png"
+                    style="max-width: 100px;"></div>
+                  <div class="col-10" style="width:100%;height:160px;">SYS-00105:<br>No camera is configured for the organization.</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-top justify-content-center m-0 px-1 pt-2">
+              <input type="button" align="middle" value="OK" name="btnOk" class="btn bg-button text-white" (click)="nhxMessageBox.hide()">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-none">
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog" aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -869,7 +903,8 @@
     <div class="choices rounded" data-type="select-multiple" dir="ltr">
       <div class="choices__inner">
         <div class="choices__list choices__list--multiple">
-
+          <div class="choices__item choices__item--selectable">Diabetic Retinopathy<button type="button" class="choices__button" data-disease-id="disease_1">Remove item</button></div>
+          <div class="choices__item choices__item--selectable">Chronic Kidney Disease<button type="button" class="choices__button" data-disease-id="disease_4">Remove item</button></div>
         </div>
       </div>
     </div>
