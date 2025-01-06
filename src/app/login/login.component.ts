@@ -62,7 +62,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.router.navigate(['/home']).then(() => {
-      let cssLink = this.document.getElementById(
+      const cssLink = this.document.getElementById(
         'stylesheet_bg'
       ) as HTMLLinkElement;
       if (cssLink) {
