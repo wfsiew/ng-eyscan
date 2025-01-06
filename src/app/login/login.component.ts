@@ -61,7 +61,16 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home']).then(() => {
+      let cssLink = this.document.getElementById(
+        'stylesheet_bg'
+      ) as HTMLLinkElement;
+      if (cssLink) {
+        const head = this.document.getElementsByTagName('head')[0];
+        head.removeChild(cssLink);
+      }
+      
+    });
     return false;
   }
 
