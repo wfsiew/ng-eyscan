@@ -1,4 +1,4 @@
-import { Component, Inject, OnDestroy, Renderer2, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
@@ -12,7 +12,7 @@ import { AppTranslateService } from '../services/app-translate.service';
   styleUrl: './login.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnDestroy {
+export class LoginComponent implements OnInit, OnDestroy {
 
   lang = 'en';
 
@@ -29,7 +29,9 @@ export class LoginComponent implements OnDestroy {
     if (lang) {
       this.lang = lang;
     }
+  }
 
+  ngOnInit() {
     this.initCss();
   }
 
