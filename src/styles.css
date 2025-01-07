@@ -19,3 +19,12 @@
   width: 518px;
   height: 230px;
 }
+
+.nhxlogo {
+  max-width: 100px;
+}
+
+.nhxmsg {
+  width: 100%;
+  height: 160px;
+}

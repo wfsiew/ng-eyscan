@@ -23,6 +23,7 @@ import { AcquireImageComponent } from './submit-image/acquire-image/acquire-imag
 import { AccountInfoComponent } from './account-info/account-info.component';
 
 import { AppTranslateService } from './services/app-translate.service';
+import { SafehtmlPipe } from './safehtml.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AppTranslateService } from './services/app-translate.service';
     ManagementComponent,
     GuideComponent,
     AcquireImageComponent,
-    AccountInfoComponent
+    AccountInfoComponent,
+    SafehtmlPipe
   ],
   imports: [
     BrowserModule,

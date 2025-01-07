@@ -91,3 +91,12 @@ body {
 .main-margin {
   margin-top: 120px;
 }
+
+.btn-del {
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  padding: 0.1rem;
+  top: -0.1rem;
+  left: 0.3rem;
+}

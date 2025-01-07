@@ -115,7 +115,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
-        <h5 class="modal-title" id="__nhxMessageBox_title">Error</h5>
+        <h5 class="modal-title" id="__nhxMessageBox_title">{{ nhxMessageTitle }}</h5>
         <button type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white" data-dismiss="modal" aria-label="Close" (click)="nhxMessageBox.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -123,15 +123,7 @@
       <div class="modal-body m-0 p-0" style="overflow: hidden;">
       	<div class="modal-dialog p-0 m-0 error-dialog" role="document">
           <div class="modal-content p-0 m-0 border-0">
-            <div class="modal-body p-0 m-0 ">
-              <div class="container">
-                <div class="row pt-3 d-flex">
-                  <div class="col-2 justify-content-center "><img src="assets/img/eyris_logo.png"
-                    style="max-width: 100px;"></div>
-                  <div class="col-10" style="width:100%;height:160px;">SYS-00105:<br>No camera is configured for the organization.</div>
-                </div>
-              </div>
-            </div>
+            <div class="modal-body p-0 m-0 " [innerHTML]="nhxMessageBody | safehtml"></div>
             <div class="modal-footer border-top justify-content-center m-0 px-1 pt-2">
               <input type="button" align="middle" value="OK" name="btnOk" class="btn bg-button text-white" (click)="nhxMessageBox.hide()">
             </div>
@@ -665,6 +657,10 @@
       <input id="eye_img_left" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none;"
         data-img-obj="img_container_left" data-img-id="">
       <input id="reference_id" name="reference_id" type="hidden" value="">
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeRight1($event)" #fileRight1 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeRight2($event)" #fileRight2 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeLeft1($event)" #fileLeft1 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeLeft2($event)" #fileLeft2 />
 
     </div>
   </div>
@@ -1380,25 +1376,39 @@
             </div>
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 pl-1">
-                <div id="r1"
+                <div id="r1" (click)="fileRight1.click()" (drop)="onFileDropRight1($event)" (dragover)="onDragOverRight1($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
                   data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px;">
-                  <img align="middle" class="img-fluid " src="assets/img/submit-image/RO.png"
+                  <ng-container *ngIf="imagePreviewRight1">
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_right_files" data-img-seq="1" (click)="onDeleteImageRight1($event)">
+                      <i class="fa fa-trash-alt"></i>
+                    </button>
+                  </ng-container>
+                  <img align="middle" class="img-fluid " [src]="displayImageRight1"
                     style="height:80%; xvertical-align: middle;">
-                  <div class="col-12 text-center">
-                    Click or drag image here
-                  </div>
+                  <ng-container *ngIf="!imagePreviewRight1">
+                    <div class="col-12 text-center">
+                      Click or drag image here
+                    </div>
+                  </ng-container>
                 </div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div id="r2"
+                <div id="r2" (click)="fileRight2.click()" (drop)="onFileDropRight2($event)" (dragover)="onDragOverRight2($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
                   data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px;">
-                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/RM.png"
+                  <ng-container *ngIf="imagePreviewRight2">
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_right_files" data-img-seq="1" (click)="onDeleteImageRight2($event)">
+                      <i class="fa fa-trash-alt"></i>
+                    </button>
+                  </ng-container>
+                  <img align="middle" class="img-fluid " [src]="displayImageRight2"
                     style="height:80%; xvertical-align: middle;">
-                  <div class="col-12 text-center">
-                    Click or drag image here
-                  </div>
+                  <ng-container *ngIf="!imagePreviewRight2">
+                    <div class="col-12 text-center">
+                      Click or drag image here
+                    </div>
+                  </ng-container>
                 </div>
               </div>
             </div>
@@ -1435,25 +1445,39 @@
             </div>
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div id="l1"
+                <div id="l1" (click)="fileLeft1.click()" (drop)="onFileDropLeft1($event)" (dragover)="onDragOverLeft1($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
                   data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px;">
-                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/LO.png"
+                  <ng-container *ngIf="imagePreviewLeft1">
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_left_files" data-img-seq="1" (click)="onDeleteImageLeft1($event)">
+                      <i class="fa fa-trash-alt"></i>
+                    </button>
+                  </ng-container>
+                  <img align="middle" class="img-fluid " [src]="displayImageLeft1"
                     style="height:80%; xvertical-align: middle;">
-                  <div class="col-12 text-center">
-                    Click or drag image here
-                  </div>
+                  <ng-container *ngIf="!imagePreviewLeft1">
+                    <div class="col-12 text-center">
+                      Click or drag image here
+                    </div>
+                  </ng-container>
                 </div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div id="l2"
+                <div id="l2" (click)="fileLeft2.click()" (drop)="onFileDropLeft2($event)" (dragover)="onDragOverLeft2($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
                   data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px;">
-                  <img id="" align="middle" class="img-fluid " src="assets/img/submit-image/LM.png"
+                  <ng-container *ngIf="imagePreviewLeft2">
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_left_files" data-img-seq="1" (click)="onDeleteImageLeft2($event)">
+                      <i class="fa fa-trash-alt"></i>
+                    </button>
+                  </ng-container>
+                  <img id="" align="middle" class="img-fluid " [src]="displayImageLeft2"
                     style="height:80%; xvertical-align: middle;">
-                  <div class="col-12 text-center">
-                    Click or drag image here
-                  </div>
+                  <ng-container *ngIf="!imagePreviewLeft2">
+                    <div class="col-12 text-center">
+                      Click or drag image here
+                    </div>
+                  </ng-container>
                 </div>
               </div>
             </div>
