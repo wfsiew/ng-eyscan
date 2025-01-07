@@ -19,8 +19,10 @@ interface DiseaseType {
 })
 export class SubmitImageComponent implements OnInit {
 
+  isCollapseSelena = true;
+  isCollapseckd = true;
   isCollapse = true;
-  date_of_image: any = null;
+  date_of_image: any = new Date();
   selectedDiseaseList: DiseaseType[] = [];
   selectedFileRight1: File | null = null;
   imageNameRight1: any = null;

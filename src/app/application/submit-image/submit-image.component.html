@@ -649,9 +649,9 @@
       <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire" (click)="onModalAcquireImage()"><i class="fas fa-camera"></i> Acquire Image</button>
 
       <button id="imgSubmit" type="button" class="btn btn-primary m-1 form_submit"><i class="fa fa-cloud-upload-alt"></i> Submit</button>
-      <button id="btnReset" type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()"><i class="fa fa-redo"></i> Reset</button>
+      <button type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()"><i class="fa fa-redo"></i> Reset</button>
       <button id="btnReport" type="button" class="btn btn-primary m-1 form_report" disabled><i class="fa fa-file-alt"></i> View Report</button>
-      <button id="btnGuide" type="button" class="btn btn-primary m-1" (click)="onModalGuide()"><i class="fa fa-file-alt"></i> Guide</button>
+      <button type="button" class="btn btn-primary m-1" (click)="onModalGuide()"><i class="fa fa-file-alt"></i> Guide</button>
       <input id="eye_img_right" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none;"
         data-img-obj="img_container_right" data-img-id="">
       <input id="eye_img_left" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none;"
@@ -678,16 +678,16 @@
                 <div class="col-12 xp-2 xborder  xrounded xbg-white">
 
                   <div class="card">
-                    <div class="card-header bg-hd1 text-white py-2" id="hdSelena" data-toggle="collapse"
-                      data-target="#collapseSelena" aria-expanded="true" aria-controls="collapseSelena"
-                      style="cursor:pointer;">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdSelena"
+                      aria-expanded="true" aria-controls="collapseSelena"
+                      style="cursor:pointer;" (click)="isCollapseSelena = !isCollapseSelena">
                       <div class="row py-0">
                         <div class="col-10 my-0 ">SELENA+</div>
                         <div class="col-2 text-right"><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
                       </div>
                     </div>
 
-                    <div id="collapseSelena" class="collapse xshow multi-collapse" aria-labelledby="hdSelena">
+                    <div id="collapseSelena" class="xshow multi-collapse" aria-labelledby="hdSelena" [collapse]="isCollapseSelena" [isAnimated]="true">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0">
 
@@ -776,16 +776,16 @@
               <div class="row">
                 <div class="col-12 xp-2 ">
                   <div class="card ">
-                    <div class="card-header bg-hd1 text-white py-2" id="hdckd" data-toggle="collapse"
-                      data-target="#collapseckd" aria-expanded="true" aria-controls="collapseckd"
-                      style="cursor:pointer;">
+                    <div class="card-header bg-hd1 text-white py-2" id="hdckd"
+                      aria-expanded="true" aria-controls="collapseckd"
+                      style="cursor:pointer;" (click)="isCollapseckd = !isCollapseckd">
                       <div class="row py-0">
                         <div class="col-10 my-0">RetiKid</div>
                         <div class="col-2 text-right"><i id="collapseIcon" class="fa fa-chevron-down"></i></div>
                       </div>
                     </div>
 
-                    <div id="collapseckd" class="collapse xshow  multi-collapse" aria-labelledby="hdckd">
+                    <div id="collapseckd" class="xshow  multi-collapse" aria-labelledby="hdckd" [collapse]="isCollapseckd" [isAnimated]="true">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0">
 
@@ -911,15 +911,15 @@
 
   <div class="row mt-1 mx-1 border rounded border-secondary">
     <div class="col-12 text-center">
-      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1 box-shadow" (click)="isCollapse = !isCollapse"
+      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1" [ngClass]="{'box-shadow': isCollapse}" (click)="isCollapse = !isCollapse"
         style="cursor: pointer;">
         <div class="col-1"></div>
         <div class="col-10">Subject Medical History</div>
-        <div class="col-1 text-right"><i id="collapseIcon" class="fa  fa-chevron-down xfa-angle-double-down"></i></div>
+        <div class="col-1 text-right"><i id="collapseIcon" class="fa xfa-angle-double-down" [ngClass]="{'fa-chevron-down': isCollapse, 'fa-chevron-up': !isCollapse}"></i></div>
 
       </div>
     </div>
-    <div class="collapse col-12 px-2 xbg-light xbox-shadow" id="additionalInfo" *ngIf="!isCollapse">
+    <div class="col-12 px-2 xbg-light xbox-shadow" id="additionalInfo" [collapse]="isCollapse" [isAnimated]="true">
       <div class="row mt-2">
         <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-1">
           Unaided/Aided with Glasses
@@ -1833,14 +1833,14 @@
       reports can be retrieved from the Primary Care page.
     </div>
   </div>
-  <div id="bottom_btns" class="row mt-1 d-none ">
+  <div id="bottom_btns" class="row mt-1" [hidden]="isCollapse">
     <div class="col-12 text-right">
 
-      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire"><i class="fas fa-camera"></i> Acquire Image</button>
+      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire" (click)="onModalAcquireImage()"><i class="fas fa-camera"></i> Acquire Image</button>
 
-      <button id="imgSubmit" type="button" class="btn btn-primary m-1 form_submit"><i class="fa fa-cloud-upload-alt"></i> Submit</button>
-      <button id="btnReset" type="button" class="btn btn-primary m-1 form_reset"><i class="fa fa-redo"></i> Reset</button>
-      <button id="btnReport" type="button" class="btn btn-primary m-1 form_report" disabled><i class="fa fa-file-alt"></i> View Report</button>
+      <button type="button" class="btn btn-primary m-1 form_submit"><i class="fa fa-cloud-upload-alt"></i> Submit</button>
+      <button type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()"><i class="fa fa-redo"></i> Reset</button>
+      <button type="button" class="btn btn-primary m-1 form_report" disabled><i class="fa fa-file-alt"></i> View Report</button>
     </div>
   </div>
 
