@@ -911,7 +911,7 @@
 
   <div class="row mt-1 mx-1 border rounded border-secondary">
     <div class="col-12 text-center">
-      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1 box-shadow"
+      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1 box-shadow" (click)="isCollapse = !isCollapse"
         style="cursor: pointer;">
         <div class="col-1"></div>
         <div class="col-10">Subject Medical History</div>
@@ -919,7 +919,7 @@
 
       </div>
     </div>
-    <div class="collapse col-12 px-2 xbg-light xbox-shadow" id="additionalInfo">
+    <div class="collapse col-12 px-2 xbg-light xbox-shadow" id="additionalInfo" *ngIf="!isCollapse">
       <div class="row mt-2">
         <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-1">
           Unaided/Aided with Glasses
