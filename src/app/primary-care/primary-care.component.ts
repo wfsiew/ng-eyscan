@@ -38,23 +38,23 @@ export class PrimaryCareComponent implements OnInit {
   }
 
   onHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/application/home']);
     return false;
   }
 
   onSubmitImage() {
-    this.router.navigate(['/submit-image']);
+    this.router.navigate(['/application/submit-image']);
     return false;
   }
   
   onPrimary() {
-    this.router.navigate(['/primary']);
+    this.router.navigate(['/application/primary']);
     location.href = location.href;
     return false;
   }
 
   onReportsMgmt() {
-    this.router.navigate(['/reports/mgmt']);
+    this.router.navigate(['/application/reports/mgmt']);
     return false;
   }
 

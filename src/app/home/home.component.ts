@@ -21,23 +21,23 @@ export class HomeComponent {
   }
 
   onHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/application/home']);
     location.href = location.href;
     return false;
   }
 
   onSubmitImage() {
-    this.router.navigate(['/submit-image']);
+    this.router.navigate(['/application/submit-image']);
     return false;
   }
 
   onPrimary() {
-    this.router.navigate(['/primary']);
+    this.router.navigate(['/application/primary']);
     return false;
   }
 
   onReportsMgmt() {
-    this.router.navigate(['/reports/mgmt']);
+    this.router.navigate(['/application/reports/mgmt']);
     return false;
   }
 }

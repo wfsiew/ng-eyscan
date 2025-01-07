@@ -4,6 +4,11 @@ import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal'
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 
+interface DiseaseType {
+  desc: string;
+  cd: string;
+}
+
 @Component({
   selector: 'app-submit-image',
   standalone: false,
@@ -15,6 +20,7 @@ import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 export class SubmitImageComponent implements OnInit {
 
   date_of_image: any = null;
+  selectedDiseaseList: DiseaseType[] = [];
   bsModalRef?: BsModalRef;
   @ViewChild('nhxMessageBox', { static: false }) nhxMessageBox?: ModalDirective;
 
@@ -26,7 +32,21 @@ export class SubmitImageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedDiseaseList = [
+      {
+        desc: 'Diabetic Retinopathy',
+        cd: 'DR'
+      },
+      {
+        desc: 'Chronic Kidney Disease',
+        cd: 'CKD'
+      }
+    ];
+  }
 
+  onRemoveDisease(o: DiseaseType) {
+    const lx = this.selectedDiseaseList.filter(x => x.cd !== o.cd);
+    this.selectedDiseaseList = lx;
   }
 
   onModalAcquireImage() {
@@ -69,23 +89,23 @@ export class SubmitImageComponent implements OnInit {
   }
 
   onHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/application/home']);
     return false;
   }
 
   onSubmitImage() {
-    this.router.navigate(['/submit-image']);
+    this.router.navigate(['/application/submit-image']);
     location.href = location.href;
     return false;
   }
 
   onPrimary() {
-    this.router.navigate(['/primary']);
+    this.router.navigate(['/application/primary']);
     return false;
   }
 
   onReportsMgmt() {
-    this.router.navigate(['/reports/mgmt']);
+    this.router.navigate(['/application/reports/mgmt']);
     return false;
   }
 

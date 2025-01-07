@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/application/home']);
     return false;
   }
 

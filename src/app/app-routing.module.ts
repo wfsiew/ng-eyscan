@@ -18,23 +18,28 @@ const routes: Routes = [
     component: ForgotpwdComponent
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'submit-image',
-    component: SubmitImageComponent
-  },
-  {
-    path: 'primary',
-    component: PrimaryCareComponent
-  },
-  {
-    path: 'reports',
+    path: 'application',
     children: [
       {
-        path: 'mgmt',
-        component: ManagementComponent
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'submit-image',
+        component: SubmitImageComponent
+      },
+      {
+        path: 'primary',
+        component: PrimaryCareComponent
+      },
+      {
+        path: 'reports',
+        children: [
+          {
+            path: 'mgmt',
+            component: ManagementComponent
+          }
+        ]
       }
     ]
   },

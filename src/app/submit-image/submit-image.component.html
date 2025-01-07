@@ -903,8 +903,9 @@
     <div class="choices rounded" data-type="select-multiple" dir="ltr">
       <div class="choices__inner">
         <div class="choices__list choices__list--multiple">
-          <div class="choices__item choices__item--selectable">Diabetic Retinopathy<button type="button" class="choices__button" data-disease-id="disease_1">Remove item</button></div>
-          <div class="choices__item choices__item--selectable">Chronic Kidney Disease<button type="button" class="choices__button" data-disease-id="disease_4">Remove item</button></div>
+          <div class="choices__item choices__item--selectable" *ngFor="let o of selectedDiseaseList">
+            {{ o.desc }}<button type="button" class="choices__button" (click)="onRemoveDisease(o)">Remove item</button>
+          </div>
         </div>
       </div>
     </div>
