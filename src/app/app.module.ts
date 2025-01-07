@@ -27,6 +27,7 @@ import { SafehtmlPipe } from './safehtml.pipe';
 
 @NgModule({
   declarations: [
+    SafehtmlPipe,
     AppComponent,
     LoginComponent,
     ForgotpwdComponent,
@@ -36,8 +37,7 @@ import { SafehtmlPipe } from './safehtml.pipe';
     ManagementComponent,
     GuideComponent,
     AcquireImageComponent,
-    AccountInfoComponent,
-    SafehtmlPipe
+    AccountInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +55,7 @@ import { SafehtmlPipe } from './safehtml.pipe';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-  })
+    })
   ],
   providers: [BsModalService, provideHttpClient(), AppTranslateService],
   bootstrap: [AppComponent]
