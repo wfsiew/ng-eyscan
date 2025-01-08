@@ -1,6 +1,6 @@
 <div class=" fixed-top bg-white">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
-    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="goto('/application/home')">
+    <a class="navbar-brand pl-1 align-middle" href="" data-target="fn1" (click)="goto('/application/home')">
       <img class="d-inline-block align-middle " style="xmax-width:160px; max-height:50px;"
         src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
 
@@ -34,12 +34,13 @@
         </li>
 
         <li class="nav-item dropdown" id="fn0">
-          <a class="nav-link dropdown-toggle" data-target="fn0" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portal Administrator</a>
+          <a class="nav-link dropdown-toggle" data-target="fn0" href="" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Portal Administrator</a>
           <div class="dropdown-menu p-0" aria-labelledby="fn0">
-            
-            
+
+
             <a class="dropdown-item" data-target="fn0_1" href="#" (click)="goto('/mnt/company')">Maintain Organizations</a>
-            
+          
             <a class="dropdown-item" data-target="fn0_2" href="#" (click)="goto('/mnt/accounts')">Manage Users</a>
           
             <a class="dropdown-item" data-target="fn0_9" href="#" (click)="goto('/mnt/application')">Manage Organization Applications</a>
@@ -50,20 +51,19 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" data-target="fn0_5" href="#" (click)="goto('/mnt/lookup')">Maintain Lookup Codes</a>
             <a class="dropdown-item" data-target="fn0_11" href="#" (click)="goto('/mnt/system-param/system')">Manage Parameters</a>
-              
-              
+
+
           </div>
         </li>
 
-        <li class="nav-item active dropdown" id="fn5">
+        <li class="nav-item dropdown" id="fn5">
           <a class="nav-link dropdown-toggle" data-target="fn5" href="" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">Reports</a>
           <div class="dropdown-menu p-0" aria-labelledby="fn5">
-            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="goto('/application/reports/mgmt', true)">Primary Management Report</a>
+            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="goto('/application/reports/mgmt')">Primary Management Report</a>
 
           </div>
         </li>
-
 
       </ul>
 
@@ -98,7 +98,8 @@
         </li>
 
         <li class="nav-item" id="fn8">
-          <a class="nav-link" data-target="fn8" href="" title="Log Out"><i class="fas fa-sign-out-alt xtext-white fa-lg"></i> </a>
+          <a class="nav-link" data-target="fn8" href="" title="Log Out"><i
+              class="fas fa-sign-out-alt xtext-white fa-lg"></i> </a>
         </li>
       </ul>
 
@@ -107,12 +108,8 @@
 
   <div class="row align-items-center">
     <div class="col-10 ">
-      <h2 id="hd_text" class="container-fluid py-1">Primary Management Report</h2>
+      <h2 id="hd_text" class="container-fluid py-1">Worklist</h2>
     </div>
-
-
-
-
   </div>
 
 </div>
@@ -228,13 +225,36 @@
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
     <div class="row pb-1">
-      <div id="filter" class="container-fluid pb-2 pl-0 ">
-        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform" xclass="form-inline" action="/bn_moh_uat/application/primary/index.cfm"
-          method="post">
+      <div id="filter" class="col-12 container-fluid py-2 pl-0 ">
+        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform" xrole="form" xclass="form-inline"
+          action="/bn_moh_uat/application/secondary/index.cfm" method="post">
           <input type="hidden" name="recno" id="recno" value="25">
+          <input type="hidden" name="status" id="status" value="VR">
 
-          <div class="form-group col-lg-2 col-md-6">
-            <label class="control-label mb-1 ">Date From </label>
+          <div class="form-group ">
+            <label class="control-label mb-1 ">Case Reference ID </label>
+            <input name="pid" id="pid" type="text" class="form-control " placeholder="" value="">
+          </div>
+
+          <div class="form-group ">
+            <label class="control-label mb-1 ">Capture Site </label>
+            <select class="form-control custom-select " name="location" id="location">
+              <option value=""></option>
+
+            </select>
+          </div>
+
+          <div class="form-group ">
+            <label class="control-label mb-1 ">&nbsp;</label>
+            <select class="form-control custom-select " name="selDate" id="selDate">
+              <option value="DR" selected>Date Reported</option>
+              <option value="DI">Date of Image</option>
+              <option value="DG">Date Graded</option>
+            </select>
+          </div>
+
+          <div class="form-group ">
+            <label class="control-label mb-1 ">From </label>
             <div class="input-group">
               <input
                 name="date_from"
@@ -246,16 +266,16 @@
                 (keyup)="onKeyupFrom($event)"
                 #datepickerFrom="bsDatepicker"
                 bsDatepicker
-                placement="right"
+                placement="bottom"
                 formControlName="date_from"
                 [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
               <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
-                maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
+                maxlength="11" value="19-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
           </div>
 
-          <div class="form-group col-lg-2 col-md-6">
-            <label class="control-label mb-1 ">Date To </label>
+          <div class="form-group ">
+            <label class="control-label mb-1 ">To </label>
             <div class="input-group">
               <input
                 name="date_to"
@@ -267,280 +287,128 @@
                 (keyup)="onKeyupTo($event)"
                 #datepickerTo="bsDatepicker"
                 bsDatepicker
-                placement="right"
+                placement="bottom"
                 formControlName="date_to"
                 [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
               <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
-                maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
+                maxlength="11" value="08-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
           </div>
 
-          <div class="form-group col-lg-3 col-md-8" style="max-width: 500px;">
-            <label class="control-label mb-1 ">Company</label>
-            <select class="form-control custom-select" name="company_id" id="company_id">
-
-
-
-              <option value="8">Belait Hospital (TOPCON)</option>
-
-
-
-              <option value="10">Berakas Health Centre</option>
-
-
-
-              <option value="2">Brunei MOH</option>
-
-
-
-              <option value="3">Brunei MOH Ocular Reading Centre</option>
-
-
-
-              <option value="1" selected>EyRIS</option>
-
-
-
-              <option value="4">JPMC</option>
-
-
-
-              <option value="14">Mobile Bus 1</option>
-
-
-
-              <option value="15">Mobile Bus 2</option>
-
-
-
-              <option value="12">Muara Health Centre</option>
-
-
-
-              <option value="11">Rimba Health Centre</option>
-
-
-
-              <option value="6">RIPAS Hospital (Endocrinology)</option>
-
-
-
-              <option value="5">RIPAS Hospital (TOPCON)</option>
-
-
-
-              <option value="13">Sengkurong Health Centre</option>
-
-
-
-              <option value="9">Temburong Hospital</option>
-
-
-
-              <option value="7">Tutong Hospital (TOPCON)</option>
-
-
-
-              <option value="17">zGrading Centre</option>
-
-
-            </select>
+          <div class="form-group ">
+            <label class="control-label mb-1 ">&nbsp;</label>
+            <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white " value="Search">
+              <i class="fa fa-search"></i> Search</button>
           </div>
 
-          <div class="form-group col-lg-2 col-md-4">
-            <label class="control-label mb-1 " for="status" style="cursor: pointer;">Include Sub Centres </label>
-            <div class="custom-control custom-checkbox ">
-              <input type="checkbox" class="custom-control custom-control-lg " id="sub_comp_ind" name="sub_comp_ind"
-                value="Y" style="cursor: pointer; height:16px; width:16px;">
-            </div>
+          <div class="form-group float-right ">
+            <label class="control-label mb-1 ">&nbsp;</label>
+            <button name="xbtnDisclaimer" id="xbtnDisclaimer" class="form-control btn bg-warning text-white "
+              value="Disclaimer" onclick=" window.open('/bn_moh_uat/legal/EN_DISCLAIMER.pdf', '_blank'); return false;">
+              <i class="fa fa-exclamation-triangle"></i> Disclaimer</button>
+
           </div>
-
-
 
         </form>
       </div>
 
     </div>
 
-    <div class="row box-shadow">
-      <div class="col-xl-12 col-lg-12 ">
 
-        <div class="row p-1 bg-header text-white">
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">Report Name <i class="fa fa-sort-up"></i></div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">Print Option</div>
-        </div>
+    <div class="row">
+      <div class="col-12 px-0">
+        <ul class="nav nav-tabs pl-2 " id="myTab" role="tablist">
+          <li class="nav-item font-weight-bold ">
+            <a class="nav-link active border " id="user_worklist" data-status="VR" xdata-toggle="tab" href=""
+              role="tab">My List</a>
+          </li>
+          <li class="nav-item font-weight-bold ">
+            <a class="nav-link  border " id="all_worklist" data-status="P" xdata-toggle="tab" href="" role="tab">Queue
+              List</a>
+          </li>
+          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
+            <a class="nav-link  border " id="nr_worklist" data-status="N" xdata-toggle="tab" href="" role="tab">Non
+              Referable Cases</a>
+          </li>
+          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
+            <a class="nav-link  border " id="r_worklist" data-status="R" xdata-toggle="tab" href="" role="tab"
+              title="Finalized Referable Case">Referable Cases</a>
+          </li>
+        </ul>
 
-
-
-        <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">Billing Summary Report</div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
-            <div class="row">
-              <div class="col-auto"><a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
-                  data-code="BILLING_SUMMARY" data-desc="Billing Summary Report" href="" title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
-                  data-code="BILLING_SUMMARY" data-desc="Billing Summary Report" href="" title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
-                  data-code="BILLING_SUMMARY" data-desc="Billing Summary Report" href="" title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-
-        <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">Credits Summary Report</div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
-            <div class="row">
-              <div class="col-auto"><a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
-                  data-code="CREDITS_SUMMARY" data-desc="Credits Summary Report" href="" title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
-                  data-code="CREDITS_SUMMARY" data-desc="Credits Summary Report" href="" title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
-                  data-code="CREDITS_SUMMARY" data-desc="Credits Summary Report" href="" title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-
-        <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">Image Submitted Summary Report</div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
-            <div class="row">
-              <div class="col-auto"><a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
-                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href=""
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
-                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href=""
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
-                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href=""
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-
-        <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">Primary User Summary Report</div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
-            <div class="row">
-              <div class="col-auto"><a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
-                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href=""
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
-                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href=""
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
-                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href=""
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">User List Summary Report</div>
-          <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
-            <div class="row">
-              <div class="col-auto"><a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
-                  data-code="USERLIST_SUMMARY" data-desc="User List Summary Report" href="" title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
-                  data-code="USERLIST_SUMMARY" data-desc="User List Summary Report" href="" title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
-              </div>
-
-              <div class="col-auto"><a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
-                  data-code="USERLIST_SUMMARY" data-desc="User List Summary Report" href="" title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div> <!-- /.col-12 -->
-
-
-
-      <div class="col-lg-4 col-md-4 col-sm-12 py-2">
-        <div class="xform-group row">
-          <label class="pl-3 pr-2 text-muted">Show </label>
-          <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec" id="pagerec"
-            style="max-width: 80px;">
-            <option value="10">10</option>
-            <option value="25" selected>25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
-
-        <span id="dispdesc" class="text-muted">Showing 1 to 5 of 5</span>
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-12 pt-2">
       </div>
     </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-12 py-2 px-0">
+
+        <button name="btnRouted" id="btnRouted" class="btn btn-sm bg-primary text-white" value="Routed to Queue List"
+          disabled><i class="fa fa-share-alt"></i> Routed to Queue List</button>
+        <div class="custom-control custom-checkbox xcustom-control-group float-right ">
+
+          <input type="checkbox" class="custom-control-input " id="chk_verifying" name="chk_verifying" value="V">
+          <label class="custom-control-label small " for="chk_verifying" style="cursor: pointer;">Show Verifying Cases Only</label>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <form name="frmMain" id="frmMain" method="post">
+      <div class="row box-shadow">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+
+          <div class="row p-1 bg-header text-white">
+            <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12  ">
+              <div class="row">
+
+                <div class="col-1">
+                  <div class="checkbox">
+                    <input name="chk_all" id="chk_all" type="checkbox" style="cursor: pointer;" disabled value="0">
+                  </div>
+                </div>
+                <div class="col-11">
+                  Case Reference ID
+                </div>
+
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-  ">Site</div>
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Report Status</div>
+
+
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Image Date</div>
+            <div class="col-xl-5 col-md-5 col-lg-5 col-sm-12">
+              <div class="row">
+                <div class="col-4">
+                  Date Reported <i class="fa fa-sort-down"></i>
+                </div>
+                <div class="col-6">
+                  Graded By / Date
+                </div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="row py-1 xborder-bottom text-center bg-white">
+            <div class="col-xl-12 col-md-12 col-lg-12 ">No Record Found.</div>
+          </div>
+
+
+        </div> <!-- /.col-12 -->
+
+
+
+      </div>
+      <input type="hidden" name="record_count" id="record_count" value="0">
+      <input type="hidden" name="selected_count" id="selected_count" value="0">
+    </form>
 
   </div> <!-- /.container-fluid -->
 

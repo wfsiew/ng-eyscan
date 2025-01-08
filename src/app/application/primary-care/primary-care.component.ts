@@ -35,29 +35,12 @@ export class PrimaryCareComponent implements OnInit {
     this.mform.patchValue({ date_from: df, date_to: dt });
   }
 
-  onAccInfo() {
-    this.router.navigate(['/mnt/user']);
-    return false;
-  }
+  goto(s: string, reload = false) {
+    this.router.navigate([s]);
+    if (reload) {
+      location.href = location.href;
+    }
 
-  onHome() {
-    this.router.navigate(['/application/home']);
-    return false;
-  }
-
-  onSubmitImage() {
-    this.router.navigate(['/application/submit-image']);
-    return false;
-  }
-  
-  onPrimary() {
-    this.router.navigate(['/application/primary']);
-    location.href = location.href;
-    return false;
-  }
-
-  onReportsMgmt() {
-    this.router.navigate(['/application/reports/mgmt']);
     return false;
   }
 

@@ -2,14 +2,14 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-application',
   standalone: false,
   
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  templateUrl: './application.component.html',
+  styleUrl: './application.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
+export class ApplicationComponent {
 
   constructor(private router: Router) {
     

@@ -348,29 +348,12 @@ export class SubmitImageComponent implements OnInit {
     });
   }
 
-  onAccInfo() {
-    this.router.navigate(['/mnt/user']);
-    return false;
-  }
+  goto(s: string, reload = false) {
+    this.router.navigate([s]);
+    if (reload) {
+      location.href = location.href;
+    }
 
-  onHome() {
-    this.router.navigate(['/application/home']);
-    return false;
-  }
-
-  onSubmitImage() {
-    this.router.navigate(['/application/submit-image']);
-    location.href = location.href;
-    return false;
-  }
-
-  onPrimary() {
-    this.router.navigate(['/application/primary']);
-    return false;
-  }
-
-  onReportsMgmt() {
-    this.router.navigate(['/application/reports/mgmt']);
     return false;
   }
 

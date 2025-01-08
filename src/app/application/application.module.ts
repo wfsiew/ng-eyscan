@@ -11,7 +11,9 @@ import { ApplicationRoutingModule } from './application-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SubmitImageComponent } from './submit-image/submit-image.component';
 import { PrimaryCareComponent } from './primary-care/primary-care.component';
+import { SecondaryGraderComponent } from './secondary-grader/secondary-grader.component';
 import { ManagementComponent } from './reports/management/management.component';
+import { ManageDataComponent } from './manage-data/manage-data.component';
 import { GuideComponent } from './submit-image/guide/guide.component';
 import { AcquireImageComponent } from './submit-image/acquire-image/acquire-image.component';
 
@@ -21,7 +23,9 @@ import { AcquireImageComponent } from './submit-image/acquire-image/acquire-imag
     HomeComponent,
     SubmitImageComponent,
     PrimaryCareComponent,
+    SecondaryGraderComponent,
     ManagementComponent,
+    ManageDataComponent,
     GuideComponent,
     AcquireImageComponent,
   ],

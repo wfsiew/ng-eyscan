@@ -3,15 +3,15 @@ import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-management',
+  selector: 'app-secondary-grader',
   standalone: false,
   
-  templateUrl: './management.component.html',
-  styleUrl: './management.component.css',
+  templateUrl: './secondary-grader.component.html',
+  styleUrl: './secondary-grader.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class ManagementComponent implements OnInit {
-
+export class SecondaryGraderComponent implements OnInit {
+  
   mform?: UntypedFormGroup;
 
   constructor(

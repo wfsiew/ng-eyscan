@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
-import { AccountInfoComponent } from './account-info/account-info.component';
 
 import { AppTranslateService } from './services/app-translate.service';
 
@@ -19,8 +18,7 @@ import { AppTranslateService } from './services/app-translate.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    ForgotpwdComponent,
-    AccountInfoComponent
+    ForgotpwdComponent
   ],
   imports: [
     BrowserModule,

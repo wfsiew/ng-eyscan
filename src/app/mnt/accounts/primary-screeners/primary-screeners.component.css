@@ -1,0 +1,24 @@
+body{background-color:#deeefd;}
+.form>* {
+  margin: 5px 3px;
+}
+
+.modal-dialog {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  /* xheight: 100% !important;
+  xwidth: 100% !important; */
+  width: auto;
+  height: auto;
+  /* xdisplay: flex;
+  xalign-items: center; */
+}
+
+.main-margin {
+  margin-top: 120px;
+}

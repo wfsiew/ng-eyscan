@@ -1,6 +1,6 @@
 <div class="fixed-top bg-white">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
-    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="onHome()">
+    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="goto('/application/home')">
       <img class="d-inline-block align-middle " style="xmax-width:160px; max-height:50px;"
         src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
 
@@ -14,29 +14,52 @@
     <div class="collapse navbar-collapse pl-4 " id="navbarsMenu">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" id="fn1">
-          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="onHome()">Home</a>
+          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="goto('/application/home')">Home</a>
         </li>
 
 
 
         <li class="nav-item active" id="fn3">
-          <a class="nav-link" data-target="fn3" href="#" (click)="onSubmitImage()">Submit Image</a>
+          <a class="nav-link" data-target="fn3" href="#" (click)="goto('/application/submit-image', true)">Submit Image</a>
         </li>
 
 
 
         <li class="nav-item" id="fn2">
-          <a class="nav-link" data-target="fn2" href="#" (click)="onPrimary()">Primary Care</a>
+          <a class="nav-link" data-target="fn2" href="#" (click)="goto('/application/primary')">Primary Care</a>
         </li>
 
+        <li class="nav-item" id="fn4">
+          <a class="nav-link" data-target="fn4" href="#" (click)="goto('/application/secondary')">Secondary Grader</a>
+        </li>
 
-
+        <li class="nav-item dropdown" id="fn0">
+          <a class="nav-link dropdown-toggle" data-target="fn0" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portal Administrator</a>
+          <div class="dropdown-menu p-0" aria-labelledby="fn0">
+            
+            
+            <a class="dropdown-item" data-target="fn0_1" href="#" (click)="goto('/mnt/company')">Maintain Organizations</a>
+            
+            <a class="dropdown-item" data-target="fn0_2" href="#" (click)="goto('/mnt/accounts')">Manage Users</a>
+          
+            <a class="dropdown-item" data-target="fn0_9" href="#" (click)="goto('/mnt/application')">Manage Organization Applications</a>
+              
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" data-target="fn0_10" href="#" (click)="goto('/application/manage-data')">Case Investigation</a>
+            
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" data-target="fn0_5" href="#" (click)="goto('/mnt/lookup')">Maintain Lookup Codes</a>
+            <a class="dropdown-item" data-target="fn0_11" href="#" (click)="goto('/mnt/system-param/system')">Manage Parameters</a>
+              
+              
+          </div>
+        </li>
 
         <li class="nav-item dropdown" id="fn5">
           <a class="nav-link dropdown-toggle" data-target="fn5" href="" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">Reports</a>
           <div class="dropdown-menu p-0" aria-labelledby="fn5">
-            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="onReportsMgmt()">Primary Management Report</a>
+            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="goto('/application/reports/mgmt')">Primary Management Report</a>
 
           </div>
         </li>
@@ -58,7 +81,7 @@
                     <p class="m-0 text-center">Kian Cheong Lam</p>
                     <p class="m-0 text-center small">kiancheong.lam&#64;nova-hub.com</p>
                     <p class="m-0 text-center pt-2">
-                      <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="#" (click)="onAccInfo()">
+                      <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="#" (click)="goto('/mnt/user')">
                         Account Info
                       </a>
                     </p>

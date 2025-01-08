@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
-import { AccountInfoComponent } from './account-info/account-info.component';
 
 const routes: Routes = [
   {
@@ -18,8 +17,8 @@ const routes: Routes = [
     loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule)
   },
   {
-    path: 'mnt/user',
-    component: AccountInfoComponent
+    path: 'mnt',
+    loadChildren: () => import('./mnt/mnt.module').then(m => m.MntModule)
   },
   { path: '**', redirectTo: '/' }
 ];

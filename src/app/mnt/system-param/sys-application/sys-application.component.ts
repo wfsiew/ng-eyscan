@@ -2,14 +2,14 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-sys-application',
   standalone: false,
   
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  templateUrl: './sys-application.component.html',
+  styleUrl: './sys-application.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
+export class SysApplicationComponent {
 
   constructor(private router: Router) {
     
