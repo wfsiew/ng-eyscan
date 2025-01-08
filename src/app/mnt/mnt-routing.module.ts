@@ -7,9 +7,13 @@ import { SecondaryGradersComponent } from './accounts/secondary-graders/secondar
 import { PrimarySecondaryUserComponent } from './accounts/primary-secondary-user/primary-secondary-user.component';
 import { AdminUserComponent } from './accounts/admin-user/admin-user.component';
 import { ApplicationComponent } from './application/application.component';
-import { LookupComponent } from './lookup/lookup.component';
+import { LanguageComponent } from './lookup/language/language.component';
+import { PatientRaceComponent } from './lookup/patient-race/patient-race.component';
+import { VisualAcuityComponent } from './lookup/visual-acuity/visual-acuity.component';
+import { VunoFundusComponent } from './lookup/vuno-fundus/vuno-fundus.component';
 import { SystemComponent } from './system-param/system/system.component';
 import { SysApplicationComponent } from './system-param/sys-application/sys-application.component';
+
 
 const routes: Routes = [
   {
@@ -21,14 +25,14 @@ const routes: Routes = [
     component: CompanyComponent
   },
   {
-    path: 'accounts/',
+    path: 'accounts',
     children: [
       {
         path: 'primary-screeners',
         component: PrimaryScreenersComponent
       },
       {
-        path:' secondary-graders',
+        path:'secondary-graders',
         component: SecondaryGradersComponent
       },
       {
@@ -47,7 +51,24 @@ const routes: Routes = [
   },
   {
     path: 'lookup',
-    component: LookupComponent
+    children: [
+      {
+        path: 'language',
+        component: LanguageComponent
+      },
+      {
+        path: 'patient-race',
+        component: PatientRaceComponent
+      },
+      {
+        path: 'visual-acuity',
+        component: VisualAcuityComponent
+      },
+      {
+        path: 'vuno-fundus',
+        component: VunoFundusComponent
+      }
+    ]
   },
   {
     path: 'system-param',

@@ -11,8 +11,8 @@ body{background-color:#deeefd;}
 }
 
 .modal-content {
-  /* xheight: 100% !important;
-  xwidth: 100% !important; */
+  /* xheight: 100% !important; */
+  /* xwidth: 100% !important; */
   width: auto;
   height: auto;
   /* xdisplay: flex;

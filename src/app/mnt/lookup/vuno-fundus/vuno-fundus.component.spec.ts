@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LookupComponent } from './lookup.component';
+import { VunoFundusComponent } from './vuno-fundus.component';
 
-describe('LookupComponent', () => {
-  let component: LookupComponent;
-  let fixture: ComponentFixture<LookupComponent>;
+describe('VunoFundusComponent', () => {
+  let component: VunoFundusComponent;
+  let fixture: ComponentFixture<VunoFundusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LookupComponent]
+      declarations: [VunoFundusComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LookupComponent);
+    fixture = TestBed.createComponent(VunoFundusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

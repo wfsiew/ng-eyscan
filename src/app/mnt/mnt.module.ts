@@ -9,7 +9,10 @@ import { SecondaryGradersComponent } from './accounts/secondary-graders/secondar
 import { PrimarySecondaryUserComponent } from './accounts/primary-secondary-user/primary-secondary-user.component';
 import { AdminUserComponent } from './accounts/admin-user/admin-user.component';
 import { ApplicationComponent } from './application/application.component';
-import { LookupComponent } from './lookup/lookup.component';
+import { LanguageComponent } from './lookup/language/language.component';
+import { PatientRaceComponent } from './lookup/patient-race/patient-race.component';
+import { VisualAcuityComponent } from './lookup/visual-acuity/visual-acuity.component';
+import { VunoFundusComponent } from './lookup/vuno-fundus/vuno-fundus.component';
 import { SystemComponent } from './system-param/system/system.component';
 import { SysApplicationComponent } from './system-param/sys-application/sys-application.component';
 
@@ -23,7 +26,10 @@ import { SysApplicationComponent } from './system-param/sys-application/sys-appl
     PrimarySecondaryUserComponent,
     AdminUserComponent,
     ApplicationComponent,
-    LookupComponent,
+    LanguageComponent,
+    PatientRaceComponent,
+    VisualAcuityComponent,
+    VunoFundusComponent,
     SystemComponent,
     SysApplicationComponent
   ],

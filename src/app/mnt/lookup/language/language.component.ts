@@ -2,17 +2,17 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-primary-screeners',
+  selector: 'app-language',
   standalone: false,
   
-  templateUrl: './primary-screeners.component.html',
-  styleUrl: './primary-screeners.component.css',
+  templateUrl: './language.component.html',
+  styleUrl: './language.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class PrimaryScreenersComponent {
+export class LanguageComponent {
 
   constructor(private router: Router) {
-      
+    
   }
 
   goto(s: string, reload = false) {

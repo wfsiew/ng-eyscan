@@ -1,6 +1,6 @@
 <div class=" fixed-top bg-white">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
-    <a class="navbar-brand pl-1 align-middle" href="" data-target="fn1">
+    <a class="navbar-brand pl-1 align-middle" href="" data-target="fn1" (click)="goto('/application/home')">
       <img class="d-inline-block align-middle " style="xmax-width:160px; max-height:50px;"
         src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
 
@@ -14,45 +14,43 @@
     <div class="collapse navbar-collapse pl-4 " id="navbarsMenu">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" id="fn1">
-          <a id="fn1" class="nav-link" data-target="fn1" href="">Home</a>
+          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="goto('/application/home')">Home</a>
         </li>
 
 
 
         <li class="nav-item" id="fn3">
-          <a class="nav-link" data-target="fn3" href="">Submit Image</a>
+          <a class="nav-link" data-target="fn3" href="#" (click)="goto('/application/submit-image')">Submit Image</a>
         </li>
 
 
 
         <li class="nav-item" id="fn2">
-          <a class="nav-link" data-target="fn2" href="">Primary Care</a>
+          <a class="nav-link" data-target="fn2" href="#" (click)="goto('/application/primary')">Primary Care</a>
         </li>
 
         <li class="nav-item" id="fn4">
-          <a class="nav-link" data-target="fn4" href="">Secondary Grader</a>
+          <a class="nav-link" data-target="fn4" href="#" (click)="goto('/application/secondary')">Secondary Grader</a>
         </li>
 
-        <li class="nav-item dropdown" id="fn0">
+        <li class="nav-item active dropdown" id="fn0">
           <a class="nav-link dropdown-toggle" data-target="fn0" href="" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">Portal Administrator</a>
           <div class="dropdown-menu p-0" aria-labelledby="fn0">
 
 
-            <a class="dropdown-item" data-target="fn0_1" href="">Maintain Organizations</a>
-
-            <a class="dropdown-item" data-target="fn0_2" href="">Manage Users</a>
-
-            <a class="dropdown-item" data-target="fn0_9" href="">Manage Organization Applications</a>
-
+            <a class="dropdown-item" data-target="fn0_1" href="#" (click)="goto('/mnt/company')">Maintain Organizations</a>
+          
+            <a class="dropdown-item" data-target="fn0_2" href="#" (click)="goto('/mnt/accounts/primary-screeners', true)">Manage Users</a>
+          
+            <a class="dropdown-item" data-target="fn0_9" href="#" (click)="goto('/mnt/application')">Manage Organization Applications</a>
+              
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" data-target="fn0_10" href="">Case Investigation</a>
-
+            <a class="dropdown-item" data-target="fn0_10" href="#" (click)="goto('/application/manage-data')">Case Investigation</a>
+            
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" data-target="fn0_5" href="">Maintain Lookup Codes</a>
-            <a class="dropdown-item" data-target="fn0_11" href="">Manage Parameters</a>
-
-
+            <a class="dropdown-item" data-target="fn0_5" href="#" (click)="goto('/mnt/lookup/language')">Maintain Lookup Codes</a>
+            <a class="dropdown-item" data-target="fn0_11" href="#" (click)="goto('/mnt/system-param/system')">Manage Parameters</a>
 
 
           </div>
@@ -86,7 +84,7 @@
                 <div class="row px-1 ">
                   <div class="col-lg-12 py-2">
                     <p class="m-0 text-center">Kian Cheong Lam</p>
-                    <p class="m-0 text-center small">kiancheong.lam@nova-hub.com</p>
+                    <p class="m-0 text-center small">kiancheong.lam&#64;nova-hub.com</p>
                     <p class="m-0 text-center pt-2">
                       <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="">
                         Account Info
@@ -241,17 +239,17 @@
         aria-orientation="vertical">
 
         <a class="nav-link active " id="pill_primary" data-toggle="pill" data-group="1" data-function="fn0_2"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true">Primary Screeners</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true" (click)="goto('/mnt/accounts/primary-screeners', true)">Primary Screeners</a>
 
 
         <a class="nav-link " id="pill_secondary" data-toggle="pill" data-group="2" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false">Secondary Graders</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/secondary-graders')">Secondary Graders</a>
 
         <a class="nav-link " id="pill_prisec" data-toggle="pill" data-group="3" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false">Primary/Secondary User</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/primary-secondary-user')">Primary/Secondary User</a>
 
         <a class="nav-link " id="pill_uadmin" data-toggle="pill" data-group="10" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false">User Admin</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/admin-user')">User Admin</a>
 
       </div>
 
@@ -303,10 +301,10 @@
 
 
 
-                <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark" style='display: ;'>
+                <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    fatima@nova-hub.com
+                    fatima&#64;nova-hub.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Enerio Fatima</div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Fatima</div>
@@ -323,7 +321,7 @@
                 <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    novahealth.primary@outlook.com
+                    novahealth.primary&#64;outlook.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">novahealth primary</div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Primary Screener</div>
@@ -337,10 +335,10 @@
 
 
 
-                <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark" style='display: ;'>
+                <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    novahealth.primary2@outlook.com
+                    novahealth.primary2&#64;outlook.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Two Primary Screener </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Primary Screener Two</div>
@@ -357,7 +355,7 @@
                 <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    novahealth.primary3@outlook.com
+                    novahealth.primary3&#64;outlook.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Three Primary Screener </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">P Screener Three</div>
@@ -374,7 +372,7 @@
                 <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    novahealth.primary4@outlook.com
+                    novahealth.primary4&#64;outlook.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Four Primary Screener </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">PrimaryScreenerFour</div>
@@ -388,10 +386,10 @@
 
 
 
-                <div id="pg-6" class="rec-img row p-1 xborder-bottom bg-light text-dark" style='display: ;'>
+                <div id="pg-6" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    novahealth.primary5@outlook.com
+                    novahealth.primary5&#64;outlook.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Five Primary Screener </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">PScreenerFive</div>
@@ -405,10 +403,10 @@
 
 
 
-                <div id="pg-7" class="rec-img row p-1 xborder-bottom bg-white text-dark" style='display: ;'>
+                <div id="pg-7" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                    pscreener@gmail.com
+                    pscreener&#64;gmail.com
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">j screener</div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">pscreener</div>
