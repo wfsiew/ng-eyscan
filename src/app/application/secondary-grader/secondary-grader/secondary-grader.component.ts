@@ -3,14 +3,14 @@ import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-primary-care',
+  selector: 'app-secondary-grader',
   standalone: false,
   
-  templateUrl: './primary-care.component.html',
-  styleUrl: './primary-care.component.css',
+  templateUrl: './secondary-grader.component.html',
+  styleUrl: './secondary-grader.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class PrimaryCareComponent implements OnInit {
+export class SecondaryGraderComponent implements OnInit {
 
   mform?: UntypedFormGroup;
 
@@ -32,7 +32,7 @@ export class PrimaryCareComponent implements OnInit {
     });
     const dt = new Date();
     const df = new Date();
-    df.setDate(dt.getDate() - 7);
+    df.setDate(dt.getDate() - 20);
     this.mform.patchValue({ date_from: df, date_to: dt });
   }
 

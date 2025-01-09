@@ -3,15 +3,15 @@ import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-secondary-grader',
+  selector: 'app-secondary-grader-queue',
   standalone: false,
   
-  templateUrl: './secondary-grader.component.html',
-  styleUrl: './secondary-grader.component.css',
+  templateUrl: './secondary-grader-queue.component.html',
+  styleUrl: './secondary-grader-queue.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class SecondaryGraderComponent implements OnInit {
-  
+export class SecondaryGraderQueueComponent implements OnInit {
+
   mform?: UntypedFormGroup;
 
   constructor(
@@ -31,7 +31,8 @@ export class SecondaryGraderComponent implements OnInit {
       date_to: ['']
     });
     const dt = new Date();
-    const df = new Date(dt.getFullYear(), dt.getMonth(), 1);
+    const df = new Date();
+    df.setDate(dt.getDate() - 20);
     this.mform.patchValue({ date_from: df, date_to: dt });
   }
 
