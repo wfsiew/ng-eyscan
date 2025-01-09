@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-modal-about',
   standalone: false,
   
   templateUrl: './about.component.html',

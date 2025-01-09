@@ -33,6 +33,14 @@
   height: 460px;
 }
 
+.create-company-modal {
+  max-width: 1200px !important;
+  width: 1200px;
+  /* max-height: 1000px;
+  height: 1000px; */
+  overflow: hidden;
+}
+
 .nhxlogo {
   max-width: 100px;
 }

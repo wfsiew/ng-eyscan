@@ -1,0 +1,25 @@
+.form-group {
+  /* xdisplay: inline-block; */
+  /* xmargin:0px 3px; */
+  margin-bottom: 2px;
+  /* xvertical-align: top; */
+}
+
+.xrow-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.create-modal {
+  overflow: hidden;
+}
+
+.xbottom {
+  height: 180px;
+}
+
+.xbottom1 {
+  height: 5px;
+}

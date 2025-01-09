@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'modal-content',
+  selector: 'app-modal-acquire-img',
   standalone: false,
   
   templateUrl: './acquire-image.component.html',

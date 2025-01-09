@@ -135,7 +135,7 @@
 
           <div class="form-group">
             <div class="btn-toolbar float-right ">
-              <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white" title="New">
+              <button name="btnNew" id="btnNew" type="button" class="form-control btn bg-primary text-white" title="New" (click)="onCreate()">
                 <i class="fa fa-plus"></i> New</button>
             </div>
           </div>
@@ -244,7 +244,7 @@
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_1" name="pedit" class="pedit" href="" data-id="8" title="Edit Organization"><i
+                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="8" title="Edit Organization" (click)="onEdit()"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
