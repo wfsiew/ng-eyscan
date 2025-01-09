@@ -38,7 +38,11 @@
   width: 1200px;
   /* max-height: 1000px;
   height: 1000px; */
-  overflow: hidden;
+}
+
+.create-accounts-modal {
+  max-width: 700px;
+  width: 700px;
 }
 
 .nhxlogo {

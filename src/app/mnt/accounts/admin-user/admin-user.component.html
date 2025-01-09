@@ -116,17 +116,21 @@
         aria-orientation="vertical">
 
         <a class="nav-link " id="pill_primary" data-toggle="pill" data-group="1" data-function="fn0_2"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/primary-screeners')">Primary Screeners</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/primary-screeners')">Primary Screeners</a>
 
 
         <a class="nav-link " id="pill_secondary" data-toggle="pill" data-group="2" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/secondary-graders')">Secondary Graders</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/secondary-graders')">Secondary Graders</a>
 
         <a class="nav-link " id="pill_prisec" data-toggle="pill" data-group="3" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/accounts/primary-secondary-user')">Primary/Secondary User</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/primary-secondary-user')">Primary/Secondary User</a>
 
         <a class="nav-link active " id="pill_uadmin" data-toggle="pill" data-group="10" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true" (click)="goto('/mnt/accounts/admin-user', true)">User Admin</a>
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true"
+          (click)="goto('/mnt/accounts/admin-user', true)">User Admin</a>
 
       </div>
 
@@ -157,7 +161,7 @@
                   <div class="form-group">
                     <div class="btn-toolbar float-right ">
                       <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white" data-group="10"
-                        title="New">
+                        title="New" (click)="onCreate()">
                         <i class="fa fa-plus"></i> New</button>
                     </div>
                   </div>
@@ -187,7 +191,7 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Angie Leong</div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">EyRIS</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_1" name="pedit" class="pedit" href="" data-id="39" data-group="10" title="Edit"><i
+                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="39" data-group="10" title="Edit" (click)="onEdit()"><i
                         class="fa fa-pencil-alt "></i></a>
                   </div>
                 </div>

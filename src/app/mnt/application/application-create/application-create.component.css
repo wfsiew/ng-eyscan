@@ -1,0 +1,10 @@
+.form-group {
+  /* xdisplay: inline-block; */
+  /* xmargin: 0px 3px; */
+  margin-bottom: 2px;
+  /* xvertical-align: top; */
+}
+
+.create-modal {
+  overflow: hidden;
+}
