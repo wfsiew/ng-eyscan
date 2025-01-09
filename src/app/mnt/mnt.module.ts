@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import { MntRoutingModule } from './mnt-routing.module';
 import { AccountInfoComponent } from './account-info/account-info.component';
@@ -35,6 +36,7 @@ import { SysApplicationComponent } from './system-param/sys-application/sys-appl
   ],
   imports: [
     CommonModule,
+    SharedModule,
     MntRoutingModule
   ],
   schemas: [NO_ERRORS_SCHEMA]
