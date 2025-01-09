@@ -10,14 +10,27 @@
 }
 
 .acquire-image-modal {
-  max-width: 600px;
-  width: 600px;
+  max-width: 610px;
+  width: 610px;
 }
 
 .error-dialog {
   max-width: 518px;
   width: 518px;
   height: 230px;
+}
+
+.about-modal {
+  max-width: 700px !important;
+  width: 700px;
+  height: 620px;
+}
+
+.contact-modal {
+  max-width: 880px !important;
+  width: 880px;
+  max-height: 460px !important;
+  height: 460px;
 }
 
 .nhxlogo {

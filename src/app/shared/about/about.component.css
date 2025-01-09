@@ -1,0 +1,65 @@
+
+
+.custombg {
+  /* color: #000000; */
+  background-image: url('/assets/img/eyris_about.jpg');
+  background-color: rgba(0, 51, 102, 0.5);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  /* xheight: auto; */
+  margin: 0px;
+  /* xwidth: 100%; */
+  color: #003366;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a7c3d1;
+}
+
+#eyscan {
+  font-size: 50pt;
+  /* Xfont-family: 'Boombox', 'Arial', sans-serif; */
+}
+
+#about {
+  /* xbackground-color: rgba(0, 71, 112, 0.5); */
+  background-color: rgba(0, 51, 102, 0.5);
+  color: white;
+  left: 0%;
+  margin: 0px;
+  padding: 20px;
+  position: absolute;
+  top: 0%;
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#btnContact,
+#btnCancel,
+#btnUserGuide {
+  background-color: #003366;
+  border: none;
+  color: #ffffff;
+  font-size: inherit;
+  /* xfont-weight: bold; */
+  /* xpadding: 10px 15px; */
+}

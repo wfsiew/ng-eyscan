@@ -1,5 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
+import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-header',
@@ -14,9 +18,43 @@ export class HeaderComponent {
   @Input() menu: string = '';
   @Input() headerid: string = '';
   @Input() title: string = '';
+  bsModalRef?: BsModalRef;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private modalService: BsModalService
+  ) {
 
+  }
+
+  onAbout() {
+    const initialState = {
+    
+    };
+    this.bsModalRef = this.modalService.show(AboutComponent, { 
+      class: 'about-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhAboutBox_title', 
+      initialState 
+    });
+    this.bsModalRef.content.onClose.subscribe((res: any) => {
+      if (res.result === true) {
+        this.onContact();
+      }
+    });
+    return false;
+  }
+
+  onContact() {
+    const initialState = {
+    
+    };
+    this.bsModalRef = this.modalService.show(ContactComponent, { 
+      class: 'contact-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhPopWindow_title', 
+      initialState 
+    });
   }
 
   goto(s: string) {
