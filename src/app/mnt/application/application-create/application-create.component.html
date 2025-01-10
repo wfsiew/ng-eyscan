@@ -1,0 +1,301 @@
+<div class="modal-header m-0 p-1 pl-2 bg-header text-white">
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body m-0 p-0 create-modal">
+  <main role="main" class="container-fluid p-0">
+    <form name="frmMain" id="frmMain" method="post" class="xbg-secondary">
+      <div class="container-fluid pt-2 pb-2 px-4 bg-light xborder-bottom">
+        <input type="hidden" name="item_id" id="item_id" value="0" />
+        <input type="hidden" name="nameSpecialChars" value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
+
+        <input type="hidden"
+          name="fC5B5E6C29494887D6368D2D1D2F7D62FA221175BE632FA991F7A30ADA9654B3D012102256F1074C26D3702D2A934E8A64940FE23F2F0182F0A821623141853AA"
+          value="A216961EB3D4FEFA7727D8567578AA680A4F27BB" />
+
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group mb-2">
+              <label class="control-label mb-1">Description </label>
+              <input type="text" name="description" id="description" value="" class="form-control" required
+                maxlength="200" oninvalid="this.setCustomValidity('Please fill out this field.')"
+                oninput="setCustomValidity('')" />
+            </div>
+
+            <div class="form-row xmb-1">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-2">
+                <div class="form-row row-eq-height">
+                  <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 d-flex">
+                    <div class="col border border-info rounded p-2 mb-2">
+                      <div class="form-row mb-1">
+                        <div class="form-group col-4">
+                          <label class="control-label mb-1">Screening Model
+                          </label>
+                          <select class="form-control custom-select" name="grading_id" id="grading_id" required>
+                            <option value="P">Fully Automated</option>
+
+                            <option value="S">Semi-Automated</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-5">
+                          <label class="control-label mb-1">Image Report Preference
+                          </label>
+                          <select class="form-control custom-select" name="report_ind" id="report_ind" required>
+                            <option value="MC">Macula Centered</option>
+                            <option value="OC">Optic Disc Centered</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row mb-1">
+                        <div class="form-group col-9">
+                          <label class="control-label mb-1">Parent Organization
+                          </label>
+                          <select class="form-control custom-select" name="parent_company_id" id="parent_company_id"
+                            required oninvalid="this.setCustomValidity('Please fill out this field.')"
+                            onchange="setCustomValidity('')">
+                            <option value=""></option>
+
+                            <option value="8">Belait Hospital (TOPCON)</option>
+
+                            <option value="10">Berakas Health Centre</option>
+
+                            <option value="2">Brunei MOH</option>
+
+                            <option value="3">
+                              Brunei MOH Ocular Reading Centre
+                            </option>
+
+                            <option value="1">EyRIS</option>
+
+                            <option value="14">Mobile Bus 1</option>
+
+                            <option value="15">Mobile Bus 2</option>
+
+                            <option value="12">Muara Health Centre</option>
+
+                            <option value="11">Rimba Health Centre</option>
+
+                            <option value="6">
+                              RIPAS Hospital (Endocrinology)
+                            </option>
+
+                            <option value="5">RIPAS Hospital (TOPCON)</option>
+
+                            <option value="13">Sengkurong Health Centre</option>
+
+                            <option value="9">Temburong Hospital</option>
+
+                            <option value="7">Tutong Hospital (TOPCON)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-6">
+                          <label class="control-label mb-1">Ocular Reading Centre
+                          </label>
+                          <select class="form-control custom-select" name="secondary_id" id="secondary_id"
+                            oninvalid="this.setCustomValidity('Please fill out this field.')"
+                            onchange="setCustomValidity('')">
+                            <option value=""></option>
+
+                            <option value="8">Belait Hospital (TOPCON)</option>
+
+                            <option value="10">Berakas Health Centre</option>
+
+                            <option value="2">Brunei MOH</option>
+
+                            <option value="3">
+                              Brunei MOH Ocular Reading Centre
+                            </option>
+
+                            <option value="1">EyRIS</option>
+
+                            <option value="14">Mobile Bus 1</option>
+
+                            <option value="15">Mobile Bus 2</option>
+
+                            <option value="12">Muara Health Centre</option>
+
+                            <option value="11">Rimba Health Centre</option>
+
+                            <option value="6">
+                              RIPAS Hospital (Endocrinology)
+                            </option>
+
+                            <option value="5">RIPAS Hospital (TOPCON)</option>
+
+                            <option value="13">Sengkurong Health Centre</option>
+
+                            <option value="9">Temburong Hospital</option>
+
+                            <option value="7">Tutong Hospital (TOPCON)</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-6">
+                          <label class="control-label mb-1">Auxiliary Image Acquisition
+                          </label>
+                          <select class="form-control custom-select" name="collect_company_id" id="collect_company_id">
+                            <option value=""></option>
+
+                            <option value="8">Belait Hospital (TOPCON)</option>
+
+                            <option value="10">Berakas Health Centre</option>
+
+                            <option value="2">Brunei MOH</option>
+
+                            <option value="3">
+                              Brunei MOH Ocular Reading Centre
+                            </option>
+
+                            <option value="1">EyRIS</option>
+
+                            <option value="14">Mobile Bus 1</option>
+
+                            <option value="15">Mobile Bus 2</option>
+
+                            <option value="12">Muara Health Centre</option>
+
+                            <option value="11">Rimba Health Centre</option>
+
+                            <option value="6">
+                              RIPAS Hospital (Endocrinology)
+                            </option>
+
+                            <option value="5">RIPAS Hospital (TOPCON)</option>
+
+                            <option value="13">Sengkurong Health Centre</option>
+
+                            <option value="9">Temburong Hospital</option>
+
+                            <option value="7">Tutong Hospital (TOPCON)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-4">
+                          <label class="control-label mb-1">Contact Name </label>
+                          <input type="text" name="contact_name" id="contact_name" value="" class="form-control"
+                            maxlength="200"
+                            onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');" />
+                        </div>
+                        <div class="form-group col-4">
+                          <label class="control-label mb-1">Email </label>
+                          <input type="email" name="contact_email" id="contact_email" value="" class="form-control"
+                            maxlength="50" oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+                            oninput="setCustomValidity('')" onchange="if (this.value==''){setCustomValidity('');}" />
+                        </div>
+                        <div class="form-group col-4">
+                          <label class="control-label mb-1">Contact Number
+                          </label>
+                          <input type="text" name="contact_no" id="contact_no" value="" class="form-control"
+                            maxlength="20" onkeyup="chkphoneval(this,2,'contact_no');" />
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-12">
+                          <label class="control-label mb-1">Contact Address
+                          </label>
+                          <textarea name="contact_address" id="contact_address" class="form-control" maxlength="200"
+                            style="height: 60px"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 pb-2">
+                    <div class="col border border-info rounded p-2 mb-2 xd-flex h-100">
+                      <div class="form-row mb-0">
+                        <div class="form-group col-12">
+                          <div class="form-row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                              Diseases
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold">
+                              SELENA+
+                            </div>
+                          </div>
+
+                          <div class="form-row pl-4">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                              <div class="form-check col-12">
+                                <input class="form-check-input diseases" type="checkbox" id="disease_cd_1"
+                                  name="disease_cd_1" data-id="DR" value="DR" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_1" style="cursor: pointer">Diabetic
+                                  Retinopathy</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row pl-4">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                              <div class="form-check col-12">
+                                <input class="form-check-input diseases" type="checkbox" id="disease_cd_2"
+                                  name="disease_cd_2" data-id="GLAUCOMA" value="GLAUCOMA"
+                                  style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_2" style="cursor: pointer">Glaucoma
+                                  Suspect</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row pl-4">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                              <div class="form-check col-12">
+                                <input class="form-check-input diseases" type="checkbox" id="disease_cd_3"
+                                  name="disease_cd_3" data-id="AMD" value="AMD" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_3"
+                                  style="cursor: pointer">Age-Related Macular Degeneration</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold">
+                              RetiKID
+                            </div>
+                          </div>
+
+                          <div class="form-row pl-4">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                              <div class="form-check col-12">
+                                <input class="form-check-input diseases" type="checkbox" id="disease_cd_4"
+                                  name="disease_cd_4" data-id="CKD" value="CKD" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_4" style="cursor: pointer">Chronic
+                                  Kidney Disease</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <input type="hidden" id="diseases_count" name="diseases_count" value="4" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xbottom"></div>
+      </div>
+
+      <div class="container-fluid px-0 py-2 text-center bg-white border-top">
+        <button type="button" name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
+          title="Cancel" (click)="bsModalRef.hide()">
+          <i class="fa fa-times"></i> Cancel
+        </button>
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          title="Save ">
+          <i class="fa fa-save"></i> Save
+        </button>
+      </div>
+      <div class="xbottom1"></div>
+    </form>
+  </main>
+</div>

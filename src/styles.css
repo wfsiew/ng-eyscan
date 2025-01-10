@@ -23,6 +23,7 @@
 .about-modal {
   max-width: 700px !important;
   width: 700px;
+  max-height: 620px;
   height: 620px;
 }
 
@@ -41,8 +42,21 @@
 }
 
 .create-accounts-modal {
-  max-width: 700px;
+  max-width: 700px !important;
   width: 700px;
+}
+
+.create-application-modal {
+  max-width: 1200px !important;
+  width: 1200px;
+  /* height: 560px; */
+}
+
+.create-lookup-modal {
+  max-width: 500px !important;
+  width: 500px;
+  /* max-height: 350px;
+  height: 350px; */
 }
 
 .nhxlogo {
