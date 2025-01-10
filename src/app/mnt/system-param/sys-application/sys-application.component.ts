@@ -47,7 +47,8 @@ export class SysApplicationComponent extends CustomRender implements OnDestroy {
     return false;
   }
 
-  onEdit() {
+  onEdit(ev: any) {
+    ev.stopPropagation();
     const initialState = {
       title: 'Edit Parameter'
     };

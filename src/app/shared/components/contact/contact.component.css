@@ -25,7 +25,8 @@
   max-width: 880px !important;
   width: 880px;
   /* max-height: 465px !important;
-  height: 465px; */
+  height: 465px;
+  overflow: hidden; */
 }
 
 .xbottom {
