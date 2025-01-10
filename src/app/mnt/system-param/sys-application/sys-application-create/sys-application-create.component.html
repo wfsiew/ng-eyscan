@@ -1,1 +1,757 @@
-<p>sys-application-create works!</p>
+<div class="modal-header m-0 p-1 pl-2 bg-header text-white">
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <button
+    id="__nhPopWindow_close"
+    type="button"
+    class="close btn-md m-1 p-0 bg-header text-white"
+    data-dismiss="modal"
+    aria-label="Close"
+    (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body m-0 p-0 create-modal">
+  <main role="main" class="container-fluid p-0">
+    <form name="frmMain" id="frmMain" method="post" novalidate>
+      <input
+        type="hidden"
+        name="param_code"
+        id="param_code"
+        value="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" />
+      <input type="hidden" name="org_count" id="org_count" value="16" />
+      <input
+        type="hidden"
+        name="param_datatype"
+        id="param_datatype"
+        value="TEXT" />
+      <input type="hidden" name="param_datamin" id="param_datamin" value />
+      <input type="hidden" name="param_datamax" id="param_datamax" value />
+
+      <div class="container-fluid pt-2 pb-2 px-4 bg-light">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group mb-2">
+              <label class="control-label mb-0">Parameter Description</label>
+              <input
+                type="text"
+                name="description"
+                id="description"
+                value="Allow image download from primary care function"
+                class="form-control"
+                title="Allow image download from primary care function"
+                readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="row px-3 mb-1">
+              <div class="col-12 px-0 text-white bg-secondary">
+                <div class="row xpx-0 py-1 px-2">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-check">
+                      <input
+                        name="chk_item_all"
+                        id="chk_item_all"
+                        class="form-check-input"
+                        type="checkbox"
+                        style="cursor: pointer; width: 16px; height: 16px" />
+                      <label
+                        class="form-check-label pl-2 text-white"
+                        for="chk_item_all">
+                        Organization / Parameter Value
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row px-3">
+              <div class="col-12 px-0">
+                <div class="scroll" xstyle="overflow-y: auto; height: 200px; ">
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_1"
+                          id="chk_item_1"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="8"
+                          datarefid="param_value_1" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_1"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Belait Hospital (TOPCON)
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_1"
+                          id="param_value_1"
+                          datarefid="chk_item_1">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_2"
+                          id="chk_item_2"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="10"
+                          datarefid="param_value_2" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_2"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Berakas Health Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_2"
+                          id="param_value_2"
+                          datarefid="chk_item_2">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_3"
+                          id="chk_item_3"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="3"
+                          datarefid="param_value_3" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_3"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Brunei MOH Ocular Reading Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_3"
+                          id="param_value_3"
+                          datarefid="chk_item_3">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_4"
+                          id="chk_item_4"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="14"
+                          datarefid="param_value_4" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_4"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Mobile Bus 1
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_4"
+                          id="param_value_4"
+                          datarefid="chk_item_4">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_5"
+                          id="chk_item_5"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="15"
+                          datarefid="param_value_5" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_5"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Mobile Bus 2
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_5"
+                          id="param_value_5"
+                          datarefid="chk_item_5">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_6"
+                          id="chk_item_6"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="12"
+                          datarefid="param_value_6" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_6"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span> Muara
+                            Health Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_6"
+                          id="param_value_6"
+                          datarefid="chk_item_6">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_7"
+                          id="chk_item_7"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="11"
+                          datarefid="param_value_7" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_7"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span> Rimba
+                            Health Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_7"
+                          id="param_value_7"
+                          datarefid="chk_item_7">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_8"
+                          id="chk_item_8"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="6"
+                          datarefid="param_value_8" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_8"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span> RIPAS
+                            Hospital (Endocrinology)
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_8"
+                          id="param_value_8"
+                          datarefid="chk_item_8">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_9"
+                          id="chk_item_9"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="5"
+                          datarefid="param_value_9" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_9"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span> RIPAS
+                            Hospital (TOPCON)
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_9"
+                          id="param_value_9"
+                          datarefid="chk_item_9">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_10"
+                          id="chk_item_10"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="13"
+                          datarefid="param_value_10" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_10"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Sengkurong Health Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_10"
+                          id="param_value_10"
+                          datarefid="chk_item_10">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_11"
+                          id="chk_item_11"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="7"
+                          datarefid="param_value_11" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_11"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH ></span>
+                            Tutong Hospital (TOPCON)
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_11"
+                          id="param_value_11"
+                          datarefid="chk_item_11">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_12"
+                          id="chk_item_12"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="9"
+                          datarefid="param_value_12" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_12"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">Brunei MOH Ocular Reading
+                              Centre ></span>
+                            Temburong Hospital
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_12"
+                          id="param_value_12"
+                          datarefid="chk_item_12">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_13"
+                          id="chk_item_13"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="1"
+                          datarefid="param_value_13" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_13"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            EyRIS
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_13"
+                          id="param_value_13"
+                          datarefid="chk_item_13">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_14"
+                          id="chk_item_14"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="2"
+                          datarefid="param_value_14" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_14"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">EyRIS ></span> Brunei MOH
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_14"
+                          id="param_value_14"
+                          datarefid="chk_item_14">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-white">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_15"
+                          id="chk_item_15"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="17"
+                          datarefid="param_value_15" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_15"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            <span class="text-primary">EyRIS ></span> zGrading
+                            Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_15"
+                          id="param_value_15"
+                          datarefid="chk_item_15">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row px-3 py-0 xpy-2">
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pt-1 pb-2 xpy-3 rounded xborder bg-powderblue">
+                      <div class="form-check">
+                        <input
+                          name="chk_item_16"
+                          id="chk_item_16"
+                          class="form-check-input"
+                          type="checkbox"
+                          style="cursor: pointer; width: 16px; height: 16px"
+                          value="16"
+                          datarefid="param_value_16" />
+                        <label
+                          class="form-check-label pl-2"
+                          for="chk_item_16"
+                          style="cursor: pointer">
+                          <p
+                            class="Xtext-muted mb-1 xsmall"
+                            style="
+                              overflow-wrap: break-word;
+                              word-break: break-word;
+                            ">
+                            zScreening Centre
+                          </p>
+                        </label>
+                      </div>
+                      <div class="form-group pt-1">
+                        <select
+                          class="form-control custom-select parm_value"
+                          name="param_value_16"
+                          id="param_value_16"
+                          datarefid="chk_item_16">
+                          <option value="N">No</option>
+
+                          <option value="Y" selected>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xbottom"></div>
+      </div>
+
+      <div class="container-fluid px-0 py-2 text-center bg-white border-top">
+        <button
+          type="button"
+          name="btnCancel"
+          id="btnCancel"
+          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
+          title="Cancel"
+          (click)="bsModalRef.hide()">
+          <i class="fa fa-times"></i> Cancel
+        </button>
+        <button
+          type="submit"
+          name="btnSave"
+          id="btnSave"
+          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          title="Save">
+          <i class="fa fa-save"></i> Save
+        </button>
+      </div>
+      <div class="xbottom1"></div>
+    </form>
+  </main>
+</div>

@@ -1,84 +1,106 @@
-<app-header [reload]="'/mnt/company'" [headerid]="'fn0'" [title]="'Maintain Organizations'"></app-header>
+<app-header [reload]="'/mnt/company'" [headerid]="'fn0'"
+  [title]="'Maintain Organizations'"></app-header>
 
-<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog" aria-labelledby="__nhAboutBox_title"
+<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog"
+  aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"
       style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
-      <div class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+      <div
+        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
-        <button id="__nhAboutBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+        <button id="__nhAboutBox_close" type="button"
+          class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
-        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0" style="width:700px; height:620px; "></iframe>
+        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0"
+          style="width:700px; height:620px; "></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
-        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save
+          changes</button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save
+          changes</button>
+        <button id="__nhAboutBox_cancel" type="button"
+          class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog"
+  aria-labelledby="__nhPopWindow_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"
       style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+        <button id="__nhPopWindow_close" type="button"
+          class="close btn-md m-1 p-0 bg-header text-white"
           data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px"
+          scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save
+          changes</button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save
+          changes</button>
+        <button id="__nhPopWindow_cancel" type="button"
+          class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog" aria-labelledby="__nhMessageBox_title"
+<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog"
+  aria-labelledby="__nhMessageBox_title"
   aria-hidden="true" data-keyboard="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content"
       style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
-        <button id="__nhMessageBox_close" type="button" class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
+        <button id="__nhMessageBox_close" type="button"
+          class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0" style="overflow: hidden;">
-        <iframe id="__nhMessageBox_iframe" width="500px" height="230px" scrolling="no" frameborder="0"></iframe>
+        <iframe id="__nhMessageBox_iframe" width="500px" height="230px"
+          scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_cancel" type="button" class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_ok" type="button"
+          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_no" type="button"
+          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_cancel" type="button"
+          class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog" aria-labelledby="__nhErrorBox_title"
+<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog"
+  aria-labelledby="__nhErrorBox_title"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content"
       style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
-        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -86,23 +108,28 @@
         style="width: 100%;max-height: 500px; overflow-y: auto;">
       </div>
       <div class="modal-footer justify-content-center m-0 p-1 ">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary"
+          data-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog"
+  aria-hidden="true"
   style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="background-color: rgba(0,0,0,.0001); border: none;">
-      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none;overflow: hidden; ">
+    <div class="modal-content"
+      style="background-color: rgba(0,0,0,.0001); border: none;">
+      <div class="modal-header m-0 p-1 bg-header text-white"
+        style="display: none;overflow: hidden; ">
       </div>
       <div class="modal-body m-4 p-4">
 
         <div class="nhAnimator"></div>
       </div>
-      <div class="modal-footer justify-content-center m-0 p-1" style="display: none;">
+      <div class="modal-footer justify-content-center m-0 p-1"
+        style="display: none;">
       </div>
     </div>
   </div>
@@ -111,31 +138,38 @@
 <main role="main" class="container-fluid main-margin">
   <div class="container-fluid pt-4 pb-4">
     <div class="row pb-2 justify-content-center">
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">Organization</div>
+      <div
+        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">Organization</div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0 ">
         <form name="frmFilter" id="frmFilter" class="form-inline float-right"
           action="/bn_moh_uat/mnt/company/index.cfm?tid=fn0_1" method="post">
           <input type="hidden" name="recno" id="recno" value="25">
-          <input type="hidden" name="descSpecialChars" value="~`#%^&*-_+={}[]|\:;,.<>/?">
-          <input type="button" name="btnEdit" id="btnEdit" data-id="" data-item-id="" style="display:none;">
-          <input type="button" name="btnView" id="btnView" data-id="" data-item-id="" style="display:none;">
+          <input type="hidden" name="descSpecialChars"
+            value="~`#%^&*-_+={}[]|\:;,.<>/?">
+          <input type="button" name="btnEdit" id="btnEdit" data-id data-item-id
+            style="display:none;">
+          <input type="button" name="btnView" id="btnView" data-id data-item-id
+            style="display:none;">
 
           <div class="form-group mr-2">
 
-
-            <input name="desc" id="desc" type="text" class="form-control" placeholder="Search..." value=""
+            <input name="desc" id="desc" type="text" class="form-control"
+              placeholder="Search..." value
               onkeyup="validateSpecialCharacters(this,document.frmFilter.descSpecialChars,'Y','Y');">
           </div>
           <div class="form-group mr-2">
             <div class="btn-toolbar float-right ">
-              <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white" title="Search">
+              <button name="btnSearch" id="btnSearch"
+                class="form-control btn bg-primary text-white" title="Search">
                 <i class="fa fa-search"></i> Search</button>
             </div>
           </div>
 
           <div class="form-group">
             <div class="btn-toolbar float-right ">
-              <button name="btnNew" id="btnNew" type="button" class="form-control btn bg-primary text-white" title="New" (click)="onCreate()">
+              <button name="btnNew" id="btnNew" type="button"
+                class="form-control btn bg-primary text-white" title="New"
+                (click)="onCreate()">
                 <i class="fa fa-plus"></i> New</button>
             </div>
           </div>
@@ -149,15 +183,19 @@
       <div class="col-xl-12 col-lg-12 ">
 
         <div class="row p-1 bg-header text-white">
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Description <i class="fa fa-sort-up"></i></div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Description <i
+              class="fa fa-sort-up"></i></div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
-              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12"><span title="Screening Model">SM</span></div>
-              <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12"><span title="Image Report Preference">RP</span></div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12"><span
+                  title="Screening Model">SM</span></div>
+              <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12"><span
+                  title="Image Report Preference">RP</span></div>
             </div>
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Ocular Reading Centre <br> Auxiliary Image Acquisition
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Ocular Reading
+            Centre <br> Auxiliary Image Acquisition
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
@@ -170,8 +208,10 @@
           </div>
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Account Type</div>
-              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">Effective From<br>Effective To</div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Account
+                Type</div>
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">Effective
+                From<br>Effective To</div>
 
             </div>
           </div>
@@ -179,38 +219,42 @@
 
         </div>
 
-
-
-        <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Belait Hospital (TOPCON)</div>
+        <div id="pg-1"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Belait Hospital
+            (TOPCON)</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -225,7 +269,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -234,17 +277,23 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_1" name="pcredit_add" class="pcredit_add" href="" data-id="8" data-billing-mode=""
-                      title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_1" name="pcredit_add" class="pcredit_add"
+                      href data-id="8" data-billing-mode
+                      title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_1" name="pcredit_view" class="pcredit_view" href="" data-id="8"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_1" name="pcredit_view"
+                      class="pcredit_view" href data-id="8"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="8" title="Edit Organization" (click)="onEdit()"><i
+                    <a id="pedit_1" name="pedit" class="pedit" href="#"
+                      data-id="8" title="Edit Organization"
+                      (click)="onEdit()"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -256,39 +305,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Berakas Health Centre</div>
+        <div id="pg-2"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Berakas Health
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -303,7 +355,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -312,17 +363,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_2" name="pcredit_add" class="pcredit_add" href="" data-id="10"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_2" name="pcredit_add" class="pcredit_add"
+                      href data-id="10"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_2" name="pcredit_view" class="pcredit_view" href="" data-id="10"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_2" name="pcredit_view"
+                      class="pcredit_view" href data-id="10"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_2" name="pedit" class="pedit" href="" data-id="10" title="Edit Organization"><i
+                    <a id="pedit_2" name="pedit" class="pedit" href data-id="10"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -334,21 +390,21 @@
 
         </div>
 
-
-
-
-        <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
+        <div id="pg-3"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Fully Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Fully Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
@@ -361,11 +417,11 @@
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">EyRIS</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">11-Apr-2024 <br>
                 31-Dec-2029
@@ -380,7 +436,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -389,17 +444,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_3" name="pcredit_add" class="pcredit_add" href="" data-id="2" data-billing-mode=""
-                      title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_3" name="pcredit_add" class="pcredit_add"
+                      href data-id="2" data-billing-mode
+                      title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_3" name="pcredit_view" class="pcredit_view" href="" data-id="2"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_3" name="pcredit_view"
+                      class="pcredit_view" href data-id="2"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_3" name="pedit" class="pedit" href="" data-id="2" title="Edit Organization"><i
+                    <a id="pedit_3" name="pedit" class="pedit" href data-id="2"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -411,21 +471,22 @@
 
         </div>
 
-
-
-
-        <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre</div>
+        <div id="pg-4"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Fully Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Fully Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
@@ -438,11 +499,11 @@
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-user-tag fa-lg  text-success   "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-user-tag fa-lg  text-success   "
                   title="Upgraded Account" xtitle="Upgraded Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">22-Apr-2024 <br>
                 31-Dec-2029
@@ -457,7 +518,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -466,17 +526,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_4" name="pcredit_add" class="pcredit_add" href="" data-id="3" data-billing-mode=""
-                      title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_4" name="pcredit_add" class="pcredit_add"
+                      href data-id="3" data-billing-mode
+                      title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_4" name="pcredit_view" class="pcredit_view" href="" data-id="3"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_4" name="pcredit_view"
+                      class="pcredit_view" href data-id="3"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_4" name="pedit" class="pedit" href="" data-id="3" title="Edit Organization"><i
+                    <a id="pedit_4" name="pedit" class="pedit" href data-id="3"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -488,21 +553,21 @@
 
         </div>
 
-
-
-
-        <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
+        <div id="pg-5"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">EyRIS</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Fully Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Fully Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
@@ -515,11 +580,11 @@
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12"></div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-user-tag fa-lg  text-success   "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-user-tag fa-lg  text-success   "
                   title="Upgraded Account" xtitle="Upgraded Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">09-Apr-2024 <br>
 
@@ -534,7 +599,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -543,17 +607,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_5" name="pcredit_add" class="pcredit_add" href="" data-id="1" data-billing-mode=""
-                      title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_5" name="pcredit_add" class="pcredit_add"
+                      href data-id="1" data-billing-mode
+                      title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_5" name="pcredit_view" class="pcredit_view" href="" data-id="1"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_5" name="pcredit_view"
+                      class="pcredit_view" href data-id="1"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_5" name="pedit" class="pedit" href="" data-id="1" title="Edit Organization"><i
+                    <a id="pedit_5" name="pedit" class="pedit" href data-id="1"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -565,39 +634,41 @@
 
         </div>
 
-
-
-
-        <div id="pg-6" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
+        <div id="pg-6"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">JPMC</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-secondary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-secondary "
                   title="Inactive Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">11-Apr-2024 <br>
                 31-Dec-2024
@@ -612,7 +683,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -621,17 +691,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_6" name="pcredit_add" class="pcredit_add" href="" data-id="4" data-billing-mode=""
-                      title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_6" name="pcredit_add" class="pcredit_add"
+                      href data-id="4" data-billing-mode
+                      title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_6" name="pcredit_view" class="pcredit_view" href="" data-id="4"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_6" name="pcredit_view"
+                      class="pcredit_view" href data-id="4"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_6" name="pedit" class="pedit" href="" data-id="4" title="Edit Organization"><i
+                    <a id="pedit_6" name="pedit" class="pedit" href data-id="4"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -643,39 +718,41 @@
 
         </div>
 
-
-
-
-        <div id="pg-7" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
+        <div id="pg-7"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Mobile Bus 1</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -690,7 +767,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -699,17 +775,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_7" name="pcredit_add" class="pcredit_add" href="" data-id="14"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_7" name="pcredit_add" class="pcredit_add"
+                      href data-id="14"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_7" name="pcredit_view" class="pcredit_view" href="" data-id="14"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_7" name="pcredit_view"
+                      class="pcredit_view" href data-id="14"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_7" name="pedit" class="pedit" href="" data-id="14" title="Edit Organization"><i
+                    <a id="pedit_7" name="pedit" class="pedit" href data-id="14"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -721,39 +802,41 @@
 
         </div>
 
-
-
-
-        <div id="pg-8" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
+        <div id="pg-8"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Mobile Bus 2</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -768,7 +851,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -777,17 +859,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_8" name="pcredit_add" class="pcredit_add" href="" data-id="15"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_8" name="pcredit_add" class="pcredit_add"
+                      href data-id="15"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_8" name="pcredit_view" class="pcredit_view" href="" data-id="15"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_8" name="pcredit_view"
+                      class="pcredit_view" href data-id="15"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_8" name="pedit" class="pedit" href="" data-id="15" title="Edit Organization"><i
+                    <a id="pedit_8" name="pedit" class="pedit" href data-id="15"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -799,39 +886,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-9" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Muara Health Centre</div>
+        <div id="pg-9"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Muara Health
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -846,7 +936,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -855,17 +944,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_9" name="pcredit_add" class="pcredit_add" href="" data-id="12"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_9" name="pcredit_add" class="pcredit_add"
+                      href data-id="12"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_9" name="pcredit_view" class="pcredit_view" href="" data-id="12"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_9" name="pcredit_view"
+                      class="pcredit_view" href data-id="12"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_9" name="pedit" class="pedit" href="" data-id="12" title="Edit Organization"><i
+                    <a id="pedit_9" name="pedit" class="pedit" href data-id="12"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -877,39 +971,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-10" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Rimba Health Centre</div>
+        <div id="pg-10"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Rimba Health
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -924,7 +1021,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -933,17 +1029,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_10" name="pcredit_add" class="pcredit_add" href="" data-id="11"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_10" name="pcredit_add" class="pcredit_add"
+                      href data-id="11"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_10" name="pcredit_view" class="pcredit_view" href="" data-id="11"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_10" name="pcredit_view"
+                      class="pcredit_view" href data-id="11"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_10" name="pedit" class="pedit" href="" data-id="11" title="Edit Organization"><i
+                    <a id="pedit_10" name="pedit" class="pedit" href
+                      data-id="11" title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -955,39 +1056,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-11" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">RIPAS Hospital (Endocrinology)</div>
+        <div id="pg-11"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">RIPAS Hospital
+            (Endocrinology)</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -1002,7 +1106,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1011,17 +1114,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_11" name="pcredit_add" class="pcredit_add" href="" data-id="6"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_11" name="pcredit_add" class="pcredit_add"
+                      href data-id="6"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_11" name="pcredit_view" class="pcredit_view" href="" data-id="6"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_11" name="pcredit_view"
+                      class="pcredit_view" href data-id="6"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_11" name="pedit" class="pedit" href="" data-id="6" title="Edit Organization"><i
+                    <a id="pedit_11" name="pedit" class="pedit" href data-id="6"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1033,39 +1141,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-12" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">RIPAS Hospital (TOPCON)</div>
+        <div id="pg-12"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">RIPAS Hospital
+            (TOPCON)</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -1080,7 +1191,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1089,17 +1199,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_12" name="pcredit_add" class="pcredit_add" href="" data-id="5"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_12" name="pcredit_add" class="pcredit_add"
+                      href data-id="5"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_12" name="pcredit_view" class="pcredit_view" href="" data-id="5"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_12" name="pcredit_view"
+                      class="pcredit_view" href data-id="5"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_12" name="pedit" class="pedit" href="" data-id="5" title="Edit Organization"><i
+                    <a id="pedit_12" name="pedit" class="pedit" href data-id="5"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1111,39 +1226,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-13" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Sengkurong Health Centre</div>
+        <div id="pg-13"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Sengkurong Health
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -1158,7 +1276,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1167,17 +1284,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_13" name="pcredit_add" class="pcredit_add" href="" data-id="13"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_13" name="pcredit_add" class="pcredit_add"
+                      href data-id="13"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_13" name="pcredit_view" class="pcredit_view" href="" data-id="13"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_13" name="pcredit_view"
+                      class="pcredit_view" href data-id="13"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_13" name="pedit" class="pedit" href="" data-id="13" title="Edit Organization"><i
+                    <a id="pedit_13" name="pedit" class="pedit" href
+                      data-id="13" title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1189,39 +1311,43 @@
 
         </div>
 
-
-
-
-        <div id="pg-14" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Temburong Hospital</div>
+        <div id="pg-14"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Temburong
+            Hospital</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre</div>
-
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre</div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -1236,7 +1362,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1245,17 +1370,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_14" name="pcredit_add" class="pcredit_add" href="" data-id="9"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_14" name="pcredit_add" class="pcredit_add"
+                      href data-id="9"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_14" name="pcredit_view" class="pcredit_view" href="" data-id="9"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_14" name="pcredit_view"
+                      class="pcredit_view" href data-id="9"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_14" name="pedit" class="pedit" href="" data-id="9" title="Edit Organization"><i
+                    <a id="pedit_14" name="pedit" class="pedit" href data-id="9"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1267,39 +1397,42 @@
 
         </div>
 
-
-
-
-        <div id="pg-15" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Tutong Hospital (TOPCON)</div>
+        <div id="pg-15"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Tutong Hospital
+            (TOPCON)</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
 
           </div>
 
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular Reading Centre <br>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH Ocular
+            Reading Centre <br>
             --
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Brunei MOH</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">19-Sep-2024 <br>
                 19-Sep-2029
@@ -1314,7 +1447,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1323,17 +1455,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_15" name="pcredit_add" class="pcredit_add" href="" data-id="7"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_15" name="pcredit_add" class="pcredit_add"
+                      href data-id="7"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_15" name="pcredit_view" class="pcredit_view" href="" data-id="7"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_15" name="pcredit_view"
+                      class="pcredit_view" href data-id="7"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_15" name="pedit" class="pedit" href="" data-id="7" title="Edit Organization"><i
+                    <a id="pedit_15" name="pedit" class="pedit" href data-id="7"
+                      title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1345,21 +1482,22 @@
 
         </div>
 
-
-
-
-        <div id="pg-16" class="rec-img row p-1 xborder-bottom bg-light text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">zGrading Centre</div>
+        <div id="pg-16"
+          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">zGrading
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Fully Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Fully Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
@@ -1372,11 +1510,11 @@
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">EyRIS</div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">24-Oct-2024 <br>
                 31-Dec-2024
@@ -1391,7 +1529,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1400,17 +1537,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_16" name="pcredit_add" class="pcredit_add" href="" data-id="17"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_16" name="pcredit_add" class="pcredit_add"
+                      href data-id="17"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_16" name="pcredit_view" class="pcredit_view" href="" data-id="17"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_16" name="pcredit_view"
+                      class="pcredit_view" href data-id="17"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_16" name="pedit" class="pedit" href="" data-id="17" title="Edit Organization"><i
+                    <a id="pedit_16" name="pedit" class="pedit" href
+                      data-id="17" title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1422,22 +1564,24 @@
 
         </div>
 
-
-
-
-        <div id="pg-17" class="rec-img row p-1 xborder-bottom bg-white text-dark" >
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">zScreening Centre</div>
+        <div id="pg-17"
+          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">zScreening
+            Centre</div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12">
             <div class="row">
               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
 
-                <i class="fa fa-brain text-dark xfa-lg" title="Semi-Automated"></i> <i
-                  class="fa fa-user-alt text-dark xfa-lg" title="Semi-Automated"></i>
+                <i class="fa fa-brain text-dark xfa-lg"
+                  title="Semi-Automated"></i> <i
+                  class="fa fa-user-alt text-dark xfa-lg"
+                  title="Semi-Automated"></i>
 
               </div>
               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 
-                <i class="far fa-dot-circle text-dark fa-lg" title="Macula Centered"></i>
+                <i class="far fa-dot-circle text-dark fa-lg"
+                  title="Macula Centered"></i>
 
               </div>
             </div>
@@ -1450,11 +1594,11 @@
 
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12"></div>
 
-
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
             <div class="row">
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i class="fa fa-gift fa-lg  text-primary "
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"><i
+                  class="fa fa-gift fa-lg  text-primary "
                   title="Free Trial Account"></i> </div>
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">24-Oct-2024 <br>
                 31-Dec-2024
@@ -1469,7 +1613,6 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 small">
 
-
                   </div>
 
                 </div>
@@ -1478,17 +1621,22 @@
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pcreditadd_17" name="pcredit_add" class="pcredit_add" href="" data-id="16"
-                      data-billing-mode="" title="Add Credits"><i class="fa fa-file-invoice-dollar "></i></a>
+                    <a id="pcreditadd_17" name="pcredit_add" class="pcredit_add"
+                      href data-id="16"
+                      data-billing-mode title="Add Credits"><i
+                        class="fa fa-file-invoice-dollar "></i></a>
 
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <a id="pcreditview_17" name="pcredit_view" class="pcredit_view" href="" data-id="16"
-                      data-billing-mode="" title="View Credits"><i class="fa fa-search-dollar "></i></a>
+                    <a id="pcreditview_17" name="pcredit_view"
+                      class="pcredit_view" href data-id="16"
+                      data-billing-mode title="View Credits"><i
+                        class="fa fa-search-dollar "></i></a>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 
-                    <a id="pedit_17" name="pedit" class="pedit" href="" data-id="16" title="Edit Organization"><i
+                    <a id="pedit_17" name="pedit" class="pedit" href
+                      data-id="16" title="Edit Organization"><i
                         class="fa fa-pencil-alt "></i></a>
 
                   </div>
@@ -1500,17 +1648,14 @@
 
         </div>
 
-
-
-
       </div> <!-- /.col-12 -->
-
-
 
       <div class="col-lg-4 col-md-4 col-sm-12 py-2">
         <div class="xform-group row">
           <label class="pl-3 pr-2 text-muted">Show </label>
-          <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec" id="pagerec"
+          <select
+            class="form-control form-control-sm custom-select custom-select-sm"
+            name="pagerec" id="pagerec"
             style="max-width: 80px;">
             <option value="10">10</option>
             <option value="25" selected>25</option>
@@ -1524,14 +1669,10 @@
         <span id="dispdesc" class="text-muted">Showing 1 to 17 of 17</span>
       </div>
 
-
       <div class="col-lg-4 col-md-4 col-sm-12 pt-2">
       </div>
 
-
     </div>
-
-
 
   </div>
   <div class="clearfix"></div>

@@ -1,0 +1,27 @@
+.form-group {
+  /* xdisplay: inline-block; */
+  /* xmargin: 0px 3px; */
+  margin-bottom: 2px;
+  /* xvertical-align: top; */
+}
+
+.input-group {
+  /* xdisplay: inline-block; */
+  /* xmargin: 0px 3px; */
+  margin-bottom: 2px;
+  /* xvertical-align: top; */
+}
+
+.create-modal {
+  overflow: hidden;
+  /* max-width: 500px;
+  width: 500px; */
+}
+
+.xbottom {
+  height: 5px;
+}
+
+.xbottom1 {
+  height: 5px;
+}

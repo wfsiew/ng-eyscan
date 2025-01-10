@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-system-create',
@@ -9,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class SystemCreateComponent {
 
+  title?: string;
+    
+  constructor(public bsModalRef: BsModalRef) {}
 }

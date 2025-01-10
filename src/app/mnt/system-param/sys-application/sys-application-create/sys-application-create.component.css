@@ -1,0 +1,55 @@
+.form-group {
+  /* xdisplay: inline-block; */
+  /* xmargin: 0px 3px; */
+  margin-bottom: 2px;
+  /* xvertical-align: top; */
+}
+
+.scroll {
+  /* xwidth: 200px; */
+  height: 380px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scroll::-webkit-scrollbar {
+  /* xwidth: 12px; */
+  width: 10px;
+  background-color: #999999;
+
+}
+
+.scroll::-webkit-scrollbar-track {
+  /* x-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  /* xborder-radius: 10px; */
+  /* xbackground-color: #F5F5F5; */
+  background-color: #999999;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  /* xborder-radius: 10px; */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  /* xbackground-color: #000000; */
+  background-color: #666666;
+  /* xborder: 2px solid #555555; */
+}
+
+.txt-cblue {
+  color: #2e75b6;
+}
+
+.bg-powderblue {
+  background-color: #deeefd;
+}
+
+.create-modal {
+  overflow: hidden;
+}
+
+.xbottom {
+  height: 8px;
+}
+
+.xbottom1 {
+  height: 5px;
+}

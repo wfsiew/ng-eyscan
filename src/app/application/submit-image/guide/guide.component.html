@@ -1,63 +1,91 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">Instruction Guide</h5>
-  <button type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal" aria-label="Close" (click)="bsModalRef.hide()">
+  <button type="button" class="close btn-md m-1 p-0 bg-header text-white"
+    data-dismiss="modal" aria-label="Close" (click)="bsModalRef.hide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body">
-  <carousel class="mt-2 slide-animated" [showIndicators]="false" [isAnimated]="true" [(activeSlide)]="activeSlideIndex">
+  <carousel class="mt-2 slide-animated" [showIndicators]="false"
+    [isAnimated]="true" [(activeSlide)]="activeSlideIndex">
     <slide class="carousel-item">
-      <img src="assets/img/submit-image/step0.png" class="d-block w-100 " alt="Step 1">
+      <img src="assets/img/submit-image/step0.png" class="d-block w-100 "
+        alt="Step 1">
       <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
         <h5 class="text-primary">Instruction Guide</h5>
-        <p>This function is used by primary care users to submit retinal images for assessment of 3 eye conditions (DR, AMD and Glaucoma)</p>
+        <p>This function is used by primary care users to submit retinal images
+          for assessment of 3 eye conditions (DR, AMD and Glaucoma)</p>
       </div>
     </slide>
     <slide>
-      <img src="assets/img/submit-image/step1.png" class="d-block w-100" alt="Step 1">
+      <img src="assets/img/submit-image/step1.png" class="d-block w-100"
+        alt="Step 1">
       <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
-        <h5 class="text-primary">Step <span class="badge badge-primary" style="font-size:2vw;">1</span></h5>
-        <p>Enter mandatory fields (Case Reference ID, Date of Image, Gender, Race, Year of Birth and Diseases)
-        <br>Note: Do not use patient's identifier for Case Reference ID field
+        <h5 class="text-primary">Step <span class="badge badge-primary"
+            style="font-size:2vw;">1</span></h5>
+        <p>Enter mandatory fields (Case Reference ID, Date of Image, Gender,
+          Race, Year of Birth and Diseases)
+          <br>Note: Do not use patient's identifier for Case Reference ID field
         </p>
       </div>
     </slide>
     <slide>
-      <img src="assets/img/submit-image/step2.png" class="d-block w-100" alt="Step 2">
-      <div class="carousel-caption d-none d-md-block " style="bottom: -32px;" >
-        <h5 class="text-primary">Step <span class="badge badge-primary" style="font-size:2vw;">2</span></h5>
+      <img src="assets/img/submit-image/step2.png" class="d-block w-100"
+        alt="Step 2">
+      <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
+        <h5 class="text-primary">Step <span class="badge badge-primary"
+            style="font-size:2vw;">2</span></h5>
         <p>Enter medical history (optional)</p>
       </div>
     </slide>
     <slide>
-      <img src="assets/img/submit-image/step3.png" class="d-block w-100" alt="Step 3">
-      <div class="carousel-caption d-none d-md-block "  style="bottom: -32px;">
-        <h5 class="text-primary">Step <span class="badge badge-primary" style="font-size:2vw;">3</span></h5>
-        <p>Attach retinal images by clicking image holders or dragging the images from the file explorer to the image holders</p>
+      <img src="assets/img/submit-image/step3.png" class="d-block w-100"
+        alt="Step 3">
+      <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
+        <h5 class="text-primary">Step <span class="badge badge-primary"
+            style="font-size:2vw;">3</span></h5>
+        <p>Attach retinal images by clicking image holders or dragging the
+          images from the file explorer to the image holders</p>
       </div>
     </slide>
     <slide>
-      <img src="assets/img/submit-image/step4.png" class="d-block w-100" alt="Step 4">
-      <div class="carousel-caption d-none d-md-block "  style="bottom: -32px;">
-        <h5 class="text-primary">Step <span class="badge badge-primary" style="font-size:2vw;">4</span></h5>
+      <img src="assets/img/submit-image/step4.png" class="d-block w-100"
+        alt="Step 4">
+      <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
+        <h5 class="text-primary">Step <span class="badge badge-primary"
+            style="font-size:2vw;">4</span></h5>
         <p>Submit images by clicking Submit button</p>
       </div>
     </slide>
     <slide>
-      <img src="assets/img/submit-image/step5.png" class="d-block w-100" alt="Step 5">
-      <div class="carousel-caption d-none d-md-block "  style="bottom: -32px;">
-        <h5 class="text-primary">Step <span class="badge badge-primary" style="font-size:2vw;">5</span></h5>
+      <img src="assets/img/submit-image/step5.png" class="d-block w-100"
+        alt="Step 5">
+      <div class="carousel-caption d-none d-md-block " style="bottom: -32px;">
+        <h5 class="text-primary">Step <span class="badge badge-primary"
+            style="font-size:2vw;">5</span></h5>
         <p>View report or start a new submission</p>
       </div>
     </slide>
   </carousel>
   <ol class="carousel-indicators ">
-    <li [class.active]="0 === activeSlideIndex" [attr.aria-pressed]="0 === activeSlideIndex" (click)="activeSlideIndex = 0" title="Instruction Guide"></li>
-    <li [class.active]="1 === activeSlideIndex" [attr.aria-pressed]="1 === activeSlideIndex" (click)="activeSlideIndex = 1" title="Step 1"></li>
-    <li [class.active]="2 === activeSlideIndex" [attr.aria-pressed]="2 === activeSlideIndex" (click)="activeSlideIndex = 2" title="Step 2"></li>
-    <li [class.active]="3 === activeSlideIndex" [attr.aria-pressed]="3 === activeSlideIndex" (click)="activeSlideIndex = 3" title="Step 3"></li>
-    <li [class.active]="4 === activeSlideIndex" [attr.aria-pressed]="4 === activeSlideIndex" (click)="activeSlideIndex = 4" title="Step 4"></li>
-    <li [class.active]="5 === activeSlideIndex" [attr.aria-pressed]="5 === activeSlideIndex" (click)="activeSlideIndex = 5" title="Step 5"></li>
+    <li [class.active]="0 === activeSlideIndex"
+      [attr.aria-pressed]="0 === activeSlideIndex"
+      (click)="activeSlideIndex = 0" title="Instruction Guide"></li>
+    <li [class.active]="1 === activeSlideIndex"
+      [attr.aria-pressed]="1 === activeSlideIndex"
+      (click)="activeSlideIndex = 1" title="Step 1"></li>
+    <li [class.active]="2 === activeSlideIndex"
+      [attr.aria-pressed]="2 === activeSlideIndex"
+      (click)="activeSlideIndex = 2" title="Step 2"></li>
+    <li [class.active]="3 === activeSlideIndex"
+      [attr.aria-pressed]="3 === activeSlideIndex"
+      (click)="activeSlideIndex = 3" title="Step 3"></li>
+    <li [class.active]="4 === activeSlideIndex"
+      [attr.aria-pressed]="4 === activeSlideIndex"
+      (click)="activeSlideIndex = 4" title="Step 4"></li>
+    <li [class.active]="5 === activeSlideIndex"
+      [attr.aria-pressed]="5 === activeSlideIndex"
+      (click)="activeSlideIndex = 5" title="Step 5"></li>
   </ol>
   <div class="xbottom"></div>
 </div>

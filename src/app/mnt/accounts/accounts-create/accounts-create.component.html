@@ -1,6 +1,7 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
-  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+  <button id="__nhPopWindow_close" type="button"
+    class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
     aria-label="Close" (click)="bsModalRef.hide()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -12,9 +13,11 @@
       <div class="container-fluid pt-2 pb-3 px-4 bg-light ">
         <input type="hidden" name="item_id" id="item_id" value="0">
         <input type="hidden" name="addressSpecialChars" value="~!$%^&">
-        <input type="hidden" name="nameSpecialChars" value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?">
-        <input type="hidden" name="user_status_old" id="user_status_old" value="">
-        <input type="hidden" name="hcredits_management_ind" id="hcredits_management_ind" value="N">
+        <input type="hidden" name="nameSpecialChars"
+          value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?">
+        <input type="hidden" name="user_status_old" id="user_status_old" value>
+        <input type="hidden" name="hcredits_management_ind"
+          id="hcredits_management_ind" value="N">
 
         <input type="hidden"
           name="f91F36F40EE5F8A6D76215CBE9463DB6B2EEB9ADEFA2EE5A617EE2C1080040D79769FE2D5853D94D3855ED3B44D840687DFA51D5BA59C76848075487B5F278E8E"
@@ -22,110 +25,86 @@
 
         <div class="form-group">
           <label class="control-label mb-1 ">eMail </label>
-          <input type="email" name="email" id="email" value="" class="form-control" required maxlength="50"
-            oninvalid="this.setCustomValidity('Please enter a valid email address.')" oninput="setCustomValidity('')">
+          <input type="email" name="email" id="email" value class="form-control"
+            required maxlength="50"
+            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            oninput="setCustomValidity('')">
         </div>
 
         <div class="form-row">
           <div class="form-group col-6">
             <label class="control-label mb-1 ">Display Name </label>
-            <input type="text" name="display_name" id="display_name" value="" class="form-control" maxlength="20"
+            <input type="text" name="display_name" id="display_name" value
+              class="form-control" maxlength="20"
               onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');">
           </div>
           <div class="form-group col-6">
             <label class="control-label mb-1 ">Contact No </label>
-            <input type="text" name="contact_no" id="contact_no" value="" class="form-control" maxlength="20"
+            <input type="text" name="contact_no" id="contact_no" value
+              class="form-control" maxlength="20"
               onkeyup="chkphoneval(this,2,'contact_no');">
           </div>
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1 ">First Name </label>
-          <input type="text" name="first_name" id="first_name" value="" class="form-control" required maxlength="100"
+          <input type="text" name="first_name" id="first_name" value
+            class="form-control" required maxlength="100"
             onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
-            oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="setCustomValidity('')">
+            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            oninput="setCustomValidity('')">
         </div>
         <div class="form-group">
           <label class="control-label mb-1 ">Last Name </label>
-          <input type="text" name="last_name" id="last_name" value="" class="form-control" required maxlength="100"
+          <input type="text" name="last_name" id="last_name" value
+            class="form-control" required maxlength="100"
             onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
-            oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="setCustomValidity('')">
+            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            oninput="setCustomValidity('')">
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1 ">Company </label>
 
-          <select class="form-control custom-select" name="company_id" id="company_id" required
-            oninvalid="this.setCustomValidity('Please fill out this field.')" onchange="setCustomValidity('')">
-            <option value=""></option>
-
+          <select class="form-control custom-select" name="company_id"
+            id="company_id" required
+            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            onchange="setCustomValidity('')">
+            <option value></option>
 
             <option value="8">Belait Hospital (TOPCON)</option>
 
-
-
             <option value="10">Berakas Health Centre</option>
-
-
 
             <option value="2">Brunei MOH</option>
 
-
-
             <option value="3">Brunei MOH Ocular Reading Centre</option>
-
-
 
             <option value="1">EyRIS</option>
 
-
-
             <option value="4">JPMC</option>
-
-
 
             <option value="14">Mobile Bus 1</option>
 
-
-
             <option value="15">Mobile Bus 2</option>
-
-
 
             <option value="12">Muara Health Centre</option>
 
-
-
             <option value="11">Rimba Health Centre</option>
-
-
 
             <option value="6">RIPAS Hospital (Endocrinology)</option>
 
-
-
             <option value="5">RIPAS Hospital (TOPCON)</option>
-
-
 
             <option value="13">Sengkurong Health Centre</option>
 
-
-
             <option value="9">Temburong Hospital</option>
-
-
 
             <option value="7">Tutong Hospital (TOPCON)</option>
 
-
-
             <option value="17">zGrading Centre</option>
 
-
-
             <option value="16">zScreening Centre</option>
-
 
           </select>
         </div>
@@ -133,17 +112,13 @@
         <div class="form-row">
           <div class="form-group col-7">
             <label class="control-label mb-1 ">Grading Group </label>
-            <select class="form-control custom-select" name="user_group" id="user_group" required>
+            <select class="form-control custom-select" name="user_group"
+              id="user_group" required>
               <option value="1" selected>Primary Screener</option>
-
-
 
               <option value="2">Secondary Grader</option>
 
-
-
               <option value="3">Primary/Secondary User</option>
-
 
               <option value="10">User Admin</option>
             </select>
@@ -151,9 +126,11 @@
 
           <div class="form-group col-5 d-none" id="amend_credit_ind_group">
             <div class="col-12 xtext-center">
-              <label class="control-label " style="cursor: pointer;">Application Management </label><br>
+              <label class="control-label " style="cursor: pointer;">Application
+                Management </label><br>
               <label class="switch">
-                <input type="checkbox" name="credits_management_ind" id="credits_management_ind" value="Y">
+                <input type="checkbox" name="credits_management_ind"
+                  id="credits_management_ind" value="Y">
                 <span class="slider round"></span>
               </label>
 
@@ -169,10 +146,12 @@
           <div class="form-group col-5">
             <label class="control-label mb-1 ">Time Zone </label>
 
-            <select class="form-control custom-select" name="timezone_name" id="timezone_name" required
-              oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="setCustomValidity('')"
+            <select class="form-control custom-select" name="timezone_name"
+              id="timezone_name" required
+              oninvalid="this.setCustomValidity('Please fill out this field.')"
+              oninput="setCustomValidity('')"
               onchange="setCustomValidity('')">
-              <option value=""></option>
+              <option value></option>
 
               <option value="Africa/Abidjan">Africa/Abidjan</option>
 
@@ -292,31 +271,44 @@
 
               <option value="America/Araguaina">America/Araguaina</option>
 
-              <option value="America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</option>
+              <option
+                value="America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</option>
 
-              <option value="America/Argentina/Catamarca">America/Argentina/Catamarca</option>
+              <option
+                value="America/Argentina/Catamarca">America/Argentina/Catamarca</option>
 
-              <option value="America/Argentina/ComodRivadavia">America/Argentina/ComodRivadavia</option>
+              <option
+                value="America/Argentina/ComodRivadavia">America/Argentina/ComodRivadavia</option>
 
-              <option value="America/Argentina/Cordoba">America/Argentina/Cordoba</option>
+              <option
+                value="America/Argentina/Cordoba">America/Argentina/Cordoba</option>
 
-              <option value="America/Argentina/Jujuy">America/Argentina/Jujuy</option>
+              <option
+                value="America/Argentina/Jujuy">America/Argentina/Jujuy</option>
 
-              <option value="America/Argentina/La_Rioja">America/Argentina/La_Rioja</option>
+              <option
+                value="America/Argentina/La_Rioja">America/Argentina/La_Rioja</option>
 
-              <option value="America/Argentina/Mendoza">America/Argentina/Mendoza</option>
+              <option
+                value="America/Argentina/Mendoza">America/Argentina/Mendoza</option>
 
-              <option value="America/Argentina/Rio_Gallegos">America/Argentina/Rio_Gallegos</option>
+              <option
+                value="America/Argentina/Rio_Gallegos">America/Argentina/Rio_Gallegos</option>
 
-              <option value="America/Argentina/Salta">America/Argentina/Salta</option>
+              <option
+                value="America/Argentina/Salta">America/Argentina/Salta</option>
 
-              <option value="America/Argentina/San_Juan">America/Argentina/San_Juan</option>
+              <option
+                value="America/Argentina/San_Juan">America/Argentina/San_Juan</option>
 
-              <option value="America/Argentina/San_Luis">America/Argentina/San_Luis</option>
+              <option
+                value="America/Argentina/San_Luis">America/Argentina/San_Luis</option>
 
-              <option value="America/Argentina/Tucuman">America/Argentina/Tucuman</option>
+              <option
+                value="America/Argentina/Tucuman">America/Argentina/Tucuman</option>
 
-              <option value="America/Argentina/Ushuaia">America/Argentina/Ushuaia</option>
+              <option
+                value="America/Argentina/Ushuaia">America/Argentina/Ushuaia</option>
 
               <option value="America/Aruba">America/Aruba</option>
 
@@ -328,7 +320,8 @@
 
               <option value="America/Bahia">America/Bahia</option>
 
-              <option value="America/Bahia_Banderas">America/Bahia_Banderas</option>
+              <option
+                value="America/Bahia_Banderas">America/Bahia_Banderas</option>
 
               <option value="America/Barbados">America/Barbados</option>
 
@@ -346,7 +339,8 @@
 
               <option value="America/Buenos_Aires">America/Buenos_Aires</option>
 
-              <option value="America/Cambridge_Bay">America/Cambridge_Bay</option>
+              <option
+                value="America/Cambridge_Bay">America/Cambridge_Bay</option>
 
               <option value="America/Campo_Grande">America/Campo_Grande</option>
 
@@ -364,7 +358,8 @@
 
               <option value="America/Chihuahua">America/Chihuahua</option>
 
-              <option value="America/Coral_Harbour">America/Coral_Harbour</option>
+              <option
+                value="America/Coral_Harbour">America/Coral_Harbour</option>
 
               <option value="America/Cordoba">America/Cordoba</option>
 
@@ -426,21 +421,28 @@
 
               <option value="America/Hermosillo">America/Hermosillo</option>
 
-              <option value="America/Indiana/Indianapolis">America/Indiana/Indianapolis</option>
+              <option
+                value="America/Indiana/Indianapolis">America/Indiana/Indianapolis</option>
 
               <option value="America/Indiana/Knox">America/Indiana/Knox</option>
 
-              <option value="America/Indiana/Marengo">America/Indiana/Marengo</option>
+              <option
+                value="America/Indiana/Marengo">America/Indiana/Marengo</option>
 
-              <option value="America/Indiana/Petersburg">America/Indiana/Petersburg</option>
+              <option
+                value="America/Indiana/Petersburg">America/Indiana/Petersburg</option>
 
-              <option value="America/Indiana/Tell_City">America/Indiana/Tell_City</option>
+              <option
+                value="America/Indiana/Tell_City">America/Indiana/Tell_City</option>
 
-              <option value="America/Indiana/Vevay">America/Indiana/Vevay</option>
+              <option
+                value="America/Indiana/Vevay">America/Indiana/Vevay</option>
 
-              <option value="America/Indiana/Vincennes">America/Indiana/Vincennes</option>
+              <option
+                value="America/Indiana/Vincennes">America/Indiana/Vincennes</option>
 
-              <option value="America/Indiana/Winamac">America/Indiana/Winamac</option>
+              <option
+                value="America/Indiana/Winamac">America/Indiana/Winamac</option>
 
               <option value="America/Indianapolis">America/Indianapolis</option>
 
@@ -454,9 +456,11 @@
 
               <option value="America/Juneau">America/Juneau</option>
 
-              <option value="America/Kentucky/Louisville">America/Kentucky/Louisville</option>
+              <option
+                value="America/Kentucky/Louisville">America/Kentucky/Louisville</option>
 
-              <option value="America/Kentucky/Monticello">America/Kentucky/Monticello</option>
+              <option
+                value="America/Kentucky/Monticello">America/Kentucky/Monticello</option>
 
               <option value="America/Knox_IN">America/Knox_IN</option>
 
@@ -470,7 +474,8 @@
 
               <option value="America/Louisville">America/Louisville</option>
 
-              <option value="America/Lower_Princes">America/Lower_Princes</option>
+              <option
+                value="America/Lower_Princes">America/Lower_Princes</option>
 
               <option value="America/Maceio">America/Maceio</option>
 
@@ -518,11 +523,14 @@
 
               <option value="America/Noronha">America/Noronha</option>
 
-              <option value="America/North_Dakota/Beulah">America/North_Dakota/Beulah</option>
+              <option
+                value="America/North_Dakota/Beulah">America/North_Dakota/Beulah</option>
 
-              <option value="America/North_Dakota/Center">America/North_Dakota/Center</option>
+              <option
+                value="America/North_Dakota/Center">America/North_Dakota/Center</option>
 
-              <option value="America/North_Dakota/New_Salem">America/North_Dakota/New_Salem</option>
+              <option
+                value="America/North_Dakota/New_Salem">America/North_Dakota/New_Salem</option>
 
               <option value="America/Ojinaga">America/Ojinaga</option>
 
@@ -534,9 +542,11 @@
 
               <option value="America/Phoenix">America/Phoenix</option>
 
-              <option value="America/Port-au-Prince">America/Port-au-Prince</option>
+              <option
+                value="America/Port-au-Prince">America/Port-au-Prince</option>
 
-              <option value="America/Port_of_Spain">America/Port_of_Spain</option>
+              <option
+                value="America/Port_of_Spain">America/Port_of_Spain</option>
 
               <option value="America/Porto_Acre">America/Porto_Acre</option>
 
@@ -566,7 +576,8 @@
 
               <option value="America/Santiago">America/Santiago</option>
 
-              <option value="America/Santo_Domingo">America/Santo_Domingo</option>
+              <option
+                value="America/Santo_Domingo">America/Santo_Domingo</option>
 
               <option value="America/Sao_Paulo">America/Sao_Paulo</option>
 
@@ -576,7 +587,8 @@
 
               <option value="America/Sitka">America/Sitka</option>
 
-              <option value="America/St_Barthelemy">America/St_Barthelemy</option>
+              <option
+                value="America/St_Barthelemy">America/St_Barthelemy</option>
 
               <option value="America/St_Johns">America/St_Johns</option>
 
@@ -588,7 +600,8 @@
 
               <option value="America/St_Vincent">America/St_Vincent</option>
 
-              <option value="America/Swift_Current">America/Swift_Current</option>
+              <option
+                value="America/Swift_Current">America/Swift_Current</option>
 
               <option value="America/Tegucigalpa">America/Tegucigalpa</option>
 
@@ -618,7 +631,8 @@
 
               <option value="Antarctica/Davis">Antarctica/Davis</option>
 
-              <option value="Antarctica/DumontDUrville">Antarctica/DumontDUrville</option>
+              <option
+                value="Antarctica/DumontDUrville">Antarctica/DumontDUrville</option>
 
               <option value="Antarctica/Macquarie">Antarctica/Macquarie</option>
 
@@ -630,7 +644,8 @@
 
               <option value="Antarctica/Rothera">Antarctica/Rothera</option>
 
-              <option value="Antarctica/South_Pole">Antarctica/South_Pole</option>
+              <option
+                value="Antarctica/South_Pole">Antarctica/South_Pole</option>
 
               <option value="Antarctica/Syowa">Antarctica/Syowa</option>
 
@@ -854,7 +869,8 @@
 
               <option value="Atlantic/Reykjavik">Atlantic/Reykjavik</option>
 
-              <option value="Atlantic/South_Georgia">Atlantic/South_Georgia</option>
+              <option
+                value="Atlantic/South_Georgia">Atlantic/South_Georgia</option>
 
               <option value="Atlantic/St_Helena">Atlantic/St_Helena</option>
 
@@ -866,7 +882,8 @@
 
               <option value="Australia/Brisbane">Australia/Brisbane</option>
 
-              <option value="Australia/Broken_Hill">Australia/Broken_Hill</option>
+              <option
+                value="Australia/Broken_Hill">Australia/Broken_Hill</option>
 
               <option value="Australia/Canberra">Australia/Canberra</option>
 
@@ -1363,7 +1380,8 @@
 
           <div class="form-group col-3">
             <label class="control-label mb-1 " for="user_status">Status </label>
-            <select class="form-control custom-select" name="user_status" id="user_status" required>
+            <select class="form-control custom-select" name="user_status"
+              id="user_status" required>
               <option value="A">Active</option>
               <option value="I">Inactive</option>
               <option value="S">Suspended</option>
@@ -1372,22 +1390,28 @@
 
           <div class="form-group col-4">
             <label class="control-label mb-1 ">Inactive Date </label>
-            <input type="text" id="inactive_date" name="inactive_date" class="form-control" style="max-width: 145px;"
-              maxlength="11" value="" onblur="if(!(check_date(this))){this.value='';}">
+            <input type="text" id="inactive_date" name="inactive_date"
+              class="form-control" style="max-width: 145px;"
+              maxlength="11" value
+              onblur="if(!(check_date(this))){this.value='';}">
           </div>
         </div>
 
         <div class="xbottom"></div>
       </div>
 
-      <div class="container-fluid my-0 xpb-2 px-4 bg-light xborder-bottom" [hidden]="true">
+      <div class="container-fluid my-0 xpb-2 px-4 bg-light xborder-bottom"
+        [hidden]="true">
         <div id="d_err"></div>
       </div>
 
       <div class="container-fluid px-0 py-2 text-center bg-white border-top">
-        <button name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1" value="Cancel" (click)="bsModalRef.hide()">
+        <button name="btnCancel" id="btnCancel"
+          class="btn xbtn-sm bg-secondary py-1 text-white mr-1" value="Cancel"
+          (click)="bsModalRef.hide()">
           <i class="fa fa-times"></i> Cancel</button>
-        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1 "
+        <button type="submit" name="btnSave" id="btnSave"
+          class="btn xbtn-sm bg-primary py-1 text-white ml-1 "
           value="Save">
           <i class="fa fa-save"></i> Save</button>
       </div>

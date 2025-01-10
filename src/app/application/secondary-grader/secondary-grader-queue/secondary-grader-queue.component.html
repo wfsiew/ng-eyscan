@@ -1,4 +1,5 @@
-<app-header [reload]="'/application/secondary/index'" [headerid]="'fn4'" [title]="'Worklist'"></app-header>
+<app-header [reload]="'/application/secondary/index'" [headerid]="'fn4'"
+  [title]="'Worklist'"></app-header>
 
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
@@ -11,20 +12,23 @@
 
           <div class="form-group ">
             <label class="control-label mb-1 ">Case Reference ID </label>
-            <input name="pid" id="pid" type="text" class="form-control " placeholder="" value="">
+            <input name="pid" id="pid" type="text" class="form-control "
+              placeholder value>
           </div>
 
           <div class="form-group ">
             <label class="control-label mb-1 ">Capture Site </label>
-            <select class="form-control custom-select " name="location" id="location">
-              <option value=""></option>
+            <select class="form-control custom-select " name="location"
+              id="location">
+              <option value></option>
 
             </select>
           </div>
 
           <div class="form-group ">
             <label class="control-label mb-1 ">&nbsp;</label>
-            <select class="form-control custom-select " name="selDate" id="selDate">
+            <select class="form-control custom-select " name="selDate"
+              id="selDate">
               <option value="DR" selected>Date Reported</option>
               <option value="DI">Date of Image</option>
               <option value="DG">Date Graded</option>
@@ -34,59 +38,72 @@
           <div class="form-group ">
             <label class="control-label mb-1 ">From </label>
             <div class="input-group">
-              <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
-                maxlength="11" value="21-Dec-2024" onblur="if(!(check_date(this))){this.value='';}">
+              <input id="date_from" name="date_from" type="text"
+                class="form-control" style="max-width: 145px;"
+                maxlength="11" value="21-Dec-2024"
+                onblur="if(!(check_date(this))){this.value='';}">
             </div>
           </div>
 
           <div class="form-group ">
             <label class="control-label mb-1 ">To </label>
             <div class="input-group">
-              <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
-                maxlength="11" value="10-Jan-2025" onblur="if(!(check_date(this))){this.value='';}">
+              <input id="date_to" name="date_to" type="text"
+                class="form-control" style="max-width: 145px;"
+                maxlength="11" value="10-Jan-2025"
+                onblur="if(!(check_date(this))){this.value='';}">
             </div>
           </div>
 
           <div class="form-group ">
             <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white " value="Search">
+            <button name="btnSearch" id="btnSearch"
+              class="form-control btn bg-primary text-white " value="Search">
               <i class="fa fa-search"></i> Search</button>
           </div>
 
           <div class="form-group float-right ">
             <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="xbtnDisclaimer" id="xbtnDisclaimer" class="form-control btn bg-warning text-white "
-              value="Disclaimer" onclick=" window.open('/bn_moh_uat/legal/EN_DISCLAIMER.pdf', '_blank'); return false;">
+            <button name="xbtnDisclaimer" id="xbtnDisclaimer"
+              class="form-control btn bg-warning text-white "
+              value="Disclaimer"
+              onclick=" window.open('/bn_moh_uat/legal/EN_DISCLAIMER.pdf', '_blank'); return false;">
               <i class="fa fa-exclamation-triangle"></i> Disclaimer</button>
 
           </div>
-
-
 
         </form>
       </div>
 
     </div>
 
-
     <div class="row">
       <div class="col-12 px-0">
         <ul class="nav nav-tabs pl-2 " id="myTab" role="tablist">
           <li class="nav-item font-weight-bold ">
-            <a class="nav-link  border " id="user_worklist" data-status="VR" xdata-toggle="tab" href="#" 
-              role="tab" (click)="goto('/application/secondary/index')">My List</a>
+            <a class="nav-link  border " id="user_worklist" data-status="VR"
+              xdata-toggle="tab" href="#"
+              role="tab" (click)="goto('/application/secondary/index')">My
+              List</a>
           </li>
           <li class="nav-item font-weight-bold ">
-            <a class="nav-link active border " id="all_worklist" data-status="P" xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/queue', true)">Queue List</a>
+            <a class="nav-link active border " id="all_worklist" data-status="P"
+              xdata-toggle="tab" href="#"
+              role="tab"
+              (click)="goto('/application/secondary/queue', true)">Queue
+              List</a>
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link  border " id="nr_worklist" data-status="N" xdata-toggle="tab" href="#" 
-              role="tab" (click)="goto('/application/secondary/non-refer')">Non Referable Cases</a>
+            <a class="nav-link  border " id="nr_worklist" data-status="N"
+              xdata-toggle="tab" href="#"
+              role="tab" (click)="goto('/application/secondary/non-refer')">Non
+              Referable Cases</a>
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link  border " id="r_worklist" data-status="R" xdata-toggle="tab" href="#" 
-              role="tab" title="Finalized Referable Case" (click)="goto('/application/secondary/refer')">Referable Cases</a>
+            <a class="nav-link  border " id="r_worklist" data-status="R"
+              xdata-toggle="tab" href="#"
+              role="tab" title="Finalized Referable Case"
+              (click)="goto('/application/secondary/refer')">Referable Cases</a>
           </li>
         </ul>
 
@@ -97,7 +114,8 @@
     <div class="row">
       <div class="col-12 py-2 px-0">
 
-        <button name="btnPickup" id="btnPickup" class="btn btn-sm bg-primary text-white" value="Add to My List"
+        <button name="btnPickup" id="btnPickup"
+          class="btn btn-sm bg-primary text-white" value="Add to My List"
           disabled><i class="fa fa-file-medical"></i> Add to My List</button>
 
       </div>
@@ -114,7 +132,8 @@
 
                 <div class="col-1">
                   <div class="checkbox">
-                    <input name="chk_all" id="chk_all" type="checkbox" style="cursor: pointer;" disabled value="0">
+                    <input name="chk_all" id="chk_all" type="checkbox"
+                      style="cursor: pointer;" disabled value="0">
                   </div>
                 </div>
                 <div class="col-11">
@@ -124,10 +143,11 @@
               </div>
             </div>
             <div class="col-xl-2 col-md-2 col-lg-2 col-sm-  ">Site</div>
-            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Report Status</div>
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Report
+              Status</div>
 
-
-            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Date Reported <i class="fa fa-sort-down"></i>
+            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Date Reported <i
+                class="fa fa-sort-down"></i>
               <br>Image Date
             </div>
             <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
@@ -140,16 +160,11 @@
 
           </div>
 
-
-
           <div class="row py-1 xborder-bottom text-center bg-white">
             <div class="col-xl-12 col-md-12 col-lg-12 ">No Record Found.</div>
           </div>
 
-
         </div> <!-- /.col-12 -->
-
-
 
       </div>
       <input type="hidden" name="record_count" id="record_count" value="0">

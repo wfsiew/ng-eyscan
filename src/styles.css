@@ -59,6 +59,16 @@
   height: 350px; */
 }
 
+.create-parameter-modal {
+  max-width: 650px !important;
+  width: 650px;
+}
+
+.create-company-parameter-modal {
+  max-width: 900px !important;
+  width: 900px;
+}
+
 .nhxlogo {
   max-width: 100px;
 }
