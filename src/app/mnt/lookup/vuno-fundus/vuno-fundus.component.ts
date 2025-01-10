@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { LookupCreateComponent } from '../lookup-create/lookup-create.component';
@@ -8,8 +8,7 @@ import { LookupCreateComponent } from '../lookup-create/lookup-create.component'
   standalone: false,
   
   templateUrl: './vuno-fundus.component.html',
-  styleUrl: './vuno-fundus.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './vuno-fundus.component.css'
 })
 export class VunoFundusComponent {
 
@@ -17,9 +16,14 @@ export class VunoFundusComponent {
   
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
   
   onCreate() {

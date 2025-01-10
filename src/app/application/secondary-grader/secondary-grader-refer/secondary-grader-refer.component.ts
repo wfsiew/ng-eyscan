@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
@@ -7,22 +7,27 @@ import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
   standalone: false,
   
   templateUrl: './secondary-grader-refer.component.html',
-  styleUrl: './secondary-grader-refer.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './secondary-grader-refer.component.css'
 })
-export class SecondaryGraderReferComponent implements OnInit {
+export class SecondaryGraderReferComponent implements OnInit, OnDestroy {
 
   mform?: UntypedFormGroup;
 
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private fb: UntypedFormBuilder
   ) {
+    this.renderer2.addClass(document.body, 'main-body');
     this.createForm();
   }
 
   ngOnInit() {
 
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onDisclaimer() {

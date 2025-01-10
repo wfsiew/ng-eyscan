@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +6,19 @@ import { Router } from '@angular/router';
   standalone: false,
   
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
 
-  constructor(private router: Router) {
-    
+  constructor(
+    private router: Router,
+    private renderer2: Renderer2
+  ) {
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   goto(s: string, reload = false) {

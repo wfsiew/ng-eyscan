@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CompanyCreateComponent } from './company-create/company-create.component';
@@ -8,8 +8,7 @@ import { CompanyCreateComponent } from './company-create/company-create.componen
   standalone: false,
   
   templateUrl: './company.component.html',
-  styleUrl: './company.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './company.component.css'
 })
 export class CompanyComponent {
 
@@ -17,9 +16,14 @@ export class CompanyComponent {
 
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onCreate() {

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { SysApplicationCreateComponent } from './sys-application-create/sys-application-create.component';
@@ -9,18 +9,22 @@ import { SystemCreateComponent } from '../system/system-create/system-create.com
   standalone: false,
   
   templateUrl: './sys-application.component.html',
-  styleUrl: './sys-application.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './sys-application.component.css'
 })
-export class SysApplicationComponent {
+export class SysApplicationComponent implements OnDestroy {
 
   bsModalRef?: BsModalRef;
   
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onCreate(ev: any) {

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AccountsCreateComponent } from '../accounts-create/accounts-create.component';
@@ -8,18 +8,22 @@ import { AccountsCreateComponent } from '../accounts-create/accounts-create.comp
   standalone: false,
   
   templateUrl: './primary-secondary-user.component.html',
-  styleUrl: './primary-secondary-user.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './primary-secondary-user.component.css'
 })
-export class PrimarySecondaryUserComponent {
+export class PrimarySecondaryUserComponent implements OnDestroy {
 
   bsModalRef?: BsModalRef;
 
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onCreate() {

@@ -1,266 +1,221 @@
-<div class=" fixed-top bg-white">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3 ">
-    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1"
-      (click)="goto('/application/home')">
-      <img class="d-inline-block align-middle "
-        style="xmax-width:160px; max-height:50px;"
-        src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS">
+<app-header
+  [reload]="'/mnt/user'"
+  [headerid]="'fnprof1'"
+  [title]="'Account Info'"></app-header>
 
-    </a>
-    <button class="navbar-toggler collapsed hidden-lg-up " type="button"
-      data-toggle="collapse"
-      data-target="#navbarsMenu" aria-controls="navbarsMenu"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse pl-4 " id="navbarsMenu">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" id="fn1">
-          <a id="fn1" class="nav-link" data-target="fn1" href="#"
-            (click)="goto('/application/home')">Home</a>
-        </li>
-
-        <li class="nav-item" id="fn3">
-          <a class="nav-link" data-target="fn3" href="#"
-            (click)="goto('/application/submit-image')">Submit Image</a>
-        </li>
-
-        <li class="nav-item" id="fn2">
-          <a class="nav-link" data-target="fn2" href="#"
-            (click)="goto('/application/primary')">Primary Care</a>
-        </li>
-
-        <li class="nav-item" id="fn4">
-          <a class="nav-link" data-target="fn4" href>Secondary Grader</a>
-        </li>
-
-        <li class="nav-item dropdown" id="fn0">
-          <a class="nav-link dropdown-toggle" data-target="fn0" href
-            data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Portal Administrator</a>
-          <div class="dropdown-menu p-0" aria-labelledby="fn0">
-
-            <a class="dropdown-item" data-target="fn0_1" href="#"
-              (click)="goto('/mnt/company')">Maintain Organizations</a>
-
-            <a class="dropdown-item" data-target="fn0_2" href="#"
-              (click)="goto('/mnt/accounts/primary-screeners')">Manage Users</a>
-
-            <a class="dropdown-item" data-target="fn0_9" href="#"
-              (click)="goto('/mnt/application')">Manage Organization
-              Applications</a>
-
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" data-target="fn0_10" href="#"
-              (click)="goto('/application/manage-data')">Case Investigation</a>
-
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" data-target="fn0_5" href="#"
-              (click)="goto('/mnt/lookup/language')">Maintain Lookup Codes</a>
-            <a class="dropdown-item" data-target="fn0_11" href="#"
-              (click)="goto('/mnt/system-param/system')">Manage Parameters</a>
-
-          </div>
-        </li>
-
-        <li class="nav-item dropdown" id="fn5">
-          <a class="nav-link dropdown-toggle" data-target="fn5" href
-            data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Reports</a>
-          <div class="dropdown-menu p-0" aria-labelledby="fn5">
-            <a class="dropdown-item" data-target="fn5_1" href="#"
-              (click)="goto('/application/reports/mgmt')">Primary Management
-              Report</a>
-
-          </div>
-        </li>
-
-      </ul>
-
-      <ul class="nav navbar-nav xnavbar-right">
-        <li class="nav-item dropdown">
-          <a href class="nav-link dropdown-toggle" data-target="fnprof"
-            data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <i class="fa fa-user fa-lg"></i> KC
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right p-0">
-            <li>
-              <div class="pt-1 pb-2" style="width:280px;">
-                <div class="row px-1 ">
-                  <div class="col-lg-12 py-2">
-                    <p class="m-0 text-center">Kian Cheong Lam</p>
-                    <p
-                      class="m-0 text-center small">kiancheong.lam&#64;nova-hub.com</p>
-                    <p class="m-0 text-center pt-2">
-                      <a class="py-0 btn btn-primary xbtn-block btn-sm"
-                        data-target="fnprof1" href="#"
-                        (click)="goto('/mnt/user', true)">
-                        Account Info
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item" id="fn7">
-          <a class="nav-link" data-target="fn7" href title="Help"><i
-              class="fas fa-question xtext-white xfa-lg"></i>
-          </a>
-        </li>
-
-        <li class="nav-item" id="fn8">
-          <a class="nav-link" data-target="fn8" href title="Log Out"><i
-              class="fas fa-sign-out-alt xtext-white fa-lg"></i> </a>
-        </li>
-      </ul>
-
-    </div>
-  </nav>
-
-  <div class="row align-items-center">
-    <div class="col-10 ">
-      <h2 id="hd_text" class="container-fluid py-1">Account Info</h2>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhAboutBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div
         class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
-        <button id="__nhAboutBox_close" type="button"
+        <button
+          id="__nhAboutBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
-        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0"
-          style="width:700px; height:620px; "></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden; height: 620px">
+        <iframe
+          id="__nhAboutBox_iframe"
+          scrolling="no"
+          frameborder="0"
+          style="width: 700px; height: 620px"></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
-        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhPopWindow"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhPopWindow_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button id="__nhPopWindow_close" type="button"
+        <button
+          id="__nhPopWindow_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px"
-          scrolling="no" frameborder="0"></iframe>
+        <iframe
+          id="__nhPopWindow_iframe"
+          xwidth="500px"
+          xheight="400px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhMessageBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhMessageBox_title"
-  aria-hidden="true" data-keyboard="false">
+  aria-hidden="true"
+  data-keyboard="false">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
-        <button id="__nhMessageBox_close" type="button"
+        <button
+          id="__nhMessageBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0" style="overflow: hidden;">
-        <iframe id="__nhMessageBox_iframe" width="500px" height="230px"
-          scrolling="no" frameborder="0"></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden">
+        <iframe
+          id="__nhMessageBox_iframe"
+          width="500px"
+          height="230px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhMessageBox_ok" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_no" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button
+          id="__nhMessageBox_cancel"
+          type="button"
+          class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhErrorBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhErrorBox_title"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
-        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close btn-md m-1 p-0 bg-dark text-white"
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
-        style="width: 100%;max-height: 500px; overflow-y: auto;">
-      </div>
-      <div class="modal-footer justify-content-center m-0 p-1 ">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary"
-          data-dismiss="modal">OK</button>
+      <div
+        id="__nhErrorBox_content"
+        class="modal-body m-0 p-0"
+        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+      <div class="modal-footer justify-content-center m-0 p-1">
+        <button
+          id="__nhMessageBox_ok"
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal">
+          OK
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhAnimator"
+  tabindex="-1"
+  role="dialog"
   aria-hidden="true"
-  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  style="
+    position: absolute;
+    max-height: 140px;
+    max-width: 120px;
+    overflow: hidden;
+  ">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="background-color: rgba(0,0,0,.0001); border: none;">
-      <div class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none;overflow: hidden; ">
-      </div>
+    <div
+      class="modal-content"
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div
+        class="modal-header m-0 p-1 bg-header text-white"
+        style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
-
         <div class="nhAnimator"></div>
       </div>
-      <div class="modal-footer justify-content-center m-0 p-1"
-        style="display: none;">
-      </div>
+      <div
+        class="modal-footer justify-content-center m-0 p-1"
+        style="display: none"></div>
     </div>
   </div>
 </div>
@@ -268,152 +223,244 @@
 <main role="main" class="container-fluid main-margin">
   <div class="container-fluid pt-2 pb-4">
     <div class="row main-body">
-      <div class="nav flex-column nav-pills col-lg-2" id="v-pills-tab"
-        role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
-          href="#v-pills-home" role="tab"
-          aria-controls="v-pills-home" aria-selected=" true  ">Personal Info</a>
-        <a class="nav-link " id="v-pills-profile-tab" data-toggle="pill"
-          href="#v-pills-profile" role="tab"
-          aria-controls="v-pills-profile" aria-selected=" false ">Change
-          Password</a>
+      <div
+        class="nav flex-column nav-pills col-lg-2"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical">
+        <a
+          class="nav-link active"
+          id="v-pills-home-tab"
+          data-toggle="pill"
+          href="#v-pills-home"
+          role="tab"
+          aria-controls="v-pills-home"
+          aria-selected=" true  ">Personal Info</a>
+        <a
+          class="nav-link"
+          id="v-pills-profile-tab"
+          data-toggle="pill"
+          href="#v-pills-profile"
+          role="tab"
+          aria-controls="v-pills-profile"
+          aria-selected=" false ">Change Password</a>
       </div>
-      <div class="tab-content xp-4  col-lg-10" id="v-pills-tabContent">
-        <div class="tab-pane fade border  show active " id="v-pills-home"
+      <div class="tab-content xp-4 col-lg-10" id="v-pills-tabContent">
+        <div
+          class="tab-pane fade border show active"
+          id="v-pills-home"
           role="tabpanel"
           aria-labelledby="v-pills-home-tab">
           <h2 id="hd_text" class="container-fluid">Personal Info</h2>
           <div class="container-fluid">
             <form name="frmMain" id="frmMain" method="post">
-              <input type="hidden" name="nameSpecialChars" id="nameSpecialChars"
-                value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?">
+              <input
+                type="hidden"
+                name="nameSpecialChars"
+                id="nameSpecialChars"
+                value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
 
-              <input type="hidden"
+              <input
+                type="hidden"
                 name="fF8FF917ADB4FC75FBC3341A3EB823F2BA5CE0B1E1A1C3394CBC29BBBD80842EE6A50483C8659FCA9306A9F4E5DD45858F62A82F83CAB5D106CB2AB02EE25F709"
-                value="F2EC22596292B8EB1CE3D8A053A031355BC12843">
+                value="F2EC22596292B8EB1CE3D8A053A031355BC12843" />
 
               <div class="form-group">
                 <label>Display Name </label>
-                <input name="displayname" id="displayname" type="text"
-                  maxlength="20" class="form-control"
-                  placeholder value="KC"
+                <input
+                  name="displayname"
+                  id="displayname"
+                  type="text"
+                  maxlength="20"
+                  class="form-control"
+                  placeholder
+                  value="KC"
                   onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
-                  autocomplete="off">
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>First Name </label>
-                <input name="firstname" id="firstname" type="text"
-                  maxlength="100" class="form-control" placeholder
+                <input
+                  name="firstname"
+                  id="firstname"
+                  type="text"
+                  maxlength="100"
+                  class="form-control"
+                  placeholder
                   value="Kian Cheong"
                   onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
-                  autocomplete="off">
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>Last Name </label>
-                <input name="lastname" id="lastname" type="text" maxlength="100"
-                  class="form-control" placeholder
+                <input
+                  name="lastname"
+                  id="lastname"
+                  type="text"
+                  maxlength="100"
+                  class="form-control"
+                  placeholder
                   value="Lam"
                   onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
-                  autocomplete="off">
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>Contact No </label>
-                <input name="contactno" id="contactno" type="text"
-                  maxlength="20" class="form-control" placeholder
-                  value onkeyup="chkphoneval(this,2,'contactno');"
-                  autocomplete="off">
+                <input
+                  name="contactno"
+                  id="contactno"
+                  type="text"
+                  maxlength="20"
+                  class="form-control"
+                  placeholder
+                  value
+                  onkeyup="chkphoneval(this,2,'contactno');"
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>Grading Group</label>
-                <input name="grading_group" id="grading_group" type="text"
-                  class="form-control" placeholder
-                  value="Primary Screener" readonly>
+                <input
+                  name="grading_group"
+                  id="grading_group"
+                  type="text"
+                  class="form-control"
+                  placeholder
+                  value="Primary Screener"
+                  readonly />
               </div>
 
               <div class="form-group">
                 <label>Company</label>
-                <input name="company" id="company" type="text"
-                  class="form-control" placeholder value="EyRIS"
-                  readonly>
+                <input
+                  name="company"
+                  id="company"
+                  type="text"
+                  class="form-control"
+                  placeholder
+                  value="EyRIS"
+                  readonly />
               </div>
 
               <div class="form-group">
                 <label>Timezone</label>
-                <input name="timezone" id="timezone" type="text"
-                  class="form-control" placeholder value="Singapore"
-                  readonly>
+                <input
+                  name="timezone"
+                  id="timezone"
+                  type="text"
+                  class="form-control"
+                  placeholder
+                  value="Singapore"
+                  readonly />
               </div>
 
-              <button name="btnSave" id="btnSave" type="button"
+              <button
+                name="btnSave"
+                id="btnSave"
+                type="button"
                 class="btn bg-primary text-white float-right mt-3"
                 title="Save">
-                <i class="fa fa-save"></i> Save</button>
-
+                <i class="fa fa-save"></i> Save
+              </button>
             </form>
           </div>
         </div>
 
-        <div class="tab-pane fade border  " id="v-pills-profile" role="tabpanel"
+        <div
+          class="tab-pane fade border"
+          id="v-pills-profile"
+          role="tabpanel"
           aria-labelledby="v-pills-profile-tab">
           <h2 id="hd_text" class="container-fluid">Change Password</h2>
           <div class="container-fluid">
             <form name="frmChangePWD" id="frmChangePWD" method="post">
-              <input type="hidden" name="passwordSpecialChars"
-                id="passwordSpecialChars" value="%">
+              <input
+                type="hidden"
+                name="passwordSpecialChars"
+                id="passwordSpecialChars"
+                value="%" />
 
               <div class="form-group">
                 <label>Current Password </label>
-                <input name="old_pwd" id="old_pwd" type="password"
-                  class="form-control" placeholder
-                  autocomplete="off">
-                <input name="old_pwd_hnd" id="old_pwd_hnd" type="hidden" value>
+                <input
+                  name="old_pwd"
+                  id="old_pwd"
+                  type="password"
+                  class="form-control"
+                  placeholder
+                  autocomplete="off" />
+                <input
+                  name="old_pwd_hnd"
+                  id="old_pwd_hnd"
+                  type="hidden"
+                  value />
 
-                <input type="hidden"
+                <input
+                  type="hidden"
                   name="f17BB4A345F7E3C6BF27B56349355B94273C15CB04D15126C82C0AF7BDBB67982A9E659867A9801B46E7DD44FB18AE5DBD8DDFCAF5D356ADBEBF2E55A00D13DF6"
-                  value="A716A3771C312773183B6F8A648BFA83EF11C42D">
-
+                  value="A716A3771C312773183B6F8A648BFA83EF11C42D" />
               </div>
               <div class="form-group mb-1">
                 <label>New Password </label>
-                <input name="new_pwd" id="new_pwd" type="password"
-                  class="form-control" placeholder
-                  autocomplete="off">
-                <input name="new_pwd_hnd" id="new_pwd_hnd" type="hidden" value>
+                <input
+                  name="new_pwd"
+                  id="new_pwd"
+                  type="password"
+                  class="form-control"
+                  placeholder
+                  autocomplete="off" />
+                <input
+                  name="new_pwd_hnd"
+                  id="new_pwd_hnd"
+                  type="hidden"
+                  value />
               </div>
 
-              <div id="ver_div" class="form-group mt-0 mb-3 pl-3 ">
-                <div id="ver1" class="col-12 small text-dark"><i
-                    class="fas fa-check-circle fa-sm"></i> contains
-                  lowercase letters</div>
-                <div id="ver2" class="col-12 small text-dark"><i
-                    class="fa fa-check-circle fa-sm"></i> contains
-                  uppercase letters</div>
-                <div id="ver3" class="col-12 small text-dark"><i
-                    class="fa fa-check-circle fa-sm"></i> contains a number
+              <div id="ver_div" class="form-group mt-0 mb-3 pl-3">
+                <div id="ver1" class="col-12 small text-dark">
+                  <i class="fas fa-check-circle fa-sm"></i> contains lowercase
+                  letters
                 </div>
-                <div id="ver4" class="col-12 small text-dark"><i
-                    class="fa fa-check-circle fa-sm"></i> contains at least
-                  1 special character</div>
-                <div id="ver5" class="col-12 small text-dark"><i
-                    class="fa fa-check-circle fa-sm "></i> contains at
-                  least 8 and not more than 20 characters (no spaces)</div>
+                <div id="ver2" class="col-12 small text-dark">
+                  <i class="fa fa-check-circle fa-sm"></i> contains uppercase
+                  letters
+                </div>
+                <div id="ver3" class="col-12 small text-dark">
+                  <i class="fa fa-check-circle fa-sm"></i> contains a number
+                </div>
+                <div id="ver4" class="col-12 small text-dark">
+                  <i class="fa fa-check-circle fa-sm"></i> contains at least 1
+                  special character
+                </div>
+                <div id="ver5" class="col-12 small text-dark">
+                  <i class="fa fa-check-circle fa-sm"></i> contains at least 8
+                  and not more than 20 characters (no spaces)
+                </div>
               </div>
 
               <div class="form-group">
                 <label>Re-enter New Password </label>
-                <input name="new_pwd_confirm" id="new_pwd_confirm"
-                  type="password" class="form-control" placeholder
-                  autocomplete="off">
+                <input
+                  name="new_pwd_confirm"
+                  id="new_pwd_confirm"
+                  type="password"
+                  class="form-control"
+                  placeholder
+                  autocomplete="off" />
               </div>
 
-              <button name="btnChangePWD" id="btnChangePWD" disabled
+              <button
+                name="btnChangePWD"
+                id="btnChangePWD"
+                disabled
                 type="button"
-                class="btn bg-primary text-white float-right mt-3" title="Save">
-                <i class="fa fa-save"></i> Save</button>
+                class="btn bg-primary text-white float-right mt-3"
+                title="Save">
+                <i class="fa fa-save"></i> Save
+              </button>
             </form>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
@@ -7,22 +7,27 @@ import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
   standalone: false,
   
   templateUrl: './primary-care.component.html',
-  styleUrl: './primary-care.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './primary-care.component.css'
 })
-export class PrimaryCareComponent implements OnInit {
+export class PrimaryCareComponent implements OnInit, OnDestroy {
 
   mform?: UntypedFormGroup;
 
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private fb: UntypedFormBuilder
   ) {
+    this.renderer2.addClass(document.body, 'main-body');
     this.createForm();
   }
 
   ngOnInit() {
 
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   createForm() {

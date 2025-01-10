@@ -1,33 +1,48 @@
-<app-header [reload]="'/application/secondary/index'" [headerid]="'fn4'"
+<app-header
+  [reload]="'/application/secondary/index'"
+  [headerid]="'fn4'"
   [title]="'Worklist'"></app-header>
 
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
     <div class="row pb-1">
-      <div id="filter" class="col-12 container-fluid py-2 pl-0 ">
-        <form name="frmFilter" id="frmFilter" xrole="form" xclass="form-inline"
-          action="/bn_moh_uat/application/secondary/index.cfm" method="post">
-          <input type="hidden" name="recno" id="recno" value="25">
-          <input type="hidden" name="status" id="status" value="R">
+      <div id="filter" class="col-12 container-fluid py-2 pl-0">
+        <form
+          name="frmFilter"
+          id="frmFilter"
+          xrole="form"
+          xclass="form-inline"
+          action="/bn_moh_uat/application/secondary/index.cfm"
+          method="post">
+          <input type="hidden" name="recno" id="recno" value="25" />
+          <input type="hidden" name="status" id="status" value="R" />
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">Case Reference ID </label>
-            <input name="pid" id="pid" type="text" class="form-control "
-              placeholder value>
+            <label class="control-label mb-1">Case Reference ID </label>
+            <input
+              name="pid"
+              id="pid"
+              type="text"
+              class="form-control"
+              placeholder
+              value />
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">Capture Site </label>
-            <select class="form-control custom-select " name="location"
+            <label class="control-label mb-1">Capture Site </label>
+            <select
+              class="form-control custom-select"
+              name="location"
               id="location">
               <option value></option>
-
             </select>
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <select class="form-control custom-select " name="selDate"
+            <label class="control-label mb-1">&nbsp;</label>
+            <select
+              class="form-control custom-select"
+              name="selDate"
               id="selDate">
               <option value="DR" selected>Date Reported</option>
               <option value="DI">Date of Image</option>
@@ -36,105 +51,130 @@
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">From </label>
+            <label class="control-label mb-1">From </label>
             <div class="input-group">
-              <input id="date_from" name="date_from" type="text"
-                class="form-control" style="max-width: 145px;"
-                maxlength="11" value="21-Dec-2024"
-                onblur="if(!(check_date(this))){this.value='';}">
+              <input
+                id="date_from"
+                name="date_from"
+                type="text"
+                class="form-control"
+                style="max-width: 145px"
+                maxlength="11"
+                value="21-Dec-2024"
+                onblur="if(!(check_date(this))){this.value='';}" />
             </div>
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">To </label>
+            <label class="control-label mb-1">To </label>
             <div class="input-group">
-              <input id="date_to" name="date_to" type="text"
-                class="form-control" style="max-width: 145px;"
-                maxlength="11" value="10-Jan-2025"
-                onblur="if(!(check_date(this))){this.value='';}">
+              <input
+                id="date_to"
+                name="date_to"
+                type="text"
+                class="form-control"
+                style="max-width: 145px"
+                maxlength="11"
+                value="10-Jan-2025"
+                onblur="if(!(check_date(this))){this.value='';}" />
             </div>
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="btnSearch" id="btnSearch"
-              class="form-control btn bg-primary text-white " value="Search">
-              <i class="fa fa-search"></i> Search</button>
+            <label class="control-label mb-1">&nbsp;</label>
+            <button
+              name="btnSearch"
+              id="btnSearch"
+              class="form-control btn bg-primary text-white"
+              value="Search">
+              <i class="fa fa-search"></i> Search
+            </button>
           </div>
 
-          <div class="form-group fgx float-right ">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="xbtnDisclaimer" id="xbtnDisclaimer"
-              class="form-control btn bg-warning text-white "
+          <div class="form-group fgx float-right">
+            <label class="control-label mb-1">&nbsp;</label>
+            <button
+              name="xbtnDisclaimer"
+              id="xbtnDisclaimer"
+              class="form-control btn bg-warning text-white"
               value="Disclaimer"
               (click)="onDisclaimer()">
-              <i class="fa fa-exclamation-triangle"></i> Disclaimer</button>
-
+              <i class="fa fa-exclamation-triangle"></i> Disclaimer
+            </button>
           </div>
-
         </form>
       </div>
-
     </div>
 
     <div class="row">
       <div class="col-12 px-0">
-        <ul class="nav nav-tabs pl-2 " id="myTab" role="tablist">
-          <li class="nav-item font-weight-bold ">
-            <a class="nav-link  border " id="user_worklist" data-status="VR"
-              xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/index')">My
-              List</a>
+        <ul class="nav nav-tabs pl-2" id="myTab" role="tablist">
+          <li class="nav-item font-weight-bold">
+            <a
+              class="nav-link border"
+              id="user_worklist"
+              data-status="VR"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/index')">My List</a>
           </li>
-          <li class="nav-item font-weight-bold ">
-            <a class="nav-link  border " id="all_worklist" data-status="P"
-              xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/queue')">Queue
-              List</a>
+          <li class="nav-item font-weight-bold">
+            <a
+              class="nav-link border"
+              id="all_worklist"
+              data-status="P"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/queue')">Queue List</a>
           </li>
-          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link  border " id="nr_worklist" data-status="N"
-              xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/non-refer')">Non
-              Referable Cases</a>
+          <li class="nav-item font-weight-bold xml-auto xpr-2">
+            <a
+              class="nav-link border"
+              id="nr_worklist"
+              data-status="N"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/non-refer')">Non Referable
+              Cases</a>
           </li>
-          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link active border " id="r_worklist" data-status="R"
-              xdata-toggle="tab" href="#"
-              role="tab" title="Finalized Referable Case"
+          <li class="nav-item font-weight-bold xml-auto xpr-2">
+            <a
+              class="nav-link active border"
+              id="r_worklist"
+              data-status="R"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              title="Finalized Referable Case"
               (click)="goto('/application/secondary/refer', true)">Referable
               Cases</a>
           </li>
         </ul>
-
       </div>
     </div>
 
     <div class="clearfix"></div>
     <div class="row">
-      <div class="col-12 py-2 px-0">
-
-      </div>
+      <div class="col-12 py-2 px-0"></div>
     </div>
     <div class="clearfix"></div>
 
     <form name="frmMain" id="frmMain" method="post">
       <div class="row box-shadow">
         <div class="col-xl-12 col-lg-12 col-md-12">
-
           <div class="row p-1 bg-header text-white">
-            <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12  ">
+            <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
               <div class="row">
-
-                <div class="col-12">
-                  Case Reference ID
-                </div>
-
+                <div class="col-12">Case Reference ID</div>
               </div>
             </div>
-            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-  ">Site</div>
-            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Report
-              Status</div>
+            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-">Site</div>
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">
+              Report Status
+            </div>
 
             <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Image Date</div>
             <div class="col-xl-5 col-md-5 col-lg-5 col-sm-12">
@@ -142,70 +182,83 @@
                 <div class="col-4">
                   Date Reported <i class="fa fa-sort-down"></i>
                 </div>
-                <div class="col-6">
-                  Graded By / Date
-                </div>
+                <div class="col-6">Graded By / Date</div>
                 <div class="col-2"></div>
               </div>
             </div>
-
           </div>
 
-          <div id="pg-1"
+          <div
+            id="pg-1"
             class="rec-img row p-1 xborder-bottom bg-white text-secondary">
-
             <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
               <div class="row">
                 <div class="col-1">
                   <div class="checkbox">
-                    <input name="chk_1" id="chk_1" type="checkbox" value="1"
-                      style="cursor: pointer;" data-enable="1"
-                      datarefid="20241230000601">
-                    <input type="hidden" name="ref_id_1" id="ref_id_1"
-                      value="20241230000601">
-                    <input type="hidden" name="report_id_1" id="report_id_1"
-                      value="test">
+                    <input
+                      name="chk_1"
+                      id="chk_1"
+                      type="checkbox"
+                      value="1"
+                      style="cursor: pointer"
+                      data-enable="1"
+                      datarefid="20241230000601" />
+                    <input
+                      type="hidden"
+                      name="ref_id_1"
+                      id="ref_id_1"
+                      value="20241230000601" />
+                    <input
+                      type="hidden"
+                      name="report_id_1"
+                      id="report_id_1"
+                      value="test" />
                   </div>
                 </div>
                 <div class="col-11">
-                  <a class="pview  text-secondary" href
-                    datarefid="20241230000601" title="Preview"><i
-                      class="fa fa-file-alt"></i> test</a>
+                  <a
+                    class="pview text-secondary"
+                    href
+                    datarefid="20241230000601"
+                    title="Preview"><i class="fa fa-file-alt"></i> test</a>
                 </div>
               </div>
             </div>
             <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Mobile Bus 1</div>
 
-            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12 ">Reported</div>
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Reported</div>
             <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">30-Dec-2024</div>
             <div class="col-xl-5 col-md-5 col-lg-5 col-sm-12">
               <div class="row">
-                <div class="col-4">
-                  30-Dec-2024 14:18
-                </div>
+                <div class="col-4">30-Dec-2024 14:18</div>
                 <div class="col-6">
-                  Secondary Grader <br>
+                  Secondary Grader <br />
                   30-Dec-2024 14:18
                 </div>
                 <div class="col-2">
-                  <a id="pedit_1" name="pedit" class="pedit" href
-                    datarefid="20241230000601" data-pat-id="test"
+                  <a
+                    id="pedit_1"
+                    name="pedit"
+                    class="pedit"
+                    href
+                    datarefid="20241230000601"
+                    data-pat-id="test"
                     title="Image Viewer"><i class="fa fa-eye fa-lg"></i></a>
                 </div>
               </div>
             </div>
-
           </div>
-
-        </div> <!-- /.col-12 -->
+        </div>
+        <!-- /.col-12 -->
 
         <div class="col-lg-4 col-md-4 col-sm-12 py-2">
-          <div class="xform-group row ">
+          <div class="xform-group row">
             <label class="pl-3 pr-2 text-muted">Show </label>
             <select
               class="form-control form-control-sm custom-select custom-select-sm"
-              name="pagerec" id="pagerec"
-              style="max-width: 80px;">
+              name="pagerec"
+              id="pagerec"
+              style="max-width: 80px">
               <option value="10">10</option>
               <option value="25" selected>25</option>
               <option value="50">50</option>
@@ -213,22 +266,23 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center ">
-
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
           <span id="dispdesc" class="text-muted">Showing 1 to 1 of 1
             cases</span>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 pt-2">
-        </div>
-
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-2"></div>
       </div>
-      <input type="hidden" name="record_count" id="record_count" value="1">
-      <input type="hidden" name="selected_count" id="selected_count" value="0">
+      <input type="hidden" name="record_count" id="record_count" value="1" />
+      <input
+        type="hidden"
+        name="selected_count"
+        id="selected_count"
+        value="0" />
     </form>
-
-  </div> <!-- /.container-fluid -->
+  </div>
+  <!-- /.container-fluid -->
 
   <div class="clearfix"></div>
-
-</main> <!-- /.main -->
+</main>
+<!-- /.main -->

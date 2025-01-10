@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { GuideComponent } from './guide/guide.component';
@@ -14,10 +14,9 @@ interface DiseaseType {
   standalone: false,
   
   templateUrl: './submit-image.component.html',
-  styleUrl: './submit-image.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './submit-image.component.css'
 })
-export class SubmitImageComponent implements OnInit {
+export class SubmitImageComponent implements OnInit, OnDestroy {
 
   isCollapseSelena = true;
   isCollapseckd = true;
@@ -43,9 +42,10 @@ export class SubmitImageComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
   }
 
   ngOnInit() {
@@ -59,6 +59,10 @@ export class SubmitImageComponent implements OnInit {
         cd: 'CKD'
       }
     ];
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onFileDropRight1(ev: DragEvent) {

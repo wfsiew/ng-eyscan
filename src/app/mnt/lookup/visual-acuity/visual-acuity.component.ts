@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { LookupCreateComponent } from '../lookup-create/lookup-create.component';
@@ -8,18 +8,22 @@ import { LookupCreateComponent } from '../lookup-create/lookup-create.component'
   standalone: false,
   
   templateUrl: './visual-acuity.component.html',
-  styleUrl: './visual-acuity.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './visual-acuity.component.css'
 })
-export class VisualAcuityComponent {
+export class VisualAcuityComponent implements OnDestroy {
 
   bsModalRef?: BsModalRef;
   
   constructor(
     private router: Router,
+    private renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    
+    this.renderer2.addClass(document.body, 'main-body');
+  }
+
+  ngOnDestroy() {
+    this.renderer2.removeClass(document.body, 'main-body');
   }
 
   onCreate() {
