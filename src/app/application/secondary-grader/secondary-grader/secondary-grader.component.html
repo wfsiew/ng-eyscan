@@ -1,136 +1,221 @@
-<app-header [reload]="'/application/secondary/index'" [headerid]="'fn4'"
+<app-header
+  [reload]="'/application/secondary/index'"
+  [headerid]="'fn4'"
   [title]="'Worklist'"></app-header>
 
-<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhAboutBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div
         class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
-        <button id="__nhAboutBox_close" type="button"
+        <button
+          id="__nhAboutBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
-        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0"
-          style="width:700px; height:620px; "></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden; height: 620px">
+        <iframe
+          id="__nhAboutBox_iframe"
+          scrolling="no"
+          frameborder="0"
+          style="width: 700px; height: 620px"></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
-        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhPopWindow"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhPopWindow_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button id="__nhPopWindow_close" type="button"
+        <button
+          id="__nhPopWindow_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px"
-          scrolling="no" frameborder="0"></iframe>
+        <iframe
+          id="__nhPopWindow_iframe"
+          xwidth="500px"
+          xheight="400px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhMessageBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhMessageBox_title"
-  aria-hidden="true" data-keyboard="false">
+  aria-hidden="true"
+  data-keyboard="false">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
-        <button id="__nhMessageBox_close" type="button"
+        <button
+          id="__nhMessageBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0" style="overflow: hidden;">
-        <iframe id="__nhMessageBox_iframe" width="500px" height="230px"
-          scrolling="no" frameborder="0"></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden">
+        <iframe
+          id="__nhMessageBox_iframe"
+          width="500px"
+          height="230px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhMessageBox_ok" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_no" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button
+          id="__nhMessageBox_cancel"
+          type="button"
+          class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhErrorBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhErrorBox_title"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
-        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close btn-md m-1 p-0 bg-dark text-white"
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
-        style="width: 100%;max-height: 500px; overflow-y: auto;">
-      </div>
-      <div class="modal-footer justify-content-center m-0 p-1 ">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary"
-          data-dismiss="modal">OK</button>
+      <div
+        id="__nhErrorBox_content"
+        class="modal-body m-0 p-0"
+        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+      <div class="modal-footer justify-content-center m-0 p-1">
+        <button
+          id="__nhMessageBox_ok"
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal">
+          OK
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhAnimator"
+  tabindex="-1"
+  role="dialog"
   aria-hidden="true"
-  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  style="
+    position: absolute;
+    max-height: 140px;
+    max-width: 120px;
+    overflow: hidden;
+  ">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="background-color: rgba(0,0,0,.0001); border: none;">
-      <div class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none;overflow: hidden; ">
-      </div>
+    <div
+      class="modal-content"
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div
+        class="modal-header m-0 p-1 bg-header text-white"
+        style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
-
         <div class="nhAnimator"></div>
       </div>
-      <div class="modal-footer justify-content-center m-0 p-1"
-        style="display: none;">
-      </div>
+      <div
+        class="modal-footer justify-content-center m-0 p-1"
+        style="display: none"></div>
     </div>
   </div>
 </div>
@@ -138,31 +223,45 @@
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
     <div class="row pb-1">
-      <div id="filter" class="col-12 container-fluid py-2 pl-0 ">
-        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform"
-          xrole="form" xclass="form-inline"
-          action="/bn_moh_uat/application/secondary/index.cfm" method="post">
-          <input type="hidden" name="recno" id="recno" value="25">
-          <input type="hidden" name="status" id="status" value="VR">
+      <div id="filter" class="col-12 container-fluid py-2 pl-0">
+        <form
+          *ngIf="mform"
+          name="frmFilter"
+          id="frmFilter"
+          [formGroup]="mform"
+          xrole="form"
+          xclass="form-inline"
+          action="/bn_moh_uat/application/secondary/index.cfm"
+          method="post">
+          <input type="hidden" name="recno" id="recno" value="25" />
+          <input type="hidden" name="status" id="status" value="VR" />
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">Case Reference ID </label>
-            <input name="pid" id="pid" type="text" class="form-control "
-              placeholder value>
+          <div class="form-group fgx">
+            <label class="control-label mb-1">Case Reference ID </label>
+            <input
+              name="pid"
+              id="pid"
+              type="text"
+              class="form-control"
+              placeholder
+              value />
           </div>
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">Capture Site </label>
-            <select class="form-control custom-select " name="location"
+          <div class="form-group fgx">
+            <label class="control-label mb-1">Capture Site </label>
+            <select
+              class="form-control custom-select"
+              name="location"
               id="location">
               <option value></option>
-
             </select>
           </div>
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <select class="form-control custom-select " name="selDate"
+          <div class="form-group fgx">
+            <label class="control-label mb-1">&nbsp;</label>
+            <select
+              class="form-control custom-select"
+              name="selDate"
               id="selDate">
               <option value="DR" selected>Date Reported</option>
               <option value="DI">Date of Image</option>
@@ -170,14 +269,14 @@
             </select>
           </div>
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">From </label>
+          <div class="form-group fgx">
+            <label class="control-label mb-1">From </label>
             <div class="input-group">
               <input
                 name="date_from"
                 type="text"
                 class="form-control"
-                style="max-width: 145px;"
+                style="max-width: 145px"
                 maxlength="11"
                 onkeydown="return false"
                 (keyup)="onKeyupFrom($event)"
@@ -185,20 +284,26 @@
                 bsDatepicker
                 placement="bottom"
                 formControlName="date_from"
-                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
+                [bsConfig]="{
+                  dateInputFormat: 'DD-MMM-YYYY',
+                  containerClass: 'theme-dark-blue',
+                  showTodayButton: true,
+                  showClearButton: true,
+                  customTodayClass: 'custom-today-class'
+                }" />
               <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="19-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
           </div>
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">To </label>
+          <div class="form-group fgx">
+            <label class="control-label mb-1">To </label>
             <div class="input-group">
               <input
                 name="date_to"
                 type="text"
                 class="form-control"
-                style="max-width: 145px;"
+                style="max-width: 145px"
                 maxlength="11"
                 onkeydown="return false"
                 (keyup)="onKeyupTo($event)"
@@ -206,83 +311,117 @@
                 bsDatepicker
                 placement="bottom"
                 formControlName="date_to"
-                [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
+                [bsConfig]="{
+                  dateInputFormat: 'DD-MMM-YYYY',
+                  containerClass: 'theme-dark-blue',
+                  showTodayButton: true,
+                  showClearButton: true,
+                  customTodayClass: 'custom-today-class'
+                }" />
               <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="08-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
           </div>
 
-          <div class="form-group ">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="btnSearch" id="btnSearch"
-              class="form-control btn bg-primary text-white " value="Search">
-              <i class="fa fa-search"></i> Search</button>
+          <div class="form-group fgx">
+            <label class="control-label mb-1">&nbsp;</label>
+            <button
+              name="btnSearch"
+              id="btnSearch"
+              class="form-control btn bg-primary text-white"
+              value="Search">
+              <i class="fa fa-search"></i> Search
+            </button>
           </div>
 
-          <div class="form-group float-right ">
-            <label class="control-label mb-1 ">&nbsp;</label>
-            <button name="xbtnDisclaimer" id="xbtnDisclaimer"
-              class="form-control btn bg-warning text-white "
+          <div class="form-group fgx float-right">
+            <label class="control-label mb-1">&nbsp;</label>
+            <button
+              name="xbtnDisclaimer"
+              id="xbtnDisclaimer"
+              class="form-control btn bg-warning text-white"
               value="Disclaimer"
               (click)="onDisclaimer()">
-              <i class="fa fa-exclamation-triangle"></i> Disclaimer</button>
-
+              <i class="fa fa-exclamation-triangle"></i> Disclaimer
+            </button>
           </div>
-
         </form>
       </div>
-
     </div>
 
     <div class="row">
       <div class="col-12 px-0">
-        <ul class="nav nav-tabs pl-2 " id="myTab" role="tablist">
-          <li class="nav-item font-weight-bold ">
-            <a class="nav-link active border " id="user_worklist"
-              data-status="VR" xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/index', true)">My
-              List</a>
+        <ul class="nav nav-tabs pl-2" id="myTab" role="tablist">
+          <li class="nav-item font-weight-bold">
+            <a
+              class="nav-link active border"
+              id="user_worklist"
+              data-status="VR"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/index', true)">My List</a>
           </li>
-          <li class="nav-item font-weight-bold ">
-            <a class="nav-link  border " id="all_worklist" data-status="P"
-              xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/queue')">Queue
-              List</a>
+          <li class="nav-item font-weight-bold">
+            <a
+              class="nav-link border"
+              id="all_worklist"
+              data-status="P"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/queue')">Queue List</a>
           </li>
-          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link  border " id="nr_worklist" data-status="N"
-              xdata-toggle="tab" href="#"
-              role="tab" (click)="goto('/application/secondary/non-refer')">Non
-              Referable Cases</a>
+          <li class="nav-item font-weight-bold xml-auto xpr-2">
+            <a
+              class="nav-link border"
+              id="nr_worklist"
+              data-status="N"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              (click)="goto('/application/secondary/non-refer')">Non Referable
+              Cases</a>
           </li>
-          <li class="nav-item font-weight-bold xml-auto xpr-2 ">
-            <a class="nav-link  border " id="r_worklist" data-status="R"
-              xdata-toggle="tab" href="#"
-              role="tab" title="Finalized Referable Case"
+          <li class="nav-item font-weight-bold xml-auto xpr-2">
+            <a
+              class="nav-link border"
+              id="r_worklist"
+              data-status="R"
+              xdata-toggle="tab"
+              href="#"
+              role="tab"
+              title="Finalized Referable Case"
               (click)="goto('/application/secondary/refer')">Referable Cases</a>
           </li>
         </ul>
-
       </div>
     </div>
 
     <div class="clearfix"></div>
     <div class="row">
       <div class="col-12 py-2 px-0">
-
-        <button name="btnRouted" id="btnRouted"
-          class="btn btn-sm bg-primary text-white" value="Routed to Queue List"
-          disabled><i class="fa fa-share-alt"></i> Routed to Queue List</button>
+        <button
+          name="btnRouted"
+          id="btnRouted"
+          class="btn btn-sm bg-primary text-white"
+          value="Routed to Queue List"
+          disabled>
+          <i class="fa fa-share-alt"></i> Routed to Queue List
+        </button>
         <div
-          class="custom-control custom-checkbox xcustom-control-group float-right ">
-
-          <input type="checkbox" class="custom-control-input "
-            id="chk_verifying" name="chk_verifying" value="V">
-          <label class="custom-control-label small " for="chk_verifying"
-            style="cursor: pointer;">Show Verifying Cases Only</label>
-
+          class="custom-control custom-checkbox xcustom-control-group float-right">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="chk_verifying"
+            name="chk_verifying"
+            value="V" />
+          <label
+            class="custom-control-label small"
+            for="chk_verifying"
+            style="cursor: pointer">Show Verifying Cases Only</label>
         </div>
-
       </div>
     </div>
     <div class="clearfix"></div>
@@ -290,26 +429,27 @@
     <form name="frmMain" id="frmMain" method="post">
       <div class="row box-shadow">
         <div class="col-xl-12 col-lg-12 col-md-12">
-
           <div class="row p-1 bg-header text-white">
-            <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12  ">
+            <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
               <div class="row">
-
                 <div class="col-1">
                   <div class="checkbox">
-                    <input name="chk_all" id="chk_all" type="checkbox"
-                      style="cursor: pointer;" disabled value="0">
+                    <input
+                      name="chk_all"
+                      id="chk_all"
+                      type="checkbox"
+                      style="cursor: pointer"
+                      disabled
+                      value="0" />
                   </div>
                 </div>
-                <div class="col-11">
-                  Case Reference ID
-                </div>
-
+                <div class="col-11">Case Reference ID</div>
               </div>
             </div>
-            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-  ">Site</div>
-            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Report
-              Status</div>
+            <div class="col-xl-2 col-md-2 col-lg-2 col-sm-">Site</div>
+            <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">
+              Report Status
+            </div>
 
             <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12">Image Date</div>
             <div class="col-xl-5 col-md-5 col-lg-5 col-sm-12">
@@ -317,28 +457,28 @@
                 <div class="col-4">
                   Date Reported <i class="fa fa-sort-down"></i>
                 </div>
-                <div class="col-6">
-                  Graded By / Date
-                </div>
+                <div class="col-6">Graded By / Date</div>
                 <div class="col-2"></div>
               </div>
             </div>
-
           </div>
 
           <div class="row py-1 xborder-bottom text-center bg-white">
-            <div class="col-xl-12 col-md-12 col-lg-12 ">No Record Found.</div>
+            <div class="col-xl-12 col-md-12 col-lg-12">No Record Found.</div>
           </div>
-
-        </div> <!-- /.col-12 -->
-
+        </div>
+        <!-- /.col-12 -->
       </div>
-      <input type="hidden" name="record_count" id="record_count" value="0">
-      <input type="hidden" name="selected_count" id="selected_count" value="0">
+      <input type="hidden" name="record_count" id="record_count" value="0" />
+      <input
+        type="hidden"
+        name="selected_count"
+        id="selected_count"
+        value="0" />
     </form>
-
-  </div> <!-- /.container-fluid -->
+  </div>
+  <!-- /.container-fluid -->
 
   <div class="clearfix"></div>
-
-</main> <!-- /.main -->
+</main>
+<!-- /.main -->

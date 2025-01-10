@@ -1,9 +1,9 @@
 body{background-color:#deeefd;}
-.form-inline>* {
+.fmx>* {
   margin: 5px 3px;
 }
 
-.form-group {
+.fgx {
   display: inline-block;
   margin: 0px 3px;
   vertical-align: top;
@@ -16,10 +16,10 @@ body{background-color:#deeefd;}
   align-items: center;
 }
 
-.modal-content {
+/* .modal-content {
   width: auto;
   height: auto;
-}
+} */
 
 .main-margin {
   margin-top: 120px;

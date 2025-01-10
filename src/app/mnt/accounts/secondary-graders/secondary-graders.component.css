@@ -1,5 +1,5 @@
 body{background-color:#deeefd;}
-.form>* {
+form.fmx>* {
   margin: 5px 3px;
 }
 
@@ -10,7 +10,7 @@ body{background-color:#deeefd;}
   align-items: center;
 }
 
-.modal-content {
+.xxmodal-content {
   /* xheight: 100% !important; */
   /* xwidth: 100% !important; */
   width: auto;

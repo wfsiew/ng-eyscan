@@ -1,215 +1,337 @@
-<app-header [reload]="'/mnt/accounts/secondary-graders'" [headerid]="'fn0'"
+<app-header
+  [reload]="'/mnt/accounts/secondary-graders'"
+  [headerid]="'fn0'"
   [title]="'Manage Users'"></app-header>
 
-<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhAboutBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div
         class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
-        <button id="__nhAboutBox_close" type="button"
+        <button
+          id="__nhAboutBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
-        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0"
-          style="width:700px; height:620px; "></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden; height: 620px">
+        <iframe
+          id="__nhAboutBox_iframe"
+          scrolling="no"
+          frameborder="0"
+          style="width: 700px; height: 620px"></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
-        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhPopWindow"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhPopWindow_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button id="__nhPopWindow_close" type="button"
+        <button
+          id="__nhPopWindow_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px"
-          scrolling="no" frameborder="0"></iframe>
+        <iframe
+          id="__nhPopWindow_iframe"
+          xwidth="500px"
+          xheight="400px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhMessageBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhMessageBox_title"
-  aria-hidden="true" data-keyboard="false">
+  aria-hidden="true"
+  data-keyboard="false">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
-        <button id="__nhMessageBox_close" type="button"
+        <button
+          id="__nhMessageBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0" style="overflow: hidden;">
-        <iframe id="__nhMessageBox_iframe" width="500px" height="230px"
-          scrolling="no" frameborder="0"></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden">
+        <iframe
+          id="__nhMessageBox_iframe"
+          width="500px"
+          height="230px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhMessageBox_ok" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_no" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button
+          id="__nhMessageBox_cancel"
+          type="button"
+          class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhErrorBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhErrorBox_title"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
-        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close btn-md m-1 p-0 bg-dark text-white"
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
-        style="width: 100%;max-height: 500px; overflow-y: auto;">
-      </div>
-      <div class="modal-footer justify-content-center m-0 p-1 ">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary"
-          data-dismiss="modal">OK</button>
+      <div
+        id="__nhErrorBox_content"
+        class="modal-body m-0 p-0"
+        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+      <div class="modal-footer justify-content-center m-0 p-1">
+        <button
+          id="__nhMessageBox_ok"
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal">
+          OK
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhAnimator"
+  tabindex="-1"
+  role="dialog"
   aria-hidden="true"
-  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  style="
+    position: absolute;
+    max-height: 140px;
+    max-width: 120px;
+    overflow: hidden;
+  ">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="background-color: rgba(0,0,0,.0001); border: none;">
-      <div class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none;overflow: hidden; ">
-      </div>
+    <div
+      class="modal-content"
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div
+        class="modal-header m-0 p-1 bg-header text-white"
+        style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
-
         <div class="nhAnimator"></div>
       </div>
-      <div class="modal-footer justify-content-center m-0 p-1"
-        style="display: none;">
-      </div>
+      <div
+        class="modal-footer justify-content-center m-0 p-1"
+        style="display: none"></div>
     </div>
   </div>
 </div>
 
 <main role="main" class="container-fluid main-margin">
-  <div class="container-fluid pt-4 pb-4 ">
-    <div class="row main-body ">
-
+  <div class="container-fluid pt-4 pb-4">
+    <div class="row main-body">
       <div
         class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab" role="tablist"
+        id="v-pills-tab"
+        role="tablist"
         aria-orientation="vertical">
-
-        <a class="nav-link " id="pill_primary" data-toggle="pill" data-group="1"
+        <a
+          class="nav-link"
+          id="pill_primary"
+          data-toggle="pill"
+          data-group="1"
           data-function="fn0_2"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user"
+          href="#v-pills-user"
+          role="tab"
+          aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/accounts/primary-screeners')">Primary
           Screeners</a>
 
-        <a class="nav-link active " id="pill_secondary" data-toggle="pill"
-          data-group="2" data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user"
+        <a
+          class="nav-link active"
+          id="pill_secondary"
+          data-toggle="pill"
+          data-group="2"
+          data-function="fn0_3"
+          href="#v-pills-user"
+          role="tab"
+          aria-controls="v-pills-user"
           aria-selected="true"
           (click)="goto('/mnt/accounts/secondary-graders', true)">Secondary
           Graders</a>
 
-        <a class="nav-link " id="pill_prisec" data-toggle="pill" data-group="3"
+        <a
+          class="nav-link"
+          id="pill_prisec"
+          data-toggle="pill"
+          data-group="3"
           data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user"
+          href="#v-pills-user"
+          role="tab"
+          aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/accounts/primary-secondary-user')">Primary/Secondary
           User</a>
 
-        <a class="nav-link " id="pill_uadmin" data-toggle="pill" data-group="10"
+        <a
+          class="nav-link"
+          id="pill_uadmin"
+          data-toggle="pill"
+          data-group="10"
           data-function="fn0_3"
-          href="#v-pills-user" role="tab" aria-controls="v-pills-user"
-          aria-selected="false" (click)="goto('/mnt/accounts/admin-user')">User
-          Admin</a>
-
+          href="#v-pills-user"
+          role="tab"
+          aria-controls="v-pills-user"
+          aria-selected="false"
+          (click)="goto('/mnt/accounts/admin-user')">User Admin</a>
       </div>
 
-      <div class="tab-content xp-4  col-xl-10 col-lg-10 col-md-10 col-sm-12"
+      <div
+        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
         id="v-pills-tabContent">
-
-        <div class="tab-pane fade show active " id="v-pills-user"
+        <div
+          class="tab-pane fade show active"
+          id="v-pills-user"
           role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
                 Secondary Graders
               </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0 ">
-                <form name="frmFilter" id="frmFilter"
-                  class="form-inline float-right"
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
+                <form
+                  name="frmFilter"
+                  id="frmFilter"
+                  class="form-inline float-right fmx"
                   action="/bn_moh_uat/mnt/accounts/index.cfm?tid=fn0_3"
                   method="post">
-                  <input type="hidden" name="ugroup" id="ugroup" value="2">
-                  <input type="hidden" name="recno" id="recno" value="25">
+                  <input type="hidden" name="ugroup" id="ugroup" value="2" />
+                  <input type="hidden" name="recno" id="recno" value="25" />
                   <div class="form-group mr-2">
-
-                    <input name="desc" id="desc" type="text"
-                      class="form-control" placeholder="Search..." value>
+                    <input
+                      name="desc"
+                      id="desc"
+                      type="text"
+                      class="form-control"
+                      placeholder="Search..."
+                      value />
                   </div>
                   <div class="form-group mr-2">
-                    <div class="btn-toolbar float-right ">
-                      <button name="btnSearch" id="btnSearch"
+                    <div class="btn-toolbar float-right">
+                      <button
+                        name="btnSearch"
+                        id="btnSearch"
                         class="form-control btn bg-primary text-white"
                         title="Search">
-                        <i class="fa fa-search"></i> Search</button>
+                        <i class="fa fa-search"></i> Search
+                      </button>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="btn-toolbar float-right ">
-                      <button name="btnNew" id="btnNew"
+                    <div class="btn-toolbar float-right">
+                      <button
+                        name="btnNew"
+                        id="btnNew"
                         class="form-control btn bg-primary text-white"
                         data-group="2"
-                        title="New" (click)="onCreate()">
-                        <i class="fa fa-plus"></i> New</button>
+                        title="New"
+                        (click)="onCreate()">
+                        <i class="fa fa-plus"></i> New
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -217,162 +339,214 @@
             </div>
 
             <div class="row box-shadow">
-              <div class="col-xl-12 col-lg-12 col-md-12 ">
-
+              <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="row p-1 bg-header text-white">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">eMail <i
-                      class="fa fa-sort-up"></i></div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Full
-                    Name</div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Display
-                    Name</div>
-                  <div
-                    class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Company</div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    eMail <i class="fa fa-sort-up"></i>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Full Name
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Display Name
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Company
+                  </div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12"></div>
                 </div>
 
-                <div id="pg-1"
+                <div
+                  id="pg-1"
                   class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     dr.helena&#64;jpmc.com.bn
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Hurairah
-                    Helena </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Dr
-                    Helena</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_1" name="pedit" class="pedit" href="#"
-                      data-id="14" data-group="2" title="Edit"
-                      (click)="onEdit()"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Hurairah Helena
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Dr Helena
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_1"
+                      name="pedit"
+                      class="pedit"
+                      href="#"
+                      data-id="14"
+                      data-group="2"
+                      title="Edit"
+                      (click)="onEdit()"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-2"
+                <div
+                  id="pg-2"
                   class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     dummytesting.eyris&#64;outlook.com
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Grader
-                    Secondary</div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Secondary
-                    Grader</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_2" name="pedit" class="pedit" href data-id="31"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Grader Secondary
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Secondary Grader
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_2"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="31"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-3"
+                <div
+                  id="pg-3"
                   class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     dummytesting.eyris2&#64;outlook.com
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Two
-                    Secondary Grader</div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Secondary
-                    Grader Two</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_3" name="pedit" class="pedit" href data-id="33"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Two Secondary Grader
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Secondary Grader Two
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_3"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="33"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-4"
+                <div
+                  id="pg-4"
                   class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     eyeman3333&#64;gmail.com
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Joshi
-                    Nayan</div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Mr Nayan
-                    Joshi</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_4" name="pedit" class="pedit" href data-id="11"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Joshi Nayan
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Mr Nayan Joshi
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_4"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="11"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-5"
+                <div
+                  id="pg-5"
                   class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     helena.hurairah&#64;moh.gov.bn
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Hajah Helena
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Hajah Helena
                   </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Dr Hajah
-                    Helena </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_5" name="pedit" class="pedit" href data-id="12"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Dr Hajah Helena
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_5"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="12"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-6"
+                <div
+                  id="pg-6"
                   class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     novahealth.chingsoo&#64;outlook.com
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Chew
-                    CS</div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Secondary
-                    Grader</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_6" name="pedit" class="pedit" href data-id="29"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Chew CS
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    Secondary Grader
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_6"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="29"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div id="pg-7"
+                <div
+                  id="pg-7"
                   class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
                     sgrader&#64;test.com
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">grader
-                    sgrader</div>
-                  <div
-                    class="col-xl-2 col-lg-2 col-md-2 col-sm-12">sgrader</div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">Brunei MOH
-                    Ocular Reading Centre</div>
-                  <div
-                    class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center ">
-                    <a id="pedit_7" name="pedit" class="pedit" href data-id="24"
-                      data-group="2" title="Edit"><i
-                        class="fa fa-pencil-alt "></i></a>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    grader sgrader
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    sgrader
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    Brunei MOH Ocular Reading Centre
+                  </div>
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
+                    <a
+                      id="pedit_7"
+                      name="pedit"
+                      class="pedit"
+                      href
+                      data-id="24"
+                      data-group="2"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
-
-              </div> <!-- /.col-12 -->
+              </div>
+              <!-- /.col-12 -->
 
               <div class="col-lg-4 col-md-4 col-sm-12 py-2">
                 <div class="xform-group row">
@@ -380,7 +554,8 @@
                   <select
                     class="form-control form-control-sm custom-select custom-select-sm"
                     name="pagerec"
-                    id="pagerec" style="max-width: 80px;">
+                    id="pagerec"
+                    style="max-width: 80px">
                     <option value="10">10</option>
                     <option value="25" selected>25</option>
                     <option value="50">50</option>
@@ -389,23 +564,16 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
-
                 <span id="dispdesc" class="text-muted">Showing 1 to 7 of
                   7</span>
               </div>
 
-              <div class="col-lg-4 col-md-4 col-sm-12 pt-2">
-              </div>
-
+              <div class="col-lg-4 col-md-4 col-sm-12 pt-2"></div>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
-
   </div>
   <div class="clearfix"></div>
 </main>

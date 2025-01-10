@@ -1,22 +1,27 @@
-<app-header [reload]="'/application/manage-data'" [headerid]="'fn0'"
+<app-header
+  [reload]="'/application/manage-data'"
+  [headerid]="'fn0'"
   [title]="'Case Investigation'"></app-header>
 
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
     <div class="row pb-1">
-      <div id="filter" class="container-fluid py-2 pl-0 ">
-        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform"
-          xclass="form-inline"
+      <div id="filter" class="container-fluid py-2 pl-0">
+        <form
+          *ngIf="mform"
+          name="frmFilter"
+          id="frmFilter"
+          [formGroup]="mform"
+          xclass="form-inline fmx"
           action="/bn_moh_uat/application/manage_data/index.cfm?tid=fn0_12"
           method="post">
-          <input type="hidden" name="recno" id="recno" value="1000">
-          <input type="hidden" name="image_from" id="image_from" value>
-          <input type="hidden" name="result_status" id="result_status" value>
+          <input type="hidden" name="recno" id="recno" value="1000" />
+          <input type="hidden" name="image_from" id="image_from" value />
+          <input type="hidden" name="result_status" id="result_status" value />
 
-          <div class="row ">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="form-row">
-
                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 px-2">
                   <div class="form-row">
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
@@ -30,17 +35,25 @@
                       <div class="form-row border rounded bg-white">
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
-
-                          <div class="form-row ">
+                          <div class="form-row">
                             <div
                               class="col-xl-3 col-lg-6 col-md-4 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input " type="checkbox"
-                                  id="disease_dr" name="disease_dr"
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  id="disease_dr"
+                                  name="disease_dr"
                                   value="DR"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
-                                  for="disease_dr" style="cursor: pointer;">
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
+                                  for="disease_dr"
+                                  style="cursor: pointer">
                                   Diabetic Retinopathy
                                 </label>
                               </div>
@@ -49,13 +62,21 @@
                             <div
                               class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox"
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
                                   id="disease_glaucoma"
-                                  name="disease_glaucoma" value="GLAUCOMA"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
+                                  name="disease_glaucoma"
+                                  value="GLAUCOMA"
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
                                   for="disease_glaucoma"
-                                  style="cursor: pointer;">
+                                  style="cursor: pointer">
                                   Glaucoma Suspect
                                 </label>
                               </div>
@@ -64,88 +85,123 @@
                             <div
                               class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox"
-                                  id="disease_amd" name="disease_amd"
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  id="disease_amd"
+                                  name="disease_amd"
                                   value="AMD"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
-                                  for="disease_amd" style="cursor: pointer;">
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
+                                  for="disease_amd"
+                                  style="cursor: pointer">
                                   Age-Related Macular Degeneration
                                 </label>
                               </div>
                             </div>
-
                           </div>
-
                         </div>
-
                       </div>
                     </div>
-
                   </div>
-
                 </div>
 
                 <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 px-2">
                   <div class="form-row">
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
-
                       <div class="form-row">
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
                           Result
                         </div>
                       </div>
-                      <div class="form-row  border rounded bg-white">
+                      <div class="form-row border rounded bg-white">
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
-                          <div class="form-row ">
+                          <div class="form-row">
                             <div
                               class="col-xl-2 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input sel_result"
-                                  type="checkbox" id="referable"
-                                  name="referable" data-result-code="R,RDR,VTDR"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
+                                <input
+                                  class="form-check-input sel_result"
+                                  type="checkbox"
+                                  id="referable"
+                                  name="referable"
+                                  data-result-code="R,RDR,VTDR"
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
                                   for="referable"
-                                  style="cursor: pointer;">Referable</label>
+                                  style="cursor: pointer">Referable</label>
                               </div>
                             </div>
                             <div
                               class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input sel_result"
-                                  type="checkbox" id="non-referable"
-                                  name="nonreferable" data-result-code="N"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
+                                <input
+                                  class="form-check-input sel_result"
+                                  type="checkbox"
+                                  id="non-referable"
+                                  name="nonreferable"
+                                  data-result-code="N"
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
                                   for="non-referable"
-                                  style="cursor: pointer;">Non
-                                  Referable</label>
+                                  style="cursor: pointer">Non Referable</label>
                               </div>
                             </div>
                             <div
                               class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input sel_result"
-                                  type="checkbox" id="ungradable"
-                                  name="ungradable" data-result-code="U"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
+                                <input
+                                  class="form-check-input sel_result"
+                                  type="checkbox"
+                                  id="ungradable"
+                                  name="ungradable"
+                                  data-result-code="U"
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
                                   for="ungradable"
-                                  style="cursor: pointer;">Ungradable</label>
+                                  style="cursor: pointer">Ungradable</label>
                               </div>
                             </div>
                             <div
                               class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input class="form-check-input sel_result"
-                                  type="checkbox" id="all-nr" name="allnr"
+                                <input
+                                  class="form-check-input sel_result"
+                                  type="checkbox"
+                                  id="all-nr"
+                                  name="allnr"
                                   data-result-code="ANR"
-                                  style="cursor: pointer; height:16px; width:16px;">
-                                <label class="form-check-label pl-1"
-                                  for="all-nr" style="cursor: pointer;">All Non
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label
+                                  class="form-check-label pl-1"
+                                  for="all-nr"
+                                  style="cursor: pointer">All Non
                                   Referable</label>
                               </div>
                             </div>
@@ -155,25 +211,22 @@
                     </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </div>
 
           <div class="row pt-2">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="row">
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12  ">
-
-                  <div class="form-group ">
-                    <label class="control-label mb-1 ">From </label>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+                  <div class="form-group fgx">
+                    <label class="control-label mb-1">From </label>
                     <div class="input-group">
                       <input
                         name="date_from"
                         type="text"
                         class="form-control"
-                        style="max-width: 145px;"
+                        style="max-width: 145px"
                         maxlength="11"
                         onkeydown="return false"
                         (keyup)="onKeyupFrom($event)"
@@ -181,20 +234,26 @@
                         bsDatepicker
                         placement="right"
                         formControlName="date_from"
-                        [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
+                        [bsConfig]="{
+                          dateInputFormat: 'DD-MMM-YYYY',
+                          containerClass: 'theme-dark-blue',
+                          showTodayButton: true,
+                          showClearButton: true,
+                          customTodayClass: 'custom-today-class'
+                        }" />
                       <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                         maxlength="11" value="02-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
                     </div>
                   </div>
 
-                  <div class="form-group ">
-                    <label class="control-label mb-1 ">To </label>
+                  <div class="form-group fgx">
+                    <label class="control-label mb-1">To </label>
                     <div class="input-group">
                       <input
                         name="date_to"
                         type="text"
                         class="form-control"
-                        style="max-width: 145px;"
+                        style="max-width: 145px"
                         maxlength="11"
                         onkeydown="return false"
                         (keyup)="onKeyupTo($event)"
@@ -202,25 +261,33 @@
                         bsDatepicker
                         placement="right"
                         formControlName="date_to"
-                        [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY', containerClass: 'theme-dark-blue', showTodayButton: true, showClearButton: true, customTodayClass: 'custom-today-class' }">
+                        [bsConfig]="{
+                          dateInputFormat: 'DD-MMM-YYYY',
+                          containerClass: 'theme-dark-blue',
+                          showTodayButton: true,
+                          showClearButton: true,
+                          customTodayClass: 'custom-today-class'
+                        }" />
                       <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                         maxlength="11" value="09-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
                     </div>
                   </div>
 
-                  <div class="form-group" style="max-width: 500px;">
-                    <label class="control-label mb-1 ">Company</label>
-                    <select class="form-control custom-select" name="company_id"
+                  <div class="form-group fgx" style="max-width: 500px">
+                    <label class="control-label mb-1">Company</label>
+                    <select
+                      class="form-control custom-select"
+                      name="company_id"
                       id="company_id">
-
                       <option value="8">Belait Hospital (TOPCON)</option>
 
                       <option value="10">Berakas Health Centre</option>
 
                       <option value="2">Brunei MOH</option>
 
-                      <option value="3">Brunei MOH Ocular Reading
-                        Centre</option>
+                      <option value="3">
+                        Brunei MOH Ocular Reading Centre
+                      </option>
 
                       <option value="1" selected>EyRIS</option>
 
@@ -247,104 +314,113 @@
                       <option value="17">zGrading Centre</option>
 
                       <option value="16">zScreening Centre</option>
-
                     </select>
                   </div>
-                  <div class="form-group">
-                    <label class="control-label mb-1 " for="status"
-                      style="cursor: pointer;">Include Sub Centres
+                  <div class="form-group fgx">
+                    <label
+                      class="control-label mb-1"
+                      for="status"
+                      style="cursor: pointer">Include Sub Centres
                     </label>
-                    <div class="custom-control custom-checkbox ">
-                      <input type="checkbox"
-                        class="custom-control custom-control-lg "
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control custom-control-lg"
                         id="sub_comp_ind"
-                        name="sub_comp_ind" value="Y"
-                        style="cursor: pointer; height:16px; width:16px;">
+                        name="sub_comp_ind"
+                        value="Y"
+                        style="cursor: pointer; height: 16px; width: 16px" />
                     </div>
                   </div>
-
                 </div>
 
                 <div
-                  class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3  xd-flex xalign-items-end ">
+                  class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3 xd-flex xalign-items-end">
                   <div class="btn-group float-right">
-                    <button name="btnSearch" id="btnSearch"
+                    <button
+                      name="btnSearch"
+                      id="btnSearch"
                       class="form-control btn bg-primary text-white mr-3"
                       value="Search">
-                      <i class="fa fa-search"></i> Search</button>
-                    <button name="btnDownload" id="btnDownload"
+                      <i class="fa fa-search"></i> Search
+                    </button>
+                    <button
+                      name="btnDownload"
+                      id="btnDownload"
                       class="form-control btn bg-primary text-white"
-                      value="Download Images" disabled>
-                      <i class="fa fa-cloud-download-alt"></i> Download
-                      Image</button>
+                      value="Download Images"
+                      disabled>
+                      <i class="fa fa-cloud-download-alt"></i> Download Image
+                    </button>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
         </form>
       </div>
-
     </div>
 
     <div class="row box-shadow">
-      <div class="col-xl-12 col-lg-12 ">
-
+      <div class="col-xl-12 col-lg-12">
         <div class="row p-1 bg-header text-white">
-          <div class="col-xl-1 col-md-1 col-lg-1 col-sm-12 "
-            style="max-width:30px; ">
+          <div
+            class="col-xl-1 col-md-1 col-lg-1 col-sm-12"
+            style="max-width: 30px">
             <div class="checkbox">
-              <input name="chk_all" id="chk_all" type="checkbox"
-                style="cursor: pointer;" disabled>
+              <input
+                name="chk_all"
+                id="chk_all"
+                type="checkbox"
+                style="cursor: pointer"
+                disabled />
             </div>
           </div>
-          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Case Reference
-            ID</div>
-          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">Date Submitted <i
-              class="fa fa-sort-down"></i>
-            <br>Date of Image
+          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">
+            Case Reference ID
           </div>
-          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Submitted
-            by<br>Capture Site</div>
-          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 ">
+          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">
+            Date Submitted <i class="fa fa-sort-down"></i> <br />Date of Image
+          </div>
+          <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">
+            Submitted by<br />Capture Site
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
             <div class="row">
-              <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12 ">Right Eye</div>
-              <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12 ">Left Eye</div>
+              <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">Right Eye</div>
+              <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">Left Eye</div>
             </div>
             <div class="row">
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">DR</div>
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">Glaucoma</div>
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">AMD</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">DR</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Glaucoma</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">AMD</div>
 
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">DR</div>
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">Glaucoma</div>
-              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12 ">AMD</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">DR</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">Glaucoma</div>
+              <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">AMD</div>
             </div>
           </div>
         </div>
 
         <div class="row py-1 border-bottom text-center bg-white">
-          <div class="col-md-12 col-lg-12 ">No Record Found.</div>
+          <div class="col-md-12 col-lg-12">No Record Found.</div>
         </div>
-
-      </div> <!-- /.col-12 -->
-
+      </div>
+      <!-- /.col-12 -->
     </div>
-
-  </div> <!-- /.container-fluid -->
+  </div>
+  <!-- /.container-fluid -->
 
   <div class="clearfix"></div>
-
-</main> <!-- /.main -->
-<input type="hidden" id="hidden_from" value="02-Jan-2025">
-<input type="hidden" id="hidden_to" value="09-Jan-2025">
-<input type="hidden" id="hidden_company_id" value="1">
-<input type="hidden" id="hidden_sub_company_ind" value="N">
-<input type="hidden" id="hidden_dr_ind" value="N">
-<input type="hidden" id="hidden_gla_ind" value="N">
-<input type="hidden" id="hidden_amd_ind" value="N">
-<input type="hidden" id="hidden_ref_ind" value="N">
-<input type="hidden" id="hidden_nonref_ind" value="N">
-<input type="hidden" id="hidden_ug_ind" value="N">
+</main>
+<!-- /.main -->
+<input type="hidden" id="hidden_from" value="02-Jan-2025" />
+<input type="hidden" id="hidden_to" value="09-Jan-2025" />
+<input type="hidden" id="hidden_company_id" value="1" />
+<input type="hidden" id="hidden_sub_company_ind" value="N" />
+<input type="hidden" id="hidden_dr_ind" value="N" />
+<input type="hidden" id="hidden_gla_ind" value="N" />
+<input type="hidden" id="hidden_amd_ind" value="N" />
+<input type="hidden" id="hidden_ref_ind" value="N" />
+<input type="hidden" id="hidden_nonref_ind" value="N" />
+<input type="hidden" id="hidden_ug_ind" value="N" />

@@ -21,11 +21,17 @@
   -webkit-box-sizing: border-box;
 }
 
-.ct-modal {
-  max-height: 465px !important;
-  height: 465px;
+.ctt-modal {
+  max-width: 880px !important;
+  width: 880px;
+  /* max-height: 465px !important;
+  height: 465px; */
 }
 
 .xbottom {
   height: 58px;
+}
+
+.xbottom1 {
+  height: 5px;
 }

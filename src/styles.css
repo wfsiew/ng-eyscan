@@ -30,8 +30,8 @@
 .contact-modal {
   max-width: 880px !important;
   width: 880px;
-  max-height: 460px !important;
-  height: 460px;
+  /* max-height: 460px !important;
+  height: 460px; */
 }
 
 .create-company-modal {

@@ -3,13 +3,13 @@ body{background-color:#deeefd;}
   margin: 5px 3px;
 }
 
-.form-group {
+.fgx {
   display: inline-block;
   margin: 0px 3px;
   vertical-align: top;
 }
 
-.modal-dialog {
+/* .modal-dialog {
   height: 100% !important;
   width: 100% !important;
   display: flex;
@@ -19,7 +19,7 @@ body{background-color:#deeefd;}
 .modal-content {
   width: auto;
   height: auto;
-}
+} */
 
 .txt-ember {
   color: #f05e1b;
