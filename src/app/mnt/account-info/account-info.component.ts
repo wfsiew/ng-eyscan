@@ -12,22 +12,13 @@ import { CustomRender } from 'src/app/shared/classes/custom-render';
 export class AccountInfoComponent extends CustomRender implements OnDestroy {
 
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2
   ) {
-    super(renderer2);
+    super(router, renderer2);
   }
 
   ngOnDestroy() {
     super.destroy();
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
-    return false;
   }
 }

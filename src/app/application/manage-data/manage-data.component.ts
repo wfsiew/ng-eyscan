@@ -15,11 +15,11 @@ export class ManageDataComponent extends CustomRender implements OnInit, OnDestr
   mform?: UntypedFormGroup;
 
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2,
     private fb: UntypedFormBuilder
   ) {
-    super(renderer2);
+    super(router, renderer2);
     this.createForm();
   }
 
@@ -39,15 +39,6 @@ export class ManageDataComponent extends CustomRender implements OnInit, OnDestr
     const dt = new Date();
     const df = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() - 7);
     this.mform.patchValue({ date_from: df, date_to: dt });
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
-    return false;
   }
 
   onKeyupFrom(event: KeyboardEvent) {

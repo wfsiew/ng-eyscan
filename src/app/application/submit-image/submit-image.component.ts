@@ -44,11 +44,11 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   @ViewChild('nhxMessageBox', { static: false }) nhxMessageBox?: ModalDirective;
 
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    super(renderer2);
+    super(router, renderer2);
   }
 
   ngOnInit() {
@@ -398,15 +398,6 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
       ariaLabelledBy: '__nhPopWindow_title', 
       initialState 
     });
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
-    return false;
   }
 
   onKeyupDateImage(event: KeyboardEvent) {

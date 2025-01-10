@@ -13,23 +13,14 @@ import { Helper } from 'src/app/shared/utils/helper';
 export class HomeComponent extends CustomRender implements OnDestroy {
 
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2
   ) {
-    super(renderer2);
+    super(router, renderer2);
   }
 
   ngOnDestroy() {
     Helper.removeBeforeunload();
     super.destroy();
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
-    return false;
   }
 }

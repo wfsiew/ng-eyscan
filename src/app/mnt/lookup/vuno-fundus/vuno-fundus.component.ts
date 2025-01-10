@@ -16,11 +16,11 @@ export class VunoFundusComponent extends CustomRender implements OnDestroy {
   bsModalRef?: BsModalRef;
   
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    super(renderer2);
+    super(router, renderer2);
   }
 
   ngOnDestroy() {
@@ -54,15 +54,6 @@ export class VunoFundusComponent extends CustomRender implements OnDestroy {
       ariaLabelledBy: '__nhPopWindow_title', 
       initialState 
     });
-    return false;
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
     return false;
   }
 }

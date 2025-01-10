@@ -15,11 +15,11 @@ export class PrimaryCareComponent extends CustomRender implements OnInit, OnDest
   mform?: UntypedFormGroup;
 
   constructor(
-    private router: Router,
+    protected router: Router,
     protected renderer2: Renderer2,
     private fb: UntypedFormBuilder
   ) {
-    super(renderer2);
+    super(router, renderer2);
     this.createForm();
   }
 
@@ -40,15 +40,6 @@ export class PrimaryCareComponent extends CustomRender implements OnInit, OnDest
     const df = new Date();
     df.setDate(dt.getDate() - 7);
     this.mform.patchValue({ date_from: df, date_to: dt });
-  }
-
-  goto(s: string, reload = false) {
-    this.router.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
-
-    return false;
   }
 
   onKeyupFrom(event: KeyboardEvent) {
