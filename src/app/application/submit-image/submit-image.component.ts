@@ -38,6 +38,8 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   imagePreviewLeft2: any = null;
   nhxMessageTitle = '';
   nhxMessageBody = '';
+  files: any[] = [];
+  filex = '';
   bsModalRef?: BsModalRef;
   @ViewChild('nhxMessageBox', { static: false }) nhxMessageBox?: ModalDirective;
 
@@ -120,80 +122,125 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
     this.nhxMessageBox?.show();
   }
 
-  onFileChangeRight1(ev: any) {
-    if (ev.target.files.length > 2) {
-      this.showMaxFile();
-      return;
+  onMessageHide() {
+    this.nhxMessageBox?.hide();
+    const fx = this.filex;
+    this.filex = '';
+    if (fx === 'r1') {
+      this._onFileChangeRight1(this.files);
     }
 
-    if (ev.target.files.length > 1) {
-      const file1 = ev.target.files[0] as File | null;
-      const file2 = ev.target.files[1] as File | null;
+    else if (fx === 'r2') {
+      this._onFileChangeRight2(this.files);
+    }
+
+    else if (fx === 'l1') {
+      this._onFileChangeLeft1(this.files);
+    }
+
+    else if (fx === 'l2') {
+      this._onFileChangeLeft2(this.files);
+    }
+  }
+
+  _onFileChangeRight1(files: any[]) {
+    if (files.length > 1) {
+      const file1 = files[0] as File | null;
+      const file2 = files[1] as File | null;
       this.uploadFileRight1(file1);
       this.uploadFileRight2(file2);
     }
 
     else {
-      const file = ev.target.files[0] as File | null;
+      const file = files[0] as File | null;
       this.uploadFileRight1(file);
     }
   }
 
-  onFileChangeRight2(ev: any) {
-    if (ev.target.files.length > 2) {
-      this.showMaxFile();
-      return;
-    }
-
-    if (ev.target.files.length > 1) {
-      const file1 = ev.target.files[0] as File | null;
-      const file2 = ev.target.files[1] as File | null;
+  _onFileChangeRight2(files: any[]) {
+    if (files.length > 1) {
+      const file1 = files[0] as File | null;
+      const file2 = files[1] as File | null;
       this.uploadFileRight1(file1);
       this.uploadFileRight2(file2);
     }
 
     else {
-      const file = ev.target.files[0] as File | null;
+      const file = files[0] as File | null;
       this.uploadFileRight2(file);
     }
   }
 
-  onFileChangeLeft1(ev: any) {
-    if (ev.target.files.length > 2) {
-      this.showMaxFile();
-      return;
-    }
-
-    if (ev.target.files.length > 1) {
-      const file1 = ev.target.files[0] as File | null;
-      const file2 = ev.target.files[1] as File | null;
+  _onFileChangeLeft1(files: any[]) {
+    if (files.length > 1) {
+      const file1 = files[0] as File | null;
+      const file2 = files[1] as File | null;
       this.uploadFileLeft1(file1);
       this.uploadFileLeft2(file2);
     }
 
     else {
-      const file = ev.target.files[0] as File | null;
+      const file = files[0] as File | null;
       this.uploadFileLeft1(file);
     }
   }
 
-  onFileChangeLeft2(ev: any) {
-    if (ev.target.files.length > 2) {
-      this.showMaxFile();
-      return;
-    }
-
-    if (ev.target.files.length > 1) {
-      const file1 = ev.target.files[0] as File | null;
-      const file2 = ev.target.files[1] as File | null;
+  _onFileChangeLeft2(files: any[]) {
+    if (files.length > 1) {
+      const file1 = files[0] as File | null;
+      const file2 = files[1] as File | null;
       this.uploadFileLeft1(file1);
       this.uploadFileLeft2(file2);
     }
 
     else {
-      const file = ev.target.files[0] as File | null;
+      const file = files[0] as File | null;
       this.uploadFileLeft2(file);
     }
+  }
+
+  onFileChangeRight1(ev: any) {
+    if (ev.target.files.length > 2) {
+      this.files = ev.target.files;
+      this.filex = 'r1';
+      this.showMaxFile();
+      return;
+    }
+
+    this._onFileChangeRight1(ev.target.files);
+  }
+
+  onFileChangeRight2(ev: any) {
+    if (ev.target.files.length > 2) {
+      this.files = ev.target.files;
+      this.filex = 'r2';
+      this.showMaxFile();
+      return;
+    }
+
+    this._onFileChangeRight2(ev.target.files);
+  }
+
+  onFileChangeLeft1(ev: any) {
+    if (ev.target.files.length > 2) {
+      this.files = ev.target.files;
+      this.filex = 'l1';
+      this.showMaxFile();
+      return;
+    }
+
+    this._onFileChangeLeft1(ev.target.files);
+  }
+
+  onFileChangeLeft2(ev: any) {
+    if (ev.target.files.length > 2) {
+      this.files = ev.target.files;
+      this.filex = 'l2';
+      this.showMaxFile();
+      return;
+    }
+
+    this._onFileChangeLeft2(ev.target.files);
   }
 
   uploadFileRight1(file: File | null) {

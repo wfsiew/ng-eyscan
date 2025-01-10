@@ -33,7 +33,7 @@
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
           aria-label="Close"
-          (click)="nhxMessageBox.hide()"
+          (click)="onMessageHide()"
         >
           <span aria-hidden="true">&times;</span>
         </button>
@@ -54,7 +54,7 @@
                 value="OK"
                 name="btnOk"
                 class="btn bg-button text-white"
-                (click)="nhxMessageBox.hide()"
+                (click)="onMessageHide()"
               />
             </div>
           </div>
