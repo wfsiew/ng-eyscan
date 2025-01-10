@@ -1158,7 +1158,7 @@
       <div
         id="btnCollapse"
         class="row bg-hd1 text-white justify-content-center align-middle py-1"
-        [ngClass]="{ 'box-shadow': isCollapse }"
+        [class.box-shadow]="isCollapse"
         (click)="isCollapse = !isCollapse"
         style="cursor: pointer"
       >
@@ -1168,10 +1168,8 @@
           <i
             id="collapseIcon"
             class="fa xfa-angle-double-down"
-            [ngClass]="{
-              'fa-chevron-down': isCollapse,
-              'fa-chevron-up': !isCollapse
-            }"
+            [class.fa-chevron-down]="isCollapse"
+            [class.fa-chevron-up]="!isCollapse"
           ></i>
         </div>
       </div>
