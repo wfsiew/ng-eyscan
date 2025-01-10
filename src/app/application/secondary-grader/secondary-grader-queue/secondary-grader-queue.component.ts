@@ -26,7 +26,7 @@ export class SecondaryGraderQueueComponent implements OnInit {
   }
 
   onDisclaimer() {
-    open('/assets/docs/EN_DISCLAIMER.pdf', '_blank');
+    open('assets/docs/EN_DISCLAIMER.pdf', '_blank');
   }
 
   createForm() {
