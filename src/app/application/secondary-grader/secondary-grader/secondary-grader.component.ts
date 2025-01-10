@@ -25,6 +25,10 @@ export class SecondaryGraderComponent implements OnInit {
 
   }
 
+  onDisclaimer() {
+    open('/assets/docs/EN_DISCLAIMER.pdf', '_blank');
+  }
+
   createForm() {
     this.mform = this.fb.group({
       date_from: [''],

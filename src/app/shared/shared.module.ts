@@ -6,11 +6,12 @@ import { SafehtmlPipe } from '../safehtml.pipe';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { UserGuideComponent } from './user-guide/user-guide.component';
 
 
 
 @NgModule({
-  declarations: [SafehtmlPipe, HeaderComponent, AboutComponent, ContactComponent],
+  declarations: [SafehtmlPipe, HeaderComponent, AboutComponent, ContactComponent, UserGuideComponent],
   imports: [
     CommonModule,
     FormsModule,
