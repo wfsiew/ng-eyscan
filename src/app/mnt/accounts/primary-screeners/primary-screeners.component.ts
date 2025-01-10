@@ -2,6 +2,7 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AccountsCreateComponent } from '../accounts-create/accounts-create.component';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 @Component({
   selector: 'app-primary-screeners',
@@ -10,20 +11,20 @@ import { AccountsCreateComponent } from '../accounts-create/accounts-create.comp
   templateUrl: './primary-screeners.component.html',
   styleUrl: './primary-screeners.component.css'
 })
-export class PrimaryScreenersComponent {
+export class PrimaryScreenersComponent extends CustomRender implements OnDestroy {
 
   bsModalRef?: BsModalRef;
 
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
   onCreate() {

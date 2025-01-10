@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 @Component({
   selector: 'app-secondary-grader',
@@ -9,16 +10,16 @@ import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
   templateUrl: './secondary-grader.component.html',
   styleUrl: './secondary-grader.component.css'
 })
-export class SecondaryGraderComponent implements OnInit, OnDestroy {
+export class SecondaryGraderComponent extends CustomRender implements OnInit, OnDestroy {
 
   mform?: UntypedFormGroup;
 
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private fb: UntypedFormBuilder
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
     this.createForm();
   }
 
@@ -27,7 +28,7 @@ export class SecondaryGraderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
   onDisclaimer() {

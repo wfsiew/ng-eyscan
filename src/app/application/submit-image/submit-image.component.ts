@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 interface DiseaseType {
   desc: string;
@@ -16,7 +17,7 @@ interface DiseaseType {
   templateUrl: './submit-image.component.html',
   styleUrl: './submit-image.component.css'
 })
-export class SubmitImageComponent implements OnInit, OnDestroy {
+export class SubmitImageComponent extends CustomRender implements OnInit, OnDestroy {
 
   isCollapseSelena = true;
   isCollapseckd = true;
@@ -42,10 +43,10 @@ export class SubmitImageComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
   }
 
   ngOnInit() {
@@ -62,7 +63,7 @@ export class SubmitImageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
   onFileDropRight1(ev: DragEvent) {

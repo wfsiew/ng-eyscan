@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { SysApplicationCreateComponent } from './sys-application-create/sys-application-create.component';
 import { SystemCreateComponent } from '../system/system-create/system-create.component';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 @Component({
   selector: 'app-sys-application',
@@ -11,20 +12,20 @@ import { SystemCreateComponent } from '../system/system-create/system-create.com
   templateUrl: './sys-application.component.html',
   styleUrl: './sys-application.component.css'
 })
-export class SysApplicationComponent implements OnDestroy {
+export class SysApplicationComponent extends CustomRender implements OnDestroy {
 
   bsModalRef?: BsModalRef;
   
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
   onCreate(ev: any) {

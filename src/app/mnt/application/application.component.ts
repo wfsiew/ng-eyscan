@@ -2,6 +2,7 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ApplicationCreateComponent } from './application-create/application-create.component';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 @Component({
   selector: 'app-application',
@@ -10,20 +11,20 @@ import { ApplicationCreateComponent } from './application-create/application-cre
   templateUrl: './application.component.html',
   styleUrl: './application.component.css'
 })
-export class ApplicationComponent implements OnDestroy {
+export class ApplicationComponent extends CustomRender implements OnDestroy {
 
   bsModalRef?: BsModalRef;
 
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
 

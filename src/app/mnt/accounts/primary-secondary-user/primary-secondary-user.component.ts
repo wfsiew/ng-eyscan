@@ -2,6 +2,7 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AccountsCreateComponent } from '../accounts-create/accounts-create.component';
+import { CustomRender } from 'src/app/shared/custom-render';
 
 @Component({
   selector: 'app-primary-secondary-user',
@@ -10,20 +11,20 @@ import { AccountsCreateComponent } from '../accounts-create/accounts-create.comp
   templateUrl: './primary-secondary-user.component.html',
   styleUrl: './primary-secondary-user.component.css'
 })
-export class PrimarySecondaryUserComponent implements OnDestroy {
+export class PrimarySecondaryUserComponent extends CustomRender implements OnDestroy {
 
   bsModalRef?: BsModalRef;
 
   constructor(
     private router: Router,
-    private renderer2: Renderer2,
+    protected renderer2: Renderer2,
     private modalService: BsModalService
   ) {
-    this.renderer2.addClass(document.body, 'main-body');
+    super(renderer2);
   }
 
   ngOnDestroy() {
-    this.renderer2.removeClass(document.body, 'main-body');
+    super.destroy();
   }
 
   onCreate() {
