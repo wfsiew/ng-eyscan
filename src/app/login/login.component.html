@@ -1,62 +1,85 @@
 <div id="login">
   <ng-container *ngIf="lang === 'cn'">
     <div class="xtext-center px-0 pb-2 xborder">
-
-      <img class="p-0 xborder" src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7"
-        style="xwidth:100%; xheight:auto; max-width:200px;" alt>
-
+      <img
+        class="p-0 xborder"
+        src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7"
+        style="xwidth: 100%; xheight: auto; max-width: 200px"
+        alt />
     </div>
   </ng-container>
   <ng-container *ngIf="lang !== 'cn'">
     <div class="xtext-center px-0 pb-4 xborder">
-
       <a href="https://eyris.io" target="_blank" title>
-        <img class="p-0 xborder" src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
-          style="xwidth:100%; xmax-height:700px; max-width:400px;" alt>
+        <img
+          class="p-0 xborder"
+          src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
+          style="xwidth: 100%; xmax-height: 700px; max-width: 400px"
+          alt />
 
-        <img class="pl-4 xp-0 xborder"
+        <img
+          class="pl-4 xp-0 xborder"
           src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
-          style="max-width: 320px; xwidth:100%; xheight:auto;" alt>
+          style="max-width: 320px; xwidth: 100%; xheight: auto"
+          alt />
       </a>
-
     </div>
   </ng-container>
-  <div name="dispMsg" id="dispMsg"
-    class="alert alert-danger text-center small py-1" role="alert"
-    style="display:none;">
-
-  </div>
+  <div
+    name="dispMsg"
+    id="dispMsg"
+    class="alert alert-danger text-center small py-1"
+    role="alert"
+    style="display: none"></div>
 
   <form name="frm_signon" id="frm_signon" method="post">
-    <input type="hidden" name="hdnPwd" id="hdnPwd" value>
+    <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
-      <label>{{ 'login.email' | translate }}</label>
-      <input type="email" class="form-control" name="inEmail" id="inEmail" value
+      <label>{{ "login.email" | translate }}</label>
+      <input
+        type="email"
+        class="form-control"
+        name="inEmail"
+        id="inEmail"
+        value
         [placeholder]="'login.email-ph' | translate"
-        required="required" autofocus
+        required="required"
+        autofocus
         oninvalid="this.setCustomValidity('Please enter a valid email address.')"
-        oninput="setCustomValidity('')" title="Email address"
-        autocomplete="off">
+        oninput="setCustomValidity('')"
+        title="Email address"
+        autocomplete="off" />
     </div>
     <div class="form-group">
-      <label>{{ 'login.pwd' | translate }}</label>
-      <input type="password" class="form-control" name="inPassword"
-        id="inPassword" [placeholder]="'login.pwd' | translate"
+      <label>{{ "login.pwd" | translate }}</label>
+      <input
+        type="password"
+        class="form-control"
+        name="inPassword"
+        id="inPassword"
+        [placeholder]="'login.pwd' | translate"
         required="required"
         oninvalid="this.setCustomValidity('Please fill out this field.')"
-        oninput="setCustomValidity('')" autocomplete="off">
+        oninput="setCustomValidity('')"
+        autocomplete="off" />
     </div>
     <div class="form-group">
-      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login"
-        (click)="onSubmit()">{{ 'login.btn' | translate }}</button>
+      <button
+        type="submit"
+        class="btn xbtn-primary xbtn-md btn-block btn_login"
+        (click)="onSubmit()">
+        {{ "login.btn" | translate }}
+      </button>
     </div>
     <div class="row">
       <div class="col text-left">
-
-        <select class="form-control custom-select custom-select-sm"
-          name="inLang" id="inLang" style="width: auto;"
-          (change)="onChangeLang($event)" [(ngModel)]="lang">
-
+        <select
+          class="form-control custom-select custom-select-sm"
+          name="inLang"
+          id="inLang"
+          style="width: auto"
+          (change)="onChangeLang($event)"
+          [(ngModel)]="lang">
           <option value="en" [selected]="lang === 'en'">English</option>
 
           <option value="cn" [selected]="lang === 'cn'">简体中文</option>
@@ -65,219 +88,315 @@
 
           <option value="po" [selected]="lang === 'po'">Português</option>
 
-          <option value="id" [selected]="lang === 'id'">Bahasa
-            Indonesia</option>
-
+          <option value="id" [selected]="lang === 'id'">
+            Bahasa Indonesia
+          </option>
         </select>
       </div>
       <div class="col text-right">
-        <a href="#" (click)="onForgotPwd()">{{ 'login.forgotpwd' | translate
+        <a href="#" (click)="onForgotPwd()">{{
+          "login.forgotpwd" | translate
           }}</a>
       </div>
     </div>
 
     <div class="row xmy-2 mt-2 xmb-1 xborder-bottom">
-      <div class="col-1 py-0 pl-3 pr-0  ">
-
-        <img alt='Barcode Generator TEC-IT'
-          style="Xmax-width:70px; max-height:30px;"
-          src='assets/img/udi.gif?Ver1.4.7' />
+      <div class="col-1 py-0 pl-3 pr-0">
+        <img
+          alt="Barcode Generator TEC-IT"
+          style="xmax-width: 70px; max-height: 30px"
+          src="assets/img/udi.gif?Ver1.4.7" />
       </div>
-      <div class="col-11 py-2 text-left small ">
+      <div class="col-11 py-2 text-left small">
         <small>Powered by SELENA+ Ver1.7.0 and EySCAN Ver1.4.7 &copy; 2025 EyRIS
-          Pte Ltd</small>
+          Pte
+          Ltd</small>
       </div>
     </div>
 
-    <div class="row xp-0 py-2 px-0 ">
-      <div class="col-12 py-0 pl-3 pr-0 ">
-        <img class="py-0 pl-0 xpr-1 xpx-2 xalign-top "
+    <div class="row xp-0 py-2 px-0">
+      <div class="col-12 py-0 pl-3 pr-0">
+        <img
+          class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
           src="assets/img/CE.png?v=Ver1.4.7"
-          style="Xmax-width:70px; max-height:20px;" alt><span
-          class="py-0 pl-1 pr-4 align-bottom "
-          style="Xfont-size: small; color: black; font-weight: bold;">0123</span>
-
+          style="xmax-width: 70px; max-height: 20px"
+          alt /><span
+          class="py-0 pl-1 pr-4 align-bottom"
+          style="xfont-size: small; color: black; font-weight: bold">0123</span>
       </div>
     </div>
 
-    <div class="row xp-0 pt-2 px-0 ">
-      <div class="col-3 py-0 pl-3 pr-0 text-center ">
-        <img class="py-0 pl-0 xpr-1 xpx-2 xalign-top "
+    <div class="row xp-0 pt-2 px-0">
+      <div class="col-3 py-0 pl-3 pr-0 text-center">
+        <img
+          class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
           src="assets/img/manufacture-symbol.png?v=Ver1.4.7"
-          style="Xmax-width:70px; max-height:28px;" alt>
+          style="xmax-width: 70px; max-height: 28px"
+          alt />
       </div>
-      <div class="col-9 p-0 ">
-        <p class="xalign-top" style="font-size: 8pt; "><b>EyRIS Pte
-            Ltd</b><br>60 MacPherson Road, Block 1 Siemens
-          Centre #05-08, Singapore 348615</p>
-
+      <div class="col-9 p-0">
+        <p class="xalign-top" style="font-size: 8pt">
+          <b>EyRIS Pte Ltd</b><br />60 MacPherson Road, Block 1 Siemens Centre
+          #05-08, Singapore 348615
+        </p>
       </div>
     </div>
 
-    <div class="row p-0 pt-1 ">
+    <div class="row p-0 pt-1">
       <div class="col-3 p-0 py-0 text-center">
-        <img class="py-0 pl-4 pr-2 align-top "
+        <img
+          class="py-0 pl-4 pr-2 align-top"
           src="assets/img/ECRep_MedNet.png?v=Ver1.4.7"
-          style="xmax-width:70px; max-height:20px;" alt>
+          style="xmax-width: 70px; max-height: 20px"
+          alt />
       </div>
-      <div class="col-9 p-0  ">
-        <p class="xalign-top" style="font-size: 8pt; "><b>MedNet EC-REP
-            GmbH</b><br> Borkstrasse 10, 48163 Muenster,
-          Germany</p>
+      <div class="col-9 p-0">
+        <p class="xalign-top" style="font-size: 8pt">
+          <b>MedNet EC-REP GmbH</b><br />
+          Borkstrasse 10, 48163 Muenster, Germany
+        </p>
       </div>
     </div>
 
     <div class="row mt-2 border-top">
-      <div class="col-12 p-0 xsmall px-0 " style="font-size: 0.7rem;">
-        <nav class="nav ">
-          <a class="nav-link " target="_blank" style="text-decoration: none; "
-            href="/bn_moh_uat/importer/EN_IMPD-001.pdf">{{ 'login.importer' |
-            translate }}</a>
-          <a class="nav-link xpl-0 " target="_blank"
-            style="text-decoration: none; "
-            href="/bn_moh_uat/legal/EN_TAC-001.pdf">{{ 'login.tnc' | translate
+      <div class="col-12 p-0 xsmall px-0" style="font-size: 0.7rem">
+        <nav class="nav">
+          <a
+            class="nav-link"
+            target="_blank"
+            style="text-decoration: none"
+            href="assets/docs/EN_IMPD-001.pdf">{{ "login.importer" | translate
             }}</a>
-          <a class="nav-link xpx-0 " target="_blank"
-            style="text-decoration: none;"
-            href="/bn_moh_uat/legal/EN_PRIVPOLICY-001.pdf">{{ 'login.privacy' |
+          <a
+            class="nav-link xpl-0"
+            target="_blank"
+            style="text-decoration: none"
+            href="assets/docs/EN_TAC-001.pdf">{{ "login.tnc" | translate }}</a>
+          <a
+            class="nav-link xpx-0"
+            target="_blank"
+            style="text-decoration: none"
+            href="assets/docs/EN_PRIVPOLICY-001.pdf">{{ "login.privacy" |
             translate }}</a>
-
         </nav>
       </div>
     </div>
   </form>
 </div>
 
-<div class="modal fade" id="__nhAboutBox" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhAboutBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhAboutBox_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div
         class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
-        <button id="__nhAboutBox_close" type="button"
+        <button
+          id="__nhAboutBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0 " style="overflow: hidden; height:620px;">
-        <iframe id="__nhAboutBox_iframe" scrolling="no" frameborder="0"
-          style="width:700px; height:620px; "></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden; height: 620px">
+        <iframe
+          id="__nhAboutBox_iframe"
+          scrolling="no"
+          frameborder="0"
+          style="width: 700px; height: 620px"></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
-        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhAboutBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhAboutBox_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog"
+<div
+  class="modal fade"
+  id="__nhPopWindow"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhPopWindow_title"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important; ">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button id="__nhPopWindow_close" type="button"
+        <button
+          id="__nhPopWindow_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px"
-          scrolling="no" frameborder="0"></iframe>
+        <iframe
+          id="__nhPopWindow_iframe"
+          xwidth="500px"
+          xheight="400px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">Save
-          changes</button>
-        <button id="__nhPopWindow_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhPopWindow_cancel" type="button" class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhMessageBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhMessageBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhMessageBox_title"
-  aria-hidden="true" data-keyboard="false">
+  aria-hidden="true"
+  data-keyboard="false">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
-        <button id="__nhMessageBox_close" type="button"
+        <button
+          id="__nhMessageBox_close"
+          type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body m-0 p-0" style="overflow: hidden;">
-        <iframe id="__nhMessageBox_iframe" width="500px" height="230px"
-          scrolling="no" frameborder="0"></iframe>
+      <div class="modal-body m-0 p-0" style="overflow: hidden">
+        <iframe
+          id="__nhMessageBox_iframe"
+          width="500px"
+          height="230px"
+          scrolling="no"
+          frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
-        <button id="__nhMessageBox_ok" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_no" type="button"
-          class="btn btn-primary">Save changes</button>
-        <button id="__nhMessageBox_cancel" type="button"
-          class="btn btn-primary">Save changes</button>
+        <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button id="__nhMessageBox_no" type="button" class="btn btn-primary">
+          Save changes
+        </button>
+        <button
+          id="__nhMessageBox_cancel"
+          type="button"
+          class="btn btn-primary">
+          Save changes
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal" id="__nhErrorBox" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhErrorBox"
+  tabindex="-1"
+  role="dialog"
   aria-labelledby="__nhErrorBox_title"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content"
-      style="border-top-left-radius: 0.5rem!important; border-top-right-radius: 0.5rem!important;">
+    <div
+      class="modal-content"
+      style="
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+      ">
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
-        <button type="button" class="close btn-md m-1 p-0 bg-dark text-white"
-          data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close btn-md m-1 p-0 bg-dark text-white"
+          data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="__nhErrorBox_content" class="modal-body m-0 p-0"
-        style="width: 100%;max-height: 500px; overflow-y: auto;">
-      </div>
-      <div class="modal-footer justify-content-center m-0 p-1 ">
-        <button id="__nhMessageBox_ok" type="button" class="btn btn-secondary"
-          data-dismiss="modal">OK</button>
+      <div
+        id="__nhErrorBox_content"
+        class="modal-body m-0 p-0"
+        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+      <div class="modal-footer justify-content-center m-0 p-1">
+        <button
+          id="__nhMessageBox_ok"
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal">
+          OK
+        </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog"
+<div
+  class="modal"
+  id="__nhAnimator"
+  tabindex="-1"
+  role="dialog"
   aria-hidden="true"
-  style="position: absolute; max-height: 140px; max-width: 120px;overflow: hidden; ">
+  style="
+    position: absolute;
+    max-height: 140px;
+    max-width: 120px;
+    overflow: hidden;
+  ">
   <div class="modal-dialog" role="document">
-    <div class="modal-content"
-      style="background-color: rgba(0,0,0,.0001); border: none;">
-      <div class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none;overflow: hidden; ">
-      </div>
+    <div
+      class="modal-content"
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div
+        class="modal-header m-0 p-1 bg-header text-white"
+        style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
-
         <div class="nhAnimator"></div>
       </div>
-      <div class="modal-footer justify-content-center m-0 p-1"
-        style="display: none;">
-      </div>
+      <div
+        class="modal-footer justify-content-center m-0 p-1"
+        style="display: none"></div>
     </div>
   </div>
 </div>
