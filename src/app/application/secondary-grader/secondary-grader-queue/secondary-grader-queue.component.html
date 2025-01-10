@@ -1,7 +1,8 @@
 <app-header
   [reload]="'/application/secondary/index'"
   [headerid]="'fn4'"
-  [title]="'Worklist'"></app-header>
+  [title]="'Worklist'"
+></app-header>
 
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
@@ -13,7 +14,8 @@
           xrole="form"
           xclass="form-inline"
           action="/bn_moh_uat/application/secondary/index.cfm"
-          method="post">
+          method="post"
+        >
           <input type="hidden" name="recno" id="recno" value="25" />
           <input type="hidden" name="status" id="status" value="P" />
 
@@ -25,7 +27,8 @@
               type="text"
               class="form-control"
               placeholder
-              value />
+              value
+            />
           </div>
 
           <div class="form-group fgx">
@@ -33,7 +36,8 @@
             <select
               class="form-control custom-select"
               name="location"
-              id="location">
+              id="location"
+            >
               <option value></option>
             </select>
           </div>
@@ -43,7 +47,8 @@
             <select
               class="form-control custom-select"
               name="selDate"
-              id="selDate">
+              id="selDate"
+            >
               <option value="DR" selected>Date Reported</option>
               <option value="DI">Date of Image</option>
               <option value="DG">Date Graded</option>
@@ -61,7 +66,8 @@
                 style="max-width: 145px"
                 maxlength="11"
                 value="21-Dec-2024"
-                onblur="if(!(check_date(this))){this.value='';}" />
+                onblur="if(!(check_date(this))){this.value='';}"
+              />
             </div>
           </div>
 
@@ -76,7 +82,8 @@
                 style="max-width: 145px"
                 maxlength="11"
                 value="10-Jan-2025"
-                onblur="if(!(check_date(this))){this.value='';}" />
+                onblur="if(!(check_date(this))){this.value='';}"
+              />
             </div>
           </div>
 
@@ -86,7 +93,8 @@
               name="btnSearch"
               id="btnSearch"
               class="form-control btn bg-primary text-white"
-              value="Search">
+              value="Search"
+            >
               <i class="fa fa-search"></i> Search
             </button>
           </div>
@@ -98,7 +106,8 @@
               id="xbtnDisclaimer"
               class="form-control btn bg-warning text-white"
               value="Disclaimer"
-              (click)="onDisclaimer()">
+              (click)="onDisclaimer()"
+            >
               <i class="fa fa-exclamation-triangle"></i> Disclaimer
             </button>
           </div>
@@ -117,7 +126,9 @@
               xdata-toggle="tab"
               href="#"
               role="tab"
-              (click)="goto('/application/secondary/index')">My List</a>
+              (click)="goto('/application/secondary/index')"
+              >My List</a
+            >
           </li>
           <li class="nav-item font-weight-bold">
             <a
@@ -127,8 +138,9 @@
               xdata-toggle="tab"
               href="#"
               role="tab"
-              (click)="goto('/application/secondary/queue', true)">Queue
-              List</a>
+              (click)="goto('/application/secondary/queue', true)"
+              >Queue List</a
+            >
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2">
             <a
@@ -138,8 +150,9 @@
               xdata-toggle="tab"
               href="#"
               role="tab"
-              (click)="goto('/application/secondary/non-refer')">Non Referable
-              Cases</a>
+              (click)="goto('/application/secondary/non-refer')"
+              >Non Referable Cases</a
+            >
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2">
             <a
@@ -150,7 +163,9 @@
               href="#"
               role="tab"
               title="Finalized Referable Case"
-              (click)="goto('/application/secondary/refer')">Referable Cases</a>
+              (click)="goto('/application/secondary/refer')"
+              >Referable Cases</a
+            >
           </li>
         </ul>
       </div>
@@ -164,7 +179,8 @@
           id="btnPickup"
           class="btn btn-sm bg-primary text-white"
           value="Add to My List"
-          disabled>
+          disabled
+        >
           <i class="fa fa-file-medical"></i> Add to My List
         </button>
       </div>
@@ -185,7 +201,8 @@
                       type="checkbox"
                       style="cursor: pointer"
                       disabled
-                      value="0" />
+                      value="0"
+                    />
                   </div>
                 </div>
                 <div class="col-11">Case Reference ID</div>
@@ -219,7 +236,8 @@
         type="hidden"
         name="selected_count"
         id="selected_count"
-        value="0" />
+        value="0"
+      />
     </form>
   </div>
   <!-- /.container-fluid -->

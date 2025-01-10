@@ -1,7 +1,8 @@
 <app-header
   [reload]="'/application/manage-data'"
   [headerid]="'fn0'"
-  [title]="'Case Investigation'"></app-header>
+  [title]="'Case Investigation'"
+></app-header>
 
 <main role="main" class="container-fluid pt-3 main-margin">
   <div class="container-fluid pb-4">
@@ -14,7 +15,8 @@
           [formGroup]="mform"
           xclass="form-inline fmx"
           action="/bn_moh_uat/application/manage_data/index.cfm?tid=fn0_12"
-          method="post">
+          method="post"
+        >
           <input type="hidden" name="recno" id="recno" value="1000" />
           <input type="hidden" name="image_from" id="image_from" value />
           <input type="hidden" name="result_status" id="result_status" value />
@@ -27,17 +29,20 @@
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
                       <div class="form-row">
                         <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
+                        >
                           Diseases
                         </div>
                       </div>
 
                       <div class="form-row border rounded bg-white">
                         <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
+                        >
                           <div class="form-row">
                             <div
-                              class="col-xl-3 col-lg-6 col-md-4 col-sm-12 py-1">
+                              class="col-xl-3 col-lg-6 col-md-4 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input"
@@ -49,18 +54,21 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="disease_dr"
-                                  style="cursor: pointer">
+                                  style="cursor: pointer"
+                                >
                                   Diabetic Retinopathy
                                 </label>
                               </div>
                             </div>
 
                             <div
-                              class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1">
+                              class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input"
@@ -72,18 +80,21 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="disease_glaucoma"
-                                  style="cursor: pointer">
+                                  style="cursor: pointer"
+                                >
                                   Glaucoma Suspect
                                 </label>
                               </div>
                             </div>
 
                             <div
-                              class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1">
+                              class="col-xl-4 col-lg-6 col-md-4 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input"
@@ -95,11 +106,13 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="disease_amd"
-                                  style="cursor: pointer">
+                                  style="cursor: pointer"
+                                >
                                   Age-Related Macular Degeneration
                                 </label>
                               </div>
@@ -116,16 +129,19 @@
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
                       <div class="form-row">
                         <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
+                        >
                           Result
                         </div>
                       </div>
                       <div class="form-row border rounded bg-white">
                         <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
+                        >
                           <div class="form-row">
                             <div
-                              class="col-xl-2 col-lg-6 col-md-6 col-sm-12 py-1">
+                              class="col-xl-2 col-lg-6 col-md-6 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input sel_result"
@@ -137,15 +153,19 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="referable"
-                                  style="cursor: pointer">Referable</label>
+                                  style="cursor: pointer"
+                                  >Referable</label
+                                >
                               </div>
                             </div>
                             <div
-                              class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1">
+                              class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input sel_result"
@@ -157,15 +177,19 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="non-referable"
-                                  style="cursor: pointer">Non Referable</label>
+                                  style="cursor: pointer"
+                                  >Non Referable</label
+                                >
                               </div>
                             </div>
                             <div
-                              class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1">
+                              class="col-xl-3 col-lg-6 col-md-6 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input sel_result"
@@ -177,15 +201,19 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="ungradable"
-                                  style="cursor: pointer">Ungradable</label>
+                                  style="cursor: pointer"
+                                  >Ungradable</label
+                                >
                               </div>
                             </div>
                             <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
+                            >
                               <div class="form-check">
                                 <input
                                   class="form-check-input sel_result"
@@ -197,12 +225,14 @@
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  " />
+                                  "
+                                />
                                 <label
                                   class="form-check-label pl-1"
                                   for="all-nr"
-                                  style="cursor: pointer">All Non
-                                  Referable</label>
+                                  style="cursor: pointer"
+                                  >All Non Referable</label
+                                >
                               </div>
                             </div>
                           </div>
@@ -240,7 +270,8 @@
                           showTodayButton: true,
                           showClearButton: true,
                           customTodayClass: 'custom-today-class'
-                        }" />
+                        }"
+                      />
                       <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                         maxlength="11" value="02-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
                     </div>
@@ -267,7 +298,8 @@
                           showTodayButton: true,
                           showClearButton: true,
                           customTodayClass: 'custom-today-class'
-                        }" />
+                        }"
+                      />
                       <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                         maxlength="11" value="09-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
                     </div>
@@ -278,7 +310,8 @@
                     <select
                       class="form-control custom-select"
                       name="company_id"
-                      id="company_id">
+                      id="company_id"
+                    >
                       <option value="8">Belait Hospital (TOPCON)</option>
 
                       <option value="10">Berakas Health Centre</option>
@@ -320,7 +353,8 @@
                     <label
                       class="control-label mb-1"
                       for="status"
-                      style="cursor: pointer">Include Sub Centres
+                      style="cursor: pointer"
+                      >Include Sub Centres
                     </label>
                     <div class="custom-control custom-checkbox">
                       <input
@@ -329,19 +363,22 @@
                         id="sub_comp_ind"
                         name="sub_comp_ind"
                         value="Y"
-                        style="cursor: pointer; height: 16px; width: 16px" />
+                        style="cursor: pointer; height: 16px; width: 16px"
+                      />
                     </div>
                   </div>
                 </div>
 
                 <div
-                  class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3 xd-flex xalign-items-end">
+                  class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3 xd-flex xalign-items-end"
+                >
                   <div class="btn-group float-right">
                     <button
                       name="btnSearch"
                       id="btnSearch"
                       class="form-control btn bg-primary text-white mr-3"
-                      value="Search">
+                      value="Search"
+                    >
                       <i class="fa fa-search"></i> Search
                     </button>
                     <button
@@ -349,7 +386,8 @@
                       id="btnDownload"
                       class="form-control btn bg-primary text-white"
                       value="Download Images"
-                      disabled>
+                      disabled
+                    >
                       <i class="fa fa-cloud-download-alt"></i> Download Image
                     </button>
                   </div>
@@ -366,14 +404,16 @@
         <div class="row p-1 bg-header text-white">
           <div
             class="col-xl-1 col-md-1 col-lg-1 col-sm-12"
-            style="max-width: 30px">
+            style="max-width: 30px"
+          >
             <div class="checkbox">
               <input
                 name="chk_all"
                 id="chk_all"
                 type="checkbox"
                 style="cursor: pointer"
-                disabled />
+                disabled
+              />
             </div>
           </div>
           <div class="col-xl-2 col-md-2 col-lg-2 col-sm-12">

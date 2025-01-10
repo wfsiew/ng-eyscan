@@ -1,7 +1,8 @@
 <app-header
   [reload]="'/application/reports/mgmt'"
   [headerid]="'fn5'"
-  [title]="'Primary Management Report'"></app-header>
+  [title]="'Primary Management Report'"
+></app-header>
 
 <div
   class="modal fade"
@@ -9,23 +10,27 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhAboutBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div
-        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none"
+      >
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
         <button
           id="__nhAboutBox_close"
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -34,7 +39,8 @@
           id="__nhAboutBox_iframe"
           scrolling="no"
           frameborder="0"
-          style="width: 700px; height: 620px"></iframe>
+          style="width: 700px; height: 620px"
+        ></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
         <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
@@ -57,14 +63,16 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
         <button
@@ -72,7 +80,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -82,7 +91,8 @@
           xwidth="500px"
           xheight="400px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -106,14 +116,16 @@
   role="dialog"
   aria-labelledby="__nhMessageBox_title"
   aria-hidden="true"
-  data-keyboard="false">
+  data-keyboard="false"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
         <button
@@ -121,7 +133,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -131,7 +144,8 @@
           width="500px"
           height="230px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
@@ -143,7 +157,8 @@
         <button
           id="__nhMessageBox_cancel"
           type="button"
-          class="btn btn-primary">
+          class="btn btn-primary"
+        >
           Save changes
         </button>
       </div>
@@ -156,34 +171,39 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhErrorBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-lg" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
         <button
           type="button"
           class="close btn-md m-1 p-0 bg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div
         id="__nhErrorBox_content"
         class="modal-body m-0 p-0"
-        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+        style="width: 100%; max-height: 500px; overflow-y: auto"
+      ></div>
       <div class="modal-footer justify-content-center m-0 p-1">
         <button
           id="__nhMessageBox_ok"
           type="button"
           class="btn btn-secondary"
-          data-dismiss="modal">
+          data-dismiss="modal"
+        >
           OK
         </button>
       </div>
@@ -202,20 +222,24 @@
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  ">
+  "
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
+    >
       <div
         class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"></div>
+        style="display: none; overflow: hidden"
+      ></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
       <div
         class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"></div>
+        style="display: none"
+      ></div>
     </div>
   </div>
 </div>
@@ -231,7 +255,8 @@
           [formGroup]="mform"
           xclass="form-inline"
           action="/bn_moh_uat/application/primary/index.cfm"
-          method="post">
+          method="post"
+        >
           <input type="hidden" name="recno" id="recno" value="25" />
 
           <div class="form-group fgx col-lg-2 col-md-6">
@@ -255,7 +280,8 @@
                   showTodayButton: true,
                   showClearButton: true,
                   customTodayClass: 'custom-today-class'
-                }" />
+                }"
+              />
               <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
@@ -282,7 +308,8 @@
                   showTodayButton: true,
                   showClearButton: true,
                   customTodayClass: 'custom-today-class'
-                }" />
+                }"
+              />
               <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
@@ -290,12 +317,14 @@
 
           <div
             class="form-group fgx col-lg-3 col-md-8"
-            style="max-width: 500px">
+            style="max-width: 500px"
+          >
             <label class="control-label mb-1">Company</label>
             <select
               class="form-control custom-select"
               name="company_id"
-              id="company_id">
+              id="company_id"
+            >
               <option value="8">Belait Hospital (TOPCON)</option>
 
               <option value="10">Berakas Health Centre</option>
@@ -334,7 +363,8 @@
             <label
               class="control-label mb-1"
               for="status"
-              style="cursor: pointer">Include Sub Centres
+              style="cursor: pointer"
+              >Include Sub Centres
             </label>
             <div class="custom-control custom-checkbox">
               <input
@@ -343,7 +373,8 @@
                 id="sub_comp_ind"
                 name="sub_comp_ind"
                 value="Y"
-                style="cursor: pointer; height: 16px; width: 16px" />
+                style="cursor: pointer; height: 16px; width: 16px"
+              />
             </div>
           </div>
         </form>
@@ -361,7 +392,8 @@
 
         <div
           id="pg-1"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          class="rec-img row p-1 xborder-bottom bg-white text-dark"
+        >
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Billing Summary Report
           </div>
@@ -376,8 +408,10 @@
                   data-code="BILLING_SUMMARY"
                   data-desc="Billing Summary Report"
                   href
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
+                  title="Print Format: PDF"
+                >
+                  <i class="fa fa-file-pdf fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -389,8 +423,10 @@
                   data-code="BILLING_SUMMARY"
                   data-desc="Billing Summary Report"
                   href
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
+                  title="Print Format: CSV"
+                >
+                  <i class="fa fa-file-excel fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -402,8 +438,10 @@
                   data-code="BILLING_SUMMARY"
                   data-desc="Billing Summary Report"
                   href
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
+                  title="Print Format: RTF"
+                >
+                  <i class="fa fa-file-word fa-lg"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -411,7 +449,8 @@
 
         <div
           id="pg-2"
-          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          class="rec-img row p-1 xborder-bottom bg-light text-dark"
+        >
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Credits Summary Report
           </div>
@@ -426,8 +465,10 @@
                   data-code="CREDITS_SUMMARY"
                   data-desc="Credits Summary Report"
                   href
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
+                  title="Print Format: PDF"
+                >
+                  <i class="fa fa-file-pdf fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -439,8 +480,10 @@
                   data-code="CREDITS_SUMMARY"
                   data-desc="Credits Summary Report"
                   href
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
+                  title="Print Format: CSV"
+                >
+                  <i class="fa fa-file-excel fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -452,8 +495,10 @@
                   data-code="CREDITS_SUMMARY"
                   data-desc="Credits Summary Report"
                   href
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
+                  title="Print Format: RTF"
+                >
+                  <i class="fa fa-file-word fa-lg"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -461,7 +506,8 @@
 
         <div
           id="pg-3"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          class="rec-img row p-1 xborder-bottom bg-white text-dark"
+        >
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Image Submitted Summary Report
           </div>
@@ -476,8 +522,10 @@
                   data-code="IMGSUBMITTED_SUMMARY"
                   data-desc="Image Submitted Summary Report"
                   href
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
+                  title="Print Format: PDF"
+                >
+                  <i class="fa fa-file-pdf fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -489,8 +537,10 @@
                   data-code="IMGSUBMITTED_SUMMARY"
                   data-desc="Image Submitted Summary Report"
                   href
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
+                  title="Print Format: CSV"
+                >
+                  <i class="fa fa-file-excel fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -502,8 +552,10 @@
                   data-code="IMGSUBMITTED_SUMMARY"
                   data-desc="Image Submitted Summary Report"
                   href
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
+                  title="Print Format: RTF"
+                >
+                  <i class="fa fa-file-word fa-lg"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -511,7 +563,8 @@
 
         <div
           id="pg-4"
-          class="rec-img row p-1 xborder-bottom bg-light text-dark">
+          class="rec-img row p-1 xborder-bottom bg-light text-dark"
+        >
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Primary User Summary Report
           </div>
@@ -526,8 +579,10 @@
                   data-code="PRIMARYUSER_SUMMARY"
                   data-desc="Primary User Summary Report"
                   href
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
+                  title="Print Format: PDF"
+                >
+                  <i class="fa fa-file-pdf fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -539,8 +594,10 @@
                   data-code="PRIMARYUSER_SUMMARY"
                   data-desc="Primary User Summary Report"
                   href
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
+                  title="Print Format: CSV"
+                >
+                  <i class="fa fa-file-excel fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -552,8 +609,10 @@
                   data-code="PRIMARYUSER_SUMMARY"
                   data-desc="Primary User Summary Report"
                   href
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
+                  title="Print Format: RTF"
+                >
+                  <i class="fa fa-file-word fa-lg"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -561,7 +620,8 @@
 
         <div
           id="pg-5"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark">
+          class="rec-img row p-1 xborder-bottom bg-white text-dark"
+        >
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             User List Summary Report
           </div>
@@ -576,8 +636,10 @@
                   data-code="USERLIST_SUMMARY"
                   data-desc="User List Summary Report"
                   href
-                  title="Print Format: PDF">
-                  <i class="fa fa-file-pdf fa-lg"></i></a>
+                  title="Print Format: PDF"
+                >
+                  <i class="fa fa-file-pdf fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -589,8 +651,10 @@
                   data-code="USERLIST_SUMMARY"
                   data-desc="User List Summary Report"
                   href
-                  title="Print Format: CSV">
-                  <i class="fa fa-file-excel fa-lg"></i></a>
+                  title="Print Format: CSV"
+                >
+                  <i class="fa fa-file-excel fa-lg"></i
+                ></a>
               </div>
 
               <div class="col-auto">
@@ -602,8 +666,10 @@
                   data-code="USERLIST_SUMMARY"
                   data-desc="User List Summary Report"
                   href
-                  title="Print Format: RTF">
-                  <i class="fa fa-file-word fa-lg"></i></a>
+                  title="Print Format: RTF"
+                >
+                  <i class="fa fa-file-word fa-lg"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -618,7 +684,8 @@
             class="form-control form-control-sm custom-select custom-select-sm"
             name="pagerec"
             id="pagerec"
-            style="max-width: 80px">
+            style="max-width: 80px"
+          >
             <option value="10">10</option>
             <option value="25" selected>25</option>
             <option value="50">50</option>

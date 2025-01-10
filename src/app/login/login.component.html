@@ -5,7 +5,8 @@
         class="p-0 xborder"
         src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7"
         style="xwidth: 100%; xheight: auto; max-width: 200px"
-        alt />
+        alt
+      />
     </div>
   </ng-container>
   <ng-container *ngIf="lang !== 'cn'">
@@ -15,13 +16,15 @@
           class="p-0 xborder"
           src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
           style="xwidth: 100%; xmax-height: 700px; max-width: 400px"
-          alt />
+          alt
+        />
 
         <img
           class="pl-4 xp-0 xborder"
           src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
           style="max-width: 320px; xwidth: 100%; xheight: auto"
-          alt />
+          alt
+        />
       </a>
     </div>
   </ng-container>
@@ -30,7 +33,8 @@
     id="dispMsg"
     class="alert alert-danger text-center small py-1"
     role="alert"
-    style="display: none"></div>
+    style="display: none"
+  ></div>
 
   <form name="frm_signon" id="frm_signon" method="post">
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
@@ -48,7 +52,8 @@
         oninvalid="this.setCustomValidity('Please enter a valid email address.')"
         oninput="setCustomValidity('')"
         title="Email address"
-        autocomplete="off" />
+        autocomplete="off"
+      />
     </div>
     <div class="form-group">
       <label>{{ "login.pwd" | translate }}</label>
@@ -61,13 +66,15 @@
         required="required"
         oninvalid="this.setCustomValidity('Please fill out this field.')"
         oninput="setCustomValidity('')"
-        autocomplete="off" />
+        autocomplete="off"
+      />
     </div>
     <div class="form-group">
       <button
         type="submit"
         class="btn xbtn-primary xbtn-md btn-block btn_login"
-        (click)="onSubmit()">
+        (click)="onSubmit()"
+      >
         {{ "login.btn" | translate }}
       </button>
     </div>
@@ -79,7 +86,8 @@
           id="inLang"
           style="width: auto"
           (change)="onChangeLang($event)"
-          [(ngModel)]="lang">
+          [(ngModel)]="lang"
+        >
           <option value="en" [selected]="lang === 'en'">English</option>
 
           <option value="cn" [selected]="lang === 'cn'">简体中文</option>
@@ -96,7 +104,7 @@
       <div class="col text-right">
         <a href="#" (click)="onForgotPwd()">{{
           "login.forgotpwd" | translate
-          }}</a>
+        }}</a>
       </div>
     </div>
 
@@ -105,12 +113,14 @@
         <img
           alt="Barcode Generator TEC-IT"
           style="xmax-width: 70px; max-height: 30px"
-          src="assets/img/udi.gif?Ver1.4.7" />
+          src="assets/img/udi.gif?Ver1.4.7"
+        />
       </div>
       <div class="col-11 py-2 text-left small">
-        <small>Powered by SELENA+ Ver1.7.0 and EySCAN Ver1.4.7 &copy; 2025 EyRIS
-          Pte
-          Ltd</small>
+        <small
+          >Powered by SELENA+ Ver1.7.0 and EySCAN Ver1.4.7 &copy; 2025 EyRIS Pte
+          Ltd</small
+        >
       </div>
     </div>
 
@@ -120,9 +130,12 @@
           class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
           src="assets/img/CE.png?v=Ver1.4.7"
           style="xmax-width: 70px; max-height: 20px"
-          alt /><span
+          alt
+        /><span
           class="py-0 pl-1 pr-4 align-bottom"
-          style="xfont-size: small; color: black; font-weight: bold">0123</span>
+          style="xfont-size: small; color: black; font-weight: bold"
+          >0123</span
+        >
       </div>
     </div>
 
@@ -132,7 +145,8 @@
           class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
           src="assets/img/manufacture-symbol.png?v=Ver1.4.7"
           style="xmax-width: 70px; max-height: 28px"
-          alt />
+          alt
+        />
       </div>
       <div class="col-9 p-0">
         <p class="xalign-top" style="font-size: 8pt">
@@ -148,7 +162,8 @@
           class="py-0 pl-4 pr-2 align-top"
           src="assets/img/ECRep_MedNet.png?v=Ver1.4.7"
           style="xmax-width: 70px; max-height: 20px"
-          alt />
+          alt
+        />
       </div>
       <div class="col-9 p-0">
         <p class="xalign-top" style="font-size: 8pt">
@@ -165,19 +180,23 @@
             class="nav-link"
             target="_blank"
             style="text-decoration: none"
-            href="assets/docs/EN_IMPD-001.pdf">{{ "login.importer" | translate
-            }}</a>
+            href="assets/docs/EN_IMPD-001.pdf"
+            >{{ "login.importer" | translate }}</a
+          >
           <a
             class="nav-link xpl-0"
             target="_blank"
             style="text-decoration: none"
-            href="assets/docs/EN_TAC-001.pdf">{{ "login.tnc" | translate }}</a>
+            href="assets/docs/EN_TAC-001.pdf"
+            >{{ "login.tnc" | translate }}</a
+          >
           <a
             class="nav-link xpx-0"
             target="_blank"
             style="text-decoration: none"
-            href="assets/docs/EN_PRIVPOLICY-001.pdf">{{ "login.privacy" |
-            translate }}</a>
+            href="assets/docs/EN_PRIVPOLICY-001.pdf"
+            >{{ "login.privacy" | translate }}</a
+          >
         </nav>
       </div>
     </div>
@@ -190,23 +209,27 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhAboutBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div
-        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none"
+      >
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
         <button
           id="__nhAboutBox_close"
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -215,7 +238,8 @@
           id="__nhAboutBox_iframe"
           scrolling="no"
           frameborder="0"
-          style="width: 700px; height: 620px"></iframe>
+          style="width: 700px; height: 620px"
+        ></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
         <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
@@ -238,14 +262,16 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
         <button
@@ -253,7 +279,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -263,7 +290,8 @@
           xwidth="500px"
           xheight="400px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -287,14 +315,16 @@
   role="dialog"
   aria-labelledby="__nhMessageBox_title"
   aria-hidden="true"
-  data-keyboard="false">
+  data-keyboard="false"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
         <button
@@ -302,7 +332,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -312,7 +343,8 @@
           width="500px"
           height="230px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
@@ -324,7 +356,8 @@
         <button
           id="__nhMessageBox_cancel"
           type="button"
-          class="btn btn-primary">
+          class="btn btn-primary"
+        >
           Save changes
         </button>
       </div>
@@ -337,34 +370,39 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhErrorBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-lg" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
         <button
           type="button"
           class="close btn-md m-1 p-0 bg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div
         id="__nhErrorBox_content"
         class="modal-body m-0 p-0"
-        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+        style="width: 100%; max-height: 500px; overflow-y: auto"
+      ></div>
       <div class="modal-footer justify-content-center m-0 p-1">
         <button
           id="__nhMessageBox_ok"
           type="button"
           class="btn btn-secondary"
-          data-dismiss="modal">
+          data-dismiss="modal"
+        >
           OK
         </button>
       </div>
@@ -383,20 +421,24 @@
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  ">
+  "
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
+    >
       <div
         class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"></div>
+        style="display: none; overflow: hidden"
+      ></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
       <div
         class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"></div>
+        style="display: none"
+      ></div>
     </div>
   </div>
 </div>

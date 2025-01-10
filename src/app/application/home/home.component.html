@@ -1,7 +1,8 @@
 <app-header
   [reload]="'/application/home'"
   [headerid]="'fn1'"
-  [title]="'Home'"></app-header>
+  [title]="'Home'"
+></app-header>
 
 <div
   class="modal fade"
@@ -9,23 +10,27 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhAboutBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div
-        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none">
+        class="modal-header m-0 p-0 xpl-2 bg-header xbg-dark text-white d-none"
+      >
         <h5 class="modal-title" id="__nhAboutBox_title"></h5>
         <button
           id="__nhAboutBox_close"
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -34,7 +39,8 @@
           id="__nhAboutBox_iframe"
           scrolling="no"
           frameborder="0"
-          style="width: 700px; height: 620px"></iframe>
+          style="width: 700px; height: 620px"
+        ></iframe>
       </div>
       <div class="modal-footer m-0 p-0 d-none">
         <button id="__nhAboutBox_ok" type="button" class="btn btn-primary">
@@ -57,14 +63,16 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
         <button
@@ -72,7 +80,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -82,7 +91,8 @@
           xwidth="500px"
           xheight="400px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -106,14 +116,16 @@
   role="dialog"
   aria-labelledby="__nhMessageBox_title"
   aria-hidden="true"
-  data-keyboard="false">
+  data-keyboard="false"
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
         <h5 class="modal-title" id="__nhMessageBox_title"></h5>
         <button
@@ -121,7 +133,8 @@
           type="button"
           class="close btn-md m-1 p-0 bg-header xbg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -131,7 +144,8 @@
           width="500px"
           height="230px"
           scrolling="no"
-          frameborder="0"></iframe>
+          frameborder="0"
+        ></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhMessageBox_ok" type="button" class="btn btn-primary">
@@ -143,7 +157,8 @@
         <button
           id="__nhMessageBox_cancel"
           type="button"
-          class="btn btn-primary">
+          class="btn btn-primary"
+        >
           Save changes
         </button>
       </div>
@@ -156,34 +171,39 @@
   tabindex="-1"
   role="dialog"
   aria-labelledby="__nhErrorBox_title"
-  aria-hidden="true">
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-lg" role="document">
     <div
       class="modal-content"
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      ">
+      "
+    >
       <div class="modal-header m-0 p-1 bg-header text-white">
         <h5 class="modal-title" id="__nhErrorBox_title">Application Error</h5>
         <button
           type="button"
           class="close btn-md m-1 p-0 bg-dark text-white"
           data-dismiss="modal"
-          aria-label="Close">
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div
         id="__nhErrorBox_content"
         class="modal-body m-0 p-0"
-        style="width: 100%; max-height: 500px; overflow-y: auto"></div>
+        style="width: 100%; max-height: 500px; overflow-y: auto"
+      ></div>
       <div class="modal-footer justify-content-center m-0 p-1">
         <button
           id="__nhMessageBox_ok"
           type="button"
           class="btn btn-secondary"
-          data-dismiss="modal">
+          data-dismiss="modal"
+        >
           OK
         </button>
       </div>
@@ -202,20 +222,24 @@
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  ">
+  "
+>
   <div class="modal-dialog" role="document">
     <div
       class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
+    >
       <div
         class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"></div>
+        style="display: none; overflow: hidden"
+      ></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
       <div
         class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"></div>
+        style="display: none"
+      ></div>
     </div>
   </div>
 </div>
@@ -236,25 +260,33 @@
                   name="ddwn_datefilter"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   02-Jan-2025 To 03-Jan-2025
                 </button>
                 <div
                   class="dropdown-menu p-0"
                   aria-labelledby="ddwn_datefilter"
-                  style="width: 220px">
-                  <a class="dropdown-item px-2 py-1" data-item="1"
-                    href>Today</a>
-                  <a class="dropdown-item px-2 py-1 active" data-item="2"
-                    href>Yesterday</a>
-                  <a class="dropdown-item px-2 py-1" data-item="3" href>Last 7
-                    Days</a>
-                  <a class="dropdown-item px-2 py-1" data-item="4" href>Last 30
-                    Days</a>
-                  <a class="dropdown-item px-2 py-1" data-item="5" href>This
-                    Month</a>
-                  <a class="dropdown-item px-2 py-1" data-item="6" href>Last
-                    Month</a>
+                  style="width: 220px"
+                >
+                  <a class="dropdown-item px-2 py-1" data-item="1" href
+                    >Today</a
+                  >
+                  <a class="dropdown-item px-2 py-1 active" data-item="2" href
+                    >Yesterday</a
+                  >
+                  <a class="dropdown-item px-2 py-1" data-item="3" href
+                    >Last 7 Days</a
+                  >
+                  <a class="dropdown-item px-2 py-1" data-item="4" href
+                    >Last 30 Days</a
+                  >
+                  <a class="dropdown-item px-2 py-1" data-item="5" href
+                    >This Month</a
+                  >
+                  <a class="dropdown-item px-2 py-1" data-item="6" href
+                    >Last Month</a
+                  >
                 </div>
               </div>
             </div>
@@ -266,7 +298,8 @@
               id="btnSubmitImg"
               class="btn btn-sm bg-primary text-white"
               value="Submit Image"
-              (click)="goto('/application/submit-image')">
+              (click)="goto('/application/submit-image')"
+            >
               <i class="fa fa-cloud-upload-alt"></i> Submit Image
             </button>
           </div>
@@ -353,7 +386,8 @@
               <div class="col bg-white xbg-light">
                 <div class="row p-2">
                   <div
-                    class="col-lg-12 col-md-12 col-sm-12 p-1 text-center border-top">
+                    class="col-lg-12 col-md-12 col-sm-12 p-1 text-center border-top"
+                  >
                     No Record Found.
                   </div>
                 </div>
