@@ -57,8 +57,7 @@ export class HomeComponent extends CustomRender implements OnDestroy {
       const da = new Date(dt.getFullYear(), dt.getMonth(), 1);
       const db = new Date();
       db.setMonth(db.getMonth() + 1);
-      db.setDate(1);
-      db.setDate(db.getDate() - 1);
+      db.setDate(0);
       r = `${Helper.toDateStr(da)} To ${Helper.toDateStr(db)}`;
     }
 
@@ -66,8 +65,7 @@ export class HomeComponent extends CustomRender implements OnDestroy {
       const da = new Date();
       da.setMonth(dt.getMonth() - 1, 1);
       const db = new Date();
-      db.setDate(1);
-      db.setDate(db.getDate() - 1);
+      db.setDate(0);
       r = `${Helper.toDateStr(da)} To ${Helper.toDateStr(db)}`;
     }
 
