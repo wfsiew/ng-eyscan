@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-header',
@@ -57,6 +58,7 @@ export class HeaderComponent {
   }
 
   goto(s: string) {
+    Helper.removeBeforeunload();
     this.router.navigate([s]);
     if (this.reload === s) {
       location.href = location.href;

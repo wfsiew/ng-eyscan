@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-sys-application-create',
+  selector: 'app-modal-sys-application-create',
   standalone: false,
   
   templateUrl: './sys-application-create.component.html',

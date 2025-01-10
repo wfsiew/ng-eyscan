@@ -1,6 +1,7 @@
 import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent extends CustomRender implements OnDestroy {
   }
 
   ngOnDestroy() {
+    Helper.removeBeforeunload();
     super.destroy();
   }
 

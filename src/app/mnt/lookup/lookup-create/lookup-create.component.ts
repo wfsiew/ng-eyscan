@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-lookup-create',
+  selector: 'app-modal-lookup-create',
   standalone: false,
   
   templateUrl: './lookup-create.component.html',
