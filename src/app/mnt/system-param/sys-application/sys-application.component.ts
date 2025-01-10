@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { SysApplicationCreateComponent } from './sys-application-create/sys-application-create.component';
 import { SystemCreateComponent } from '../system/system-create/system-create.component';
-import { CustomRender } from 'src/app/shared/custom-render';
+import { CustomRender } from 'src/app/shared/classes/custom-render';
 
 @Component({
   selector: 'app-sys-application',

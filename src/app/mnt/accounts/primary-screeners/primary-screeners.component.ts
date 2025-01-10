@@ -2,7 +2,7 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AccountsCreateComponent } from '../accounts-create/accounts-create.component';
-import { CustomRender } from 'src/app/shared/custom-render';
+import { CustomRender } from 'src/app/shared/classes/custom-render';
 
 @Component({
   selector: 'app-primary-screeners',

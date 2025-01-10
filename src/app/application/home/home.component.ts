@@ -1,6 +1,6 @@
 import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { CustomRender } from 'src/app/shared/custom-render';
+import { CustomRender } from 'src/app/shared/classes/custom-render';
 
 @Component({
   selector: 'app-home',

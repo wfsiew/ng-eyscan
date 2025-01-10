@@ -2,7 +2,7 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { LookupCreateComponent } from '../lookup-create/lookup-create.component';
-import { CustomRender } from 'src/app/shared/custom-render';
+import { CustomRender } from 'src/app/shared/classes/custom-render';
 
 @Component({
   selector: 'app-vuno-fundus',

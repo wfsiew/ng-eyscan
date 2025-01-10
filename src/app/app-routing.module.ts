@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
-import { UserGuideComponent } from './shared/user-guide/user-guide.component';
+import { UserGuideComponent } from './shared/components/user-guide/user-guide.component';
 
 const routes: Routes = [
   {

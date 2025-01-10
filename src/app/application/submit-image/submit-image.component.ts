@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
-import { CustomRender } from 'src/app/shared/custom-render';
+import { CustomRender } from 'src/app/shared/classes/custom-render';
 
 interface DiseaseType {
   desc: string;
