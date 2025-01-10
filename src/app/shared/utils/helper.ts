@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 export class Helper {
 
   private static beforeUnloadListener?: any;
@@ -12,5 +14,10 @@ export class Helper {
 
   public static removeBeforeunload() {
     removeEventListener('beforeunload', this.beforeUnloadListener, { capture: true });
+  }
+
+  public static toDateStr(dt: Date) {
+    const formattedDate = format(dt, 'dd-MMM-yyyy');
+    return formattedDate;
   }
 }

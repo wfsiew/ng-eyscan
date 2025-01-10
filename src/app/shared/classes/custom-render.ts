@@ -15,6 +15,7 @@ export class CustomRender {
   destroy() {
     this.renderer.removeClass(document.body, 'main-body');
     this.renderer.removeClass(document.body, 'body-main-margin');
+    Helper.removeBeforeunload();
   }
 
   goto(s: string, reload = false) {

@@ -262,31 +262,19 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  02-Jan-2025 To 03-Jan-2025
+                  {{ selectedRange }}
                 </button>
                 <div
                   class="dropdown-menu p-0"
                   aria-labelledby="ddwn_datefilter"
                   style="width: 220px"
                 >
-                  <a class="dropdown-item px-2 py-1" data-item="1" href
-                    >Today</a
-                  >
-                  <a class="dropdown-item px-2 py-1 active" data-item="2" href
-                    >Yesterday</a
-                  >
-                  <a class="dropdown-item px-2 py-1" data-item="3" href
-                    >Last 7 Days</a
-                  >
-                  <a class="dropdown-item px-2 py-1" data-item="4" href
-                    >Last 30 Days</a
-                  >
-                  <a class="dropdown-item px-2 py-1" data-item="5" href
-                    >This Month</a
-                  >
-                  <a class="dropdown-item px-2 py-1" data-item="6" href
-                    >Last Month</a
-                  >
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'today'" data-item="1" href="#" (click)="getDateRange('today')">Today</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'yesterday'" data-item="2" href="#" (click)="getDateRange('yesterday')">Yesterday</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'last7'" data-item="3" href="#" (click)="getDateRange('last7')">Last 7 Days</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'last30'" data-item="4" href="#" (click)="getDateRange('last30')">Last 30 Days</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'tm'" data-item="5" href="#" (click)="getDateRange('tm')">This Month</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'lm'" data-item="6" href="#" (click)="getDateRange('lm')">Last Month</a>
                 </div>
               </div>
             </div>
