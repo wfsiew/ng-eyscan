@@ -24,6 +24,10 @@
   height: 230px;
 }
 
+.error-modal {
+  width: 800px;
+}
+
 .about-modal {
   max-width: 700px !important;
   width: 700px;

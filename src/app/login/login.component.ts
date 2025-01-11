@@ -63,7 +63,7 @@ export class LoginComponent implements OnDestroy {
     //   err: '...'
     // };
     // this.bsModalRef = this.modalService.show(ErrorBoxComponent, { 
-    //   class: 'modal-lg',
+    //   class: 'modal-lg error-modal',
     //   backdrop: 'static',
     //   ariaLabelledBy: '__nhErrorBox_title',
     //   initialState
