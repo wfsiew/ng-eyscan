@@ -1,8 +1,10 @@
-import { Component, Inject, OnDestroy, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, OnDestroy, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
 import { AppTranslateService } from '../services/app-translate.service';
+import { ErrorBoxComponent } from '../shared/components/error-box/error-box.component';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +14,16 @@ import { AppTranslateService } from '../services/app-translate.service';
   styleUrl: './login.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnDestroy {
 
   lang = 'en';
 
   private cssLink?: HTMLLinkElement;
+  bsModalRef?: BsModalRef;
 
   constructor(
     private router: Router,
+    private modalService: BsModalService,
     private translate: TranslateService,
     private appTranslate: AppTranslateService,
     private renderer2: Renderer2,
@@ -29,9 +33,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (lang) {
       this.lang = lang;
     }
-  }
 
-  ngOnInit() {
     this.initCss();
   }
 
@@ -57,6 +59,16 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
+    // const initialState = {
+    //   err: '...'
+    // };
+    // this.bsModalRef = this.modalService.show(ErrorBoxComponent, { 
+    //   class: 'modal-lg',
+    //   backdrop: 'static',
+    //   ariaLabelledBy: '__nhErrorBox_title',
+    //   initialState
+    // });
+
     this.router.navigate(['/application/home']);
     return false;
   }

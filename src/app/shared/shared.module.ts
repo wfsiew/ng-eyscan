@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserGuideComponent } from './components/user-guide/user-guide.component';
+import { ErrorBoxComponent } from './components/error-box/error-box.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserGuideComponent } from './components/user-guide/user-guide.component
     HeaderComponent,
     AboutComponent,
     ContactComponent,
-    UserGuideComponent
+    UserGuideComponent,
+    ErrorBoxComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,7 @@ import { UserGuideComponent } from './components/user-guide/user-guide.component
   providers: [BsModalService],
   exports: [
     SafehtmlPipe,
-    HeaderComponent
+    HeaderComponent,
   ]
 })
 export class SharedModule { }
