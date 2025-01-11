@@ -4,6 +4,7 @@ import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal'
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
+import { AppManager } from 'src/app/shared/utils/helper';
 
 interface DiseaseType {
   desc: string;
@@ -385,6 +386,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   }
 
   onReset() {
+    AppManager.instance.removeBeforeUnload();
     location.href = location.href;
   }
 

@@ -1,6 +1,6 @@
 import { Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { Helper } from 'src/app/shared/utils/helper';
+import { AppManager } from 'src/app/shared/utils/helper';
 
 export class CustomRender {
 
@@ -9,17 +9,17 @@ export class CustomRender {
     protected renderer: Renderer2) {
     this.renderer.addClass(document.body, 'main-body');
     this.renderer.addClass(document.body, 'body-main-margin');
-    Helper.addBeforeunload();
+    AppManager.instance.addBeforeUnload();
   }
 
   destroy() {
     this.renderer.removeClass(document.body, 'main-body');
     this.renderer.removeClass(document.body, 'body-main-margin');
-    Helper.removeBeforeunload();
+    AppManager.instance.removeBeforeUnload();
   }
 
   goto(s: string, reload = false) {
-    Helper.removeBeforeunload();
+    AppManager.instance.removeBeforeUnload();
     this.routerx.navigate([s]);
     if (reload) {
       location.href = location.href;

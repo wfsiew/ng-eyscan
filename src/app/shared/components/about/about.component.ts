@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Helper } from '../../utils/helper';
+import { AppManager } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-modal-about',
@@ -24,7 +24,7 @@ export class AboutComponent {
   }
 
   onHide() {
-    Helper.removeBeforeunload();
+    AppManager.instance.removeBeforeUnload();
     this.onClose.next({ result: false });
     this.bsModalRef.hide();
   }

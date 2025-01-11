@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Helper } from 'src/app/shared/utils/helper';
+import { AppManager } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-modal-contact',
@@ -14,7 +14,7 @@ export class ContactComponent {
   constructor(public bsModalRef: BsModalRef) {}
 
   onHide() {
-    Helper.removeBeforeunload();
+    AppManager.instance.removeBeforeUnload();
     this.bsModalRef.hide();
   }
 }
