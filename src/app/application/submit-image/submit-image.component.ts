@@ -114,12 +114,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
       title: 'Information',
       message: 
       `
-      <div class="container">
-        <div class="row pt-3 d-flex">
-          <div class="col-2 justify-content-center "><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
-          <div class="col-10 nhxmsg">SYS-00001:<br>Maximum screening images allowed for uploading is 2 per eye, only first 2 valid images will be used.</div>
-        </div>
-      </div>
+      SYS-00001:<br>Maximum screening images allowed for uploading is 2 per eye, only first 2 valid images will be used.
       `
     };
     this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
@@ -384,12 +379,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
           title: 'Error',
           message: 
           `
-          <div class="container">
-            <div class="row pt-3 d-flex">
-              <div class="col-2 justify-content-center"><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
-              <div class="col-10 nhxmsg">SYS-00105:<br>No camera is configured for the organization.</div>
-            </div>
-          </div>
+          SYS-00105:<br>No camera is configured for the organization.
           `
         };
         this.modalService.show(MessageBoxComponent, { 
