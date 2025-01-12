@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { GuideComponent } from './guide/guide.component';
 import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { AppManager } from 'src/app/shared/utils/helper';
+import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
 
 interface DiseaseType {
   desc: string;
@@ -42,7 +43,6 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   files: any[] = [];
   filex = '';
   bsModalRef?: BsModalRef;
-  @ViewChild('nhxMessageBox', { static: false }) nhxMessageBox?: ModalDirective;
 
   constructor(
     protected router: Router,
@@ -110,21 +110,30 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   }
  
   showMaxFile() {
-    this.nhxMessageTitle = 'Information';
-    this.nhxMessageBody = 
-    `
-    <div class="container">
-      <div class="row pt-3 d-flex">
-        <div class="col-2 justify-content-center "><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
-        <div class="col-10 nhxmsg">SYS-00001:<br>Maximum screening images allowed for uploading is 2 per eye, only first 2 valid images will be used.</div>
+    const initialState = {
+      title: 'Information',
+      message: 
+      `
+      <div class="container">
+        <div class="row pt-3 d-flex">
+          <div class="col-2 justify-content-center "><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
+          <div class="col-10 nhxmsg">SYS-00001:<br>Maximum screening images allowed for uploading is 2 per eye, only first 2 valid images will be used.</div>
+        </div>
       </div>
-    </div>
-    `
-    this.nhxMessageBox?.show();
+      `
+    };
+    this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
+      class: 'msg-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhMessageBox_title', 
+      initialState 
+    });
+    this.bsModalRef.content.onClose.subscribe((res: any) => {
+      this.onMessageHide();
+    });
   }
 
   onMessageHide() {
-    this.nhxMessageBox?.hide();
     const fx = this.filex;
     this.filex = '';
     if (fx === 'r1') {
@@ -370,17 +379,25 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
     this.bsModalRef.content.onClose.subscribe((res: any) => {
       if (res.result === true) {
         const s = res.list.join(',');
-        this.nhxMessageTitle = 'Error';
-        this.nhxMessageBody = 
-        `
-        <div class="container">
-          <div class="row pt-3 d-flex">
-            <div class="col-2 justify-content-center"><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
-            <div class="col-10 nhxmsg">SYS-00105:<br>No camera is configured for the organization.</div>
+
+        const initialState = {
+          title: 'Error',
+          message: 
+          `
+          <div class="container">
+            <div class="row pt-3 d-flex">
+              <div class="col-2 justify-content-center"><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
+              <div class="col-10 nhxmsg">SYS-00105:<br>No camera is configured for the organization.</div>
+            </div>
           </div>
-        </div>
-        `
-        this.nhxMessageBox?.show();
+          `
+        };
+        this.modalService.show(MessageBoxComponent, { 
+          class: 'acquire-image-modal', 
+          backdrop: 'static', 
+          ariaLabelledBy: '__nhMessageBox_title', 
+          initialState 
+        });
       }
     });
   }

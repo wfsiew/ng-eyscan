@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserGuideComponent } from './components/user-guide/user-guide.component';
+import { MessageBoxComponent } from './components/message-box/message-box.component';
 import { ErrorBoxComponent } from './components/error-box/error-box.component';
 
 
@@ -17,6 +18,7 @@ import { ErrorBoxComponent } from './components/error-box/error-box.component';
     AboutComponent,
     ContactComponent,
     UserGuideComponent,
+    MessageBoxComponent,
     ErrorBoxComponent
   ],
   imports: [
