@@ -4,12 +4,14 @@
       class="navbar-brand pl-1 align-middle"
       href="#"
       data-target="fn1"
-      (click)="goto('/application/home')">
+      (click)="goto('/application/home')"
+    >
       <img
         class="d-inline-block align-middle"
         style="max-height: 50px"
         src="assets/img/eyris_navbar.png?v=Ver1.4.7"
-        alt="EyRIS" />
+        alt="EyRIS"
+      />
     </a>
     <button
       class="navbar-toggler collapsed hidden-lg-up"
@@ -18,7 +20,8 @@
       data-target="#navbarsMenu"
       aria-controls="navbarsMenu"
       aria-expanded="false"
-      aria-label="Toggle navigation">
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -30,97 +33,123 @@
             class="nav-link"
             data-target="fn1"
             href="#"
-            (click)="goto('/application/home')">Home</a>
+            (click)="goto('/application/home')"
+            >Home</a
+          >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn3'" id="fn3">
           <a
             class="nav-link"
             data-target="fn3"
             href="#"
-            (click)="goto('/application/submit-image')">Submit Image</a>
+            (click)="goto('/application/submit-image')"
+            >Submit Image</a
+          >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn2'" id="fn2">
           <a
             class="nav-link"
             data-target="fn2"
             href="#"
-            (click)="goto('/application/primary')">Primary Care</a>
+            (click)="goto('/application/primary')"
+            >Primary Care</a
+          >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn4'" id="fn4">
           <a
             class="nav-link"
             data-target="fn4"
             href="#"
-            (click)="goto('/application/secondary/index')">Secondary Grader</a>
+            (click)="goto('/application/secondary/index')"
+            >Secondary Grader</a
+          >
         </li>
         <li
           class="nav-item dropdown"
           [class.active]="headerid === 'fn0'"
-          id="fn0">
+          id="fn0"
+        >
           <a
             class="nav-link dropdown-toggle"
             data-target="fn0"
             href
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false">Portal Administrator</a>
+            aria-expanded="false"
+            >Portal Administrator</a
+          >
           <div class="dropdown-menu p-0" aria-labelledby="fn0">
             <a
               class="dropdown-item"
               data-target="fn0_1"
               href="#"
-              (click)="goto('/mnt/company')">Maintain Organizations</a>
+              (click)="goto('/mnt/company')"
+              >Maintain Organizations</a
+            >
             <a
               class="dropdown-item"
               data-target="fn0_2"
               href="#"
-              (click)="goto('/mnt/accounts/primary-screeners')">Manage Users</a>
+              (click)="goto('/mnt/accounts/primary-screeners')"
+              >Manage Users</a
+            >
             <a
               class="dropdown-item"
               data-target="fn0_9"
               href="#"
-              (click)="goto('/mnt/application')">Manage Organization
-              Applications</a>
+              (click)="goto('/mnt/application')"
+              >Manage Organization Applications</a
+            >
 
             <div class="dropdown-divider"></div>
             <a
               class="dropdown-item"
               data-target="fn0_10"
               href="#"
-              (click)="goto('/application/manage-data')">Case Investigation</a>
+              (click)="goto('/application/manage-data')"
+              >Case Investigation</a
+            >
 
             <div class="dropdown-divider"></div>
             <a
               class="dropdown-item"
               data-target="fn0_5"
               href="#"
-              (click)="goto('/mnt/lookup/language')">Maintain Lookup Codes</a>
+              (click)="goto('/mnt/lookup/language')"
+              >Maintain Lookup Codes</a
+            >
             <a
               class="dropdown-item"
               data-target="fn0_11"
               href="#"
-              (click)="goto('/mnt/system-param/system')">Manage Parameters</a>
+              (click)="goto('/mnt/system-param/system')"
+              >Manage Parameters</a
+            >
           </div>
         </li>
 
         <li
           class="nav-item dropdown"
           [class.active]="headerid === 'fn5'"
-          id="fn5">
+          id="fn5"
+        >
           <a
             class="nav-link dropdown-toggle"
             data-target="fn5"
             href
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false">Reports</a>
+            aria-expanded="false"
+            >Reports</a
+          >
           <div class="dropdown-menu p-0" aria-labelledby="fn5">
             <a
               class="dropdown-item"
               data-target="fn5_1"
               href="#"
-              (click)="goto('/application/reports/mgmt')">Primary Management
-              Report</a>
+              (click)="goto('/application/reports/mgmt')"
+              >Primary Management Report</a
+            >
           </div>
         </li>
       </ul>
@@ -133,7 +162,8 @@
             data-target="fnprof"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false">
+            aria-expanded="false"
+          >
             <i class="fa fa-user fa-lg"></i> KC
           </a>
           <ul class="dropdown-menu dropdown-menu-right p-0">
@@ -150,7 +180,8 @@
                         class="py-0 btn btn-primary xbtn-block btn-sm"
                         data-target="fnprof1"
                         href="#"
-                        (click)="goto('/mnt/user')">
+                        (click)="goto('/mnt/user')"
+                      >
                         Account Info
                       </a>
                     </p>
@@ -167,14 +198,19 @@
             data-target="fn7"
             href="#"
             title="Help"
-            (click)="onAbout()"><i
-              class="fas fa-question xtext-white xfa-lg"></i>
+            (click)="onAbout()"
+            ><i class="fas fa-question xtext-white xfa-lg"></i>
           </a>
         </li>
 
         <li class="nav-item" id="fn8">
-          <a class="nav-link" data-target="fn8" href title="Log Out"><i
-              class="fas fa-sign-out-alt xtext-white fa-lg"></i>
+          <a
+            class="nav-link"
+            data-target="fn8"
+            href="#"
+            title="Log Out"
+            (click)="goto('/')"
+            ><i class="fas fa-sign-out-alt xtext-white fa-lg"></i>
           </a>
         </li>
       </ul>
@@ -194,7 +230,8 @@
             class="form-control custom-select d-none"
             name="collect_company_id"
             id="collect_company_id"
-            style="width: 95%">
+            style="width: 95%"
+          >
             <option value selected></option>
             <option value="1">EyRIS</option>
           </select>
