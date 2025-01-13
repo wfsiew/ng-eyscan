@@ -13,7 +13,15 @@
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form name="frmMain" id="frmMain" method="post">
+    <form
+      *ngIf="mform"
+      name="frmMain"
+      id="frmMain"
+      method="post"
+      [formGroup]="mform"
+      ngNativeValidate
+      (ngSubmit)="onSubmit()"
+    >
       <div class="container-fluid pt-2 pb-3 px-4 bg-light">
         <input type="hidden" name="item_id" id="item_id" value="0" />
         <input type="hidden" name="addressSpecialChars" value="~!$%^&" />
@@ -45,10 +53,8 @@
           <label class="control-label mb-1">eMail </label>
           <input
             type="email"
-            name="email"
-            id="email"
-            value
             class="form-control"
+            formControlName="email"
             required
             maxlength="50"
             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
@@ -61,10 +67,8 @@
             <label class="control-label mb-1">Display Name </label>
             <input
               type="text"
-              name="display_name"
-              id="display_name"
-              value
               class="form-control"
+              formControlName="display_name"
               maxlength="20"
               onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
             />
@@ -73,10 +77,8 @@
             <label class="control-label mb-1">Contact No </label>
             <input
               type="text"
-              name="contact_no"
-              id="contact_no"
-              value
               class="form-control"
+              formControlName="contact_no"
               maxlength="20"
               onkeyup="chkphoneval(this,2,'contact_no');"
             />
@@ -87,10 +89,8 @@
           <label class="control-label mb-1">First Name </label>
           <input
             type="text"
-            name="first_name"
-            id="first_name"
-            value
             class="form-control"
+            formControlName="first_name"
             required
             maxlength="100"
             onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
@@ -102,10 +102,8 @@
           <label class="control-label mb-1">Last Name </label>
           <input
             type="text"
-            name="last_name"
-            id="last_name"
-            value
             class="form-control"
+            formControlName="last_name"
             required
             maxlength="100"
             onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
@@ -119,8 +117,7 @@
 
           <select
             class="form-control custom-select"
-            name="company_id"
-            id="company_id"
+            formControlName="company_id"
             required
             oninvalid="this.setCustomValidity('Please fill out this field.')"
             onchange="setCustomValidity('')"
@@ -168,8 +165,7 @@
             <label class="control-label mb-1">Grading Group </label>
             <select
               class="form-control custom-select"
-              name="user_group"
-              id="user_group"
+              formControlName="user_group"
               required
             >
               <option value="1" selected>Primary Screener</option>
@@ -190,8 +186,7 @@
               <label class="switch">
                 <input
                   type="checkbox"
-                  name="credits_management_ind"
-                  id="credits_management_ind"
+                  formControlName="credits_management_ind"
                   value="Y"
                 />
                 <span class="slider round"></span>
@@ -208,8 +203,7 @@
 
             <select
               class="form-control custom-select"
-              name="timezone_name"
-              id="timezone_name"
+              formControlName="timezone_name"
               required
               oninvalid="this.setCustomValidity('Please fill out this field.')"
               oninput="setCustomValidity('')"
@@ -1483,8 +1477,7 @@
             <label class="control-label mb-1" for="user_status">Status </label>
             <select
               class="form-control custom-select"
-              name="user_status"
-              id="user_status"
+              formControlName="user_status"
               required
             >
               <option value="A">Active</option>
@@ -1497,13 +1490,22 @@
             <label class="control-label mb-1">Inactive Date </label>
             <input
               type="text"
-              id="inactive_date"
-              name="inactive_date"
               class="form-control"
+              formControlName="inactive_date"
               style="max-width: 145px"
               maxlength="11"
-              value
-              onblur="if(!(check_date(this))){this.value='';}"
+              onkeydown="return false"
+              (keyup)="onKeyupInactiveDate($event)"
+              #datepickerInactiveDate="bsDatepicker"
+              bsDatepicker
+              placement="top"
+              [bsConfig]="{
+                dateInputFormat: 'DD-MMM-YYYY',
+                containerClass: 'theme-dark-blue',
+                showTodayButton: true,
+                showClearButton: true,
+                customTodayClass: 'custom-today-class'
+              }"
             />
           </div>
         </div>

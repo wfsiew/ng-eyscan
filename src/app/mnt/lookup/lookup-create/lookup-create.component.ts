@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
 
@@ -13,7 +14,25 @@ export class LookupCreateComponent extends GeneralForm {
 
   title?: string;
     
-  constructor(public bsModalRef: BsModalRef) {
+  constructor(
+    public bsModalRef: BsModalRef,
+    private fb: UntypedFormBuilder
+  ) {
     super();
+    this.createForm();
+  }
+
+  createForm() {
+    this.mform = this.fb.group({
+      code: ['', [Validators.required, Validators.maxLength(20)]],
+      description: ['', [Validators.required, Validators.maxLength(200)]],
+      english_desc: ['', [Validators.required, Validators.maxLength(200)]],
+      sort_seq: ['', [Validators.required, Validators.maxLength(5)]],
+      status: [true]
+    });
+  }
+
+  onSubmit() {
+
   }
 }

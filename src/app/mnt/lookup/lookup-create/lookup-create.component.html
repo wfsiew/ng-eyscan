@@ -13,7 +13,16 @@
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form name="frmMain" id="frmMain" method="post" class="xbg-secondary">
+    <form
+      *ngIf="mform"
+      name="frmMain"
+      id="frmMain"
+      method="post"
+      class="xbg-secondary"
+      [formGroup]="mform"
+      ngNativeValidate
+      (ngSubmit)="onSubmit()"
+    >
       <div class="container-fluid pt-2 pb-3 px-4 bg-light border-bottom">
         <input type="hidden" name="item_id" id="item_id" value />
         <input
@@ -27,10 +36,8 @@
           <label class="control-label mb-1">Code </label>
           <input
             type="text"
-            name="code"
-            id="code"
-            value
             class="form-control"
+            formControlName="code"
             required
             maxlength="20"
             onchange="c_upper(this);"
@@ -44,10 +51,8 @@
           <label class="control-label mb-1">Description</label>
           <input
             type="text"
-            name="description"
-            id="description"
-            value
             class="form-control"
+            formControlName="description"
             required
             maxlength="200"
             oninvalid="this.setCustomValidity('Please fill out this field.')"
@@ -58,10 +63,8 @@
           <label class="control-label mb-1">English Description </label>
           <input
             type="text"
-            name="english_desc"
-            id="english_desc"
-            value
             class="form-control"
+            formControlName="english_desc"
             required
             maxlength="200"
             oninvalid="this.setCustomValidity('Please fill out this field.')"
@@ -74,10 +77,8 @@
             <label class="control-label mb-1">Display Order </label>
             <input
               type="text"
-              name="sort_seq"
-              id="sort_seq"
-              value
               class="form-control"
+              formControlName="sort_seq"
               required
               maxlength="5"
               onkeyup="reject_space(this);chkposval(this, 2, 'sort_seq')"
@@ -98,10 +99,8 @@
               <input
                 type="checkbox"
                 class="custom-control custom-control-lg"
-                id="status"
-                name="status"
+                formControlName="status"
                 value="A"
-                checked
                 style="cursor: pointer; height: 16px; width: 16px"
               />
             </div>

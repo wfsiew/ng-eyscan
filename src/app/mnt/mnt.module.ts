@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { SharedModule } from '../shared/shared.module';
 
 import { MntRoutingModule } from './mnt-routing.module';
@@ -53,6 +54,7 @@ import { SystemCreateComponent } from './system-param/system/system-create/syste
     MntRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BsDatepickerModule,
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })
