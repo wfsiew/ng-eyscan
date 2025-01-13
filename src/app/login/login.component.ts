@@ -1,11 +1,12 @@
 import { Component, Inject, OnDestroy, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
 import { AppTranslateService } from '../services/app-translate.service';
 import { ErrorBoxComponent } from 'src/app/shared/components/error-box/error-box.component';
+import { GeneralForm } from 'src/app/shared/classes/general-form';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +16,8 @@ import { ErrorBoxComponent } from 'src/app/shared/components/error-box/error-box
   styleUrl: './login.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnDestroy {
+export class LoginComponent extends GeneralForm implements OnDestroy {
 
-  mform?: UntypedFormGroup;
   bsModalRef?: BsModalRef;
 
   private cssLink?: HTMLLinkElement;
@@ -31,6 +31,7 @@ export class LoginComponent implements OnDestroy {
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {
+    super();
     this.createForm();
     const lang = appTranslate.getLang();
     if (lang) {
@@ -98,18 +99,5 @@ export class LoginComponent implements OnDestroy {
   get lang() {
     const f = this.mform?.value;
     return f.inLang;
-  }
-
-  get f() {
-    return this.mform?.controls;
-  }
-
-  invalid(s: string) {
-    const m = this.mform?.controls[s];
-    if (!m) {
-      return false;
-    }
-
-    return m.invalid && (m.dirty || m.touched);
   }
 }

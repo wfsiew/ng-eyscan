@@ -1,8 +1,9 @@
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
 import { DOCUMENT } from '@angular/common';
+import { GeneralForm } from '../shared/classes/general-form';
 
 @Component({
   selector: 'app-forgotpwd',
@@ -12,9 +13,8 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './forgotpwd.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class ForgotpwdComponent {
+export class ForgotpwdComponent extends GeneralForm {
 
-  mform?: UntypedFormGroup;
   lang = 'en';
 
   constructor(
@@ -23,6 +23,7 @@ export class ForgotpwdComponent {
     private translate: TranslateService,
     @Inject(DOCUMENT) private document: Document
   ) {
+    super();
     this.createForm();
     const lang = localStorage.getItem('lang');
     if (lang) {
@@ -68,24 +69,11 @@ export class ForgotpwdComponent {
       this.mform?.markAllAsTouched();
       return;
     }
-    
+
   }
 
   onLogin() {
     this.router.navigate(['/'], { skipLocationChange: true });
     return false;
-  }
-
-  get f() {
-    return this.mform?.controls;
-  }
-
-  invalid(s: string) {
-    const m = this.mform?.controls[s];
-    if (!m) {
-      return false;
-    }
-
-    return m.invalid && (m.dirty || m.touched);
   }
 }
