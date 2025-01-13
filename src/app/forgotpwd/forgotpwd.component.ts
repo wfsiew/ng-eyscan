@@ -1,5 +1,6 @@
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
 import { DOCUMENT } from '@angular/common';
 
@@ -13,13 +14,16 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ForgotpwdComponent {
 
+  mform?: UntypedFormGroup;
   lang = 'en';
 
   constructor(
     private router: Router,
+    private fb: UntypedFormBuilder,
     private translate: TranslateService,
     @Inject(DOCUMENT) private document: Document
   ) {
+    this.createForm();
     const lang = localStorage.getItem('lang');
     if (lang) {
       this.lang = lang;
@@ -53,8 +57,35 @@ export class ForgotpwdComponent {
     }
   }
 
+  createForm() {
+    this.mform = this.fb.group({
+      inEmail: ['', [Validators.required]]
+    });
+  }
+
+  onSubmit() {
+    if (this.mform?.invalid) {
+      this.mform?.markAllAsTouched();
+      return;
+    }
+    
+  }
+
   onLogin() {
     this.router.navigate(['/'], { skipLocationChange: true });
     return false;
+  }
+
+  get f() {
+    return this.mform?.controls;
+  }
+
+  invalid(s: string) {
+    const m = this.mform?.controls[s];
+    if (!m) {
+      return false;
+    }
+
+    return m.invalid && (m.dirty || m.touched);
   }
 }

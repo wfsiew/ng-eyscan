@@ -4,7 +4,7 @@
       <img
         class="p-0 xborder"
         src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7"
-        style="xwidth: 100%; xheight: auto; max-width: 200px"
+        style="max-width: 200px"
         alt
       />
     </div>
@@ -15,13 +15,13 @@
         <img
           class="p-0"
           src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
-          style="xwidth: 100%; xheight: auto; max-width: 200px"
+          style="max-width: 200px"
           alt
         />
         <img
           class="pl-2 xp-0 xborder"
           src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
-          style="max-width: 320px; xwidth: 100%; xheight: auto"
+          style="max-width: 320px"
           alt
         />
       </a>
@@ -32,22 +32,28 @@
     id="dispMsg"
     class="alert alert-danger text-center small py-1"
     role="alert"
-    style="display: none"
+    [hidden]="true"
   >
     Invalid user!
   </div>
   <h1 class="pb-2">{{ "fpwd.title" | translate }}</h1>
 
-  <form name="frm_signon" id="frm_signon" method="post">
+  <form
+    *ngIf="mform"
+    name="frm_signon"
+    id="frm_signon"
+    method="post"
+    [formGroup]="mform"
+    ngNativeValidate
+    (ngSubmit)="onSubmit()"
+  >
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
       <label>{{ "login.email" | translate }}</label>
       <input
         type="email"
         class="form-control"
-        name="inEmail"
-        id="inEmail"
-        value
+        formControlName="inEmail"
         [placeholder]="'login.email-ph' | translate"
         required="required"
         autofocus
