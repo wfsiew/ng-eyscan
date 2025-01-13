@@ -1,8 +1,8 @@
-import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms'
+import { FormBuilder, FormArray, Validators, UntypedFormGroup } from '@angular/forms'
 
 export class GeneralForm {
   
-  protected mform?: FormGroup;
+  protected mform?: UntypedFormGroup;
 
   get f() {
     return this.mform?.controls;

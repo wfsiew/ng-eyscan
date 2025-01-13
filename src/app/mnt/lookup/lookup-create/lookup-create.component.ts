@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { GeneralForm } from 'src/app/shared/classes/general-form';
 
 @Component({
   selector: 'app-modal-lookup-create',
@@ -8,9 +9,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   templateUrl: './lookup-create.component.html',
   styleUrl: './lookup-create.component.css'
 })
-export class LookupCreateComponent {
+export class LookupCreateComponent extends GeneralForm {
 
   title?: string;
     
-  constructor(public bsModalRef: BsModalRef) {}
+  constructor(public bsModalRef: BsModalRef) {
+    super();
+  }
 }

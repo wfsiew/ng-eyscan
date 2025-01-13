@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { GeneralForm } from 'src/app/shared/classes/general-form';
 
 @Component({
   selector: 'app-modal-system-create',
@@ -8,9 +9,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   templateUrl: './system-create.component.html',
   styleUrl: './system-create.component.css'
 })
-export class SystemCreateComponent {
+export class SystemCreateComponent extends GeneralForm {
 
   title?: string;
     
-  constructor(public bsModalRef: BsModalRef) {}
+  constructor(public bsModalRef: BsModalRef) {
+    super();
+  }
 }
