@@ -88,9 +88,10 @@ export class LoginComponent implements OnDestroy {
   }
 
   onChangeLang(ev: any) {
-    this.mform?.patchValue({ inLang: ev.target.value });
-    this.translate.use(ev.target.value);
-    this.appTranslate.setLang(ev.target.value);
+    const lang = ev.target.value;
+    this.mform?.patchValue({ inLang: lang });
+    this.translate.use(lang);
+    this.appTranslate.setLang(lang);
     location.href = location.href;
   }
 
