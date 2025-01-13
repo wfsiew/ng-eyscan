@@ -36,21 +36,25 @@
     style="display: none"
   ></div>
 
-  <form name="frm_signon" id="frm_signon" method="post">
+  <form
+    *ngIf="mform"
+    name="frm_signon"
+    id="frm_signon"
+    method="post"
+    [formGroup]="mform"
+    (ngSubmit)="onSubmit()"
+  >
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
       <label>{{ "login.email" | translate }}</label>
       <input
         type="email"
         class="form-control"
-        name="inEmail"
-        id="inEmail"
-        value
+        formControlName="inEmail"
+        [class.is-invalid]="invalid('inEmail')"
         [placeholder]="'login.email-ph' | translate"
-        required="required"
+        required
         autofocus
-        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
-        oninput="setCustomValidity('')"
         title="Email address"
         autocomplete="off"
       />
@@ -60,12 +64,10 @@
       <input
         type="password"
         class="form-control"
-        name="inPassword"
-        id="inPassword"
+        formControlName="inPassword"
+        [class.is-invalid]="invalid('inPassword')"
         [placeholder]="'login.pwd' | translate"
-        required="required"
-        oninvalid="this.setCustomValidity('Please fill out this field.')"
-        oninput="setCustomValidity('')"
+        required
         autocomplete="off"
       />
     </div>
@@ -73,7 +75,6 @@
       <button
         type="submit"
         class="btn xbtn-primary xbtn-md btn-block btn_login"
-        (click)="onSubmit()"
       >
         {{ "login.btn" | translate }}
       </button>
@@ -82,11 +83,9 @@
       <div class="col text-left">
         <select
           class="form-control custom-select custom-select-sm"
-          name="inLang"
-          id="inLang"
           style="width: auto"
           (change)="onChangeLang($event)"
-          [(ngModel)]="lang"
+          formControlName="inLang"
         >
           <option value="en" [selected]="lang === 'en'">English</option>
 
