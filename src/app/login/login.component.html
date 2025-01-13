@@ -44,6 +44,7 @@
     id="frm_signon"
     method="post"
     [formGroup]="mform"
+    ngNativeValidate
     (ngSubmit)="onSubmit()"
   >
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
@@ -53,19 +54,16 @@
         type="email"
         class="form-control"
         formControlName="inEmail"
-        [class.is-invalid]="invalid('inEmail')"
         [placeholder]="'login.email-ph' | translate"
         required
         autofocus
+        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+        oninput="setCustomValidity('')"
         title="Email address"
         autocomplete="off"
+        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+        oninput="setCustomValidity('')"
       />
-      <small
-        class="badge"
-        *ngIf="f && invalid('inEmail') && f['inEmail'].hasError('required')"
-      >
-        Please enter a valid email address
-      </small>
     </div>
     <div class="form-group">
       <label>{{ "login.pwd" | translate }}</label>
@@ -73,19 +71,12 @@
         type="password"
         class="form-control"
         formControlName="inPassword"
-        [class.is-invalid]="invalid('inPassword')"
         [placeholder]="'login.pwd' | translate"
         required
+        oninvalid="this.setCustomValidity('Please fill out this field.')"
+        oninput="setCustomValidity('')"
         autocomplete="off"
       />
-      <small
-        class="badge"
-        *ngIf="
-          f && invalid('inPassword') && f['inPassword'].hasError('required')
-        "
-      >
-        Please fill out this field
-      </small>
     </div>
     <div class="form-group">
       <button
