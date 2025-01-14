@@ -49,7 +49,7 @@ export class CompanyCreateComponent extends GeneralForm {
       disease_cd_4: [''],
       trial_ind: ['Y'],
       trial_startdate: ['', [Validators.required, Validators.maxLength(11)]],
-      trial_enddate: ['', [Validators.required, Validators.maxLength(11)]],
+      trial_enddate: ['', [Validators.maxLength(11)]],
       trial_count: ['0', [Validators.maxLength(4)]],
       submitted_count: ['0', [Validators.maxLength(4)]],
       subscribe_startdate: ['', [Validators.maxLength(11)]],
@@ -96,5 +96,12 @@ export class CompanyCreateComponent extends GeneralForm {
     const v = f[field];
     const s = Helper.chkposval(v, ftype);
     this.mform?.controls[field].patchValue(s);
+  }
+
+  onKeyupDate(event: KeyboardEvent, field: string) {
+    const key = event.key;
+    if (key === 'Backspace') {
+      this.mform?.controls[field].patchValue('');
+    }
   }
 }

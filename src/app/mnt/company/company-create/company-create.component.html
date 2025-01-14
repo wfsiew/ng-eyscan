@@ -627,12 +627,35 @@
                                     formControlName="trial_startdate"
                                     style="max-width: 255px"
                                     maxlength="11"
+                                    required
+                                    onkeydown="return false"
+                                    (keyup)="onKeyupDate($event, 'trial_startdate')"
+                                    #datepickerTrialFrom="bsDatepicker"
+                                    bsDatepicker
+                                    placement="top"
+                                    [bsConfig]="{
+                                      dateInputFormat: 'DD-MMM-YYYY',
+                                      containerClass: 'theme-dark-blue',
+                                      showTodayButton: true,
+                                      showClearButton: true,
+                                      customTodayClass: 'custom-today-class'
+                                    }"
+                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                    oninput="setCustomValidity('')"
+                                    onchange="setCustomValidity('')"
+                                  />
+                                  <!-- <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="trial_startdate"
+                                    style="max-width: 255px"
+                                    maxlength="11"
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     required
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                  /> -->
                                 </div>
                                 <div class="form-group col-3">
                                   <label class="control-label mb-1"
@@ -644,11 +667,34 @@
                                     formControlName="trial_enddate"
                                     style="max-width: 255px"
                                     maxlength="11"
+                                    required
+                                    onkeydown="return false"
+                                    (keyup)="onKeyupDate($event, 'trial_enddate')"
+                                    #datepickerTrialTo="bsDatepicker"
+                                    bsDatepicker
+                                    placement="top"
+                                    [bsConfig]="{
+                                      dateInputFormat: 'DD-MMM-YYYY',
+                                      containerClass: 'theme-dark-blue',
+                                      showTodayButton: true,
+                                      showClearButton: true,
+                                      customTodayClass: 'custom-today-class'
+                                    }"
+                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                    oninput="setCustomValidity('')"
+                                    onchange="setCustomValidity('')"
+                                  />
+                                  <!-- <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="trial_enddate"
+                                    style="max-width: 255px"
+                                    maxlength="11"
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                  /> -->
                                 </div>
                                 <div class="form-group col-3">
                                   <label class="control-label mb-1"
@@ -710,12 +756,31 @@
                                     formControlName="subscribe_startdate"
                                     style="max-width: 255px"
                                     maxlength="11"
+                                    onkeydown="return false"
+                                    (keyup)="onKeyupDate($event, 'subscribe_startdate')"
+                                    #datepickerSubFrom="bsDatepicker"
+                                    bsDatepicker
+                                    placement="top"
+                                    [bsConfig]="{
+                                      dateInputFormat: 'DD-MMM-YYYY',
+                                      containerClass: 'theme-dark-blue',
+                                      showTodayButton: true,
+                                      showClearButton: true,
+                                      customTodayClass: 'custom-today-class'
+                                    }"
+                                  />
+                                  <!-- <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="subscribe_startdate"
+                                    style="max-width: 255px"
+                                    maxlength="11"
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     readonly
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                  /> -->
                                 </div>
                                 <div class="form-group col-3">
                                   <label class="control-label mb-1"
@@ -727,13 +792,32 @@
                                     formControlName="subscribe_enddate"
                                     style="max-width: 255px"
                                     maxlength="11"
+                                    onkeydown="return false"
+                                    (keyup)="onKeyupDate($event, 'subscribe_enddate')"
+                                    #datepickerSubTo="bsDatepicker"
+                                    bsDatepicker
+                                    placement="top"
+                                    [bsConfig]="{
+                                      dateInputFormat: 'DD-MMM-YYYY',
+                                      containerClass: 'theme-dark-blue',
+                                      showTodayButton: true,
+                                      showClearButton: true,
+                                      customTodayClass: 'custom-today-class'
+                                    }"
+                                  />
+                                  <!-- <input
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="subscribe_enddate"
+                                    style="max-width: 255px"
+                                    maxlength="11"
                                     value
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     readonly
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                  /> -->
                                 </div>
                                 <div class="form-group col-6">
                                   <label class="control-label mb-1"
