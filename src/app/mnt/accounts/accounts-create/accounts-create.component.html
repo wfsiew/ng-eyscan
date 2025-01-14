@@ -70,7 +70,7 @@
               class="form-control"
               formControlName="display_name"
               maxlength="20"
-              onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+              (keyup)="onKeyupValidateSpecialChar($event, 'display_name')"
             />
           </div>
           <div class="form-group col-6">
@@ -80,7 +80,7 @@
               class="form-control"
               formControlName="contact_no"
               maxlength="20"
-              onkeyup="chkphoneval(this,2,'contact_no');"
+              (keyup)="onKeyupContact($event)"
             />
           </div>
         </div>
@@ -93,7 +93,7 @@
             formControlName="first_name"
             required
             maxlength="100"
-            onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+            (keyup)="onKeyupValidateSpecialChar($event, 'first_name')"
             oninvalid="this.setCustomValidity('Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
@@ -106,7 +106,7 @@
             formControlName="last_name"
             required
             maxlength="100"
-            onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+            (keyup)="onKeyupValidateSpecialChar($event, 'last_name')"
             oninvalid="this.setCustomValidity('Please fill out this field.')"
             oninput="setCustomValidity('')"
           />

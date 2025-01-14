@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
+import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-modal-accounts-create',
@@ -16,6 +18,7 @@ export class AccountsCreateComponent extends GeneralForm {
   
   constructor(
     public bsModalRef: BsModalRef,
+    private modalService: BsModalService,
     private fb: UntypedFormBuilder
   ) {
     super();
@@ -40,6 +43,39 @@ export class AccountsCreateComponent extends GeneralForm {
 
   onSubmit() {
 
+  }
+
+  showInvalidInput(r: string) {
+    const initialState = {
+      title: 'Information',
+      message: 
+      `
+      SYS-00030:<br>Following characters<br> ${r} <br>are not allowed in this field and will be removed.
+      `
+    };
+    this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
+      class: 'msg-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhMessageBox_title', 
+      initialState 
+    });
+  }
+
+  onKeyupValidateSpecialChar(event: KeyboardEvent, field: string) {
+    const f = this.mform?.value;
+    const v = f[field];
+    const ls = Helper.validateSpecialCharacters(v, Helper.nameSpecialChars, 'Y', 'Y');
+    this.mform?.controls[field].patchValue(ls[0]);
+    if (ls[1] === false) {
+      this.showInvalidInput(ls[2] as string);
+    }
+  }
+
+  onKeyupContact(event: KeyboardEvent) {
+    const f = this.mform?.value;
+    const v = f.contact_no;
+    const s = Helper.chkphoneval(v);
+    this.mform?.patchValue({ contact_no: s });
   }
 
   onKeyupInactiveDate(event: KeyboardEvent) {

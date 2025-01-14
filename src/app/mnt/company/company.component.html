@@ -97,11 +97,14 @@
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
         <form
+          *ngIf="mform"
           name="frmFilter"
           id="frmFilter"
           class="form-inline float-right"
           action="/bn_moh_uat/mnt/company/index.cfm?tid=fn0_1"
           method="post"
+          [formGroup]="mform"
+          (ngSubmit)="onSubmit()"
         >
           <input type="hidden" name="recno" id="recno" value="25" />
           <input
@@ -128,13 +131,11 @@
 
           <div class="form-group mr-2">
             <input
-              name="desc"
-              id="desc"
               type="text"
               class="form-control"
+              formControlName="desc"
               placeholder="Search..."
-              value
-              onkeyup="validateSpecialCharacters(this,document.frmFilter.descSpecialChars,'Y','Y');"
+              (keyup)="onKeyupDesc($event)"
             />
           </div>
           <div class="form-group mr-2">
