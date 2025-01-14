@@ -10,8 +10,7 @@ export class Helper {
     return formattedDate;
   }
 
-  public static chkposval(val: string, ftype: number)
-  {
+  public static chkposval(val: string, ftype: number): string {
     let s = val;
       
     //check for positive values to 2 decimal places
@@ -20,7 +19,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);      
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);
+        return this.chkposval(s, ftype);
       }
 
       else if (Number(s) < 0) {
@@ -39,7 +38,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);
+        return this.chkposval(s, ftype);
       }
 
       else if (Number(s) < 0) {
@@ -51,7 +50,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.indexOf(".")) + numfield.value.substr(numfield.value.indexOf(".") + 1, numfield.value.length);
         //s = this.removedot(s);
       }    
-    }  
+    }
     
     //check for percentage values to 2 decimal places
     else if (ftype == 3) {
@@ -59,7 +58,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);     
+        return this.chkposval(s, ftype);     
       }
 
       else if ((Number(s) > 100) || (Number(s) < 0)) {
@@ -71,16 +70,16 @@ export class Helper {
       {
         s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
         //recursive      
-        this.chkposval(s, ftype);      
+        return this.chkposval(s, ftype);      
       }    
-    }    
+    }  
     
     else if (ftype == 8) {		
       if (!(isFinite(Number(s)))) {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);      
+        return this.chkposval(s, ftype);      
       }
       //else if ((numfield.value > 100) || (numfield.value < 0))
       else if ((Number(s) < 0)) {
@@ -98,14 +97,14 @@ export class Helper {
           }    
         }
       }    
-    } 
+    }
     
     //check for positive values to 2 decimal places & set the field to blank if invalid
     else if (ftype == 4) {
       if ((!(isFinite(Number(s)))) || (Number(s) < 0)) {
         s = '';
         //recursive
-        this.chkposval(s, ftype);
+        return this.chkposval(s, ftype);
       }
 
       if (s.indexOf(".") != -1) { 
@@ -117,7 +116,7 @@ export class Helper {
       if ((!(isFinite(Number(s))))  || (Number(s) < 0)) {
         s = s.substr(0, s.length -1);
         //recursive
-        this.chkposval(s, ftype);      
+        return this.chkposval(s, ftype);      
       }
       //check 2 decimals
       if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 4) { 
@@ -130,7 +129,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);      
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);      
+        return this.chkposval(s, ftype);      
       }
 
       else if ((Number(s) > 100) || (Number(s) < 0)) {
@@ -141,7 +140,7 @@ export class Helper {
       if (s.indexOf(".") >= 0) { 
         s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
       }    
-    }  
+    }
     
     //check for percentage values to 2 decimal places
     else if (ftype == 7) {
@@ -149,7 +148,7 @@ export class Helper {
         //numfield.value = numfield.value.substr(0, numfield.value.length -1);
         s = this.removechar(s);
         //recursive
-        this.chkposval(s, ftype);     
+        return this.chkposval(s, ftype);     
       }
 
       else if ((Number(s) > 999) || (Number(s) < 0)) {
@@ -160,9 +159,11 @@ export class Helper {
       if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 3) {
         s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
         //recursive      
-        this.chkposval(s, ftype);      
+        return this.chkposval(s, ftype);      
       }    
-    }    
+    }
+
+    return s;
   }//end function
 
   public static chkphoneval(val: string) {
