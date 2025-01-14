@@ -10,6 +10,161 @@ export class Helper {
     return formattedDate;
   }
 
+  public static chkposval(val: string, ftype: number)
+  {
+    let s = val;
+      
+    //check for positive values to 2 decimal places
+    if (ftype == 1) {
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);      
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);
+      }
+
+      else if (Number(s) < 0) {
+        s = '';
+      }    
+      
+      //check 2 decimals
+      if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 3) { 
+        //numfield.value = numfield.value.substr(0, numfield.value.indexOf(".")) + numfield.value.substr(numfield.value.indexOf(".") + 1, numfield.value.length);
+        s = s.substr(0, s.indexOf(".") + 1) + s.substr(s.indexOf(".") + 1, 2);
+      }
+    }
+    //check for positive whole numbers
+    else if (ftype == 2) {
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);
+      }
+
+      else if (Number(s) < 0) {
+        s = '';  
+      }        
+      
+      if (s.indexOf(".") >= 0) {
+        s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
+        //numfield.value = numfield.value.substr(0, numfield.value.indexOf(".")) + numfield.value.substr(numfield.value.indexOf(".") + 1, numfield.value.length);
+        //s = this.removedot(s);
+      }    
+    }  
+    
+    //check for percentage values to 2 decimal places
+    else if (ftype == 3) {
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);     
+      }
+
+      else if ((Number(s) > 100) || (Number(s) < 0)) {
+        s = '';   
+      }
+        
+      //check 2 decimal places 
+      if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 3)
+      {
+        s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
+        //recursive      
+        this.chkposval(s, ftype);      
+      }    
+    }    
+    
+    else if (ftype == 8) {		
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);      
+      }
+      //else if ((numfield.value > 100) || (numfield.value < 0))
+      else if ((Number(s) < 0)) {
+        s = '';     
+      }
+      
+      //check for decimal places 
+      if (s.indexOf(".") != -1) {
+        if (s.lastIndexOf(".") > 1) {
+          if (s.indexOf(".") != s.lastIndexOf(".")) {	
+            s = s.substr(0, s.lastIndexOf("."));
+            //recursive      
+            
+            //chkposval(numfield, ftype, fieldname);  
+          }    
+        }
+      }    
+    } 
+    
+    //check for positive values to 2 decimal places & set the field to blank if invalid
+    else if (ftype == 4) {
+      if ((!(isFinite(Number(s)))) || (Number(s) < 0)) {
+        s = '';
+        //recursive
+        this.chkposval(s, ftype);
+      }
+
+      if (s.indexOf(".") != -1) { 
+        s = s.substr(0, s.indexOf("."));
+      }
+    }
+    //check for positive values to 3 decimal places i.e. unit price
+    else if (ftype == 5) {
+      if ((!(isFinite(Number(s))))  || (Number(s) < 0)) {
+        s = s.substr(0, s.length -1);
+        //recursive
+        this.chkposval(s, ftype);      
+      }
+      //check 2 decimals
+      if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 4) { 
+        s = s.substr(0, s.length -1);      
+      }    
+    }
+    //check for percentage values but decimal number not allowed
+    else if (ftype == 6) {
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);      
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);      
+      }
+
+      else if ((Number(s) > 100) || (Number(s) < 0)) {
+        s = '';    
+      }
+          
+      //check 2 decimal places 
+      if (s.indexOf(".") >= 0) { 
+        s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
+      }    
+    }  
+    
+    //check for percentage values to 2 decimal places
+    else if (ftype == 7) {
+      if (!(isFinite(Number(s)))) {
+        //numfield.value = numfield.value.substr(0, numfield.value.length -1);
+        s = this.removechar(s);
+        //recursive
+        this.chkposval(s, ftype);     
+      }
+
+      else if ((Number(s) > 999) || (Number(s) < 0)) {
+        s = '';      
+      }
+        
+      //check 2 decimal places 
+      if (s.indexOf(".") != -1 && s.length - s.indexOf(".") > 3) {
+        s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
+        //recursive      
+        this.chkposval(s, ftype);      
+      }    
+    }    
+  }//end function
+
   public static chkphoneval(val: string) {
     let pfv, s;
     pfv = val.trim();
@@ -59,6 +214,11 @@ export class Helper {
     }
 
     return [s, ok, invalid];
+  }
+
+  private static removedot(val: string) {
+    let s = val;
+    return s;
   }
 
   private static removechar(str: string) {

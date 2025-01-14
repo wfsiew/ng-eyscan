@@ -15,6 +15,7 @@ import { Helper } from 'src/app/shared/utils/helper';
 export class AccountsCreateComponent extends GeneralForm {
 
   title?: string;
+  bsModalRef1?: BsModalRef;
   
   constructor(
     public bsModalRef: BsModalRef,
@@ -53,7 +54,7 @@ export class AccountsCreateComponent extends GeneralForm {
       SYS-00030:<br>Following characters<br> ${r} <br>are not allowed in this field and will be removed.
       `
     };
-    this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
+    this.bsModalRef1 = this.modalService.show(MessageBoxComponent, { 
       class: 'msg-modal', 
       backdrop: 'static', 
       ariaLabelledBy: '__nhMessageBox_title', 
