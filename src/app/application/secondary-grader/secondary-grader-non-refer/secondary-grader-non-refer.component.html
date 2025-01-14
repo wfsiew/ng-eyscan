@@ -9,8 +9,10 @@
     <div class="row pb-1">
       <div id="filter" class="col-12 container-fluid py-2 pl-0">
         <form
+        *ngIf="mform"
           name="frmFilter"
           id="frmFilter"
+          [formGroup]="mform"
           xrole="form"
           xclass="form-inline"
           action="/bn_moh_uat/application/secondary/index.cfm"
@@ -59,6 +61,26 @@
             <label class="control-label mb-1">From </label>
             <div class="input-group">
               <input
+                name="date_from"
+                type="text"
+                class="form-control"
+                style="max-width: 145px"
+                maxlength="11"
+                onkeydown="return false"
+                (keyup)="onKeyupDate($event, 'date_from')"
+                #datepickerFrom="bsDatepicker"
+                bsDatepicker
+                placement="bottom"
+                formControlName="date_from"
+                [bsConfig]="{
+                  dateInputFormat: 'DD-MMM-YYYY',
+                  containerClass: 'theme-dark-blue',
+                  showTodayButton: true,
+                  showClearButton: true,
+                  customTodayClass: 'custom-today-class'
+                }"
+              />
+              <!-- <input
                 id="date_from"
                 name="date_from"
                 type="text"
@@ -67,7 +89,7 @@
                 maxlength="11"
                 value="21-Dec-2024"
                 onblur="if(!(check_date(this))){this.value='';}"
-              />
+              /> -->
             </div>
           </div>
 
@@ -75,6 +97,26 @@
             <label class="control-label mb-1">To </label>
             <div class="input-group">
               <input
+                name="date_to"
+                type="text"
+                class="form-control"
+                style="max-width: 145px"
+                maxlength="11"
+                onkeydown="return false"
+                (keyup)="onKeyupDate($event, 'date_to')"
+                #datepickerTo="bsDatepicker"
+                bsDatepicker
+                placement="bottom"
+                formControlName="date_to"
+                [bsConfig]="{
+                  dateInputFormat: 'DD-MMM-YYYY',
+                  containerClass: 'theme-dark-blue',
+                  showTodayButton: true,
+                  showClearButton: true,
+                  customTodayClass: 'custom-today-class'
+                }"
+              />
+              <!-- <input
                 id="date_to"
                 name="date_to"
                 type="text"
@@ -83,7 +125,7 @@
                 maxlength="11"
                 value="10-Jan-2025"
                 onblur="if(!(check_date(this))){this.value='';}"
-              />
+              /> -->
             </div>
           </div>
 

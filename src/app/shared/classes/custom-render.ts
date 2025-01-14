@@ -20,10 +20,12 @@ export class CustomRender {
 
   goto(s: string, reload = false) {
     AppManager.instance.removeBeforeUnload();
-    this.routerx.navigate([s]);
-    if (reload) {
-      location.href = location.href;
-    }
+    this.routerx.navigate([s]).then((x) => {
+      if (reload) {
+        AppManager.instance.removeBeforeUnload();
+        location.href = location.href;
+      }
+    });
 
     return false;
   }

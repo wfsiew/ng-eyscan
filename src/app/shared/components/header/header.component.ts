@@ -59,10 +59,12 @@ export class HeaderComponent {
 
   goto(s: string) {
     AppManager.instance.removeBeforeUnload();
-    this.router.navigate([s]);
-    if (this.reload === s) {
-      location.href = location.href;
-    }
+    this.router.navigate([s]).then((x) => {
+      if (this.reload === s) {
+        AppManager.instance.removeBeforeUnload();
+        location.href = location.href;
+      }
+    });
 
     return false;
   }

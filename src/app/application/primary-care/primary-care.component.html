@@ -429,7 +429,7 @@
                     style="max-width: 145px"
                     maxlength="11"
                     onkeydown="return false"
-                    (keyup)="onKeyupFrom($event)"
+                    (keyup)="onKeyupDate($event, 'date_from')"
                     #datepickerFrom="bsDatepicker"
                     bsDatepicker
                     placement="bottom"
@@ -457,7 +457,7 @@
                     style="max-width: 145px"
                     maxlength="11"
                     onkeydown="return false"
-                    (keyup)="onKeyupTo($event)"
+                    (keyup)="onKeyupDate($event, 'date_to')"
                     #datepickerTo="bsDatepicker"
                     bsDatepicker
                     placement="bottom"

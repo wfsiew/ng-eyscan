@@ -47,17 +47,10 @@ export class SecondaryGraderNonReferComponent extends CustomRender implements On
     this.mform.patchValue({ date_from: df, date_to: dt });
   }
 
-  onKeyupFrom(event: KeyboardEvent) {
+  onKeyupDate(event: KeyboardEvent, field: string) {
     const key = event.key;
     if (key === 'Backspace') {
-      this.mform?.patchValue({ date_from: '' });
-    }
-  }
-
-  onKeyupTo(event: KeyboardEvent) {
-    const key = event.key;
-    if (key === 'Backspace') {
-      this.mform?.patchValue({ date_to: '' });
+      this.mform?.controls[field].patchValue('');
     }
   }
 }
