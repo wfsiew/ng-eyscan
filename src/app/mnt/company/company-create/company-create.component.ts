@@ -104,4 +104,14 @@ export class CompanyCreateComponent extends GeneralForm {
       this.mform?.controls[field].patchValue('');
     }
   }
+
+  onDateChange(val: Date, x: HTMLInputElement) {
+    if (!val) {
+      x.setCustomValidity('Please fill out this field.');
+    }
+
+    else {
+      x.setCustomValidity('');
+    }
+  }
 }

@@ -630,9 +630,11 @@
                                     required
                                     onkeydown="return false"
                                     (keyup)="onKeyupDate($event, 'trial_startdate')"
+                                    #mdatepickerTrialFrom
                                     #datepickerTrialFrom="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
+                                    (bsValueChange)="onDateChange($event, mdatepickerTrialFrom)"
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
@@ -640,9 +642,6 @@
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
                                     }"
-                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
-                                    oninput="setCustomValidity('')"
-                                    onchange="setCustomValidity('')"
                                   />
                                   <!-- <input
                                     type="text"
@@ -670,9 +669,11 @@
                                     required
                                     onkeydown="return false"
                                     (keyup)="onKeyupDate($event, 'trial_enddate')"
+                                    #mdatepickerTrialTo
                                     #datepickerTrialTo="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
+                                    (bsValueChange)="onDateChange($event, mdatepickerTrialTo)"
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
@@ -680,9 +681,6 @@
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
                                     }"
-                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
-                                    oninput="setCustomValidity('')"
-                                    onchange="setCustomValidity('')"
                                   />
                                   <!-- <input
                                     type="text"
@@ -761,6 +759,7 @@
                                     #datepickerSubFrom="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
+                                    [disabled]="true"
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
@@ -797,6 +796,7 @@
                                     #datepickerSubTo="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
+                                    [disabled]="true"
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
