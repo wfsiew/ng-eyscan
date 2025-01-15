@@ -8,6 +8,14 @@ export class GeneralForm {
     return this.mform?.controls;
   }
 
+  getValue(field: string) {
+    return this.mform?.get(field)?.value;
+  }
+
+  setValue(field: string, val: any) {
+    this.mform?.controls[field].patchValue(val);
+  }
+
   invalid(s: string) {
     const m = this.mform?.controls[s];
     if (!m) {

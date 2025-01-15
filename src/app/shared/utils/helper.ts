@@ -160,7 +160,7 @@ export class Helper {
         s = s.substr(0, s.indexOf(".")) + s.substr(s.indexOf(".") + 1, s.length);
         //recursive      
         return this.chkposval(s, ftype);      
-      }    
+      }
     }
 
     return s;
@@ -215,6 +215,25 @@ export class Helper {
     }
 
     return [s, ok, invalid];
+  }
+
+  public static reject_space(str: string) {
+    let arr = str.split(' ');
+    let ls: string[] = [];
+    let s = '';
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] != '') {
+        ls.push(arr[i]);
+      }
+    }
+
+    s = ls.join('');
+    return s;
+  }
+
+  public static c_upper(val: string) {
+    return val.toUpperCase();
   }
 
   private static removedot(val: string) {

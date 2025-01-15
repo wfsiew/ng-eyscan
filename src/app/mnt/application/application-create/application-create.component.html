@@ -6,14 +6,23 @@
     class="close btn-md m-1 p-0 bg-header text-white"
     data-dismiss="modal"
     aria-label="Close"
-    (click)="bsModalRef.hide()"
+    (click)="onHide()"
   >
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form name="frmMain" id="frmMain" method="post" class="xbg-secondary">
+    <form
+      *ngIf="mform"
+      name="frmMain"
+      id="frmMain"
+      method="post"
+      class="xbg-secondary"
+      [formGroup]="mform"
+      ngNativeValidate
+      (ngSubmit)="onSubmit()"
+    >
       <div class="container-fluid pt-2 pb-2 px-4 bg-light xborder-bottom">
         <input type="hidden" name="item_id" id="item_id" value="0" />
         <input
@@ -34,10 +43,8 @@
               <label class="control-label mb-1">Description </label>
               <input
                 type="text"
-                name="description"
-                id="description"
-                value
                 class="form-control"
+                formControlName="description"
                 required
                 maxlength="200"
                 oninvalid="this.setCustomValidity('Please fill out this field.')"
@@ -56,10 +63,11 @@
                             >Screening Model
                           </label>
                           <select
+                            #grading_id
                             class="form-control custom-select"
-                            name="grading_id"
-                            id="grading_id"
+                            formControlName="grading_id"
                             required
+                            (change)="onChangeGradingId(grading_id)"
                           >
                             <option value="P">Fully Automated</option>
 
@@ -72,8 +80,7 @@
                           </label>
                           <select
                             class="form-control custom-select"
-                            name="report_ind"
-                            id="report_ind"
+                            formControlName="report_ind"
                             required
                           >
                             <option value="MC">Macula Centered</option>
@@ -88,8 +95,7 @@
                           </label>
                           <select
                             class="form-control custom-select"
-                            name="parent_company_id"
-                            id="parent_company_id"
+                            formControlName="parent_company_id"
                             required
                             oninvalid="this.setCustomValidity('Please fill out this field.')"
                             onchange="setCustomValidity('')"
@@ -137,8 +143,8 @@
                           </label>
                           <select
                             class="form-control custom-select"
-                            name="secondary_id"
-                            id="secondary_id"
+                            formControlName="secondary_id"
+                            [required]="!disabled_secondary_id"
                             oninvalid="this.setCustomValidity('Please fill out this field.')"
                             onchange="setCustomValidity('')"
                           >
@@ -183,8 +189,7 @@
                           </label>
                           <select
                             class="form-control custom-select"
-                            name="collect_company_id"
-                            id="collect_company_id"
+                            formControlName="collect_company_id"
                           >
                             <option value></option>
 
@@ -229,22 +234,18 @@
                           </label>
                           <input
                             type="text"
-                            name="contact_name"
-                            id="contact_name"
-                            value
+                            formControlName="contact_name"
                             class="form-control"
                             maxlength="200"
-                            onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+                            (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')"
                           />
                         </div>
                         <div class="form-group col-4">
                           <label class="control-label mb-1">Email </label>
                           <input
                             type="email"
-                            name="contact_email"
-                            id="contact_email"
-                            value
                             class="form-control"
+                            formControlName="contact_email"
                             maxlength="50"
                             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
                             oninput="setCustomValidity('')"
@@ -257,12 +258,10 @@
                           </label>
                           <input
                             type="text"
-                            name="contact_no"
-                            id="contact_no"
-                            value
                             class="form-control"
+                            formControlName="contact_no"
                             maxlength="20"
-                            onkeyup="chkphoneval(this,2,'contact_no');"
+                            (keyup)="onKeyupChkposval($event, 'contact_no', 2)"
                           />
                         </div>
                       </div>
@@ -272,9 +271,8 @@
                             >Contact Address
                           </label>
                           <textarea
-                            name="contact_address"
-                            id="contact_address"
                             class="form-control"
+                            formControlName="contact_address"
                             maxlength="200"
                             style="height: 60px"
                           ></textarea>
@@ -313,8 +311,7 @@
                                 <input
                                   class="form-check-input diseases"
                                   type="checkbox"
-                                  id="disease_cd_1"
-                                  name="disease_cd_1"
+                                  formControlName="disease_cd_1"
                                   data-id="DR"
                                   value="DR"
                                   style="height: 16px; width: 16px"
@@ -337,8 +334,7 @@
                                 <input
                                   class="form-check-input diseases"
                                   type="checkbox"
-                                  id="disease_cd_2"
-                                  name="disease_cd_2"
+                                  formControlName="disease_cd_2"
                                   data-id="GLAUCOMA"
                                   value="GLAUCOMA"
                                   style="height: 16px; width: 16px"
@@ -361,8 +357,7 @@
                                 <input
                                   class="form-check-input diseases"
                                   type="checkbox"
-                                  id="disease_cd_3"
-                                  name="disease_cd_3"
+                                  formControlName="disease_cd_3"
                                   data-id="AMD"
                                   value="AMD"
                                   style="height: 16px; width: 16px"
@@ -393,8 +388,7 @@
                                 <input
                                   class="form-check-input diseases"
                                   type="checkbox"
-                                  id="disease_cd_4"
-                                  name="disease_cd_4"
+                                  formControlName="disease_cd_4"
                                   data-id="CKD"
                                   value="CKD"
                                   style="height: 16px; width: 16px"
@@ -434,7 +428,7 @@
           id="btnCancel"
           class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
           title="Cancel"
-          (click)="bsModalRef.hide()"
+          (click)="onHide()"
         >
           <i class="fa fa-times"></i> Cancel
         </button>

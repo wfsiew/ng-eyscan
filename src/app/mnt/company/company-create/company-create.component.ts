@@ -81,27 +81,39 @@ export class CompanyCreateComponent extends GeneralForm {
     });
   }
 
+  onKeyupCkdIm(event: KeyboardEvent, field: string, ftype: number) {
+    const v = this.getValue(field);
+    const s = Helper.reject_space(v);
+    const x = Helper.chkposval(s, ftype);
+    this.setValue(field, x);
+  }
+
+  onBlurCkdIm(event: FocusEvent, field: string, ftype: number) {
+    const v = this.getValue(field);
+    const s = Helper.reject_space(v);
+    const x = Helper.chkposval(s, ftype);
+    this.setValue(field, x);
+  }
+
   onKeyupValidateSpecialChar(event: KeyboardEvent, specialChars: string, field: string) {
-    const f = this.mform?.value;
-    const v = f[field];
+    const v = this.getValue(field);
     const ls = Helper.validateSpecialCharacters(v, specialChars, 'Y', 'Y');
-    this.mform?.controls[field].patchValue(ls[0]);
+    this.setValue(field, ls[0]);
     if (ls[1] === false) {
       this.showInvalidInput(ls[2] as string);
     }
   }
 
   onKeyupChkposval(event: KeyboardEvent, field: string, ftype: number) {
-    const f = this.mform?.value;
-    const v = f[field];
+    const v = this.getValue(field);
     const s = Helper.chkposval(v, ftype);
-    this.mform?.controls[field].patchValue(s);
+    this.setValue(field, s);
   }
 
   onKeyupDate(event: KeyboardEvent, field: string) {
     const key = event.key;
     if (key === 'Backspace') {
-      this.mform?.controls[field].patchValue('');
+      this.setValue(field, '');
     }
   }
 
@@ -113,5 +125,10 @@ export class CompanyCreateComponent extends GeneralForm {
     else {
       x.setCustomValidity('');
     }
+  }
+
+  onHide() {
+    this.bsModalRef.hide();
+    return false;
   }
 }

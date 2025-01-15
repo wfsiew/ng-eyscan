@@ -6,7 +6,7 @@
     class="close btn-md m-1 p-0 bg-header text-white"
     data-dismiss="modal"
     aria-label="Close"
-    (click)="bsModalRef.hide()"
+    (click)="onHide()"
   >
     <span aria-hidden="true">&times;</span>
   </button>
@@ -1526,7 +1526,7 @@
           id="btnCancel"
           class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
           value="Cancel"
-          (click)="bsModalRef.hide()"
+          (click)="onHide()"
         >
           <i class="fa fa-times"></i> Cancel
         </button>

@@ -6,7 +6,7 @@
     class="close btn-md m-1 p-0 bg-header text-white"
     data-dismiss="modal"
     aria-label="Close"
-    (click)="bsModalRef.hide()"
+    (click)="onHide()"
   >
     <span aria-hidden="true">&times;</span>
   </button>
@@ -115,7 +115,13 @@
                         maxlength="200"
                         oninvalid="this.setCustomValidity('Please fill out this field.')"
                         oninput="setCustomValidity('')"
-                        (keyup)="onKeyupValidateSpecialChar($event, descSpecialChars, 'description')"
+                        (keyup)="
+                          onKeyupValidateSpecialChar(
+                            $event,
+                            descSpecialChars,
+                            'description'
+                          )
+                        "
                       />
                     </div>
                   </div>
@@ -163,7 +169,13 @@
                                 class="form-control"
                                 formControlName="auditing_threshold"
                                 maxlength="4"
-                                (keyup)="onKeyupChkposval($event, 'auditing_threshold', 2)"
+                                (keyup)="
+                                  onKeyupChkposval(
+                                    $event,
+                                    'auditing_threshold',
+                                    2
+                                  )
+                                "
                               />
                             </div>
                           </div>
@@ -352,7 +364,13 @@
                                 class="form-control"
                                 formControlName="contact_name"
                                 maxlength="200"
-                                (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')"
+                                (keyup)="
+                                  onKeyupValidateSpecialChar(
+                                    $event,
+                                    nameSpecialChars,
+                                    'contact_name'
+                                  )
+                                "
                               />
                             </div>
                             <div class="form-group col-4">
@@ -376,7 +394,9 @@
                                 class="form-control"
                                 formControlName="contact_no"
                                 maxlength="20"
-                                (keyup)="onKeyupChkposval($event, 'contact_no', 2)"
+                                (keyup)="
+                                  onKeyupChkposval($event, 'contact_no', 2)
+                                "
                               />
                             </div>
                           </div>
@@ -629,12 +649,16 @@
                                     maxlength="11"
                                     required
                                     onkeydown="return false"
-                                    (keyup)="onKeyupDate($event, 'trial_startdate')"
+                                    (keyup)="
+                                      onKeyupDate($event, 'trial_startdate')
+                                    "
                                     #mdatepickerTrialFrom
                                     #datepickerTrialFrom="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
-                                    (bsValueChange)="onDateChange($event, mdatepickerTrialFrom)"
+                                    (bsValueChange)="
+                                      onDateChange($event, mdatepickerTrialFrom)
+                                    "
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
@@ -668,12 +692,16 @@
                                     maxlength="11"
                                     required
                                     onkeydown="return false"
-                                    (keyup)="onKeyupDate($event, 'trial_enddate')"
+                                    (keyup)="
+                                      onKeyupDate($event, 'trial_enddate')
+                                    "
                                     #mdatepickerTrialTo
                                     #datepickerTrialTo="bsDatepicker"
                                     bsDatepicker
                                     placement="top"
-                                    (bsValueChange)="onDateChange($event, mdatepickerTrialTo)"
+                                    (bsValueChange)="
+                                      onDateChange($event, mdatepickerTrialTo)
+                                    "
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
@@ -703,7 +731,9 @@
                                     class="form-control"
                                     formControlName="trial_count"
                                     maxlength="4"
-                                    (keyup)="onKeyupChkposval($event, 'trial_count', 2)"
+                                    (keyup)="
+                                      onKeyupChkposval($event, 'trial_count', 2)
+                                    "
                                     style="max-width: 255px"
                                   />
                                 </div>
@@ -716,7 +746,13 @@
                                     class="form-control"
                                     formControlName="submitted_count"
                                     maxlength="4"
-                                    (keyup)="onKeyupChkposval($event, 'submitted_count', 2)"
+                                    (keyup)="
+                                      onKeyupChkposval(
+                                        $event,
+                                        'submitted_count',
+                                        2
+                                      )
+                                    "
                                   />
                                 </div>
                               </div>
@@ -748,7 +784,7 @@
                                   <label class="control-label mb-1"
                                     >Effective Date From
                                   </label>
-                                  <input
+                                  <!-- <input
                                     type="text"
                                     class="form-control"
                                     formControlName="subscribe_startdate"
@@ -767,8 +803,8 @@
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
                                     }"
-                                  />
-                                  <!-- <input
+                                  /> -->
+                                  <input
                                     type="text"
                                     class="form-control"
                                     formControlName="subscribe_startdate"
@@ -779,13 +815,13 @@
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  /> -->
+                                  />
                                 </div>
                                 <div class="form-group col-3">
                                   <label class="control-label mb-1"
                                     >Date To
                                   </label>
-                                  <input
+                                  <!-- <input
                                     type="text"
                                     class="form-control"
                                     formControlName="subscribe_enddate"
@@ -804,8 +840,8 @@
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
                                     }"
-                                  />
-                                  <!-- <input
+                                  /> -->
+                                  <input
                                     type="text"
                                     class="form-control"
                                     formControlName="subscribe_enddate"
@@ -817,7 +853,7 @@
                                     oninvalid="this.setCustomValidity('Please fill out this field.')"
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
-                                  /> -->
+                                  />
                                 </div>
                                 <div class="form-group col-6">
                                   <label class="control-label mb-1"
@@ -983,8 +1019,12 @@
                           class="form-control"
                           formControlName="ckd_image_left_threshold"
                           maxlength="100"
-                          onkeyup="reject_space(this);chkposval(this, 8, 'ckd_image_left_threshold');"
-                          onblur="reject_space(this); chkposval(this, 8, 'ckd_image_left_threshold'); "
+                          (keyup)="
+                            onKeyupCkdIm($event, 'ckd_image_left_threshold', 8)
+                          "
+                          (blur)="
+                            onBlurCkdIm($event, 'ckd_image_left_threshold', 8)
+                          "
                         />
                       </div>
                     </div>
@@ -999,8 +1039,12 @@
                           class="form-control"
                           formControlName="ckd_image_right_threshold"
                           maxlength="100"
-                          onkeyup="reject_space(this);chkposval(this, 8, 'ckd_image_right_threshold');"
-                          onblur="reject_space(this);chkposval(this, 8, 'ckd_image_right_threshold');"
+                          (keyup)="
+                            onKeyupCkdIm($event, 'ckd_image_right_threshold', 8)
+                          "
+                          (blur)="
+                            onBlurCkdIm($event, 'ckd_image_right_threshold', 8)
+                          "
                         />
                       </div>
                     </div>
@@ -1015,6 +1059,16 @@
                           class="form-control"
                           formControlName="ckd_image_result_threshold"
                           maxlength="100"
+                          (keyup)="
+                            onKeyupCkdIm(
+                              $event,
+                              'ckd_image_result_threshold',
+                              8
+                            )
+                          "
+                          (blur)="
+                            onBlurCkdIm($event, 'ckd_image_result_threshold', 8)
+                          "
                           onkeyup="reject_space(this);chkposval(this, 8, 'ckd_image_result_threshold');"
                           onblur="reject_space(this);chkposval(this, 8, 'ckd_image_result_threshold');"
                         />
@@ -1038,7 +1092,7 @@
           id="btnCancel"
           class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
           title="Cancel"
-          (click)="bsModalRef.hide()"
+          (click)="onHide()"
         >
           <i class="fa fa-times"></i> Cancel
         </button>

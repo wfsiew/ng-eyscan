@@ -85,4 +85,9 @@ export class AccountsCreateComponent extends GeneralForm {
       this.mform?.patchValue({ inactive_date: '' });
     }
   }
+
+  onHide() {
+    this.bsModalRef.hide();
+    return false;
+  }
 }
