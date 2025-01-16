@@ -34,9 +34,9 @@
     role="alert"
     [hidden]="true"
   >
-    Invalid user!
+    {{ "Invalid user!" | translate }}
   </div>
-  <h1 class="pb-2">{{ "fpwd.title" | translate }}</h1>
+  <h1 class="pb-2">{{ "Forgot Password" | translate }}</h1>
 
   <form
     *ngIf="mform"
@@ -49,12 +49,12 @@
   >
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
-      <label>{{ "login.email" | translate }}</label>
+      <label>{{ "Email Address" | translate }}</label>
       <input
         type="email"
         class="form-control"
         formControlName="inEmail"
-        [placeholder]="'login.email-ph' | translate"
+        [placeholder]="'Email Address' | translate"
         required="required"
         autofocus
         oninvalid="this.setCustomValidity('Please enter a valid email address.')"
@@ -65,12 +65,12 @@
 
     <div class="form-group">
       <button type="submit" class="btn btn-block">
-        {{ "fpwd.reset" | translate }}
+        {{ "Reset Password" | translate }}
       </button>
     </div>
   </form>
 
   <p>
-    <a href="#" (click)="onLogin()">{{ "login.btn" | translate }}</a>
+    <a href="#" (click)="onLogin()">{{ "Log In" | translate }}</a>
   </p>
 </div>

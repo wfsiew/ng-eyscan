@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/application/primary'"
   [headerid]="'fn2'"
-  [title]="'Image Report'"
+  [title]="'Image Report' | translate"
 ></app-header>
 
 <div
@@ -120,7 +120,7 @@
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
                         >
-                          Diseases
+                          {{ "Diseases" | translate }}
                         </div>
                       </div>
 
@@ -150,7 +150,7 @@
                                   for="disease_dr"
                                   style="cursor: pointer"
                                 >
-                                  Diabetic Retinopathy
+                                  {{ "Diabetic Retinopathy" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -176,7 +176,7 @@
                                   for="disease_glaucoma"
                                   style="cursor: pointer"
                                 >
-                                  Glaucoma Suspect
+                                  {{ "Glaucoma Suspect" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -202,7 +202,10 @@
                                   for="disease_amd"
                                   style="cursor: pointer"
                                 >
-                                  Age-Related Macular Degeneration
+                                  {{
+                                    "Age-related Macular Degeneration"
+                                      | translate
+                                  }}
                                 </label>
                               </div>
                             </div>
@@ -228,7 +231,7 @@
                                   for="disease_ckd"
                                   style="cursor: pointer"
                                 >
-                                  Chronic Kidney Disease
+                                  {{ "Chronic Kidney Disease" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -246,7 +249,7 @@
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
                         >
-                          Result
+                          {{ "Result" | translate }}
                         </div>
                       </div>
                       <div class="form-row border rounded bg-white">
@@ -274,7 +277,9 @@
                                   class="form-check-label pl-1"
                                   for="referable"
                                   style="cursor: pointer"
-                                  >Referable/Clinically Significant</label
+                                  >{{ "Referable" | translate }}/{{
+                                    "Clinically Significant" | translate
+                                  }}</label
                                 >
                               </div>
                             </div>
@@ -298,9 +303,10 @@
                                   class="form-check-label pl-1"
                                   for="non-referable"
                                   style="cursor: pointer"
-                                  >Non Referable/Non-clinically
-                                  Significant</label
-                                >
+                                  >{{ "NON REFERABLE" | translate }}/{{
+                                    "Non-clinically Significant" | translate
+                                  }}
+                                </label>
                               </div>
                             </div>
                             <div
@@ -323,7 +329,7 @@
                                   class="form-check-label pl-1"
                                   for="ungradable"
                                   style="cursor: pointer"
-                                  >Ungradable</label
+                                  >{{ "Ungradable" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -347,7 +353,7 @@
                                   class="form-check-label pl-1"
                                   for="fail"
                                   style="cursor: pointer"
-                                  >Error</label
+                                  >{{ "Error" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -371,9 +377,10 @@
                                   class="form-check-label pl-1"
                                   for="all-nr"
                                   style="cursor: pointer"
-                                  >All Non Referable/Non-clinically
-                                  Significant</label
-                                >
+                                  >{{ "All Non Referable" | translate }}/{{
+                                    "Non-clinically Significant" | translate
+                                  }}
+                                </label>
                               </div>
                             </div>
                           </div>
@@ -389,7 +396,7 @@
           <div class="row pt-2">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="form-group fgx">
-                <label class="control-label mb-1">Case Reference ID </label>
+                <label class="control-label mb-1">{{ "Case Reference ID" | translate }} </label>
                 <input
                   name="pid"
                   id="pid"
@@ -408,19 +415,19 @@
                   id="selDate"
                 >
                   <option value="DS" data-date-option="Date Submitted">
-                    Date Submitted
+                    {{ "Date Submitted" | translate }}
                   </option>
                   <option value="DR" data-date-option="Date Reported">
-                    Date Reported
+                    {{ "Date Reported" | translate }}
                   </option>
                   <option value="DI" data-date-option="Date of Image">
-                    Date of Image
+                    {{ "Date of Image" | translate }}
                   </option>
                 </select>
               </div>
 
               <div class="form-group fgx">
-                <label class="control-label mb-1">From </label>
+                <label class="control-label mb-1">{{ "From" | translate }} </label>
                 <div class="input-group">
                   <input
                     name="date_from"
@@ -448,7 +455,7 @@
               </div>
 
               <div class="form-group fgx">
-                <label class="control-label mb-1">To </label>
+                <label class="control-label mb-1">{{ "To" | translate }} </label>
                 <div class="input-group">
                   <input
                     name="date_to"
@@ -483,7 +490,7 @@
                   class="form-control btn bg-primary text-white"
                   value="Search"
                 >
-                  <i class="fa fa-search"></i> Search
+                  <i class="fa fa-search"></i> {{ "Search" | translate }}
                 </button>
               </div>
 
@@ -496,7 +503,7 @@
                   value="Download Images"
                   disabled
                 >
-                  <i class="fa fa-cloud-download-alt"></i> Download Image
+                  <i class="fa fa-cloud-download-alt"></i> {{ "Download Image" | translate }}
                 </button>
               </div>
             </div>

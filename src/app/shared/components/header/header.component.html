@@ -34,7 +34,7 @@
             data-target="fn1"
             href="#"
             (click)="goto('/application/home')"
-            >Home</a
+            >{{ "Home" | translate }}</a
           >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn3'" id="fn3">
@@ -43,7 +43,7 @@
             data-target="fn3"
             href="#"
             (click)="goto('/application/submit-image')"
-            >Submit Image</a
+            >{{ "Submit Image" | translate }}</a
           >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn2'" id="fn2">
@@ -52,7 +52,7 @@
             data-target="fn2"
             href="#"
             (click)="goto('/application/primary')"
-            >Primary Care</a
+            >{{ "Primary Care" | translate }}</a
           >
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn4'" id="fn4">
@@ -61,7 +61,7 @@
             data-target="fn4"
             href="#"
             (click)="goto('/application/secondary/index')"
-            >Secondary Grader</a
+            >{{ "Secondary Grader" | translate }}</a
           >
         </li>
         <li
@@ -76,7 +76,7 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-            >Portal Administrator</a
+            >{{ "Portal Administrator" | translate }}</a
           >
           <div class="dropdown-menu p-0" aria-labelledby="fn0">
             <a
@@ -84,21 +84,21 @@
               data-target="fn0_1"
               href="#"
               (click)="goto('/mnt/company')"
-              >Maintain Organizations</a
+              >{{ "Maintain Organizations" | translate }}</a
             >
             <a
               class="dropdown-item"
               data-target="fn0_2"
               href="#"
               (click)="goto('/mnt/accounts/primary-screeners')"
-              >Manage Users</a
+              >{{ "Manage Users" | translate }}</a
             >
             <a
               class="dropdown-item"
               data-target="fn0_9"
               href="#"
               (click)="goto('/mnt/application')"
-              >Manage Organization Applications</a
+              >{{ "Manage Organization Applications" | translate }}</a
             >
 
             <div class="dropdown-divider"></div>
@@ -107,7 +107,7 @@
               data-target="fn0_10"
               href="#"
               (click)="goto('/application/manage-data')"
-              >Case Investigation</a
+              >{{ "Case Investigation" | translate }}</a
             >
 
             <div class="dropdown-divider"></div>
@@ -116,14 +116,14 @@
               data-target="fn0_5"
               href="#"
               (click)="goto('/mnt/lookup/language')"
-              >Maintain Lookup Codes</a
+              >{{ "Maintain Lookup Codes" | translate }}</a
             >
             <a
               class="dropdown-item"
               data-target="fn0_11"
               href="#"
               (click)="goto('/mnt/system-param/system')"
-              >Manage Parameters</a
+              >{{ "Manage Parameters" | translate }}</a
             >
           </div>
         </li>
@@ -140,7 +140,7 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-            >Reports</a
+            >{{ "Reports" | translate }}</a
           >
           <div class="dropdown-menu p-0" aria-labelledby="fn5">
             <a
@@ -148,7 +148,7 @@
               data-target="fn5_1"
               href="#"
               (click)="goto('/application/reports/mgmt')"
-              >Primary Management Report</a
+              >{{ "Primary Management Report" | translate }}</a
             >
           </div>
         </li>
@@ -182,7 +182,7 @@
                         href="#"
                         (click)="goto('/mnt/user')"
                       >
-                        Account Info
+                        {{ "Account Info" | translate }}
                       </a>
                     </p>
                   </div>

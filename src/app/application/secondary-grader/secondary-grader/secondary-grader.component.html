@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/application/secondary/index'"
   [headerid]="'fn4'"
-  [title]="'Worklist'"
+  [title]="'Worklist' | translate"
 ></app-header>
 
 <div
@@ -107,7 +107,7 @@
           <input type="hidden" name="status" id="status" value="VR" />
 
           <div class="form-group fgx">
-            <label class="control-label mb-1">Case Reference ID </label>
+            <label class="control-label mb-1">{{ "Case Reference ID" | translate }} </label>
             <input
               name="pid"
               id="pid"
@@ -119,7 +119,7 @@
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1">Capture Site </label>
+            <label class="control-label mb-1">{{ "Capture Site" | translate }}</label>
             <select
               class="form-control custom-select"
               name="location"
@@ -136,14 +136,14 @@
               name="selDate"
               id="selDate"
             >
-              <option value="DR" selected>Date Reported</option>
-              <option value="DI">Date of Image</option>
-              <option value="DG">Date Graded</option>
+              <option value="DR" selected>{{ "Date Reported" | translate }}</option>
+              <option value="DI">{{ "Date of Image" | translate }}</option>
+              <option value="DG">{{ "Date Graded" | translate }}</option>
             </select>
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1">From </label>
+            <label class="control-label mb-1">{{ "From" | translate }} </label>
             <div class="input-group">
               <input
                 name="date_from"
@@ -171,7 +171,7 @@
           </div>
 
           <div class="form-group fgx">
-            <label class="control-label mb-1">To </label>
+            <label class="control-label mb-1">{{ "To" | translate }} </label>
             <div class="input-group">
               <input
                 name="date_to"
@@ -206,7 +206,7 @@
               class="form-control btn bg-primary text-white"
               value="Search"
             >
-              <i class="fa fa-search"></i> Search
+              <i class="fa fa-search"></i> {{ "Search" | translate }}
             </button>
           </div>
 
@@ -219,7 +219,7 @@
               value="Disclaimer"
               (click)="onDisclaimer()"
             >
-              <i class="fa fa-exclamation-triangle"></i> Disclaimer
+              <i class="fa fa-exclamation-triangle"></i> {{ "Disclaimer" | translate }}
             </button>
           </div>
         </form>
@@ -238,7 +238,7 @@
               href="#"
               role="tab"
               (click)="goto('/application/secondary/index', true)"
-              >My List</a
+              >{{ "My List" | translate }}</a
             >
           </li>
           <li class="nav-item font-weight-bold">
@@ -250,7 +250,7 @@
               href="#"
               role="tab"
               (click)="goto('/application/secondary/queue')"
-              >Queue List</a
+              >{{ "Queue List" | translate }}</a
             >
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2">
@@ -262,7 +262,7 @@
               href="#"
               role="tab"
               (click)="goto('/application/secondary/non-refer')"
-              >Non Referable Cases</a
+              >{{ "Non Referable Cases" | translate }}</a
             >
           </li>
           <li class="nav-item font-weight-bold xml-auto xpr-2">
@@ -275,7 +275,7 @@
               role="tab"
               title="Finalized Referable Case"
               (click)="goto('/application/secondary/refer')"
-              >Referable Cases</a
+              >{{ "Referable Cases" | translate }}</a
             >
           </li>
         </ul>
@@ -292,7 +292,7 @@
           value="Routed to Queue List"
           disabled
         >
-          <i class="fa fa-share-alt"></i> Routed to Queue List
+          <i class="fa fa-share-alt"></i> {{ "Routed to Queue List" | translate }}
         </button>
         <div
           class="custom-control custom-checkbox xcustom-control-group float-right"

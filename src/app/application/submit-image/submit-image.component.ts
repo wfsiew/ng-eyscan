@@ -6,6 +6,8 @@ import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { AppManager } from 'src/app/shared/utils/helper';
 import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
+import { TranslateService } from '@ngx-translate/core';
+import { AppTranslateService } from 'src/app/services/app-translate.service';
 
 interface DiseaseType {
   desc: string;
@@ -47,9 +49,11 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
   constructor(
     protected router: Router,
     protected renderer2: Renderer2,
+    protected translate: TranslateService,
+    protected appTranslate: AppTranslateService,
     private modalService: BsModalService
   ) {
-    super(router, renderer2);
+    super(router, renderer2, translate, appTranslate);
   }
 
   ngOnInit() {

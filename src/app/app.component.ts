@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   ) {
     setTheme('bs4');
     translate.setDefaultLang('en');
-    translate.use('en');
   }
 
   ngOnInit() {

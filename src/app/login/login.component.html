@@ -35,6 +35,7 @@
     role="alert"
     [hidden]="true"
   >
+    {{ "Email and password combination is not valid !!!" | translate }}
     Email and password combination is not valid !!!
   </div>
 
@@ -49,29 +50,29 @@
   >
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
-      <label>{{ "login.email" | translate }}</label>
+      <label>{{ "Email Address" | translate }}</label>
       <input
         type="email"
         class="form-control"
         formControlName="inEmail"
-        [placeholder]="'login.email-ph' | translate"
+        [placeholder]="'Email Address' | translate"
         required
         autofocus
         oninvalid="this.setCustomValidity('Please enter a valid email address.')"
         oninput="setCustomValidity('')"
-        title="Email address"
+        [title]="'Email Address' | translate"
         autocomplete="off"
         oninvalid="this.setCustomValidity('Please enter a valid email address.')"
         oninput="setCustomValidity('')"
       />
     </div>
     <div class="form-group">
-      <label>{{ "login.pwd" | translate }}</label>
+      <label>{{ "Password" | translate }}</label>
       <input
         type="password"
         class="form-control"
         formControlName="inPassword"
-        [placeholder]="'login.pwd' | translate"
+        [placeholder]="'Password' | translate"
         required
         oninvalid="this.setCustomValidity('Please fill out this field.')"
         oninput="setCustomValidity('')"
@@ -83,7 +84,7 @@
         type="submit"
         class="btn xbtn-primary xbtn-md btn-block btn_login"
       >
-        {{ "login.btn" | translate }}
+        {{ "Log In" | translate }}
       </button>
     </div>
     <div class="row">
@@ -109,7 +110,7 @@
       </div>
       <div class="col text-right">
         <a href="#" (click)="onForgotPwd()">{{
-          "login.forgotpwd" | translate
+          "Forgot password?" | translate
         }}</a>
       </div>
     </div>
@@ -187,21 +188,21 @@
             target="_blank"
             style="text-decoration: none"
             href="assets/docs/EN_IMPD-001.pdf"
-            >{{ "login.importer" | translate }}</a
+            >{{ "Importer Details" | translate }}</a
           >
           <a
             class="nav-link xpl-0"
             target="_blank"
             style="text-decoration: none"
             href="assets/docs/EN_TAC-001.pdf"
-            >{{ "login.tnc" | translate }}</a
+            >{{ "Terms & Conditions" | translate }}</a
           >
           <a
             class="nav-link xpx-0"
             target="_blank"
             style="text-decoration: none"
             href="assets/docs/EN_PRIVPOLICY-001.pdf"
-            >{{ "login.privacy" | translate }}</a
+            >{{ "Privacy Policy" | translate }}</a
           >
         </nav>
       </div>

@@ -4,6 +4,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { SysApplicationCreateComponent } from './sys-application-create/sys-application-create.component';
 import { SystemCreateComponent } from '../system/system-create/system-create.component';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
+import { TranslateService } from '@ngx-translate/core';
+import { AppTranslateService } from 'src/app/services/app-translate.service';
 
 @Component({
   selector: 'app-sys-application',
@@ -19,9 +21,11 @@ export class SysApplicationComponent extends CustomRender implements OnDestroy {
   constructor(
     protected router: Router,
     protected renderer2: Renderer2,
+    protected translate: TranslateService,
+    protected appTranslate: AppTranslateService,
     private modalService: BsModalService
   ) {
-    super(router, renderer2);
+    super(router, renderer2, translate, appTranslate);
   }
 
   ngOnDestroy() {

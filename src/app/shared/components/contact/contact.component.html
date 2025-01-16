@@ -1,5 +1,5 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">Contact Us</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ "Contact Us" | translate }}</h5>
   <button
     id="__nhPopWindow_close"
     type="button"
@@ -18,7 +18,7 @@
           <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12">
             <div class="row">
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 h4 mb-0">
-                Contact Us
+                {{ "Contact Us" | translate }}
               </div>
               <div
                 class="col-xl-8 col-lg-8 col-md-8 col-sm-12 text-right alert alert-success small py-1 px-2 my-0 alert-dismissible fade show"
@@ -26,16 +26,14 @@
                 name="hstatus"
                 role="alert"
                 [hidden]="true">
-                Your message was sent successfully. An email notification of a
-                copy of your message has been sent out. Please check your
-                Spam/Junk folder if you have not received it in your inbox.
+                {{ "Your message was sent successfully. An email notification of a copy of your message has been sent out. Please check your Spam/Junk folder if you have not received it in your inbox." | translate }}
               </div>
             </div>
 
             <div class="row">
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
-                  <label>Name</label>
+                  <label>{{ "Name" | translate }}</label>
                   <input
                     class="form-control"
                     name="txtname"
@@ -50,7 +48,7 @@
 
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
-                  <label>eMail</label>
+                  <label>{{ "eMail" | translate }}</label>
                   <input
                     type="email"
                     class="form-control"
@@ -66,7 +64,7 @@
 
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
-                  <label>Organization</label>
+                  <label>{{ "Organization" | translate }}</label>
                   <input
                     class="form-control"
                     name="txtorganization"
@@ -86,7 +84,7 @@
                     class="form-control"
                     name="txtmessage"
                     id="txtmessage"
-                    placeholder="How can we help?"
+                    [placeholder]="'How can we help?' | translate"
                     required="required"
                     rows="8"
                     maxlength="2000"
@@ -107,7 +105,7 @@
           type="submit"
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
           title="Send Message">
-          <i class="fa fa-envelope"></i> Send Message
+          <i class="fa fa-envelope"></i> {{ "Send Message" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>

@@ -2,6 +2,8 @@ import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { AppManager, Helper } from 'src/app/shared/utils/helper';
+import { TranslateService } from '@ngx-translate/core';
+import { AppTranslateService } from 'src/app/services/app-translate.service';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +19,11 @@ export class HomeComponent extends CustomRender implements OnDestroy {
 
   constructor(
     protected router: Router,
-    protected renderer2: Renderer2
+    protected renderer2: Renderer2,
+    protected translate: TranslateService,
+    protected appTranslate: AppTranslateService
   ) {
-    super(router, renderer2);
+    super(router, renderer2, translate, appTranslate);
     this.getDateRange('yesterday');
   }
 

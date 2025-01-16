@@ -5,7 +5,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ApplicationRoutingModule } from './application-routing.module';
 import { HomeComponent } from './home/home.component';

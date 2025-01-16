@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/application/reports/mgmt'"
   [headerid]="'fn5'"
-  [title]="'Primary Management Report'"
+  [title]="'Primary Management Report' | translate"
 ></app-header>
 
 <div
@@ -105,7 +105,7 @@
           <input type="hidden" name="recno" id="recno" value="25" />
 
           <div class="form-group fgx col-lg-2 col-md-6">
-            <label class="control-label mb-1">Date From </label>
+            <label class="control-label mb-1">{{ "Date From" | translate }} </label>
             <div class="input-group">
               <input
                 name="date_from"
@@ -133,7 +133,7 @@
           </div>
 
           <div class="form-group fgx col-lg-2 col-md-6">
-            <label class="control-label mb-1">Date To </label>
+            <label class="control-label mb-1">{{ "Date To" | translate }} </label>
             <div class="input-group">
               <input
                 name="date_to"
@@ -164,7 +164,7 @@
             class="form-group fgx col-lg-3 col-md-8"
             style="max-width: 500px"
           >
-            <label class="control-label mb-1">Company</label>
+            <label class="control-label mb-1">{{ "Company" | translate }}</label>
             <select
               class="form-control custom-select"
               name="company_id"
@@ -209,7 +209,7 @@
               class="control-label mb-1"
               for="status"
               style="cursor: pointer"
-              >Include Sub Centres
+              >{{ "Include Sub Centres" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
               <input

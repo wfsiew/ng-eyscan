@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/mnt/user'"
   [headerid]="'fnprof1'"
-  [title]="'Account Info'"
+  [title]="'Account Info' | translate"
 ></app-header>
 
 <div
@@ -106,7 +106,7 @@
           role="tab"
           aria-controls="v-pills-home"
           aria-selected=" true  "
-          >Personal Info</a
+          >{{ "Personal Info" | translate }}</a
         >
         <a
           class="nav-link"
@@ -116,7 +116,7 @@
           role="tab"
           aria-controls="v-pills-profile"
           aria-selected=" false "
-          >Change Password</a
+          >{{ "Change Password" | translate }}</a
         >
       </div>
       <div class="tab-content xp-4 col-lg-10" id="v-pills-tabContent">
@@ -126,7 +126,7 @@
           role="tabpanel"
           aria-labelledby="v-pills-home-tab"
         >
-          <h2 id="hd_text" class="container-fluid">Personal Info</h2>
+          <h2 id="hd_text" class="container-fluid">{{ "Personal Info" | translate }}</h2>
           <div class="container-fluid">
             <form name="frmMain" id="frmMain" method="post">
               <input
@@ -143,7 +143,7 @@
               />
 
               <div class="form-group">
-                <label>Display Name </label>
+                <label>{{ "Display Name" | translate }} </label>
                 <input
                   name="displayname"
                   id="displayname"
@@ -158,7 +158,7 @@
               </div>
 
               <div class="form-group">
-                <label>First Name </label>
+                <label>{{ "First Name" | translate }} </label>
                 <input
                   name="firstname"
                   id="firstname"
@@ -173,7 +173,7 @@
               </div>
 
               <div class="form-group">
-                <label>Last Name </label>
+                <label>{{ "Last Name" | translate }} </label>
                 <input
                   name="lastname"
                   id="lastname"
@@ -188,7 +188,7 @@
               </div>
 
               <div class="form-group">
-                <label>Contact No </label>
+                <label>{{ "Contact No" | translate }} </label>
                 <input
                   name="contactno"
                   id="contactno"
@@ -203,7 +203,7 @@
               </div>
 
               <div class="form-group">
-                <label>Grading Group</label>
+                <label>{{ "Grading Group" | translate }}</label>
                 <input
                   name="grading_group"
                   id="grading_group"
@@ -216,7 +216,7 @@
               </div>
 
               <div class="form-group">
-                <label>Company</label>
+                <label>{{ "Company" | translate }}</label>
                 <input
                   name="company"
                   id="company"
@@ -229,7 +229,7 @@
               </div>
 
               <div class="form-group">
-                <label>Timezone</label>
+                <label>{{ "Timezone" | translate }}</label>
                 <input
                   name="timezone"
                   id="timezone"
@@ -248,7 +248,7 @@
                 class="btn bg-primary text-white float-right mt-3"
                 title="Save"
               >
-                <i class="fa fa-save"></i> Save
+                <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
             </form>
           </div>
@@ -260,7 +260,7 @@
           role="tabpanel"
           aria-labelledby="v-pills-profile-tab"
         >
-          <h2 id="hd_text" class="container-fluid">Change Password</h2>
+          <h2 id="hd_text" class="container-fluid">{{ "Change Password" | translate }}</h2>
           <div class="container-fluid">
             <form name="frmChangePWD" id="frmChangePWD" method="post">
               <input
@@ -271,7 +271,7 @@
               />
 
               <div class="form-group">
-                <label>Current Password </label>
+                <label>{{ "Current Password" | translate }} </label>
                 <input
                   name="old_pwd"
                   id="old_pwd"
@@ -294,7 +294,7 @@
                 />
               </div>
               <div class="form-group mb-1">
-                <label>New Password </label>
+                <label>{{ "New Password" | translate }} </label>
                 <input
                   name="new_pwd"
                   id="new_pwd"
@@ -313,28 +313,24 @@
 
               <div id="ver_div" class="form-group mt-0 mb-3 pl-3">
                 <div id="ver1" class="col-12 small text-dark">
-                  <i class="fas fa-check-circle fa-sm"></i> contains lowercase
-                  letters
+                  <i class="fas fa-check-circle fa-sm"></i> {{ "contains lowercase letters" | translate }}
                 </div>
                 <div id="ver2" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> contains uppercase
-                  letters
+                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains uppercase letters" | translate }}
                 </div>
                 <div id="ver3" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> contains a number
+                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains a number" | translate }}
                 </div>
                 <div id="ver4" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> contains at least 1
-                  special character
+                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains at least 1 special character" | translate }}
                 </div>
                 <div id="ver5" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> contains at least 8
-                  and not more than 20 characters (no spaces)
+                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains at least {{min}} and not more than {{max}} characters (no spaces)" | translate: {min:8, max:20} }}
                 </div>
               </div>
 
               <div class="form-group">
-                <label>Re-enter New Password </label>
+                <label>{{ "Re-enter New Password" | translate }} </label>
                 <input
                   name="new_pwd_confirm"
                   id="new_pwd_confirm"
@@ -353,7 +349,7 @@
                 class="btn bg-primary text-white float-right mt-3"
                 title="Save"
               >
-                <i class="fa fa-save"></i> Save
+                <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
             </form>
           </div>
