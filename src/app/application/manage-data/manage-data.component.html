@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/application/manage-data'"
   [headerid]="'fn0'"
-  [title]="'Case Investigation'"
+  [title]="'Case Investigation' | translate"
 ></app-header>
 
 <main role="main" class="container-fluid pt-3">
@@ -31,7 +31,7 @@
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
                         >
-                          Diseases
+                          {{ "Diseases" | translate }}
                         </div>
                       </div>
 
@@ -61,7 +61,7 @@
                                   for="disease_dr"
                                   style="cursor: pointer"
                                 >
-                                  Diabetic Retinopathy
+                                  {{ "Diabetic Retinopathy" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -87,7 +87,7 @@
                                   for="disease_glaucoma"
                                   style="cursor: pointer"
                                 >
-                                  Glaucoma Suspect
+                                  {{ "Glaucoma Suspect" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -113,7 +113,7 @@
                                   for="disease_amd"
                                   style="cursor: pointer"
                                 >
-                                  Age-Related Macular Degeneration
+                                  {{ "Age-related Macular Degeneration" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -131,7 +131,7 @@
                         <div
                           class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
                         >
-                          Result
+                          {{ "Result" | translate }}
                         </div>
                       </div>
                       <div class="form-row border rounded bg-white">
@@ -159,7 +159,7 @@
                                   class="form-check-label pl-1"
                                   for="referable"
                                   style="cursor: pointer"
-                                  >Referable</label
+                                  >{{ "Referable" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -183,7 +183,7 @@
                                   class="form-check-label pl-1"
                                   for="non-referable"
                                   style="cursor: pointer"
-                                  >Non Referable</label
+                                  >{{ "NON REFERABLE" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -207,7 +207,7 @@
                                   class="form-check-label pl-1"
                                   for="ungradable"
                                   style="cursor: pointer"
-                                  >Ungradable</label
+                                  >{{ "Ungradable" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -231,7 +231,7 @@
                                   class="form-check-label pl-1"
                                   for="all-nr"
                                   style="cursor: pointer"
-                                  >All Non Referable</label
+                                  >{{ "All Non Referable" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -250,7 +250,7 @@
               <div class="row">
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
                   <div class="form-group fgx">
-                    <label class="control-label mb-1">From </label>
+                    <label class="control-label mb-1">{{ "From" | translate }} </label>
                     <div class="input-group">
                       <input
                         name="date_from"
@@ -278,7 +278,7 @@
                   </div>
 
                   <div class="form-group fgx">
-                    <label class="control-label mb-1">To </label>
+                    <label class="control-label mb-1">{{ "To" | translate }} </label>
                     <div class="input-group">
                       <input
                         name="date_to"
@@ -306,7 +306,7 @@
                   </div>
 
                   <div class="form-group fgx" style="max-width: 500px">
-                    <label class="control-label mb-1">Company</label>
+                    <label class="control-label mb-1">{{ "Company" | translate }}</label>
                     <select
                       class="form-control custom-select"
                       name="company_id"
@@ -354,7 +354,7 @@
                       class="control-label mb-1"
                       for="status"
                       style="cursor: pointer"
-                      >Include Sub Centres
+                      >{{ "Include Sub Centres" | translate }}
                     </label>
                     <div class="custom-control custom-checkbox">
                       <input
@@ -379,7 +379,7 @@
                       class="form-control btn bg-primary text-white mr-3"
                       value="Search"
                     >
-                      <i class="fa fa-search"></i> Search
+                      <i class="fa fa-search"></i> {{ "Search" | translate }}
                     </button>
                     <button
                       name="btnDownload"
@@ -388,7 +388,7 @@
                       value="Download Images"
                       disabled
                     >
-                      <i class="fa fa-cloud-download-alt"></i> Download Image
+                      <i class="fa fa-cloud-download-alt"></i> {{ "Download Image" | translate }}
                     </button>
                   </div>
                 </div>

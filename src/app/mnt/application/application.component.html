@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/mnt/application'"
   [headerid]="'fn0'"
-  [title]="'Manage Organization Applications'"
+  [title]="'Manage Organization Applications' | translate"
 ></app-header>
 
 <div
@@ -93,7 +93,7 @@
   <div class="container-fluid pt-4 pb-4">
     <div class="row pb-2 justify-content-center">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
-        Applications
+        {{ "Applications" | translate }}
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
         <form
@@ -111,7 +111,7 @@
               id="desc"
               type="text"
               class="form-control"
-              placeholder="Search..."
+              placeholder="{{ 'Search' | translate }}..."
               value
             />
           </div>
@@ -121,9 +121,9 @@
                 name="btnSearch"
                 id="btnSearch"
                 class="form-control btn bg-primary text-white"
-                title="Search"
+                [title]="'Search' | translate"
               >
-                <i class="fa fa-search"></i> Search
+                <i class="fa fa-search"></i> {{ "Search" | translate }}
               </button>
             </div>
           </div>
@@ -134,7 +134,7 @@
                 name="btnNew"
                 id="btnNew"
                 class="form-control btn bg-primary text-white"
-                title="New"
+                [title]="'New' | translate"
                 (click)="onCreate()"
               >
                 <i class="fa fa-plus"></i> New

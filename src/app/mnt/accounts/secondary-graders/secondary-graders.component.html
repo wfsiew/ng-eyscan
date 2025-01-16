@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/mnt/accounts/secondary-graders'"
   [headerid]="'fn0'"
-  [title]="'Manage Users'"
+  [title]="'Manage Users' | translate"
 ></app-header>
 
 <div
@@ -109,7 +109,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/accounts/primary-screeners')"
-          >Primary Screeners</a
+          >{{ "Primary Screeners" | translate }}</a
         >
 
         <a
@@ -123,7 +123,7 @@
           aria-controls="v-pills-user"
           aria-selected="true"
           (click)="goto('/mnt/accounts/secondary-graders', true)"
-          >Secondary Graders</a
+          >{{ "Secondary Graders" | translate }}</a
         >
 
         <a
@@ -137,7 +137,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/accounts/primary-secondary-user')"
-          >Primary/Secondary User</a
+          >{{ "Primary/Secondary User" | translate }}</a
         >
 
         <a
@@ -151,7 +151,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/accounts/admin-user')"
-          >User Admin</a
+          >{{ "User Admin" | translate }}</a
         >
       </div>
 
@@ -167,7 +167,7 @@
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
-                Secondary Graders
+                {{ "Secondary Graders" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                 <form
@@ -185,7 +185,7 @@
                       id="desc"
                       type="text"
                       class="form-control"
-                      placeholder="Search..."
+                      placeholder="{{ 'Search' | translate }}..."
                       value
                     />
                   </div>
@@ -195,9 +195,9 @@
                         name="btnSearch"
                         id="btnSearch"
                         class="form-control btn bg-primary text-white"
-                        title="Search"
+                        [title]="'Search' | translate"
                       >
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
@@ -208,10 +208,10 @@
                         id="btnNew"
                         class="form-control btn bg-primary text-white"
                         data-group="2"
-                        title="New"
+                        [title]="'New' | translate"
                         (click)="onCreate()"
                       >
-                        <i class="fa fa-plus"></i> New
+                        <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>
                   </div>
@@ -261,7 +261,7 @@
                       href="#"
                       data-id="14"
                       data-group="2"
-                      title="Edit"
+                      [title]="'Edit' | translate"
                       (click)="onEdit()"
                       ><i class="fa fa-pencil-alt"></i
                     ></a>

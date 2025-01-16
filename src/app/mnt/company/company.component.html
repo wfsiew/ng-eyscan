@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/mnt/company'"
   [headerid]="'fn0'"
-  [title]="'Maintain Organizations'"
+  [title]="'Maintain Organizations' | translate"
 ></app-header>
 
 <div
@@ -93,7 +93,7 @@
   <div class="container-fluid pt-4 pb-4">
     <div class="row pb-2 justify-content-center">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
-        Organization
+        {{ "Organization" | translate }}
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
         <form
@@ -134,7 +134,7 @@
               type="text"
               class="form-control"
               formControlName="desc"
-              placeholder="Search..."
+              placeholder="{{ 'Search' | translate }}..."
               (keyup)="onKeyupDesc($event)"
             />
           </div>
@@ -144,9 +144,9 @@
                 name="btnSearch"
                 id="btnSearch"
                 class="form-control btn bg-primary text-white"
-                title="Search"
+                [title]="'Search' | translate"
               >
-                <i class="fa fa-search"></i> Search
+                <i class="fa fa-search"></i> {{ "Search" | translate }}
               </button>
             </div>
           </div>
@@ -158,10 +158,10 @@
                 id="btnNew"
                 type="button"
                 class="form-control btn bg-primary text-white"
-                title="New"
+                [title]="'New' | translate"
                 (click)="onCreate()"
               >
-                <i class="fa fa-plus"></i> New
+                <i class="fa fa-plus"></i> {{ "New" | translate }}
               </button>
             </div>
           </div>

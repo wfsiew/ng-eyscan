@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/mnt/lookup/vuno-fundus'"
   [headerid]="'fn0'"
-  [title]="'Maintain Lookup Code'"
+  [title]="'Maintain Lookup Code' | translate"
 ></app-header>
 
 <div
@@ -111,7 +111,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/lookup/language')"
-          >Language</a
+          >{{ "Language" | translate }}</a
         >
 
         <a
@@ -127,7 +127,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/lookup/patient-race')"
-          >Patient Race</a
+          >{{ "Patient Race" | translate }}</a
         >
 
         <a
@@ -143,7 +143,7 @@
           aria-controls="v-pills-user"
           aria-selected="false"
           (click)="goto('/mnt/lookup/visual-acuity')"
-          >Visual Acuity</a
+          >{{ "Visual Acuity" | translate }}</a
         >
 
         <a
@@ -194,7 +194,7 @@
                       id="desc"
                       type="text"
                       class="form-control"
-                      placeholder="Search..."
+                      placeholder="{{ 'Search' | translate }}..."
                       value
                     />
                   </div>
@@ -204,9 +204,9 @@
                         name="btnSearch"
                         id="btnSearch"
                         class="form-control btn bg-primary text-white"
-                        title="Search"
+                        [title]="'Search' | translate"
                       >
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
@@ -221,7 +221,7 @@
                         title="New"
                         (click)="onCreate()"
                       >
-                        <i class="fa fa-plus"></i> New
+                        <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>
                   </div>

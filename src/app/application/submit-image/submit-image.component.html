@@ -1,7 +1,7 @@
 <app-header
   [reload]="'/application/submit-image'"
   [headerid]="'fn3'"
-  [title]="'Submit Image'"
+  [title]="'Submit Image' | translate"
 ></app-header>
 
 <div
@@ -95,7 +95,7 @@
       <div class="row">
         <div class="col-md-3 col-sm-12">
           <div class="form-group">
-            <label for="report_id">Case Reference ID</label>
+            <label for="report_id">{{ "Case Reference ID" | translate }}</label>
             <input
               id="report_id"
               name="report_id"
@@ -108,7 +108,7 @@
         </div>
         <div class="col-md-3 col-sm-12">
           <div class="form-group">
-            <label for="date_of_image">Date of Image</label>
+            <label for="date_of_image">{{ "Date of Image" | translate }}</label>
             <input
               name="date_of_image"
               type="text"
@@ -135,121 +135,121 @@
         </div>
         <div class="col-md-2 col-sm-12">
           <div class="form-group">
-            <label for="gender">Gender</label>
+            <label for="gender">{{ "Gender" | translate }}</label>
             <select id="gender" name="gender" class="custom-select">
               <option value selected></option>
-              <option value="M">Male</option>
-              <option value="F">Female</option>
+              <option value="M">{{ "Male" | translate }}</option>
+              <option value="F">{{ "Female" | translate }}</option>
             </select>
           </div>
         </div>
         <div class="col-md-2 col-sm-12">
           <div class="form-group">
-            <label for="race">Race</label>
+            <label for="race">{{ "Race" | translate }}</label>
             <select id="race" name="race" class="custom-select">
               <option value selected></option>
 
-              <option value="1">Chinese</option>
+              <option value="1">{{ "Chinese" | translate }}</option>
 
-              <option value="2">Malay</option>
+              <option value="2">{{ "Malay" | translate }}</option>
 
-              <option value="3">Indian</option>
+              <option value="3">{{ "Indian" | translate }}</option>
 
-              <option value="45">Vietnamese</option>
+              <option value="45">{{ "Vietnamese" | translate }}</option>
 
-              <option value="46">Filipino</option>
+              <option value="46">{{ "Filipino" | translate }}</option>
 
-              <option value="47">White</option>
+              <option value="47">{{ "White" | translate }}</option>
 
-              <option value="48">Bangladeshi</option>
+              <option value="48">{{ "Bangladeshi" | translate }}</option>
 
-              <option value="49">Burma</option>
+              <option value="49">{{ "Burma" | translate }}</option>
 
-              <option value="4">Others</option>
+              <option value="4">{{ "Others" | translate }}</option>
 
-              <option value="8">Acehnese</option>
+              <option value="8">{{ "Acehnese" | translate }}</option>
 
-              <option value="9">African Americans</option>
+              <option value="9">{{ "African Americans" | translate }}</option>
 
-              <option value="10">Americans</option>
+              <option value="10">{{ "Americans" | translate }}</option>
 
-              <option value="11">Arabs</option>
+              <option value="11">{{ "Arabs" | translate }}</option>
 
-              <option value="12">Asian American</option>
+              <option value="12">{{ "Asian American" | translate }}</option>
 
-              <option value="13">Balinese</option>
+              <option value="13">{{ "Balinese" | translate }}</option>
 
-              <option value="14">Bamar</option>
+              <option value="14">{{ "Bamar" | translate }}</option>
 
-              <option value="15">Batak</option>
+              <option value="15">{{ "Batak" | translate }}</option>
 
-              <option value="16">British</option>
+              <option value="16">{{ "British" | translate }}</option>
 
-              <option value="17">Danes</option>
+              <option value="17">{{ "Danes" | translate }}</option>
 
-              <option value="18">Dutch</option>
+              <option value="18">{{ "Dutch" | translate }}</option>
 
-              <option value="19">English</option>
+              <option value="19">{{ "English" | translate }}</option>
 
-              <option value="20">European Americans</option>
+              <option value="20">{{ "European Americans" | translate }}</option>
 
-              <option value="21">Finns</option>
+              <option value="21">{{ "Finns" | translate }}</option>
 
-              <option value="22">French</option>
+              <option value="22">{{ "French" | translate }}</option>
 
-              <option value="23">Germans</option>
+              <option value="23">{{ "Germans" | translate }}</option>
 
-              <option value="24">Greeks</option>
+              <option value="24">{{ "Greeks" | translate }}</option>
 
-              <option value="25">Hispanic</option>
+              <option value="25">{{ "Hispanic" | translate }}</option>
 
-              <option value="26">Hmong</option>
+              <option value="26">{{ "Hmong" | translate }}</option>
 
-              <option value="27">Iban</option>
+              <option value="27">{{ "Iban" | translate }}</option>
 
-              <option value="28">Icelanders</option>
+              <option value="28">{{ "Icelanders" | translate }}</option>
 
-              <option value="29">Irish</option>
+              <option value="29">{{ "Irish" | translate }}</option>
 
-              <option value="30">Italians</option>
+              <option value="30">{{ "Italians" | translate }}</option>
 
-              <option value="31">Japanese</option>
+              <option value="31">{{ "Japanese" | translate }}</option>
 
-              <option value="32">Javanese</option>
+              <option value="32">{{ "Javanese" | translate }}</option>
 
-              <option value="33">Khmer</option>
+              <option value="33">{{ "Khmer" | translate }}</option>
 
-              <option value="34">Korean</option>
+              <option value="34">{{ "Korean" | translate }}</option>
 
-              <option value="35">Lao</option>
+              <option value="35">{{ "Lao" | translate }}</option>
 
-              <option value="50">Mongol</option>
+              <option value="50">{{ "Mongol" | translate }}</option>
 
-              <option value="36">Norwegians</option>
+              <option value="36">{{ "Norwegians" | translate }}</option>
 
-              <option value="37">Polish</option>
+              <option value="37">{{ "Polish" | translate }}</option>
 
-              <option value="38">Portuguese</option>
+              <option value="38">{{ "Portuguese" | translate }}</option>
 
-              <option value="39">Scottish</option>
+              <option value="39">{{ "Scottish" | translate }}</option>
 
-              <option value="40">Shan</option>
+              <option value="40">{{ "Shan" | translate }}</option>
 
-              <option value="41">Sinhalese</option>
+              <option value="41">{{ "Sinhalese" | translate }}</option>
 
-              <option value="42">Spaniards</option>
+              <option value="42">{{ "Spaniards" | translate }}</option>
 
-              <option value="43">Thais</option>
+              <option value="43">{{ "Thais" | translate }}</option>
 
-              <option value="44">Welsh</option>
+              <option value="44">{{ "Welsh" | translate }}</option>
 
-              <option value="99">Unknown</option>
+              <option value="99">{{ "Unknown" | translate }}</option>
             </select>
           </div>
         </div>
         <div class="col-md-2 col-sm-12">
           <div class="form-group">
-            <label for="birth_year">Year of Birth</label>
+            <label for="birth_year">{{ "Year of Birth" | translate }}</label>
             <select id="birth_year" name="birth_year" class="custom-select">
               <option value selected></option>
 
@@ -504,7 +504,7 @@
         class="btn btn-primary m-1 form_acquire"
         (click)="onModalAcquireImage()"
       >
-        <i class="fas fa-camera"></i> Acquire Image
+        <i class="fas fa-camera"></i> {{ "Acquire Image" | translate }}
       </button>
 
       <button
@@ -512,14 +512,14 @@
         type="button"
         class="btn btn-primary m-1 form_submit"
       >
-        <i class="fa fa-cloud-upload-alt"></i> Submit
+        <i class="fa fa-cloud-upload-alt"></i> {{ "Submit" | translate }}
       </button>
       <button
         type="button"
         class="btn btn-primary m-1 form_reset"
         (click)="onReset()"
       >
-        <i class="fa fa-redo"></i> Reset
+        <i class="fa fa-redo"></i> {{ "Reset" | translate }}
       </button>
       <button
         id="btnReport"
@@ -527,14 +527,14 @@
         class="btn btn-primary m-1 form_report"
         disabled
       >
-        <i class="fa fa-file-alt"></i> View Report
+        <i class="fa fa-file-alt"></i> {{ "View Report" | translate }}
       </button>
       <button
         type="button"
         class="btn btn-primary m-1"
         (click)="onModalGuide()"
       >
-        <i class="fa fa-file-alt"></i> Guide
+        <i class="fa fa-file-alt"></i> {{ "Guide" | translate }}
       </button>
       <input
         id="eye_img_right"
@@ -648,7 +648,7 @@
                                   for="disease_1"
                                   style="cursor: pointer"
                                 >
-                                  Diabetic Retinopathy
+                                  {{ "Diabetic Retinopathy" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -674,7 +674,7 @@
                                   for="disease_2"
                                   style="cursor: pointer"
                                 >
-                                  Glaucoma Suspect
+                                  {{ "Glaucoma Suspect" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -700,7 +700,7 @@
                                   for="disease_3"
                                   style="cursor: pointer"
                                 >
-                                  Age-Related Macular Degeneration
+                                  {{ "Age-Related Macular Degeneration" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -805,7 +805,7 @@
                                   for="disease_4"
                                   style="cursor: pointer"
                                 >
-                                  Chronic Kidney Disease
+                                  {{ "Chronic Kidney Disease" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -902,11 +902,11 @@
   </div>
 
   <div class="row">
-    <div class="col-12 xh5 font-weight-bold">Selected Findings</div>
+    <div class="col-12 xh5 font-weight-bold">{{ "Selected Findings" | translate }}</div>
   </div>
   <div class="row pb-2 d-none">
     <div class="col-12 pl-4 font-italic">
-      <span id="spantext">Diabetic Retinopathy, Chronic Kidney Disease</span>
+      <span id="spantext">{{ "Diabetic Retinopathy" | translate }}, {{ "Chronic Kidney Disease" | translate }}</span>
     </div>
   </div>
   <div class="row pb-2 pl-4">
@@ -917,13 +917,12 @@
             class="choices__item choices__item--selectable"
             *ngFor="let o of selectedDiseaseList"
           >
-            {{ o.desc
-            }}<button
+            {{ o.desc | translate }}<button
               type="button"
               class="choices__button"
               (click)="onRemoveDisease(o)"
             >
-              Remove item
+              {{ "Remove item" | translate }}
             </button>
           </div>
         </div>
@@ -947,7 +946,7 @@
         style="cursor: pointer"
       >
         <div class="col-1"></div>
-        <div class="col-10">Subject Medical History</div>
+        <div class="col-10">{{ "Subject Medical History" | translate }}</div>
         <div class="col-1 text-right">
           <i
             id="collapseIcon"
@@ -1611,7 +1610,7 @@
         class="container-fluit border rounded border-secondary p-0 ml-0 mr-lg-2 mr-md-0 mr-sm-0"
       >
         <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
-          Right Eye (OD)
+          {{ "Right Eye" | translate }} (OD)
         </div>
         <div
           class="row m-0 p-0"
@@ -1622,10 +1621,10 @@
           <div class="col-md-12 col-12 m-0 p-0">
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-0">
-                <div class="text-center">Optic-Centred</div>
+                <div class="text-center">{{ "Optic-Centred" | translate }}</div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-0">
-                <div class="text-center">Macula-Centred</div>
+                <div class="text-center">{{ "Macula-Centred" | translate }}</div>
               </div>
             </div>
             <div class="row p-0 m-0">
@@ -1659,7 +1658,7 @@
                   />
                   <ng-container *ngIf="!imagePreviewRight1">
                     <div class="col-12 text-center">
-                      Click or drag image here
+                      {{ "Click or drag image here" | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -1694,7 +1693,7 @@
                   />
                   <ng-container *ngIf="!imagePreviewRight2">
                     <div class="col-12 text-center">
-                      Click or drag image here
+                      {{ "Click or drag image here" | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -1721,7 +1720,7 @@
         class="container-fluit border rounded border-secondary p-0 ml-lg-2 ml-md-0 ml-sm-0 mt-lg-0 mt-md-2 mt-sm-2"
       >
         <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
-          Left Eye (OS)
+          {{ "Left Eye" | translate }} (OS)
         </div>
         <div
           class="row m-0 p-0"
@@ -1732,10 +1731,10 @@
           <div class="col-md-12 col-12 m-0 p-0">
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-0">
-                <div class="col-12 text-center">Optic-Centred</div>
+                <div class="col-12 text-center">{{ "Optic-Centred" | translate }}</div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-0">
-                <div class="text-center">Macula-Centred</div>
+                <div class="text-center">{{ "Macula-Centred" | translate }}</div>
               </div>
             </div>
             <div class="row p-0 m-0">
@@ -1769,7 +1768,7 @@
                   />
                   <ng-container *ngIf="!imagePreviewLeft1">
                     <div class="col-12 text-center">
-                      Click or drag image here
+                      {{ "Click or drag image here" | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -1805,7 +1804,7 @@
                   />
                   <ng-container *ngIf="!imagePreviewLeft2">
                     <div class="col-12 text-center">
-                      Click or drag image here
+                      {{ "Click or drag image here" | translate }}
                     </div>
                   </ng-container>
                 </div>
@@ -1980,10 +1979,10 @@
                               &nbsp;
                             </div>
                             <div class="col-4 xtext-center font-weight-bold">
-                              Right Eye (OD)
+                              {{ "Right Eye" | translate }} (OD)
                             </div>
                             <div class="col-4 xtext-center font-weight-bold">
-                              Left Eye (OS)
+                              {{ "Left Eye" | translate }} (OS)
                             </div>
                           </div>
 
@@ -2049,7 +2048,7 @@
                         <div
                           class="col-6 py-2 xborder result_label font-weight-bold"
                         >
-                          Chronic Kidney Disease
+                          {{ "Chronic Kidney Disease" | translate }}
                         </div>
                         <div
                           class="col-6 py-2 xborder result_detail xtext-right xtext-success"
@@ -2211,21 +2210,21 @@
         class="btn btn-primary m-1 form_acquire"
         (click)="onModalAcquireImage()"
       >
-        <i class="fas fa-camera"></i> Acquire Image
+        <i class="fas fa-camera"></i> {{ "Acquire Image" | translate }}
       </button>
 
       <button type="button" class="btn btn-primary m-1 form_submit">
-        <i class="fa fa-cloud-upload-alt"></i> Submit
+        <i class="fa fa-cloud-upload-alt"></i> {{ "Submit" | translate }}
       </button>
       <button
         type="button"
         class="btn btn-primary m-1 form_reset"
         (click)="onReset()"
       >
-        <i class="fa fa-redo"></i> Reset
+        <i class="fa fa-redo"></i> {{ "Reset" | translate }}
       </button>
       <button type="button" class="btn btn-primary m-1 form_report" disabled>
-        <i class="fa fa-file-alt"></i> View Report
+        <i class="fa fa-file-alt"></i> {{ "View Report" | translate }}
       </button>
     </div>
   </div>
