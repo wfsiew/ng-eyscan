@@ -23,7 +23,7 @@ export class ForgotpwdComponent extends GeneralForm {
     private translate: TranslateService,
     @Inject(DOCUMENT) private document: Document
   ) {
-    super();
+    super(translate);
     this.createForm();
     const lang = localStorage.getItem('lang');
     if (lang) {

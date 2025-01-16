@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
 import { Helper } from 'src/app/shared/utils/helper';
@@ -13,13 +14,14 @@ import { Helper } from 'src/app/shared/utils/helper';
 })
 export class SystemCreateComponent extends GeneralForm {
 
-  title?: string;
+  title: string = '';
     
   constructor(
     public bsModalRef: BsModalRef,
+    protected translate: TranslateService,
     private fb: UntypedFormBuilder
   ) {
-    super();
+    super(translate);
     this.createForm();
   }
 

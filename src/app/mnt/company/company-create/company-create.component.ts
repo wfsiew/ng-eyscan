@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
 import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
@@ -21,10 +22,11 @@ export class CompanyCreateComponent extends GeneralForm {
   
   constructor(
     public bsModalRef: BsModalRef,
+    protected translate: TranslateService,
     private modalService: BsModalService,
     private fb: UntypedFormBuilder
   ) {
-    super();
+    super(translate);
     this.createForm();
   }
 

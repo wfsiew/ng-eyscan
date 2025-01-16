@@ -1,5 +1,5 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
   <button
     id="__nhPopWindow_close"
     type="button"
@@ -33,7 +33,7 @@
         />
 
         <div class="form-group">
-          <label class="control-label mb-1">Code </label>
+          <label class="control-label mb-1">{{ "Code" | translate }} </label>
           <input
             type="text"
             class="form-control"
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label mb-1">Description</label>
+          <label class="control-label mb-1">{{ "Description" | translate }}</label>
           <input
             type="text"
             class="form-control"
@@ -60,7 +60,7 @@
           />
         </div>
         <div class="form-group">
-          <label class="control-label mb-1">English Description </label>
+          <label class="control-label mb-1">{{ "English Description" | translate }} </label>
           <input
             type="text"
             class="form-control"
@@ -74,7 +74,7 @@
 
         <div class="form-row">
           <div class="form-group col-6">
-            <label class="control-label mb-1">Display Order </label>
+            <label class="control-label mb-1">{{ "Display Order" | translate }} </label>
             <input
               type="text"
               class="form-control"
@@ -93,7 +93,7 @@
               class="control-label mb-1"
               for="status"
               style="cursor: pointer"
-              >Active
+              >{{ "Active" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
               <input
@@ -115,7 +115,7 @@
           value="Close"
           (click)="bsModalRef.hide()"
         >
-          <i class="fa fa-times"></i> Close
+          <i class="fa fa-times"></i> {{ "Close" | translate }}
         </button>
         <button
           type="submit"
@@ -124,7 +124,7 @@
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
           value="Save"
         >
-          <i class="fa fa-save"></i> Save
+          <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>

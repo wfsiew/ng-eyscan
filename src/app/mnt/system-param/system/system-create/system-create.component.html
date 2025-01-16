@@ -1,5 +1,5 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
   <button
     id="__nhPopWindow_close"
     type="button"
@@ -45,7 +45,7 @@
         />
 
         <div class="form-group">
-          <label class="control-label mb-1">Description</label>
+          <label class="control-label mb-1">{{ "Description" | translate }}</label>
           <input
             type="text"
             value="AUDIT LOG: Archival audit log records retaining days"
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label mb-1">Parameter Value</label>
+          <label class="control-label mb-1">{{ "Parameter Value" | translate }}</label>
           <select
             class="form-control custom-select tparam_value d-none"
             formControlName="sel_param_value"
@@ -80,16 +80,16 @@
 
         <div class="form-row">
           <div class="form-group col-7">
-            <label class="control-label mb-1">Data Type </label>
+            <label class="control-label mb-1">{{ "Data Type" | translate }} </label>
             <select
               class="form-control custom-select"
               formControlName="param_datatype"
               required
             >
-              <option value="TEXT">Text</option>
-              <option value="NUMBER" selected>Number</option>
-              <option value="DATE">Date</option>
-              <option value="TIME">Time</option>
+              <option value="TEXT">{{ "Text" | translate }}</option>
+              <option value="NUMBER" selected>{{ "Number" | translate }}</option>
+              <option value="DATE">{{ "Date" | translate }}</option>
+              <option value="TIME">{{ "Time" | translate }}</option>
             </select>
           </div>
 
@@ -98,7 +98,7 @@
               class="control-label mb-1"
               for="status"
               style="cursor: pointer"
-              >Data Reference
+              >{{ "Data Reference" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
               <input
@@ -114,7 +114,7 @@
 
         <div class="form-row">
           <div class="form-group col-4">
-            <label class="control-label mb-1">Length</label>
+            <label class="control-label mb-1">{{ "Length" | translate }}</label>
             <input
               type="text"
               class="form-control"
@@ -125,7 +125,7 @@
             />
           </div>
           <div class="form-group col-4">
-            <label class="control-label mb-1">Minimum</label>
+            <label class="control-label mb-1">{{ "Minimum" | translate }}</label>
             <input
               type="text"
               class="form-control"
@@ -137,7 +137,7 @@
             />
           </div>
           <div class="form-group col-4">
-            <label class="control-label mb-1">Maximum</label>
+            <label class="control-label mb-1">{{ "Maximum" | translate }}</label>
             <input
               type="text"
               class="form-control"
@@ -160,7 +160,7 @@
           value="Close"
           (click)="onHide()"
         >
-          <i class="fa fa-times"></i> Close
+          <i class="fa fa-times"></i> {{ "Close" | translate }}
         </button>
         <button
           type="submit"
@@ -169,7 +169,7 @@
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
           value="Save"
         >
-          <i class="fa fa-save"></i> Save
+          <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>

@@ -1,5 +1,5 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
   <button
     id="__nhPopWindow_close"
     type="button"
@@ -50,21 +50,21 @@
         />
 
         <div class="form-group">
-          <label class="control-label mb-1">eMail </label>
+          <label class="control-label mb-1">{{ "eMail" | translate }} </label>
           <input
             type="email"
             class="form-control"
             formControlName="email"
             required
             maxlength="50"
-            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
             oninput="setCustomValidity('')"
           />
         </div>
 
         <div class="form-row">
           <div class="form-group col-6">
-            <label class="control-label mb-1">Display Name </label>
+            <label class="control-label mb-1">{{ "Display Name" | translate }} </label>
             <input
               type="text"
               class="form-control"
@@ -74,7 +74,7 @@
             />
           </div>
           <div class="form-group col-6">
-            <label class="control-label mb-1">Contact No </label>
+            <label class="control-label mb-1">{{ "Contact No" | translate }} </label>
             <input
               type="text"
               class="form-control"
@@ -86,7 +86,7 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label mb-1">First Name </label>
+          <label class="control-label mb-1">{{ "First Name" | translate }} </label>
           <input
             type="text"
             class="form-control"
@@ -94,12 +94,12 @@
             required
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'first_name')"
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
         </div>
         <div class="form-group">
-          <label class="control-label mb-1">Last Name </label>
+          <label class="control-label mb-1">{{ "Last Name" | translate }} </label>
           <input
             type="text"
             class="form-control"
@@ -107,19 +107,19 @@
             required
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'last_name')"
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
         </div>
 
         <div class="form-group">
-          <label class="control-label mb-1">Company </label>
+          <label class="control-label mb-1">{{ "Company" | translate }} </label>
 
           <select
             class="form-control custom-select"
             formControlName="company_id"
             required
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             onchange="setCustomValidity('')"
           >
             <option value></option>
@@ -162,26 +162,26 @@
 
         <div class="form-row">
           <div class="form-group col-7">
-            <label class="control-label mb-1">Grading Group </label>
+            <label class="control-label mb-1">{{ "Grading Group" | translate }} </label>
             <select
               class="form-control custom-select"
               formControlName="user_group"
               required
             >
-              <option value="1" selected>Primary Screener</option>
+              <option value="1" selected>{{ "Primary Screener" | translate }}</option>
 
-              <option value="2">Secondary Grader</option>
+              <option value="2">{{ "Secondary Grader" | translate }}</option>
 
-              <option value="3">Primary/Secondary User</option>
+              <option value="3">{{ "Primary/Secondary User" | translate }}</option>
 
-              <option value="10">User Admin</option>
+              <option value="10">{{ "User Admin" | translate }}</option>
             </select>
           </div>
 
           <div class="form-group col-5 d-none" id="amend_credit_ind_group">
             <div class="col-12 xtext-center">
               <label class="control-label" style="cursor: pointer"
-                >Application Management </label
+                >{{ "Application Management" | translate }} </label
               ><br />
               <label class="switch">
                 <input
@@ -192,20 +192,20 @@
                 <span class="slider round"></span>
               </label>
 
-              <span id="status_desc" class="pl-3"> No </span>
+              <span id="status_desc" class="pl-3"> {{ "No" | translate }} </span>
             </div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-5">
-            <label class="control-label mb-1">Time Zone </label>
+            <label class="control-label mb-1">{{ "Time Zone" | translate }} </label>
 
             <select
               class="form-control custom-select"
               formControlName="timezone_name"
               required
-              oninvalid="this.setCustomValidity('Please fill out this field.')"
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')"
               oninput="setCustomValidity('')"
               onchange="setCustomValidity('')"
             >
@@ -1474,20 +1474,20 @@
           </div>
 
           <div class="form-group col-3">
-            <label class="control-label mb-1" for="user_status">Status </label>
+            <label class="control-label mb-1" for="user_status">{{ "Status" | translate }} </label>
             <select
               class="form-control custom-select"
               formControlName="user_status"
               required
             >
-              <option value="A">Active</option>
-              <option value="I">Inactive</option>
-              <option value="S">Suspended</option>
+              <option value="A">{{ "Active" | translate }}</option>
+              <option value="I">{{ "Inactive" | translate }}</option>
+              <option value="S">{{ "Suspended" | translate }}</option>
             </select>
           </div>
 
           <div class="form-group col-4">
-            <label class="control-label mb-1">Inactive Date </label>
+            <label class="control-label mb-1">{{ "Inactive Date" | translate }} </label>
             <input
               type="text"
               class="form-control"
@@ -1528,7 +1528,7 @@
           value="Cancel"
           (click)="onHide()"
         >
-          <i class="fa fa-times"></i> Cancel
+          <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
         <button
           type="submit"
@@ -1537,7 +1537,7 @@
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
           value="Save"
         >
-          <i class="fa fa-save"></i> Save
+          <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>

@@ -31,7 +31,7 @@ export class LoginComponent extends GeneralForm implements OnDestroy {
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {
-    super();
+    super(translate);
     this.createForm();
     const lang = appTranslate.getLang();
     if (lang) {

@@ -1,5 +1,5 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
   <button
     id="__nhPopWindow_close"
     type="button"
@@ -40,7 +40,7 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group mb-2">
-              <label class="control-label mb-1">Description </label>
+              <label class="control-label mb-1">{{ "Description" | translate }} </label>
               <input
                 type="text"
                 class="form-control"
@@ -60,7 +60,7 @@
                       <div class="form-row mb-1">
                         <div class="form-group col-4">
                           <label class="control-label mb-1"
-                            >Screening Model
+                            >{{ "Screening Model" | translate }}
                           </label>
                           <select
                             #grading_id
@@ -69,29 +69,29 @@
                             required
                             (change)="onChangeGradingId(grading_id)"
                           >
-                            <option value="P">Fully Automated</option>
+                            <option value="P">{{ "Fully Automated" | translate }}</option>
 
-                            <option value="S">Semi-Automated</option>
+                            <option value="S">{{ "Semi-Automated" | translate }}</option>
                           </select>
                         </div>
                         <div class="form-group col-5">
                           <label class="control-label mb-1"
-                            >Image Report Preference
+                            >{{ "Image Report Preference" | translate }}
                           </label>
                           <select
                             class="form-control custom-select"
                             formControlName="report_ind"
                             required
                           >
-                            <option value="MC">Macula Centered</option>
-                            <option value="OC">Optic Disc Centered</option>
+                            <option value="MC">{{ "Macula Centered" | translate }}</option>
+                            <option value="OC">{{ "Optic Disc Centered" | translate }}</option>
                           </select>
                         </div>
                       </div>
                       <div class="form-row mb-1">
                         <div class="form-group col-9">
                           <label class="control-label mb-1"
-                            >Parent Organization
+                            >{{ "Parent Organization" | translate }}
                           </label>
                           <select
                             class="form-control custom-select"
@@ -139,7 +139,7 @@
                       <div class="form-row">
                         <div class="form-group col-6">
                           <label class="control-label mb-1"
-                            >Ocular Reading Centre
+                            >{{ "Ocular Reading Centre" | translate }}
                           </label>
                           <select
                             class="form-control custom-select"
@@ -185,7 +185,7 @@
                         </div>
                         <div class="form-group col-6">
                           <label class="control-label mb-1"
-                            >Auxiliary Image Acquisition
+                            >{{ "Auxiliary Image Acquisition" | translate }}
                           </label>
                           <select
                             class="form-control custom-select"
@@ -230,7 +230,7 @@
                       <div class="form-row">
                         <div class="form-group col-4">
                           <label class="control-label mb-1"
-                            >Contact Name
+                            >{{ "Contact Name" | translate }}
                           </label>
                           <input
                             type="text"
@@ -241,7 +241,7 @@
                           />
                         </div>
                         <div class="form-group col-4">
-                          <label class="control-label mb-1">Email </label>
+                          <label class="control-label mb-1">{{ "Email" | translate }} </label>
                           <input
                             type="email"
                             class="form-control"
@@ -254,7 +254,7 @@
                         </div>
                         <div class="form-group col-4">
                           <label class="control-label mb-1"
-                            >Contact Number
+                            >{{ "Contact No" | translate }}
                           </label>
                           <input
                             type="text"
@@ -268,7 +268,7 @@
                       <div class="form-row">
                         <div class="form-group col-12">
                           <label class="control-label mb-1"
-                            >Contact Address
+                            >{{ "Contact Address" | translate }}
                           </label>
                           <textarea
                             class="form-control"
@@ -291,7 +291,7 @@
                             <div
                               class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
                             >
-                              Diseases
+                              {{ "Diseases" | translate }}
                             </div>
                           </div>
 
@@ -320,7 +320,7 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_1"
                                   style="cursor: pointer"
-                                  >Diabetic Retinopathy</label
+                                  >{{ "Diabetic Retinopathy" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -343,7 +343,7 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_2"
                                   style="cursor: pointer"
-                                  >Glaucoma Suspect</label
+                                  >{{ "Glaucoma Suspect" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -366,7 +366,7 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_3"
                                   style="cursor: pointer"
-                                  >Age-Related Macular Degeneration</label
+                                  >{{ "Age-related Macular Degeneration" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -397,7 +397,7 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_4"
                                   style="cursor: pointer"
-                                  >Chronic Kidney Disease</label
+                                  >{{ "Chronic Kidney Disease" | translate }}</label
                                 >
                               </div>
                             </div>
@@ -427,19 +427,19 @@
           name="btnCancel"
           id="btnCancel"
           class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          title="Cancel"
+          [title]="'Cancel' | translate"
           (click)="onHide()"
         >
-          <i class="fa fa-times"></i> Cancel
+          <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
         <button
           type="submit"
           name="btnSave"
           id="btnSave"
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          title="Save "
+          [title]="'Save' | translate"
         >
-          <i class="fa fa-save"></i> Save
+          <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>
