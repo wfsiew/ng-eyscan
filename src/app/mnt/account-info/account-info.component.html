@@ -126,9 +126,19 @@
           role="tabpanel"
           aria-labelledby="v-pills-home-tab"
         >
-          <h2 id="hd_text" class="container-fluid">{{ "Personal Info" | translate }}</h2>
+          <h2 id="hd_text" class="container-fluid">
+            {{ "Personal Info" | translate }}
+          </h2>
           <div class="container-fluid">
-            <form name="frmMain" id="frmMain" method="post">
+            <form
+              *ngIf="mform"
+              frmMain
+              id="frmMain"
+              method="post"
+              [formGroup]="mform"
+              ngNativeValidate
+              (ngSubmit)="onSubmit()"
+            >
               <input
                 type="hidden"
                 name="nameSpecialChars"
@@ -145,14 +155,19 @@
               <div class="form-group">
                 <label>{{ "Display Name" | translate }} </label>
                 <input
-                  name="displayname"
-                  id="displayname"
                   type="text"
                   maxlength="20"
                   class="form-control"
+                  formControlName="displayname"
                   placeholder
                   value="KC"
-                  onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+                  (keyup)="
+                    onKeyupValidateSpecialChar(
+                      $event,
+                      nameSpecialChars,
+                      'displayname'
+                    )
+                  "
                   autocomplete="off"
                 />
               </div>
@@ -160,14 +175,19 @@
               <div class="form-group">
                 <label>{{ "First Name" | translate }} </label>
                 <input
-                  name="firstname"
-                  id="firstname"
                   type="text"
                   maxlength="100"
                   class="form-control"
+                  formControlName="firstname"
                   placeholder
                   value="Kian Cheong"
-                  onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+                  (keyup)="
+                    onKeyupValidateSpecialChar(
+                      $event,
+                      nameSpecialChars,
+                      'firstname'
+                    )
+                  "
                   autocomplete="off"
                 />
               </div>
@@ -175,14 +195,19 @@
               <div class="form-group">
                 <label>{{ "Last Name" | translate }} </label>
                 <input
-                  name="lastname"
-                  id="lastname"
                   type="text"
                   maxlength="100"
                   class="form-control"
+                  formControlName="lastname"
                   placeholder
                   value="Lam"
-                  onkeyup="validateSpecialCharacters(this,document.frmMain.nameSpecialChars,'Y','Y');"
+                  (keyup)="
+                    onKeyupValidateSpecialChar(
+                      $event,
+                      nameSpecialChars,
+                      'lastname'
+                    )
+                  "
                   autocomplete="off"
                 />
               </div>
@@ -190,14 +215,13 @@
               <div class="form-group">
                 <label>{{ "Contact No" | translate }} </label>
                 <input
-                  name="contactno"
-                  id="contactno"
                   type="text"
                   maxlength="20"
                   class="form-control"
+                  formControlName="contactno"
                   placeholder
                   value
-                  onkeyup="chkphoneval(this,2,'contactno');"
+                  (keyup)="onKeyupChkposval($event, 'contactno', 2)"
                   autocomplete="off"
                 />
               </div>
@@ -205,10 +229,9 @@
               <div class="form-group">
                 <label>{{ "Grading Group" | translate }}</label>
                 <input
-                  name="grading_group"
-                  id="grading_group"
                   type="text"
                   class="form-control"
+                  formControlName="grading_group"
                   placeholder
                   value="Primary Screener"
                   readonly
@@ -218,10 +241,9 @@
               <div class="form-group">
                 <label>{{ "Company" | translate }}</label>
                 <input
-                  name="company"
-                  id="company"
                   type="text"
                   class="form-control"
+                  formControlName="company"
                   placeholder
                   value="EyRIS"
                   readonly
@@ -231,10 +253,9 @@
               <div class="form-group">
                 <label>{{ "Timezone" | translate }}</label>
                 <input
-                  name="timezone"
-                  id="timezone"
                   type="text"
                   class="form-control"
+                  formControlName="timezone"
                   placeholder
                   value="Singapore"
                   readonly
@@ -246,7 +267,7 @@
                 id="btnSave"
                 type="button"
                 class="btn bg-primary text-white float-right mt-3"
-                title="Save"
+                [title]="'Save' | translate"
               >
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
@@ -260,9 +281,19 @@
           role="tabpanel"
           aria-labelledby="v-pills-profile-tab"
         >
-          <h2 id="hd_text" class="container-fluid">{{ "Change Password" | translate }}</h2>
+          <h2 id="hd_text" class="container-fluid">
+            {{ "Change Password" | translate }}
+          </h2>
           <div class="container-fluid">
-            <form name="frmChangePWD" id="frmChangePWD" method="post">
+            <form
+              *ngIf="pform"
+              name="frmChangePWD"
+              id="frmChangePWD"
+              method="post"
+              [formGroup]="pform"
+              ngNativeValidate
+              (ngSubmit)="onSubmitp()"
+            >
               <input
                 type="hidden"
                 name="passwordSpecialChars"
@@ -273,10 +304,9 @@
               <div class="form-group">
                 <label>{{ "Current Password" | translate }} </label>
                 <input
-                  name="old_pwd"
-                  id="old_pwd"
                   type="password"
                   class="form-control"
+                  formControlName="old_pwd"
                   placeholder
                   autocomplete="off"
                 />
@@ -296,10 +326,9 @@
               <div class="form-group mb-1">
                 <label>{{ "New Password" | translate }} </label>
                 <input
-                  name="new_pwd"
-                  id="new_pwd"
                   type="password"
                   class="form-control"
+                  formControlName="new_pwd"
                   placeholder
                   autocomplete="off"
                 />
@@ -313,29 +342,35 @@
 
               <div id="ver_div" class="form-group mt-0 mb-3 pl-3">
                 <div id="ver1" class="col-12 small text-dark">
-                  <i class="fas fa-check-circle fa-sm"></i> {{ "contains lowercase letters" | translate }}
+                  <i class="fas fa-check-circle fa-sm"></i>
+                  {{ "contains lowercase letters" | translate }}
                 </div>
                 <div id="ver2" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains uppercase letters" | translate }}
+                  <i class="fa fa-check-circle fa-sm"></i>
+                  {{ "contains uppercase letters" | translate }}
                 </div>
                 <div id="ver3" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains a number" | translate }}
+                  <i class="fa fa-check-circle fa-sm"></i>
+                  {{ "contains a number" | translate }}
                 </div>
                 <div id="ver4" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains at least 1 special character" | translate }}
+                  <i class="fa fa-check-circle fa-sm"></i>
+                  {{ "contains at least 1 special character" | translate }}
                 </div>
                 <div id="ver5" class="col-12 small text-dark">
-                  <i class="fa fa-check-circle fa-sm"></i> {{ "contains at least {{min}} and not more than {{max}} characters (no spaces)" | translate: {min:8, max:20} }}
+                  <i class="fa fa-check-circle fa-sm"></i>
+                  {{ "contains at least {{min}} and not more than
+                  {{ max }} characters (no spaces)" | translate: {min:8, max:20}
+                  }}
                 </div>
               </div>
 
               <div class="form-group">
                 <label>{{ "Re-enter New Password" | translate }} </label>
                 <input
-                  name="new_pwd_confirm"
-                  id="new_pwd_confirm"
                   type="password"
                   class="form-control"
+                  formControlName="new_pwd_confirm"
                   placeholder
                   autocomplete="off"
                 />
@@ -347,7 +382,7 @@
                 disabled
                 type="button"
                 class="btn bg-primary text-white float-right mt-3"
-                title="Save"
+                [title]="'Save' | translate"
               >
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>

@@ -57,7 +57,7 @@
         [placeholder]="'Email Address' | translate"
         required="required"
         autofocus
-        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+        (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
         oninput="setCustomValidity('')"
         autocomplete="off"
       />

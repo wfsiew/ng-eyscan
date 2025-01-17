@@ -58,12 +58,10 @@
         [placeholder]="'Email Address' | translate"
         required
         autofocus
-        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+        (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
         oninput="setCustomValidity('')"
         [title]="'Email Address' | translate"
         autocomplete="off"
-        oninvalid="this.setCustomValidity('Please enter a valid email address.')"
-        oninput="setCustomValidity('')"
       />
     </div>
     <div class="form-group">
@@ -74,7 +72,7 @@
         formControlName="inPassword"
         [placeholder]="'Password' | translate"
         required
-        oninvalid="this.setCustomValidity('Please fill out this field.')"
+        (invalid)="setCustomValidity($event, 'Please fill out this field.')"
         oninput="setCustomValidity('')"
         autocomplete="off"
       />

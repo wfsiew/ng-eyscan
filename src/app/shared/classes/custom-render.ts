@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AppTranslateService } from 'src/app/services/app-translate.service';
 import { AppManager } from 'src/app/shared/utils/helper';
+import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 
 export class CustomRender {
 
@@ -35,5 +36,10 @@ export class CustomRender {
     });
 
     return false;
+  }
+
+  setCustomValidity(ev: any, s: string) {
+    const t = this.translatex.instant(_(s));
+    ev.target.setCustomValidity(t);
   }
 }

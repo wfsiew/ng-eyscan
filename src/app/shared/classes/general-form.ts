@@ -1,4 +1,4 @@
-import { FormBuilder, FormArray, Validators, UntypedFormGroup } from '@angular/forms'
+import { FormBuilder, FormArray, Validators, UntypedFormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 
@@ -6,7 +6,7 @@ export class GeneralForm {
   
   protected mform?: UntypedFormGroup;
 
-  constructor(protected trx: TranslateService) {
+  constructor(protected translatex: TranslateService) {
 
   }
 
@@ -32,7 +32,7 @@ export class GeneralForm {
   }
 
   setCustomValidity(ev: any, s: string) {
-    const t = this.trx.instant(_(s));
+    const t = this.translatex.instant(_(s));
     ev.target.setCustomValidity(t);
   }
 }
