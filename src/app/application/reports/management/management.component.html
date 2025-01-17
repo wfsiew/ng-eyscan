@@ -1,45 +1,23 @@
-<app-header
-  [reload]="'/application/reports/mgmt'"
-  [headerid]="'fn5'"
-  [title]="'Primary Management Report' | translate"
-></app-header>
+<app-header [reload]="'/application/reports/mgmt'" [headerid]="'fn5'"
+  [title]="'Primary Management Report' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +34,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -93,40 +56,32 @@
   <div class="container-fluid pb-4">
     <div class="row pb-1">
       <div id="filter" class="container-fluid pb-2 pl-0">
-        <form
-          *ngIf="mform"
-          name="frmFilter"
-          id="frmFilter"
-          [formGroup]="mform"
-          xclass="form-inline"
-          action="/bn_moh_uat/application/primary/index.cfm"
-          method="post"
-        >
+        <form *ngIf="mform" name="frmFilter" id="frmFilter" [formGroup]="mform" xclass="form-inline"
+          action="/bn_moh_uat/application/primary/index.cfm" method="post">
           <input type="hidden" name="recno" id="recno" value="25" />
 
           <div class="form-group fgx col-lg-2 col-md-6">
             <label class="control-label mb-1">{{ "Date From" | translate }} </label>
             <div class="input-group">
-              <input
-                name="date_from"
-                type="text"
-                class="form-control"
-                style="max-width: 145px"
+              <input 
+                name="date_from" 
+                type="text" 
+                class="form-control" 
+                style="max-width: 145px" 
                 maxlength="11"
-                onkeydown="return false"
-                (keyup)="onKeyupFrom($event)"
-                #datepickerFrom="bsDatepicker"
+                onkeydown="return false" 
+                (keyup)="onKeyupFrom($event)" 
+                #datepickerFrom="bsDatepicker" 
                 bsDatepicker
-                placement="right"
-                formControlName="date_from"
+                placement="right" 
+                formControlName="date_from" 
                 [bsConfig]="{
                   dateInputFormat: 'DD-MMM-YYYY',
                   containerClass: 'theme-dark-blue',
                   showTodayButton: true,
                   showClearButton: true,
                   customTodayClass: 'custom-today-class'
-                }"
-              />
+                }" />
               <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
@@ -135,41 +90,32 @@
           <div class="form-group fgx col-lg-2 col-md-6">
             <label class="control-label mb-1">{{ "Date To" | translate }} </label>
             <div class="input-group">
-              <input
-                name="date_to"
-                type="text"
-                class="form-control"
-                style="max-width: 145px"
+              <input 
+                name="date_to" 
+                type="text" class="form-control" 
+                style="max-width: 145px" 
                 maxlength="11"
-                onkeydown="return false"
-                (keyup)="onKeyupTo($event)"
-                #datepickerTo="bsDatepicker"
+                onkeydown="return false" 
+                (keyup)="onKeyupTo($event)" 
+                #datepickerTo="bsDatepicker" 
                 bsDatepicker
-                placement="right"
-                formControlName="date_to"
+                placement="right" 
+                formControlName="date_to" 
                 [bsConfig]="{
                   dateInputFormat: 'DD-MMM-YYYY',
                   containerClass: 'theme-dark-blue',
                   showTodayButton: true,
                   showClearButton: true,
                   customTodayClass: 'custom-today-class'
-                }"
-              />
+                }" />
               <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                 maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
             </div>
           </div>
 
-          <div
-            class="form-group fgx col-lg-3 col-md-8"
-            style="max-width: 500px"
-          >
+          <div class="form-group fgx col-lg-3 col-md-8" style="max-width: 500px">
             <label class="control-label mb-1">{{ "Company" | translate }}</label>
-            <select
-              class="form-control custom-select"
-              name="company_id"
-              id="company_id"
-            >
+            <select class="form-control custom-select" name="company_id" id="company_id">
               <option value="8">Belait Hospital (TOPCON)</option>
 
               <option value="10">Berakas Health Centre</option>
@@ -205,21 +151,17 @@
           </div>
 
           <div class="form-group fgx col-lg-2 col-md-4">
-            <label
-              class="control-label mb-1"
-              for="status"
-              style="cursor: pointer"
-              >{{ "Include Sub Centres" | translate }}
+            <label class="control-label mb-1" for="status" style="cursor: pointer">
+              {{ "Include Sub Centres" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control custom-control-lg"
-                id="sub_comp_ind"
+              <input 
+                type="checkbox" 
+                class="custom-control custom-control-lg" 
+                id="sub_comp_ind" 
                 name="sub_comp_ind"
-                value="Y"
-                style="cursor: pointer; height: 16px; width: 16px"
-              />
+                value="Y" 
+                style="cursor: pointer; height: 16px; width: 16px" />
             </div>
           </div>
         </form>
@@ -235,286 +177,157 @@
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">Print Option</div>
         </div>
 
-        <div
-          id="pg-1"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark"
-        >
+        <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Billing Summary Report
           </div>
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
             <div class="row">
               <div class="col-auto">
-                <a
-                  name="btnPDF"
-                  id="btnPDF"
-                  class="file-format text-dark"
-                  data-file="pdf"
-                  data-code="BILLING_SUMMARY"
-                  data-desc="Billing Summary Report"
-                  href
-                  title="Print Format: PDF"
-                >
-                  <i class="fa fa-file-pdf fa-lg"></i
-                ></a>
+                <a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf" data-code="BILLING_SUMMARY"
+                  data-desc="Billing Summary Report" href title="Print Format: PDF">
+                  <i class="fa fa-file-pdf fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnCSV"
-                  id="btnCSV"
-                  class="file-format text-dark"
-                  data-file="csv"
-                  data-code="BILLING_SUMMARY"
-                  data-desc="Billing Summary Report"
-                  href
-                  title="Print Format: CSV"
-                >
-                  <i class="fa fa-file-excel fa-lg"></i
-                ></a>
+                <a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv" data-code="BILLING_SUMMARY"
+                  data-desc="Billing Summary Report" href title="Print Format: CSV">
+                  <i class="fa fa-file-excel fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnWORD"
-                  id="btnWORD"
-                  class="file-format text-dark"
-                  data-file="rtf"
-                  data-code="BILLING_SUMMARY"
-                  data-desc="Billing Summary Report"
-                  href
-                  title="Print Format: RTF"
-                >
-                  <i class="fa fa-file-word fa-lg"></i
-                ></a>
+                <a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf" data-code="BILLING_SUMMARY"
+                  data-desc="Billing Summary Report" href title="Print Format: RTF">
+                  <i class="fa fa-file-word fa-lg"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          id="pg-2"
-          class="rec-img row p-1 xborder-bottom bg-light text-dark"
-        >
+        <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark">
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Credits Summary Report
           </div>
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
             <div class="row">
               <div class="col-auto">
-                <a
-                  name="btnPDF"
-                  id="btnPDF"
-                  class="file-format text-dark"
-                  data-file="pdf"
-                  data-code="CREDITS_SUMMARY"
-                  data-desc="Credits Summary Report"
-                  href
-                  title="Print Format: PDF"
-                >
-                  <i class="fa fa-file-pdf fa-lg"></i
-                ></a>
+                <a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf" data-code="CREDITS_SUMMARY"
+                  data-desc="Credits Summary Report" href title="Print Format: PDF">
+                  <i class="fa fa-file-pdf fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnCSV"
-                  id="btnCSV"
-                  class="file-format text-dark"
-                  data-file="csv"
-                  data-code="CREDITS_SUMMARY"
-                  data-desc="Credits Summary Report"
-                  href
-                  title="Print Format: CSV"
-                >
-                  <i class="fa fa-file-excel fa-lg"></i
-                ></a>
+                <a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv" data-code="CREDITS_SUMMARY"
+                  data-desc="Credits Summary Report" href title="Print Format: CSV">
+                  <i class="fa fa-file-excel fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnWORD"
-                  id="btnWORD"
-                  class="file-format text-dark"
-                  data-file="rtf"
-                  data-code="CREDITS_SUMMARY"
-                  data-desc="Credits Summary Report"
-                  href
-                  title="Print Format: RTF"
-                >
-                  <i class="fa fa-file-word fa-lg"></i
-                ></a>
+                <a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf" data-code="CREDITS_SUMMARY"
+                  data-desc="Credits Summary Report" href title="Print Format: RTF">
+                  <i class="fa fa-file-word fa-lg"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          id="pg-3"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark"
-        >
+        <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Image Submitted Summary Report
           </div>
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
             <div class="row">
               <div class="col-auto">
-                <a
-                  name="btnPDF"
-                  id="btnPDF"
-                  class="file-format text-dark"
-                  data-file="pdf"
-                  data-code="IMGSUBMITTED_SUMMARY"
-                  data-desc="Image Submitted Summary Report"
-                  href
-                  title="Print Format: PDF"
-                >
-                  <i class="fa fa-file-pdf fa-lg"></i
-                ></a>
+                <a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
+                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href
+                  title="Print Format: PDF">
+                  <i class="fa fa-file-pdf fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnCSV"
-                  id="btnCSV"
-                  class="file-format text-dark"
-                  data-file="csv"
-                  data-code="IMGSUBMITTED_SUMMARY"
-                  data-desc="Image Submitted Summary Report"
-                  href
-                  title="Print Format: CSV"
-                >
-                  <i class="fa fa-file-excel fa-lg"></i
-                ></a>
+                <a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
+                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href
+                  title="Print Format: CSV">
+                  <i class="fa fa-file-excel fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnWORD"
-                  id="btnWORD"
-                  class="file-format text-dark"
-                  data-file="rtf"
-                  data-code="IMGSUBMITTED_SUMMARY"
-                  data-desc="Image Submitted Summary Report"
-                  href
-                  title="Print Format: RTF"
-                >
-                  <i class="fa fa-file-word fa-lg"></i
-                ></a>
+                <a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
+                  data-code="IMGSUBMITTED_SUMMARY" data-desc="Image Submitted Summary Report" href
+                  title="Print Format: RTF">
+                  <i class="fa fa-file-word fa-lg"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          id="pg-4"
-          class="rec-img row p-1 xborder-bottom bg-light text-dark"
-        >
+        <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark">
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             Primary User Summary Report
           </div>
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
             <div class="row">
               <div class="col-auto">
-                <a
-                  name="btnPDF"
-                  id="btnPDF"
-                  class="file-format text-dark"
-                  data-file="pdf"
-                  data-code="PRIMARYUSER_SUMMARY"
-                  data-desc="Primary User Summary Report"
-                  href
-                  title="Print Format: PDF"
-                >
-                  <i class="fa fa-file-pdf fa-lg"></i
-                ></a>
+                <a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf"
+                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href
+                  title="Print Format: PDF">
+                  <i class="fa fa-file-pdf fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnCSV"
-                  id="btnCSV"
-                  class="file-format text-dark"
-                  data-file="csv"
-                  data-code="PRIMARYUSER_SUMMARY"
-                  data-desc="Primary User Summary Report"
-                  href
-                  title="Print Format: CSV"
-                >
-                  <i class="fa fa-file-excel fa-lg"></i
-                ></a>
+                <a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv"
+                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href
+                  title="Print Format: CSV">
+                  <i class="fa fa-file-excel fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnWORD"
-                  id="btnWORD"
-                  class="file-format text-dark"
-                  data-file="rtf"
-                  data-code="PRIMARYUSER_SUMMARY"
-                  data-desc="Primary User Summary Report"
-                  href
-                  title="Print Format: RTF"
-                >
-                  <i class="fa fa-file-word fa-lg"></i
-                ></a>
+                <a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
+                  data-code="PRIMARYUSER_SUMMARY" data-desc="Primary User Summary Report" href
+                  title="Print Format: RTF">
+                  <i class="fa fa-file-word fa-lg"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          id="pg-5"
-          class="rec-img row p-1 xborder-bottom bg-white text-dark"
-        >
+        <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark">
           <div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
             User List Summary Report
           </div>
           <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
             <div class="row">
               <div class="col-auto">
-                <a
-                  name="btnPDF"
-                  id="btnPDF"
-                  class="file-format text-dark"
-                  data-file="pdf"
-                  data-code="USERLIST_SUMMARY"
-                  data-desc="User List Summary Report"
-                  href
-                  title="Print Format: PDF"
-                >
-                  <i class="fa fa-file-pdf fa-lg"></i
-                ></a>
+                <a name="btnPDF" id="btnPDF" class="file-format text-dark" data-file="pdf" data-code="USERLIST_SUMMARY"
+                  data-desc="User List Summary Report" href title="Print Format: PDF">
+                  <i class="fa fa-file-pdf fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnCSV"
-                  id="btnCSV"
-                  class="file-format text-dark"
-                  data-file="csv"
-                  data-code="USERLIST_SUMMARY"
-                  data-desc="User List Summary Report"
-                  href
-                  title="Print Format: CSV"
-                >
-                  <i class="fa fa-file-excel fa-lg"></i
-                ></a>
+                <a name="btnCSV" id="btnCSV" class="file-format text-dark" data-file="csv" data-code="USERLIST_SUMMARY"
+                  data-desc="User List Summary Report" href title="Print Format: CSV">
+                  <i class="fa fa-file-excel fa-lg"></i>
+                </a>
               </div>
 
               <div class="col-auto">
-                <a
-                  name="btnWORD"
-                  id="btnWORD"
-                  class="file-format text-dark"
-                  data-file="rtf"
-                  data-code="USERLIST_SUMMARY"
-                  data-desc="User List Summary Report"
-                  href
-                  title="Print Format: RTF"
-                >
-                  <i class="fa fa-file-word fa-lg"></i
-                ></a>
+                <a name="btnWORD" id="btnWORD" class="file-format text-dark" data-file="rtf"
+                  data-code="USERLIST_SUMMARY" data-desc="User List Summary Report" href title="Print Format: RTF">
+                  <i class="fa fa-file-word fa-lg"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -525,12 +338,8 @@
       <div class="col-lg-4 col-md-4 col-sm-12 py-2">
         <div class="xform-group row">
           <label class="pl-3 pr-2 text-muted">Show </label>
-          <select
-            class="form-control form-control-sm custom-select custom-select-sm"
-            name="pagerec"
-            id="pagerec"
-            style="max-width: 80px"
-          >
+          <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec" id="pagerec"
+            style="max-width: 80px">
             <option value="10">10</option>
             <option value="25" selected>25</option>
             <option value="50">50</option>

@@ -1,91 +1,41 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form
-      *ngIf="mform"
-      name="frmMain"
-      id="frmMain"
-      method="post"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
+    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" [formGroup]="mform" ngNativeValidate
+      (ngSubmit)="onSubmit()">
       <div class="container-fluid pt-2 pb-3 px-4 bg-light xborder-bottom">
         <input type="hidden" name="company_id" id="company_id" value="0" />
-        <input
-          type="hidden"
-          name="param_code"
-          id="param_code"
-          value="ARC_AUDIT_LOG_RETAINING_DAYS"
-        />
+        <input type="hidden" name="param_code" id="param_code" value="ARC_AUDIT_LOG_RETAINING_DAYS" />
         <input type="hidden" name="param_value" id="param_value" value="3650" />
-        <input
-          type="hidden"
-          name="param_value_old"
-          id="param_value_old"
-          value="3650"
-        />
-        <input
-          type="hidden"
-          name="hparam_datatype"
-          id="hparam_datatype"
-          value
-        />
+        <input type="hidden" name="param_value_old" id="param_value_old" value="3650" />
+        <input type="hidden" name="hparam_datatype" id="hparam_datatype" value />
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "Description" | translate }}</label>
-          <input
-            type="text"
-            value="AUDIT LOG: Archival audit log records retaining days"
-            class="form-control"
-            formControlName="description"
-            title="AUDIT LOG: Archival audit log records retaining days"
-            readonly
-          />
+          <input type="text" value="AUDIT LOG: Archival audit log records retaining days" class="form-control"
+            formControlName="description" title="AUDIT LOG: Archival audit log records retaining days" readonly />
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "Parameter Value" | translate }}</label>
-          <select
-            class="form-control custom-select tparam_value d-none"
-            formControlName="sel_param_value"
-          ></select>
+          <select class="form-control custom-select tparam_value d-none" formControlName="sel_param_value"></select>
 
-          <input
-            type="text"
-            class="form-control tparam_value"
-            #mtxt_param_value
-            formControlName="txt_param_value"
-            value="3650"
-            required
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-            maxlength="50"
-            (keyup)="onKeyupParam($event, 'txt_param_value', 2)"
-            (blur)="onBlurParam($event, 'txt_param_value', 2)"
-          />
+          <input type="text" class="form-control tparam_value" #mtxt_param_value formControlName="txt_param_value"
+            value="3650" required (invalid)="setCustomValidity($event, 'Please fill out this field.')"
+            oninput="setCustomValidity('')" maxlength="50" (keyup)="onKeyupParam($event, 'txt_param_value', 2)"
+            (blur)="onBlurParam($event, 'txt_param_value', 2)" />
         </div>
 
         <div class="form-row">
           <div class="form-group col-7">
             <label class="control-label mb-1">{{ "Data Type" | translate }} </label>
-            <select
-              class="form-control custom-select"
-              formControlName="param_datatype"
-              required
-            >
+            <select class="form-control custom-select" formControlName="param_datatype" required>
               <option value="TEXT">{{ "Text" | translate }}</option>
               <option value="NUMBER" selected>{{ "Number" | translate }}</option>
               <option value="DATE">{{ "Date" | translate }}</option>
@@ -94,20 +44,11 @@
           </div>
 
           <div class="form-group col-5 justify-content-right">
-            <label
-              class="control-label mb-1"
-              for="status"
-              style="cursor: pointer"
-              >{{ "Data Reference" | translate }}
+            <label class="control-label mb-1" for="status" style="cursor: pointer">{{ "Data Reference" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control custom-control-lg"
-                formControlName="param_data_ind"
-                value="Y"
-                style="cursor: pointer; width: 20px"
-              />
+              <input type="checkbox" class="custom-control custom-control-lg" formControlName="param_data_ind" value="Y"
+                style="cursor: pointer; width: 20px" />
             </div>
           </div>
         </div>
@@ -115,60 +56,47 @@
         <div class="form-row">
           <div class="form-group col-4">
             <label class="control-label mb-1">{{ "Length" | translate }}</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="param_length"
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="param_length" 
               maxlength="3"
               (keyup)="onKeyupParam($event, 'param_length', 2)"
-              (blur)="onBlurParamLength($event, 'param_length', 2, mparam_datamin, mparam_datamax, mtxt_param_value)"
-            />
+              (blur)="onBlurParamLength($event, 'param_length', 2, mparam_datamin, mparam_datamax, mtxt_param_value)" />
           </div>
           <div class="form-group col-4">
             <label class="control-label mb-1">{{ "Minimum" | translate }}</label>
-            <input
-              type="text"
-              class="form-control"
-              #mparam_datamin
-              formControlName="param_datamin"
+            <input 
+              type="text" 
+              class="form-control" 
+              #mparam_datamin 
+              formControlName="param_datamin" 
               maxlength="5"
-              (keyup)="onKeyupParam($event, 'param_datamin', 2)"
-              (blur)="onBlurParam($event, 'param_datamin', 2)"
-            />
+              (keyup)="onKeyupParam($event, 'param_datamin', 2)" 
+              (blur)="onBlurParam($event, 'param_datamin', 2)" />
           </div>
           <div class="form-group col-4">
             <label class="control-label mb-1">{{ "Maximum" | translate }}</label>
-            <input
-              type="text"
-              class="form-control"
-              #mparam_datamax
-              formControlName="param_datamax"
+            <input 
+              type="text" 
+              class="form-control" 
+              #mparam_datamax 
+              formControlName="param_datamax" 
               maxlength="5"
-              (keyup)="onKeyupParam($event, 'param_datamax', 2)"
-              (blur)="onBlurParam($event, 'param_datamax', 2)"
-            />
+              (keyup)="onKeyupParam($event, 'param_datamax', 2)" 
+              (blur)="onBlurParam($event, 'param_datamax', 2)" />
           </div>
         </div>
         <div class="xbottom"></div>
       </div>
 
       <div class="container-fluid px-0 py-2 text-center border-top bg-white">
-        <button
-          name="btnCancel"
-          id="btnCancel"
-          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          value="Close"
-          (click)="onHide()"
-        >
+        <button name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1" value="Close"
+          (click)="onHide()">
           <i class="fa fa-times"></i> {{ "Close" | translate }}
         </button>
-        <button
-          type="submit"
-          name="btnSave"
-          id="btnSave"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          value="Save"
-        >
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          value="Save">
           <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>

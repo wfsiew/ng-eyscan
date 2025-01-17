@@ -1,59 +1,35 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form
-      *ngIf="mform"
-      name="frmMain"
-      id="frmMain"
-      method="post"
-      class="xbg-secondary"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
+    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" class="xbg-secondary" [formGroup]="mform"
+      ngNativeValidate (ngSubmit)="onSubmit()">
       <div class="container-fluid pt-2 pb-2 px-4 bg-light xborder-bottom">
         <input type="hidden" name="item_id" id="item_id" value="0" />
-        <input
-          type="hidden"
-          name="nameSpecialChars"
-          value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?"
-        />
+        <input type="hidden" name="nameSpecialChars" value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
 
-        <input
-          type="hidden"
+        <input type="hidden"
           name="fC5B5E6C29494887D6368D2D1D2F7D62FA221175BE632FA991F7A30ADA9654B3D012102256F1074C26D3702D2A934E8A64940FE23F2F0182F0A821623141853AA"
-          value="A216961EB3D4FEFA7727D8567578AA680A4F27BB"
-        />
+          value="A216961EB3D4FEFA7727D8567578AA680A4F27BB" />
 
         <div class="row">
           <div class="col-12">
             <div class="form-group mb-2">
-              <label class="control-label mb-1"
-                >{{ "Description" | translate }}
+              <label class="control-label mb-1">{{ "Description" | translate }}
               </label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="description"
-                required
-                maxlength="200"
-                (invalid)="
-                  setCustomValidity($event, 'Please fill out this field.')
-                "
-                oninput="setCustomValidity('')"
-              />
+              <input 
+                type="text" 
+                class="form-control" 
+                formControlName="description" 
+                required 
+                maxlength="200" 
+                (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                oninput="setCustomValidity('')" />
             </div>
 
             <div class="form-row xmb-1">
@@ -63,16 +39,13 @@
                     <div class="col border border-info rounded p-2 mb-2">
                       <div class="form-row mb-1">
                         <div class="form-group col-4">
-                          <label class="control-label mb-1"
-                            >{{ "Screening Model" | translate }}
-                          </label>
-                          <select
-                            #grading_id
-                            class="form-control custom-select"
-                            formControlName="grading_id"
+                          <label class="control-label mb-1">{{ "Screening Model" | translate }}</label>
+                          <select 
+                            #grading_id 
+                            class="form-control custom-select" 
+                            formControlName="grading_id" 
                             required
-                            (change)="onChangeGradingId(grading_id)"
-                          >
+                            (change)="onChangeGradingId(grading_id)">
                             <option value="P">
                               {{ "Fully Automated" | translate }}
                             </option>
@@ -83,14 +56,9 @@
                           </select>
                         </div>
                         <div class="form-group col-5">
-                          <label class="control-label mb-1"
-                            >{{ "Image Report Preference" | translate }}
+                          <label class="control-label mb-1">{{ "Image Report Preference" | translate }}
                           </label>
-                          <select
-                            class="form-control custom-select"
-                            formControlName="report_ind"
-                            required
-                          >
+                          <select class="form-control custom-select" formControlName="report_ind" required>
                             <option value="MC">
                               {{ "Macula Centered" | translate }}
                             </option>
@@ -102,21 +70,14 @@
                       </div>
                       <div class="form-row mb-1">
                         <div class="form-group col-9">
-                          <label class="control-label mb-1"
-                            >{{ "Parent Organization" | translate }}
+                          <label class="control-label mb-1">{{ "Parent Organization" | translate }}
                           </label>
-                          <select
-                            class="form-control custom-select"
-                            formControlName="parent_company_id"
+                          <select 
+                            class="form-control custom-select" 
+                            formControlName="parent_company_id" 
                             required
-                            (invalid)="
-                              setCustomValidity(
-                                $event,
-                                'Please fill out this field.'
-                              )
-                            "
-                            onchange="setCustomValidity('')"
-                          >
+                            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                            onchange="setCustomValidity('')">
                             <option value></option>
 
                             <option value="8">Belait Hospital (TOPCON)</option>
@@ -155,21 +116,13 @@
                       </div>
                       <div class="form-row">
                         <div class="form-group col-6">
-                          <label class="control-label mb-1"
-                            >{{ "Ocular Reading Centre" | translate }}
-                          </label>
-                          <select
-                            class="form-control custom-select"
+                          <label class="control-label mb-1">{{ "Ocular Reading Centre" | translate }}</label>
+                          <select 
+                            class="form-control custom-select" 
                             formControlName="secondary_id"
-                            [required]="!disabled_secondary_id"
-                            (invalid)="
-                              setCustomValidity(
-                                $event,
-                                'Please fill out this field.'
-                              )
-                            "
-                            onchange="setCustomValidity('')"
-                          >
+                            [required]="!disabled_secondary_id" 
+                            (invalid)="setCustomValidity($event,'Please fill out this field.')" 
+                            onchange="setCustomValidity('')">
                             <option value></option>
 
                             <option value="8">Belait Hospital (TOPCON)</option>
@@ -206,13 +159,8 @@
                           </select>
                         </div>
                         <div class="form-group col-6">
-                          <label class="control-label mb-1"
-                            >{{ "Auxiliary Image Acquisition" | translate }}
-                          </label>
-                          <select
-                            class="form-control custom-select"
-                            formControlName="collect_company_id"
-                          >
+                          <label class="control-label mb-1">{{ "Auxiliary Image Acquisition" | translate }}</label>
+                          <select class="form-control custom-select" formControlName="collect_company_id">
                             <option value></option>
 
                             <option value="8">Belait Hospital (TOPCON)</option>
@@ -251,206 +199,110 @@
                       </div>
                       <div class="form-row">
                         <div class="form-group col-4">
-                          <label class="control-label mb-1"
-                            >{{ "Contact Name" | translate }}
-                          </label>
-                          <input
-                            type="text"
-                            formControlName="contact_name"
-                            class="form-control"
+                          <label class="control-label mb-1">{{ "Contact Name" | translate }}</label>
+                          <input 
+                            type="text" 
+                            formControlName="contact_name" 
+                            class="form-control" 
                             maxlength="200"
-                            (keyup)="
-                              onKeyupValidateSpecialChar(
-                                $event,
-                                nameSpecialChars,
-                                'contact_name'
-                              )
-                            "
-                          />
+                            (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')" />
                         </div>
                         <div class="form-group col-4">
-                          <label class="control-label mb-1"
-                            >{{ "Email" | translate }}
-                          </label>
-                          <input
-                            type="email"
-                            class="form-control"
-                            formControlName="contact_email"
+                          <label class="control-label mb-1">{{ "Email" | translate }}</label>
+                          <input 
+                            type="email" 
+                            class="form-control" 
+                            formControlName="contact_email" 
                             maxlength="50"
-                            (invalid)="
-                              setCustomValidity(
-                                $event,
-                                'Please enter a valid email address.'
-                              )
-                            "
-                            oninput="setCustomValidity('')"
-                            onchange="if (this.value==''){setCustomValidity('');}"
-                          />
+                            (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
+                            oninput="setCustomValidity('')" 
+                            onchange="if (this.value==''){setCustomValidity('');}" />
                         </div>
                         <div class="form-group col-4">
-                          <label class="control-label mb-1"
-                            >{{ "Contact Number" | translate }}
-                          </label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            formControlName="contact_no"
+                          <label class="control-label mb-1">{{ "Contact Number" | translate }}</label>
+                          <input 
+                            type="text" 
+                            class="form-control" 
+                            formControlName="contact_no" 
                             maxlength="20"
-                            (keyup)="onKeyupChkposval($event, 'contact_no', 2)"
-                          />
+                            (keyup)="onKeyupChkposval($event, 'contact_no', 2)" />
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-12">
-                          <label class="control-label mb-1"
-                            >{{ "Contact Address" | translate }}
-                          </label>
-                          <textarea
-                            class="form-control"
-                            formControlName="contact_address"
-                            maxlength="200"
-                            style="height: 60px"
-                          ></textarea>
+                          <label class="control-label mb-1">{{ "Contact Address" | translate }}</label>
+                          <textarea class="form-control" formControlName="contact_address" maxlength="200" style="height: 60px"></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 pb-2">
-                    <div
-                      class="col border border-info rounded p-2 mb-2 xd-flex h-100"
-                    >
+                    <div class="col border border-info rounded p-2 mb-2 xd-flex h-100">
                       <div class="form-row mb-0">
                         <div class="form-group col-12">
                           <div class="form-row">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                               {{ "Diseases" | translate }}
                             </div>
                           </div>
 
                           <div class="form-row">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold">
                               SELENA+
                             </div>
                           </div>
 
                           <div class="form-row pl-4">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                               <div class="form-check col-12">
-                                <input
-                                  class="form-check-input diseases"
-                                  type="checkbox"
-                                  formControlName="disease_cd_1"
-                                  data-id="DR"
-                                  value="DR"
-                                  style="height: 16px; width: 16px"
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_cd_1"
-                                  style="cursor: pointer"
-                                  >{{
-                                    "Diabetic Retinopathy" | translate
-                                  }}</label
-                                >
+                                <input class="form-check-input diseases" type="checkbox" formControlName="disease_cd_1"
+                                  data-id="DR" value="DR" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_1" style="cursor: pointer">{{
+                                  "Diabetic Retinopathy" | translate
+                                  }}</label>
                               </div>
                             </div>
                           </div>
 
                           <div class="form-row pl-4">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                               <div class="form-check col-12">
-                                <input
-                                  class="form-check-input diseases"
-                                  type="checkbox"
-                                  formControlName="disease_cd_2"
-                                  data-id="GLAUCOMA"
-                                  value="GLAUCOMA"
-                                  style="height: 16px; width: 16px"
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_cd_2"
-                                  style="cursor: pointer"
-                                  >{{ "Glaucoma Suspect" | translate }}</label
-                                >
+                                <input class="form-check-input diseases" type="checkbox" formControlName="disease_cd_2"
+                                  data-id="GLAUCOMA" value="GLAUCOMA" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_2" style="cursor: pointer">{{
+                                  "Glaucoma Suspect" | translate }}</label>
                               </div>
                             </div>
                           </div>
 
                           <div class="form-row pl-4">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                               <div class="form-check col-12">
-                                <input
-                                  class="form-check-input diseases"
-                                  type="checkbox"
-                                  formControlName="disease_cd_3"
-                                  data-id="AMD"
-                                  value="AMD"
-                                  style="height: 16px; width: 16px"
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_cd_3"
-                                  style="cursor: pointer"
-                                  >{{
-                                    "Age-related Macular Degeneration"
-                                      | translate
-                                  }}</label
-                                >
+                                <input class="form-check-input diseases" type="checkbox" formControlName="disease_cd_3"
+                                  data-id="AMD" value="AMD" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_3" style="cursor: pointer">{{ "Age-related Macular Degeneration" | translate }}</label>
                               </div>
                             </div>
                           </div>
 
                           <div class="form-row">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 font-weight-bold">
                               RetiKID
                             </div>
                           </div>
 
                           <div class="form-row pl-4">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                               <div class="form-check col-12">
-                                <input
-                                  class="form-check-input diseases"
-                                  type="checkbox"
-                                  formControlName="disease_cd_4"
-                                  data-id="CKD"
-                                  value="CKD"
-                                  style="height: 16px; width: 16px"
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_cd_4"
-                                  style="cursor: pointer"
-                                  >{{
-                                    "Chronic Kidney Disease" | translate
-                                  }}</label
-                                >
+                                <input class="form-check-input diseases" type="checkbox" formControlName="disease_cd_4"
+                                  data-id="CKD" value="CKD" style="height: 16px; width: 16px" />
+                                <label class="form-check-label pl-1" for="disease_cd_4" style="cursor: pointer">{{ "Chronic Kidney Disease" | translate }}</label>
                               </div>
                             </div>
                           </div>
 
-                          <input
-                            type="hidden"
-                            id="diseases_count"
-                            name="diseases_count"
-                            value="4"
-                          />
+                          <input type="hidden" id="diseases_count" name="diseases_count" value="4" />
                         </div>
                       </div>
                     </div>
@@ -464,23 +316,12 @@
       </div>
 
       <div class="container-fluid px-0 py-2 text-center bg-white border-top">
-        <button
-          type="button"
-          name="btnCancel"
-          id="btnCancel"
-          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          [title]="'Cancel' | translate"
-          (click)="onHide()"
-        >
+        <button type="button" name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
+          [title]="'Cancel' | translate" (click)="onHide()">
           <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
-        <button
-          type="submit"
-          name="btnSave"
-          id="btnSave"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          [title]="'Save' | translate"
-        >
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          [title]="'Save' | translate">
           <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>

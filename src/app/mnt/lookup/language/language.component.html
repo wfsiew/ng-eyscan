@@ -1,45 +1,23 @@
-<app-header
-  [reload]="'/mnt/lookup/language'"
-  [headerid]="'fn0'"
-  [title]="'Maintain Lookup Code' | translate"
-></app-header>
+<app-header [reload]="'/mnt/lookup/language'" [headerid]="'fn0'"
+  [title]="'Maintain Lookup Code' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +34,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,81 +55,26 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-4 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link lookup active"
-          id="lookup_LANGUAGE_CD"
-          data-toggle="pill"
-          data-group="LANGUAGE_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="true"
-          (click)="goto('/mnt/lookup/language', true)"
-          >{{ "Language" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
+        <a class="nav-link lookup active" id="lookup_LANGUAGE_CD" data-toggle="pill" data-group="LANGUAGE_CD"
+          data-std="Y" data-function="fn0_5" data-startupfile href role="tab" aria-controls="v-pills-user"
+          aria-selected="true" (click)="goto('/mnt/lookup/language', true)">{{ "Language" | translate }}</a>
 
-        <a
-          class="nav-link lookup"
-          id="lookup_RACE_CD"
-          data-toggle="pill"
-          data-group="RACE_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/patient-race')"
-          >{{ "Patient Race" | translate }}</a
-        >
+        <a class="nav-link lookup" id="lookup_RACE_CD" data-toggle="pill" data-group="RACE_CD" data-std="Y"
+          data-function="fn0_5" data-startupfile href role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/lookup/patient-race')">{{ "Patient Race" | translate }}</a>
 
-        <a
-          class="nav-link lookup"
-          id="lookup_PINHOLE_CD"
-          data-toggle="pill"
-          data-group="PINHOLE_CD"
-          data-std="N"
-          data-function="fn0_5"
-          data-startupfile="mnt/visual_acuity/index.cfm"
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/visual-acuity')"
-          >{{ "Visual Acuity" | translate }}</a
-        >
+        <a class="nav-link lookup" id="lookup_PINHOLE_CD" data-toggle="pill" data-group="PINHOLE_CD" data-std="N"
+          data-function="fn0_5" data-startupfile="mnt/visual_acuity/index.cfm" href role="tab"
+          aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/lookup/visual-acuity')">{{ "Visual Acuity" | translate }}</a>
 
-        <a
-          class="nav-link lookup"
-          id="lookup_VUNO_FUNDUS_AI_FDG_CD"
-          data-toggle="pill"
-          data-group="VUNO_FUNDUS_AI_FDG_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/vuno-fundus')"
-          >{{ "VUNO Fundus AI Findings" | translate }}</a
-        >
+        <a class="nav-link lookup" id="lookup_VUNO_FUNDUS_AI_FDG_CD" data-toggle="pill"
+          data-group="VUNO_FUNDUS_AI_FDG_CD" data-std="Y" data-function="fn0_5" data-startupfile href role="tab"
+          aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/lookup/vuno-fundus')">{{ "VUNO Fundus AI Findings" | translate }}</a>
       </div>
 
-      <div
-        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
-        id="v-pills-tabContent"
-      >
+      <div class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12" id="v-pills-tabContent">
         <div class="tab-pane fade xborder show active" role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
@@ -174,53 +82,26 @@
                 {{ "Language" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
-                <form
-                  name="frmFilter"
-                  id="frmFilter"
-                  class="form-inline float-right fmx"
-                  action="/bn_moh_uat/mnt/lookup/index.cfm?tid=fn0_5"
-                  method="post"
-                >
-                  <input
-                    type="hidden"
-                    name="ugroup"
-                    id="ugroup"
-                    value="LANGUAGE_CD"
-                  />
+                <form name="frmFilter" id="frmFilter" class="form-inline float-right fmx"
+                  action="/bn_moh_uat/mnt/lookup/index.cfm?tid=fn0_5" method="post">
+                  <input type="hidden" name="ugroup" id="ugroup" value="LANGUAGE_CD" />
                   <input type="hidden" name="recno" id="recno" value="25" />
                   <div class="form-group mr-2">
-                    <input
-                      name="desc"
-                      id="desc"
-                      type="text"
-                      class="form-control"
-                      placeholder="{{ 'Search' | translate }}..."
-                      value
-                    />
+                    <input name="desc" id="desc" type="text" class="form-control"
+                      placeholder="{{ 'Search' | translate }}..." value />
                   </div>
                   <div class="form-group mr-2">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnSearch"
-                        id="btnSearch"
-                        class="form-control btn bg-primary text-white"
-                        [title]="'Search' | translate"
-                      >
+                      <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white"
+                        [title]="'Search' | translate">
                         <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnNew"
-                        id="btnNew"
-                        class="form-control btn bg-primary text-white"
-                        data-group="LANGUAGE_CD"
-                        data-std="Y"
-                        [title]="'New' | translate"
-                        (click)="onCreate()"
-                      >
+                      <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white"
+                        data-group="LANGUAGE_CD" data-std="Y" [title]="'New' | translate" (click)="onCreate()">
                         <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>
@@ -245,10 +126,7 @@
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12"></div>
                 </div>
 
-                <div
-                  id="pg-1"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">EN</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     English
@@ -258,25 +136,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_1"
-                      name="pedit"
-                      class="pedit"
-                      href="#"
-                      data-id="EN"
-                      data-group="LANGUAGE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      (click)="onEdit()"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="EN" data-group="LANGUAGE_CD"
+                      data-std="Y" title="Edit" (click)="onEdit()"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-2"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     CHINESE
                   </div>
@@ -288,24 +153,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_2"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="CHINESE"
-                      data-group="LANGUAGE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_2" name="pedit" class="pedit" href data-id="CHINESE" data-group="LANGUAGE_CD"
+                      data-std="Y" title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-3"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     VIETNAMESE
                   </div>
@@ -317,24 +170,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_3"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="VIETNAMESE"
-                      data-group="LANGUAGE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_3" name="pedit" class="pedit" href data-id="VIETNAMESE" data-group="LANGUAGE_CD"
+                      data-std="Y" title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-4"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     PORTUGUESE
                   </div>
@@ -346,24 +187,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_4"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="PORTUGUESE"
-                      data-group="LANGUAGE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_4" name="pedit" class="pedit" href data-id="PORTUGUESE" data-group="LANGUAGE_CD"
+                      data-std="Y" title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-5"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     INDONESIAN
                   </div>
@@ -375,17 +204,8 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_5"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="INDONESIAN"
-                      data-group="LANGUAGE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_5" name="pedit" class="pedit" href data-id="INDONESIAN" data-group="LANGUAGE_CD"
+                      data-std="Y" title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
               </div>
@@ -394,12 +214,8 @@
               <div class="col-lg-4 col-md-4 col-sm-12 py-2">
                 <div class="xform-group row">
                   <label class="pl-3 pr-2 text-muted">Show </label>
-                  <select
-                    class="form-control form-control-sm custom-select custom-select-sm"
-                    name="pagerec"
-                    id="pagerec"
-                    style="max-width: 80px"
-                  >
+                  <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec"
+                    id="pagerec" style="max-width: 80px">
                     <option value="10">10</option>
                     <option value="25" selected>25</option>
                     <option value="50">50</option>
@@ -408,9 +224,7 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
-                <span id="dispdesc" class="text-muted"
-                  >Showing 1 to 5 of 5</span
-                >
+                <span id="dispdesc" class="text-muted">Showing 1 to 5 of 5</span>
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2"></div>

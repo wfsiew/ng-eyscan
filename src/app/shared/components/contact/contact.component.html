@@ -2,28 +2,15 @@
   <h5 class="modal-title" id="__nhPopWindow_title">
     {{ "Contact Us" | translate }}
   </h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 ctt-modal">
   <main role="main" class="container-fluid p-0 m-0">
-    <form
-      *ngIf="mform"
-      name="frmfeedback"
-      id="frmfeedback"
-      method="post"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
+    <form *ngIf="mform" name="frmfeedback" id="frmfeedback" method="post" [formGroup]="mform" ngNativeValidate
+      (ngSubmit)="onSubmit()">
       <div class="container-fluid pt-2 pb-2 px-4 bg-light">
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12">
@@ -33,15 +20,8 @@
               </div>
               <div
                 class="col-xl-8 col-lg-8 col-md-8 col-sm-12 text-right alert alert-success small py-1 px-2 my-0 alert-dismissible fade show"
-                id="hstatus"
-                name="hstatus"
-                role="alert"
-                [hidden]="true"
-              >
-                {{
-                  "Your message was sent successfully. An email notification of a copy of your message has been sent out. Please check your Spam/Junk folder if you have not received it in your inbox."
-                    | translate
-                }}
+                id="hstatus" name="hstatus" role="alert" [hidden]="true">
+                {{ "Your message was sent successfully. An email notification of a copy of your message has been sent out. Please check your Spam/Junk folder if you have not received it in your inbox." | translate }}
               </div>
             </div>
 
@@ -49,65 +29,43 @@
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
                   <label>{{ "Name" | translate }}</label>
-                  <input
-                    class="form-control"
-                    formControlName="txtname"
-                    value="Kian Cheong Lam"
-                    [placeholder]="'Your Name' | translate"
-                    required
-                    [title]="'Name' | translate"
-                    readonly
-                  />
+                  <input class="form-control" formControlName="txtname" value="Kian Cheong Lam"
+                    [placeholder]="'Your Name' | translate" required [title]="'Name' | translate" readonly />
                 </div>
               </div>
 
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
                   <label>{{ "eMail" | translate }}</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    formControlName="txtemail"
-                    value="kiancheong.lam@nova-hub.com"
-                    [placeholder]="'Your eMail' | translate"
-                    required
-                    [title]="'eMail' | translate"
-                    readonly
-                  />
+                  <input type="email" class="form-control" formControlName="txtemail"
+                    value="kiancheong.lam@nova-hub.com" [placeholder]="'Your eMail' | translate" required
+                    [title]="'eMail' | translate" readonly />
                 </div>
               </div>
 
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
                   <label>{{ "Organization" | translate }}</label>
-                  <input
-                    class="form-control"
-                    formControlName="txtorganization"
-                    value="EyRIS"
-                    [placeholder]="'Your Organization' | translate"
-                    required
-                    [title]="'Organization' | translate"
-                    readonly
-                  />
+                  <input class="form-control" formControlName="txtorganization" value="EyRIS"
+                    [placeholder]="'Your Organization' | translate" required [title]="'Organization' | translate"
+                    readonly />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="form-group">
-                  <textarea
-                    class="form-control"
+                  <textarea 
+                    class="form-control" 
                     formControlName="txtmessage"
-                    [placeholder]="'How can we help?' | translate"
-                    required
-                    rows="8"
-                    maxlength="2000"
-                    (invalid)="
-                      setCustomValidity($event, 'Please fill out this field.')
-                    "
-                    oninput="setCustomValidity('')"
-                    onchange="if(this.value!=''){setCustomValidity('');}"
-                  ></textarea>
+                    [placeholder]="'How can we help?' | translate" 
+                    required 
+                    rows="8" 
+                    maxlength="2000" 
+                    (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                    oninput="setCustomValidity('')" 
+                    onchange="if(this.value!=''){setCustomValidity('');}">
+                  </textarea>
                 </div>
                 <div></div>
               </div>
@@ -118,11 +76,7 @@
       </div>
 
       <div class="container-fluid px-0 py-2 text-center bg-white border-top">
-        <button
-          type="submit"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          title="Send Message"
-        >
+        <button type="submit" class="btn xbtn-sm bg-primary py-1 text-white ml-1" title="Send Message">
           <i class="fa fa-envelope"></i> {{ "Send Message" | translate }}
         </button>
       </div>

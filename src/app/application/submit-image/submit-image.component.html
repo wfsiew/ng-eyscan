@@ -1,45 +1,22 @@
-<app-header
-  [reload]="'/application/submit-image'"
-  [headerid]="'fn3'"
-  [title]="'Submit Image' | translate"
-></app-header>
+<app-header [reload]="'/application/submit-image'" [headerid]="'fn3'" [title]="'Submit Image' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +33,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -96,39 +58,37 @@
         <div class="col-md-3 col-sm-12">
           <div class="form-group">
             <label for="report_id">{{ "Case Reference ID" | translate }}</label>
-            <input
-              id="report_id"
-              name="report_id"
-              type="text"
-              class="form-control"
+            <input 
+              id="report_id" 
+              name="report_id" 
+              type="text" 
+              class="form-control" 
               maxlength="50"
-              onblur="_retrieveInfo(this);"
-            />
+              onblur="_retrieveInfo(this);" />
           </div>
         </div>
         <div class="col-md-3 col-sm-12">
           <div class="form-group">
             <label for="date_of_image">{{ "Date of Image" | translate }}</label>
-            <input
-              name="date_of_image"
-              type="text"
-              class="form-control"
-              style="max-width: 160px"
+            <input 
+              name="date_of_image" 
+              type="text" 
+              class="form-control" 
+              style="max-width: 160px" 
               maxlength="11"
-              onkeydown="return false"
-              (keyup)="onKeyupDateImage($event)"
-              #datepickerIm="bsDatepicker"
+              onkeydown="return false" 
+              (keyup)="onKeyupDateImage($event)" 
+              #datepickerIm="bsDatepicker" 
               bsDatepicker
-              placement="bottom"
-              [(ngModel)]="date_of_image"
+              placement="bottom" 
+              [(ngModel)]="date_of_image" 
               [bsConfig]="{
                 dateInputFormat: 'DD-MMM-YYYY',
                 containerClass: 'theme-dark-blue',
                 showTodayButton: true,
                 showClearButton: true,
                 customTodayClass: 'custom-today-class'
-              }"
-            />
+              }" />
             <!-- <input id="date_of_image" name="date_of_image" type="text" class="form-control" style="max-width: 160px;"
               maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
           </div>
@@ -498,95 +458,31 @@
       </div>
     </div>
     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 text-right">
-      <button
-        id="imgAcquire"
-        type="button"
-        class="btn btn-primary m-1 form_acquire"
-        (click)="onModalAcquireImage()"
-      >
+      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire" (click)="onModalAcquireImage()">
         <i class="fas fa-camera"></i> {{ "Acquire Image" | translate }}
       </button>
 
-      <button
-        id="imgSubmit"
-        type="button"
-        class="btn btn-primary m-1 form_submit"
-      >
+      <button id="imgSubmit" type="button" class="btn btn-primary m-1 form_submit">
         <i class="fa fa-cloud-upload-alt"></i> {{ "Submit" | translate }}
       </button>
-      <button
-        type="button"
-        class="btn btn-primary m-1 form_reset"
-        (click)="onReset()"
-      >
+      <button type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()">
         <i class="fa fa-redo"></i> {{ "Reset" | translate }}
       </button>
-      <button
-        id="btnReport"
-        type="button"
-        class="btn btn-primary m-1 form_report"
-        disabled
-      >
+      <button id="btnReport" type="button" class="btn btn-primary m-1 form_report" disabled>
         <i class="fa fa-file-alt"></i> {{ "View Report" | translate }}
       </button>
-      <button
-        type="button"
-        class="btn btn-primary m-1"
-        (click)="onModalGuide()"
-      >
+      <button type="button" class="btn btn-primary m-1" (click)="onModalGuide()">
         <i class="fa fa-file-alt"></i> {{ "Guide" | translate }}
       </button>
-      <input
-        id="eye_img_right"
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        style="display: none"
-        data-img-obj="img_container_right"
-        data-img-id
-      />
-      <input
-        id="eye_img_left"
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        style="display: none"
-        data-img-obj="img_container_left"
-        data-img-id
-      />
+      <input id="eye_img_right" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none"
+        data-img-obj="img_container_right" data-img-id />
+      <input id="eye_img_left" multiple type="file" accept=".jpg,.jpeg,.png" style="display: none"
+        data-img-obj="img_container_left" data-img-id />
       <input id="reference_id" name="reference_id" type="hidden" value />
-      <input
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        hidden
-        (change)="onFileChangeRight1($event)"
-        #fileRight1
-      />
-      <input
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        hidden
-        (change)="onFileChangeRight2($event)"
-        #fileRight2
-      />
-      <input
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        hidden
-        (change)="onFileChangeLeft1($event)"
-        #fileLeft1
-      />
-      <input
-        multiple
-        type="file"
-        accept=".jpg,.jpeg,.png"
-        hidden
-        (change)="onFileChangeLeft2($event)"
-        #fileLeft2
-      />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeRight1($event)" #fileRight1 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeRight2($event)" #fileRight2 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeLeft1($event)" #fileLeft1 />
+      <input multiple type="file" accept=".jpg,.jpeg,.png" hidden (change)="onFileChangeLeft2($event)" #fileLeft2 />
     </div>
   </div>
   <div class="row diseases-label d-none">
@@ -602,14 +498,9 @@
               <div class="row">
                 <div class="col-12 xp-2 xborder xrounded xbg-white">
                   <div class="card">
-                    <div
-                      class="card-header bg-hd1 text-white py-2"
-                      id="hdSelena"
-                      aria-expanded="true"
-                      aria-controls="collapseSelena"
-                      style="cursor: pointer"
-                      (click)="isCollapseSelena = !isCollapseSelena"
-                    >
+                    <div class="card-header bg-hd1 text-white py-2" id="hdSelena" aria-expanded="true"
+                      aria-controls="collapseSelena" style="cursor: pointer"
+                      (click)="isCollapseSelena = !isCollapseSelena">
                       <div class="row py-0">
                         <div class="col-10 my-0">SELENA+</div>
                         <div class="col-2 text-right">
@@ -618,36 +509,17 @@
                       </div>
                     </div>
 
-                    <div
-                      id="collapseSelena"
-                      class="xshow multi-collapse"
-                      aria-labelledby="hdSelena"
-                      [collapse]="isCollapseSelena"
-                      [isAnimated]="true"
-                    >
+                    <div id="collapseSelena" class="xshow multi-collapse" aria-labelledby="hdSelena"
+                      [collapse]="isCollapseSelena" [isAnimated]="true">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0">
                           <div class="form-row">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input disease_checkbox"
-                                  type="checkbox"
-                                  id="disease_1"
-                                  name="disease_1"
-                                  value="Y"
-                                  xstyle="cursor: pointer;"
-                                  data-disease-cd="DR"
-                                  data-disease-desc="Diabetic Retinopathy"
-                                  checked
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="disease_1"
-                                  style="cursor: pointer"
-                                >
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_1"
+                                  name="disease_1" value="Y" xstyle="cursor: pointer;" data-disease-cd="DR"
+                                  data-disease-desc="Diabetic Retinopathy" checked />
+                                <label class="form-check-label" for="disease_1" style="cursor: pointer">
                                   {{ "Diabetic Retinopathy" | translate }}
                                 </label>
                               </div>
@@ -655,25 +527,12 @@
                           </div>
 
                           <div class="form-row d-none">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input disease_checkbox"
-                                  type="checkbox"
-                                  id="disease_2"
-                                  name="disease_2"
-                                  value="Y"
-                                  xstyle="cursor: pointer;"
-                                  data-disease-cd="GLAUCOMA"
-                                  data-disease-desc="Glaucoma Suspect"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="disease_2"
-                                  style="cursor: pointer"
-                                >
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_2"
+                                  name="disease_2" value="Y" xstyle="cursor: pointer;" data-disease-cd="GLAUCOMA"
+                                  data-disease-desc="Glaucoma Suspect" />
+                                <label class="form-check-label" for="disease_2" style="cursor: pointer">
                                   {{ "Glaucoma Suspect" | translate }}
                                 </label>
                               </div>
@@ -681,25 +540,12 @@
                           </div>
 
                           <div class="form-row d-none">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input disease_checkbox"
-                                  type="checkbox"
-                                  id="disease_3"
-                                  name="disease_3"
-                                  value="Y"
-                                  xstyle="cursor: pointer;"
-                                  data-disease-cd="AMD"
-                                  data-disease-desc="Age-Related Macular Degeneration"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="disease_3"
-                                  style="cursor: pointer"
-                                >
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_3"
+                                  name="disease_3" value="Y" xstyle="cursor: pointer;" data-disease-cd="AMD"
+                                  data-disease-desc="Age-Related Macular Degeneration" />
+                                <label class="form-check-label" for="disease_3" style="cursor: pointer">
                                   {{ "Age-Related Macular Degeneration" | translate }}
                                 </label>
                               </div>
@@ -721,15 +567,9 @@
               <div class="row">
                 <div class="col-12 xp-2">
                   <div class="card">
-                    <div
-                      class="card-header bg-hd1 text-white py-2"
-                      id="hdVuno"
-                      data-toggle="collapse"
-                      data-target="#collapseVuno"
-                      aria-expanded="true"
-                      aria-controls="collapseVuno"
-                      style="cursor: pointer"
-                    >
+                    <div class="card-header bg-hd1 text-white py-2" id="hdVuno" data-toggle="collapse"
+                      data-target="#collapseVuno" aria-expanded="true" aria-controls="collapseVuno"
+                      style="cursor: pointer">
                       <div class="row py-0">
                         <div class="col-10 my-0">VUNO Med-Fundus AI</div>
                         <div class="col-2 text-right">
@@ -738,11 +578,7 @@
                       </div>
                     </div>
 
-                    <div
-                      id="collapseVuno"
-                      class="collapse xshow multi-collapse"
-                      aria-labelledby="hdVuno"
-                    >
+                    <div id="collapseVuno" class="collapse xshow multi-collapse" aria-labelledby="hdVuno">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0"></div>
                       </div>
@@ -760,14 +596,8 @@
               <div class="row">
                 <div class="col-12 xp-2">
                   <div class="card">
-                    <div
-                      class="card-header bg-hd1 text-white py-2"
-                      id="hdckd"
-                      aria-expanded="true"
-                      aria-controls="collapseckd"
-                      style="cursor: pointer"
-                      (click)="isCollapseckd = !isCollapseckd"
-                    >
+                    <div class="card-header bg-hd1 text-white py-2" id="hdckd" aria-expanded="true"
+                      aria-controls="collapseckd" style="cursor: pointer" (click)="isCollapseckd = !isCollapseckd">
                       <div class="row py-0">
                         <div class="col-10 my-0">RetiKid</div>
                         <div class="col-2 text-right">
@@ -776,35 +606,17 @@
                       </div>
                     </div>
 
-                    <div
-                      id="collapseckd"
-                      class="xshow multi-collapse"
-                      aria-labelledby="hdckd"
-                      [collapse]="isCollapseckd"
-                      [isAnimated]="true"
-                    >
+                    <div id="collapseckd" class="xshow multi-collapse" aria-labelledby="hdckd"
+                      [collapse]="isCollapseckd" [isAnimated]="true">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0">
                           <div class="form-row">
-                            <div
-                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1"
-                            >
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 xpl-3 pb-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input disease_checkbox"
-                                  type="checkbox"
-                                  id="disease_4"
-                                  name="disease_4"
-                                  value="Y"
-                                  data-disease-cd="CKD"
-                                  data-disease-desc="Chronic Kidney Disease"
-                                  checked
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="disease_4"
-                                  style="cursor: pointer"
-                                >
+                                <input class="form-check-input disease_checkbox" type="checkbox" id="disease_4"
+                                  name="disease_4" value="Y" data-disease-cd="CKD"
+                                  data-disease-desc="Chronic Kidney Disease" checked />
+                                <label class="form-check-label" for="disease_4" style="cursor: pointer">
                                   {{ "Chronic Kidney Disease" | translate }}
                                 </label>
                               </div>
@@ -826,15 +638,9 @@
               <div class="row">
                 <div class="col-12 xp-2">
                   <div class="card">
-                    <div
-                      class="card-header bg-hd1 text-white py-2"
-                      id="hdmediwhale"
-                      data-toggle="collapse"
-                      data-target="#collapsemediwhale"
-                      aria-expanded="true"
-                      aria-controls="collapsemediwhale"
-                      style="cursor: pointer"
-                    >
+                    <div class="card-header bg-hd1 text-white py-2" id="hdmediwhale" data-toggle="collapse"
+                      data-target="#collapsemediwhale" aria-expanded="true" aria-controls="collapsemediwhale"
+                      style="cursor: pointer">
                       <div class="row py-0">
                         <div class="col-10 my-0">DrNoon</div>
                         <div class="col-2 text-right">
@@ -843,11 +649,7 @@
                       </div>
                     </div>
 
-                    <div
-                      id="collapsemediwhale"
-                      class="collapse xshow multi-collapse"
-                      aria-labelledby="hdmediwhale"
-                    >
+                    <div id="collapsemediwhale" class="collapse xshow multi-collapse" aria-labelledby="hdmediwhale">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0"></div>
                       </div>
@@ -865,15 +667,9 @@
               <div class="row">
                 <div class="col-12 xp-2">
                   <div class="card">
-                    <div
-                      class="card-header bg-hd1 text-white py-2"
-                      id="hdmediwhale"
-                      data-toggle="collapse"
-                      data-target="#collapsebioage"
-                      aria-expanded="true"
-                      aria-controls="collapsebioage"
-                      style="cursor: pointer"
-                    >
+                    <div class="card-header bg-hd1 text-white py-2" id="hdmediwhale" data-toggle="collapse"
+                      data-target="#collapsebioage" aria-expanded="true" aria-controls="collapsebioage"
+                      style="cursor: pointer">
                       <div class="row py-0">
                         <div class="col-10 my-0">Toku Eyes</div>
                         <div class="col-2 text-right">
@@ -882,11 +678,7 @@
                       </div>
                     </div>
 
-                    <div
-                      id="collapsebioage"
-                      class="collapse xshow multi-collapse"
-                      aria-labelledby="hdbioage"
-                    >
+                    <div id="collapsebioage" class="collapse xshow multi-collapse" aria-labelledby="hdbioage">
                       <div class="card-body pl-1">
                         <div class="form-group col-12 my-0"></div>
                       </div>
@@ -913,56 +705,29 @@
     <div class="choices rounded" data-type="select-multiple" dir="ltr">
       <div class="choices__inner">
         <div class="choices__list choices__list--multiple">
-          <div
-            class="choices__item choices__item--selectable"
-            *ngFor="let o of selectedDiseaseList"
-          >
-            {{ o.desc | translate }}<button
-              type="button"
-              class="choices__button"
-              (click)="onRemoveDisease(o)"
-            >
-              {{ "Remove item" | translate }}
-            </button>
+          <div class="choices__item choices__item--selectable" *ngFor="let o of selectedDiseaseList">
+            {{ o.desc | translate }}<button type="button" class="choices__button" (click)="onRemoveDisease(o)">{{ "Remove item" | translate }}</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <input
-    id="selected_diseases"
-    name="selected_diseases"
-    type="hidden"
-    value="Diabetic Retinopathy, Chronic Kidney Disease"
-  />
+  <input id="selected_diseases" name="selected_diseases" type="hidden"
+    value="Diabetic Retinopathy, Chronic Kidney Disease" />
 
   <div class="row mt-1 mx-1 border rounded border-secondary">
     <div class="col-12 text-center">
-      <div
-        id="btnCollapse"
-        class="row bg-hd1 text-white justify-content-center align-middle py-1"
-        [class.box-shadow]="isCollapse"
-        (click)="isCollapse = !isCollapse"
-        style="cursor: pointer"
-      >
+      <div id="btnCollapse" class="row bg-hd1 text-white justify-content-center align-middle py-1"
+        [class.box-shadow]="isCollapse" (click)="isCollapse = !isCollapse" style="cursor: pointer">
         <div class="col-1"></div>
         <div class="col-10">{{ "Subject Medical History" | translate }}</div>
         <div class="col-1 text-right">
-          <i
-            id="collapseIcon"
-            class="fa xfa-angle-double-down"
-            [class.fa-chevron-down]="isCollapse"
-            [class.fa-chevron-up]="!isCollapse"
-          ></i>
+          <i id="collapseIcon" class="fa xfa-angle-double-down" [class.fa-chevron-down]="isCollapse"
+            [class.fa-chevron-up]="!isCollapse"></i>
         </div>
       </div>
     </div>
-    <div
-      class="col-12 px-2 xbg-light xbox-shadow"
-      id="additionalInfo"
-      [collapse]="isCollapse"
-      [isAnimated]="true"
-    >
+    <div class="col-12 px-2 xbg-light xbox-shadow" id="additionalInfo" [collapse]="isCollapse" [isAnimated]="true">
       <div class="row mt-2">
         <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-1">
           Unaided/Aided with Glasses
@@ -1145,104 +910,66 @@
       </div>
 
       <div class="row mt-2">
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="diabete_ind"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="diabete_ind">
           Diabetes
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="diabete_ind_y"
-                  name="diabete_ind"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="diabete_ind_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="diabete_ind_y" name="diabete_ind"
+                  value="Y" />
+                <label class="custom-control-label" for="diabete_ind_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="diabete_ind_n"
-                  name="diabete_ind"
-                  value="N"
-                />
-                <label class="custom-control-label" for="diabete_ind_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="diabete_ind_n" name="diabete_ind"
+                  value="N" />
+                <label class="custom-control-label" for="diabete_ind_n">No</label>
               </div>
             </div>
             <div class="col-sm-8">
-              <input
-                id="diabete_duration"
-                name="diabete_duration"
-                type="text"
+              <input 
+                id="diabete_duration" 
+                name="diabete_duration" 
+                type="text" 
                 class="form-control duration"
                 maxlength="3"
                 onkeyup="chkposval(this,2,'diabete_duration');_calculateOnsetDateDuration('diabete_duration','diabete_duration_year');"
-                placeholder="Duration"
-                title="Duration"
-                disabled
-              />
-              <input
-                id="diabete_duration_year"
-                name="diabete_duration_year"
+                placeholder="Duration" 
+                title="Duration" 
+                disabled />
+              <input 
+                id="diabete_duration_year" 
+                name="diabete_duration_year" 
                 type="text"
-                class="form-control age_of_onset"
+                class="form-control age_of_onset" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'diabete_duration_year');_calculateOnsetDateDuration('diabete_duration_year','diabete_duration');"
-                placeholder="Age of Onset"
-                title="Age of Onset"
-                disabled
-              />
+                placeholder="Age of Onset" 
+                title="Age of Onset" 
+                disabled />
             </div>
           </div>
         </div>
       </div>
       <div class="row mt-2">
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="hypertension"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="hypertension">
           Hypertension
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="hypertension_y"
-                  name="hypertension"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="hypertension_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input" id="hypertension_y" name="hypertension" value="Y" />
+                <label class="custom-control-label" for="hypertension_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="hypertension_n"
-                  name="hypertension"
-                  value="N"
-                />
-                <label class="custom-control-label" for="hypertension_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input" id="hypertension_n" name="hypertension" value="N" />
+                <label class="custom-control-label" for="hypertension_n">No</label>
               </div>
             </div>
           </div>
@@ -1251,87 +978,54 @@
         <div class="col">
           <div class="row">
             <div class="col-sm-2">
-              <input
-                id="hba1c"
-                name="hba1c"
-                type="text"
-                class="form-control"
+              <input 
+                id="hba1c" 
+                name="hba1c" 
+                type="text" 
+                class="form-control" 
                 maxlength="3"
-                onkeyup="chkposval(this,2,'hba1c');"
-              />
+                onkeyup="chkposval(this,2,'hba1c');" />
             </div>
             <div class="col mt-1">mmol/mol</div>
           </div>
         </div>
       </div>
       <div class="row mt-2">
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="hypercholesteremia"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="hypercholesteremia">
           Hypercholesteremia
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="hypercholesteremia_y"
-                  name="hypercholesteremia"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="hypercholesteremia_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input" id="hypercholesteremia_y" name="hypercholesteremia"
+                  value="Y" />
+                <label class="custom-control-label" for="hypercholesteremia_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="hypercholesteremia_n"
-                  name="hypercholesteremia"
-                  value="N"
-                />
-                <label class="custom-control-label" for="hypercholesteremia_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input" id="hypercholesteremia_n" name="hypercholesteremia"
+                  value="N" />
+                <label class="custom-control-label" for="hypercholesteremia_n">No</label>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="smoking"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="smoking">
           Smoking
         </div>
         <div class="col">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="smoking_y"
-                  name="smoking"
-                  value="Y"
-                />
+                <input type="radio" class="custom-control-input" id="smoking_y" name="smoking" value="Y" />
                 <label class="custom-control-label" for="smoking_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="smoking_n"
-                  name="smoking"
-                  value="N"
-                />
+                <input type="radio" class="custom-control-input" id="smoking_n" name="smoking" value="N" />
                 <label class="custom-control-label" for="smoking_n">No</label>
               </div>
             </div>
@@ -1339,251 +1033,175 @@
         </div>
       </div>
       <div class="row mt-2">
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="stroke_ind"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="stroke_ind">
           Stroke History
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="stroke_ind_y"
-                  name="stroke_ind"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="stroke_ind_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="stroke_ind_y" name="stroke_ind"
+                  value="Y" />
+                <label class="custom-control-label" for="stroke_ind_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="stroke_ind_n"
-                  name="stroke_ind"
-                  value="N"
-                />
-                <label class="custom-control-label" for="stroke_ind_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="stroke_ind_n" name="stroke_ind"
+                  value="N" />
+                <label class="custom-control-label" for="stroke_ind_n">No</label>
               </div>
             </div>
             <div class="col-sm-8">
-              <input
-                id="stroke_duration"
-                name="stroke_duration"
-                type="text"
-                class="form-control duration"
+              <input 
+                id="stroke_duration" 
+                name="stroke_duration" 
+                type="text" 
+                class="form-control duration" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'stroke_duration');_calculateOnsetDateDuration('stroke_duration','stroke_year');"
-                placeholder="Duration"
-                title="Duration"
-                disabled
-              />
-              <input
-                id="stroke_year"
-                name="stroke_year"
-                type="text"
-                class="form-control age_of_onset"
+                placeholder="Duration" 
+                title="Duration" 
+                disabled />
+              <input 
+                id="stroke_year" 
+                name="stroke_year" 
+                type="text" 
+                class="form-control age_of_onset" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'stroke_year');_calculateOnsetDateDuration('stroke_year','stroke_duration');"
-                placeholder="Age of Onset"
-                title="Age of Onset"
-                disabled
-              />
+                placeholder="Age of Onset" 
+                title="Age of Onset" 
+                disabled />
             </div>
           </div>
         </div>
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="heart_ind"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="heart_ind">
           Heart Disease History
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="heart_ind_y"
-                  name="heart_ind"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="heart_ind_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="heart_ind_y" name="heart_ind"
+                  value="Y" />
+                <label class="custom-control-label" for="heart_ind_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="heart_ind_n"
-                  name="heart_ind"
-                  value="N"
-                />
+                <input type="radio" class="custom-control-input radio_year" id="heart_ind_n" name="heart_ind"
+                  value="N" />
                 <label class="custom-control-label" for="heart_ind_n">No</label>
               </div>
             </div>
             <div class="col-sm-8">
-              <input
-                id="heart_duration"
-                name="heart_duration"
-                type="text"
-                class="form-control duration"
+              <input 
+                id="heart_duration" 
+                name="heart_duration" 
+                type="text" 
+                class="form-control duration" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'heart_duration');_calculateOnsetDateDuration('heart_duration','heart_year');"
-                placeholder="Duration"
-                title="Duration"
-                disabled
-              />
-              <input
-                id="heart_year"
-                name="heart_year"
-                type="text"
-                class="form-control age_of_onset"
+                placeholder="Duration" 
+                title="Duration" 
+                disabled />
+              <input 
+                id="heart_year" 
+                name="heart_year" 
+                type="text" 
+                class="form-control age_of_onset" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'heart_year');_calculateOnsetDateDuration('heart_year','heart_duration');"
-                placeholder="Age of Onset"
-                title="Age of Onset"
-                disabled
-              />
+                placeholder="Age of Onset" 
+                title="Age of Onset" 
+                disabled />
             </div>
           </div>
         </div>
       </div>
       <div class="row my-2">
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="chronic_ind"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="chronic_ind">
           Chronic History
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="chronic_ind_y"
-                  name="chronic_ind"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="chronic_ind_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="chronic_ind_y" name="chronic_ind"
+                  value="Y" />
+                <label class="custom-control-label" for="chronic_ind_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="chronic_ind_n"
-                  name="chronic_ind"
-                  value="N"
-                />
-                <label class="custom-control-label" for="chronic_ind_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="chronic_ind_n" name="chronic_ind"
+                  value="N" />
+                <label class="custom-control-label" for="chronic_ind_n">No</label>
               </div>
             </div>
             <div class="col-sm-8">
-              <input
-                id="chronic_duration"
-                name="chronic_duration"
-                type="text"
-                class="form-control duration"
+              <input 
+                id="chronic_duration" 
+                name="chronic_duration" 
+                type="text" class="form-control duration"
                 maxlength="3"
                 onkeyup="chkposval(this,2,'chronic_duration');_calculateOnsetDateDuration('chronic_duration','chronic_year');"
-                placeholder="Duration"
-                title="Duration"
-                disabled
-              />
-              <input
-                id="chronic_year"
-                name="chronic_year"
-                type="text"
-                class="form-control age_of_onset"
+                placeholder="Duration" 
+                title="Duration" 
+                disabled />
+              <input 
+                id="chronic_year" 
+                name="chronic_year" 
+                type="text" 
+                class="form-control age_of_onset" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'chronic_year');_calculateOnsetDateDuration('chronic_year','chronic_duration');"
-                placeholder="Age of Onset"
-                title="Age of Onset"
-                disabled
-              />
+                placeholder="Age of Onset" 
+                title="Age of Onset" 
+                disabled />
             </div>
           </div>
         </div>
-        <div
-          class="col-lg-2 col-sm-12 mt-1 radio-label"
-          data-radio-obj="kidney_ind"
-        >
+        <div class="col-lg-2 col-sm-12 mt-1 radio-label" data-radio-obj="kidney_ind">
           Kidney Disease History
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="row">
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="kidney_ind_y"
-                  name="kidney_ind"
-                  value="Y"
-                />
-                <label class="custom-control-label" for="kidney_ind_y"
-                  >Yes</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="kidney_ind_y" name="kidney_ind"
+                  value="Y" />
+                <label class="custom-control-label" for="kidney_ind_y">Yes</label>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="custom-control custom-radio mt-1">
-                <input
-                  type="radio"
-                  class="custom-control-input radio_year"
-                  id="kidney_ind_n"
-                  name="kidney_ind"
-                  value="N"
-                />
-                <label class="custom-control-label" for="kidney_ind_n"
-                  >No</label
-                >
+                <input type="radio" class="custom-control-input radio_year" id="kidney_ind_n" name="kidney_ind"
+                  value="N" />
+                <label class="custom-control-label" for="kidney_ind_n">No</label>
               </div>
             </div>
             <div class="col-sm-8">
-              <input
-                id="kidney_duration"
-                name="kidney_duration"
-                type="text"
-                class="form-control duration"
+              <input 
+                id="kidney_duration" 
+                name="kidney_duration" 
+                type="text" class="form-control duration" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'kidney_duration');_calculateOnsetDateDuration('kidney_duration','kidney_year');"
-                placeholder="Duration"
-                title="Duration"
-                disabled
-              />
-              <input
-                id="kidney_year"
-                name="kidney_year"
-                type="text"
-                class="form-control age_of_onset"
+                placeholder="Duration" 
+                title="Duration" 
+                disabled />
+              <input 
+                id="kidney_year" 
+                name="kidney_year" 
+                type="text" 
+                class="form-control age_of_onset" 
                 maxlength="3"
                 onkeyup="chkposval(this,2,'kidney_year');_calculateOnsetDateDuration('kidney_year','kidney_duration');"
-                placeholder="Age of Onset"
-                duration="Age of Onset"
-                disabled
-              />
+                placeholder="Age of Onset" 
+                duration="Age of Onset" 
+                disabled />
             </div>
           </div>
         </div>
@@ -1592,13 +1210,7 @@
         <div class="col-12">
           <div class="form-group">
             <label for="remarks">Remarks</label>
-            <textarea
-              class="form-control"
-              id="remarks"
-              name="remarks"
-              rows="3"
-              maxlength="500"
-            ></textarea>
+            <textarea class="form-control" id="remarks" name="remarks" rows="3" maxlength="500"></textarea>
           </div>
         </div>
       </div>
@@ -1606,18 +1218,11 @@
   </div>
   <div class="row mt-3 mx-1">
     <div class="col-lg-6 col-md-12 text-left p-0 m-0">
-      <div
-        class="container-fluit border rounded border-secondary p-0 ml-0 mr-lg-2 mr-md-0 mr-sm-0"
-      >
+      <div class="container-fluit border rounded border-secondary p-0 ml-0 mr-lg-2 mr-md-0 mr-sm-0">
         <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
           {{ "Right Eye" | translate }} (OD)
         </div>
-        <div
-          class="row m-0 p-0"
-          id="img_container_right"
-          data-file-obj="eye_img_right"
-          data-var-obj="_right_files"
-        >
+        <div class="row m-0 p-0" id="img_container_right" data-file-obj="eye_img_right" data-var-obj="_right_files">
           <div class="col-md-12 col-12 m-0 p-0">
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-0">
@@ -1629,33 +1234,17 @@
             </div>
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 pl-1">
-                <div
-                  id="r1"
-                  (click)="fileRight1.click()"
-                  (drop)="onFileDropRight1($event)"
+                <div id="r1" (click)="fileRight1.click()" (drop)="onFileDropRight1($event)"
                   (dragover)="onDragOverRight1($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
-                  data-file-obj="eye_img_right"
-                  data-var-obj="_right_files"
-                  style="height: 210px"
-                >
+                  data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px">
                   <ng-container *ngIf="imagePreviewRight1">
-                    <button
-                      type="button"
-                      class="btn btn-danger img-delete btn-del"
-                      data-var-obj="_right_files"
-                      data-img-seq="1"
-                      (click)="onDeleteImageRight1($event)"
-                    >
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_right_files"
+                      data-img-seq="1" (click)="onDeleteImageRight1($event)">
                       <i class="fa fa-trash-alt"></i>
                     </button>
                   </ng-container>
-                  <img
-                    align="middle"
-                    class="img-fluid"
-                    [src]="displayImageRight1"
-                    style="height: 80%;"
-                  />
+                  <img align="middle" class="img-fluid" [src]="displayImageRight1" style="height: 80%;" />
                   <ng-container *ngIf="!imagePreviewRight1">
                     <div class="col-12 text-center">
                       {{ "Click or drag image here" | translate }}
@@ -1664,33 +1253,17 @@
                 </div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div
-                  id="r2"
-                  (click)="fileRight2.click()"
-                  (drop)="onFileDropRight2($event)"
+                <div id="r2" (click)="fileRight2.click()" (drop)="onFileDropRight2($event)"
                   (dragover)="onDragOverRight2($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
-                  data-file-obj="eye_img_right"
-                  data-var-obj="_right_files"
-                  style="height: 210px"
-                >
+                  data-file-obj="eye_img_right" data-var-obj="_right_files" style="height: 210px">
                   <ng-container *ngIf="imagePreviewRight2">
-                    <button
-                      type="button"
-                      class="btn btn-danger img-delete btn-del"
-                      data-var-obj="_right_files"
-                      data-img-seq="1"
-                      (click)="onDeleteImageRight2($event)"
-                    >
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_right_files"
+                      data-img-seq="1" (click)="onDeleteImageRight2($event)">
                       <i class="fa fa-trash-alt"></i>
                     </button>
                   </ng-container>
-                  <img
-                    align="middle"
-                    class="img-fluid"
-                    [src]="displayImageRight2"
-                    style="height: 80%;"
-                  />
+                  <img align="middle" class="img-fluid" [src]="displayImageRight2" style="height: 80%;" />
                   <ng-container *ngIf="!imagePreviewRight2">
                     <div class="col-12 text-center">
                       {{ "Click or drag image here" | translate }}
@@ -1701,13 +1274,8 @@
             </div>
           </div>
           <div class="col-md-4 col-12 m-0 p-0 invisible">
-            <div
-              id="right_result"
-              class="container-fluit ml-2 mr-0 my-0 p-0 invisible"
-            >
-              <div
-                class="row bg-secondary text-white m-1 p-0 justify-content-center result_title"
-              >
+            <div id="right_result" class="container-fluit ml-2 mr-0 my-0 p-0 invisible">
+              <div class="row bg-secondary text-white m-1 p-0 justify-content-center result_title">
                 Grading Result
               </div>
             </div>
@@ -1716,18 +1284,11 @@
       </div>
     </div>
     <div class="col-lg-6 col-md-12 text-right p-0 m-0">
-      <div
-        class="container-fluit border rounded border-secondary p-0 ml-lg-2 ml-md-0 ml-sm-0 mt-lg-0 mt-md-2 mt-sm-2"
-      >
+      <div class="container-fluit border rounded border-secondary p-0 ml-lg-2 ml-md-0 ml-sm-0 mt-lg-0 mt-md-2 mt-sm-2">
         <div class="row bg-hd1 text-white justify-content-center py-1 m-0">
           {{ "Left Eye" | translate }} (OS)
         </div>
-        <div
-          class="row m-0 p-0"
-          id="img_container_left"
-          data-file-obj="eye_img_left"
-          data-var-obj="_left_files"
-        >
+        <div class="row m-0 p-0" id="img_container_left" data-file-obj="eye_img_left" data-var-obj="_left_files">
           <div class="col-md-12 col-12 m-0 p-0">
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-0">
@@ -1739,33 +1300,17 @@
             </div>
             <div class="row p-0 m-0">
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div
-                  id="l1"
-                  (click)="fileLeft1.click()"
-                  (drop)="onFileDropLeft1($event)"
+                <div id="l1" (click)="fileLeft1.click()" (drop)="onFileDropLeft1($event)"
                   (dragover)="onDragOverLeft1($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
-                  data-file-obj="eye_img_left"
-                  data-var-obj="_left_files"
-                  style="height: 210px"
-                >
+                  data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px">
                   <ng-container *ngIf="imagePreviewLeft1">
-                    <button
-                      type="button"
-                      class="btn btn-danger img-delete btn-del"
-                      data-var-obj="_left_files"
-                      data-img-seq="1"
-                      (click)="onDeleteImageLeft1($event)"
-                    >
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_left_files"
+                      data-img-seq="1" (click)="onDeleteImageLeft1($event)">
                       <i class="fa fa-trash-alt"></i>
                     </button>
                   </ng-container>
-                  <img
-                    align="middle"
-                    class="img-fluid"
-                    [src]="displayImageLeft1"
-                    style="height: 80%;"
-                  />
+                  <img align="middle" class="img-fluid" [src]="displayImageLeft1" style="height: 80%;" />
                   <ng-container *ngIf="!imagePreviewLeft1">
                     <div class="col-12 text-center">
                       {{ "Click or drag image here" | translate }}
@@ -1774,34 +1319,17 @@
                 </div>
               </div>
               <div class="col-md-6 col-12 mt-3 p-1">
-                <div
-                  id="l2"
-                  (click)="fileLeft2.click()"
-                  (drop)="onFileDropLeft2($event)"
+                <div id="l2" (click)="fileLeft2.click()" (drop)="onFileDropLeft2($event)"
                   (dragover)="onDragOverLeft2($event)"
                   class="row border rounded justify-content-center my-1 ml-2 mr-2 align-items-center img_holder img_container"
-                  data-file-obj="eye_img_left"
-                  data-var-obj="_left_files"
-                  style="height: 210px"
-                >
+                  data-file-obj="eye_img_left" data-var-obj="_left_files" style="height: 210px">
                   <ng-container *ngIf="imagePreviewLeft2">
-                    <button
-                      type="button"
-                      class="btn btn-danger img-delete btn-del"
-                      data-var-obj="_left_files"
-                      data-img-seq="1"
-                      (click)="onDeleteImageLeft2($event)"
-                    >
+                    <button type="button" class="btn btn-danger img-delete btn-del" data-var-obj="_left_files"
+                      data-img-seq="1" (click)="onDeleteImageLeft2($event)">
                       <i class="fa fa-trash-alt"></i>
                     </button>
                   </ng-container>
-                  <img
-                    id
-                    align="middle"
-                    class="img-fluid"
-                    [src]="displayImageLeft2"
-                    style="height: 80%;"
-                  />
+                  <img id align="middle" class="img-fluid" [src]="displayImageLeft2" style="height: 80%;" />
                   <ng-container *ngIf="!imagePreviewLeft2">
                     <div class="col-12 text-center">
                       {{ "Click or drag image here" | translate }}
@@ -1812,13 +1340,8 @@
             </div>
           </div>
           <div class="col-md-4 col-12 m-0 p-0 invisible">
-            <div
-              id="left_result"
-              class="container-fluit ml-2 mr-0 my-0 p-0 invisible"
-            >
-              <div
-                class="row bg-secondary text-white m-1 p-0 justify-content-center result_title"
-              >
+            <div id="left_result" class="container-fluit ml-2 mr-0 my-0 p-0 invisible">
+              <div class="row bg-secondary text-white m-1 p-0 justify-content-center result_title">
                 Grading Result
               </div>
             </div>
@@ -1832,8 +1355,7 @@
     <div class="col-12 bg-assessment">
       <div class="row pt-2 px-2">
         <div
-          class="col-12 bg-hd1 text-white xtext-center xd-flex xjustify-content-center py-1 d-flex align-items-center"
-        >
+          class="col-12 bg-hd1 text-white xtext-center xd-flex xjustify-content-center py-1 d-flex align-items-center">
           <i class="fa fa-eye fa-lg"></i>&nbsp;&nbsp;SELENA+ Assessment
           <div class="pl-2 d-none" id="unverify_banner">
             (Unverified Result)
@@ -1851,22 +1373,16 @@
                     <div class="col-12 xborder-right xb-divider">
                       <div class="row">
                         <div class="col-4">&nbsp;</div>
-                        <div
-                          class="col-4 py-2 xborder result_label font-weight-bold xtext-center"
-                        >
+                        <div class="col-4 py-2 xborder result_label font-weight-bold xtext-center">
                           RIGHT EYE
                         </div>
-                        <div
-                          class="col-4 py-2 xborder result_label font-weight-bold xtext-center"
-                        >
+                        <div class="col-4 py-2 xborder result_label font-weight-bold xtext-center">
                           LEFT EYE
                         </div>
                       </div>
 
                       <div class="row d-none" id="result_dr">
-                        <div
-                          class="col-4 py-1 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">
                           Diabetic Retinopathy
                         </div>
                         <div class="col-4 py-1 xborder result_detail">
@@ -1888,14 +1404,10 @@
                       </div>
 
                       <div class="row d-none" id="result_gla">
-                        <div
-                          class="col-4 py-1 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">
                           Glaucoma Suspect
                         </div>
-                        <div
-                          class="col-4 py-1 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-4 py-1 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="rt_gla_icon"></td>
@@ -1903,9 +1415,7 @@
                             </tr>
                           </table>
                         </div>
-                        <div
-                          class="col-4 py-1 xborder result_detail xtext-right"
-                        >
+                        <div class="col-4 py-1 xborder result_detail xtext-right">
                           <table>
                             <tr>
                               <td style="width: 30px" id="lt_gla_icon"></td>
@@ -1916,14 +1426,10 @@
                       </div>
 
                       <div class="row d-none" id="result_amd">
-                        <div
-                          class="col-4 py-1 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-4 py-1 xborder result_label font-weight-bold">
                           AMD
                         </div>
-                        <div
-                          class="col-4 py-1 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-4 py-1 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="rt_amd_icon"></td>
@@ -1931,9 +1437,7 @@
                             </tr>
                           </table>
                         </div>
-                        <div
-                          class="col-4 py-1 xborder result_detail xtext-right"
-                        >
+                        <div class="col-4 py-1 xborder result_detail xtext-right">
                           <table>
                             <tr>
                               <td style="width: 30px" id="lt_amd_icon"></td>
@@ -1956,9 +1460,7 @@
   <div class="row mt-2 mx-1 result_div d-none" id="result_vuno">
     <div class="col-12 bg-assessment">
       <div class="row pt-2 px-2">
-        <div
-          class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center"
-        >
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
           <i class="fa fa-eye fa-lg"></i>&nbsp;&nbsp;VUNO Med-Fundus AI
           Assessment
         </div>
@@ -1992,18 +1494,12 @@
                             </div>
                             <div class="col-4 xtext-center">
                               <div class="row xp-0 xm-0">
-                                <div
-                                  class="col-lg-12 col-md-12 col-12 pt-4"
-                                  id="vuno_result_right"
-                                ></div>
+                                <div class="col-lg-12 col-md-12 col-12 pt-4" id="vuno_result_right"></div>
                               </div>
                             </div>
                             <div class="col-4 xtext-center">
                               <div class="row xp-0 xm-0">
-                                <div
-                                  class="col-lg-12 col-md-12 col-12 pt-4"
-                                  id="vuno_result_left"
-                                ></div>
+                                <div class="col-lg-12 col-md-12 col-12 pt-4" id="vuno_result_left"></div>
                               </div>
                             </div>
                           </div>
@@ -2023,16 +1519,9 @@
   <div class="row mt-2 mx-1 result_div d-none" id="result_kidney">
     <div class="col-12 bg-assessment">
       <div class="row pt-2 px-2">
-        <div
-          class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center"
-        >
-          <img
-            id
-            align="middle"
-            class="img-fluid pr-1"
-            src="assets/img/submit-image/kidney.png"
-            style="max-height: 30px;"
-          />RetiKid Assessment
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
+          <img id align="middle" class="img-fluid pr-1" src="assets/img/submit-image/kidney.png"
+            style="max-height: 30px;" />RetiKid Assessment
         </div>
       </div>
 
@@ -2045,14 +1534,10 @@
                   <div class="row">
                     <div class="col-12 xborder-right xb-divider">
                       <div class="row">
-                        <div
-                          class="col-6 py-2 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">
                           {{ "Chronic Kidney Disease" | translate }}
                         </div>
-                        <div
-                          class="col-6 py-2 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="ckd_icon"></td>
@@ -2075,9 +1560,7 @@
   <div class="row mt-2 mx-1 result_div d-none" id="result_mediwhale">
     <div class="col-12 bg-assessment">
       <div class="row pt-2 px-2">
-        <div
-          class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center"
-        >
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
           <i class="fa fa-heartbeat fa-lg"></i>&nbsp;&nbsp;DrNoon Reti-CVD
           Assessment
         </div>
@@ -2092,21 +1575,14 @@
                   <div class="row">
                     <div class="col-12 xborder-right xb-divider">
                       <div class="row">
-                        <div
-                          class="col-6 py-2 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">
                           Cardiovascular Disease Risk Outcome
                         </div>
-                        <div
-                          class="col-6 py-2 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="cvd_icon"></td>
-                              <td
-                                id="medi_cvd_result"
-                                style="text-transform: capitalize"
-                              ></td>
+                              <td id="medi_cvd_result" style="text-transform: capitalize"></td>
                             </tr>
                           </table>
                         </div>
@@ -2125,9 +1601,7 @@
   <div class="row mt-2 mx-1 result_div d-none" id="result_bioage">
     <div class="col-12 bg-assessment">
       <div class="row pt-2 px-2">
-        <div
-          class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center"
-        >
+        <div class="col-12 bg-hd1 text-white xtext-center py-1 d-flex align-items-center">
           <i class="fa fa-heartbeat fa-lg"></i>&nbsp;&nbsp;Toku Eyes Assessment
         </div>
       </div>
@@ -2141,21 +1615,14 @@
                   <div class="row d-none" id="toku_bioage_ai">
                     <div class="col-12 xborder-right xb-divider">
                       <div class="row">
-                        <div
-                          class="col-6 py-2 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">
                           Biological Age
                         </div>
-                        <div
-                          class="col-6 py-2 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="bioage_icon"></td>
-                              <td
-                                id="bioage_result"
-                                style="text-transform: capitalize"
-                              ></td>
+                              <td id="bioage_result" style="text-transform: capitalize"></td>
                             </tr>
                           </table>
                         </div>
@@ -2165,21 +1632,14 @@
                   <div class="row d-none" id="toku_cvd_ai">
                     <div class="col-12 xborder-right xb-divider">
                       <div class="row">
-                        <div
-                          class="col-6 py-2 xborder result_label font-weight-bold"
-                        >
+                        <div class="col-6 py-2 xborder result_label font-weight-bold">
                           Cardiovascular Risk
                         </div>
-                        <div
-                          class="col-6 py-2 xborder result_detail xtext-right xtext-success"
-                        >
+                        <div class="col-6 py-2 xborder result_detail xtext-right xtext-success">
                           <table>
                             <tr>
                               <td style="width: 30px" id="toku_cvd_icon"></td>
-                              <td
-                                id="toku_cvd_result"
-                                style="text-transform: capitalize"
-                              ></td>
+                              <td id="toku_cvd_result" style="text-transform: capitalize"></td>
                             </tr>
                           </table>
                         </div>
@@ -2204,23 +1664,14 @@
   </div>
   <div id="bottom_btns" class="row mt-1" [hidden]="isCollapse">
     <div class="col-12 text-right">
-      <button
-        id="imgAcquire"
-        type="button"
-        class="btn btn-primary m-1 form_acquire"
-        (click)="onModalAcquireImage()"
-      >
+      <button id="imgAcquire" type="button" class="btn btn-primary m-1 form_acquire" (click)="onModalAcquireImage()">
         <i class="fas fa-camera"></i> {{ "Acquire Image" | translate }}
       </button>
 
       <button type="button" class="btn btn-primary m-1 form_submit">
         <i class="fa fa-cloud-upload-alt"></i> {{ "Submit" | translate }}
       </button>
-      <button
-        type="button"
-        class="btn btn-primary m-1 form_reset"
-        (click)="onReset()"
-      >
+      <button type="button" class="btn btn-primary m-1 form_reset" (click)="onReset()">
         <i class="fa fa-redo"></i> {{ "Reset" | translate }}
       </button>
       <button type="button" class="btn btn-primary m-1 form_report" disabled>

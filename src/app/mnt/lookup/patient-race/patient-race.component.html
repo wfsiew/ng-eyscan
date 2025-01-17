@@ -1,45 +1,23 @@
-<app-header
-  [reload]="'/mnt/lookup/patient-race'"
-  [headerid]="'fn0'"
-  [title]="'Maintain Lookup Code' | translate"
-></app-header>
+<app-header [reload]="'/mnt/lookup/patient-race'" [headerid]="'fn0'"
+  [title]="'Maintain Lookup Code' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +34,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,81 +55,26 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-4 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link lookup"
-          id="lookup_LANGUAGE_CD"
-          data-toggle="pill"
-          data-group="LANGUAGE_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/language')"
-          >{{ "Language" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
+        <a class="nav-link lookup" id="lookup_LANGUAGE_CD" data-toggle="pill" data-group="LANGUAGE_CD" data-std="Y"
+          data-function="fn0_5" data-startupfile href role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/lookup/language')">{{ "Language" | translate }}</a>
 
-        <a
-          class="nav-link lookup active"
-          id="lookup_RACE_CD"
-          data-toggle="pill"
-          data-group="RACE_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          riole="tab"
-          aria-controls="v-pills-user"
-          aria-selected="true"
-          (click)="goto('/mnt/lookup/patient-race', true)"
-          >{{ "Patient Race" | translate }}</a
-        >
+        <a class="nav-link lookup active" id="lookup_RACE_CD" data-toggle="pill" data-group="RACE_CD" data-std="Y"
+          data-function="fn0_5" data-startupfile href riole="tab" aria-controls="v-pills-user" aria-selected="true"
+          (click)="goto('/mnt/lookup/patient-race', true)">{{ "Patient Race" | translate }}</a>
 
-        <a
-          class="nav-link lookup"
-          id="lookup_PINHOLE_CD"
-          data-toggle="pill"
-          data-group="PINHOLE_CD"
-          data-std="N"
-          data-function="fn0_5"
-          data-startupfile="mnt/visual_acuity/index.cfm"
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/visual-acuity')"
-          >{{ "Visual Acuity" | translate }}</a
-        >
+        <a class="nav-link lookup" id="lookup_PINHOLE_CD" data-toggle="pill" data-group="PINHOLE_CD" data-std="N"
+          data-function="fn0_5" data-startupfile="mnt/visual_acuity/index.cfm" href role="tab"
+          aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/lookup/visual-acuity')">{{ "Visual Acuity" | translate }}</a>
 
-        <a
-          class="nav-link lookup"
-          id="lookup_VUNO_FUNDUS_AI_FDG_CD"
-          data-toggle="pill"
-          data-group="VUNO_FUNDUS_AI_FDG_CD"
-          data-std="Y"
-          data-function="fn0_5"
-          data-startupfile
-          href
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/lookup/vuno-fundus')"
-          >{{ "VUNO Fundus AI Findings" | translate }}</a
-        >
+        <a class="nav-link lookup" id="lookup_VUNO_FUNDUS_AI_FDG_CD" data-toggle="pill"
+          data-group="VUNO_FUNDUS_AI_FDG_CD" data-std="Y" data-function="fn0_5" data-startupfile href role="tab"
+          aria-controls="v-pills-user" aria-selected="false" (click)="goto('/mnt/lookup/vuno-fundus')">{{ "VUNO Fundus AI Findings" | translate }}</a>
       </div>
 
-      <div
-        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
-        id="v-pills-tabContent"
-      >
+      <div class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12" id="v-pills-tabContent">
         <div class="tab-pane fade xborder show active" role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
@@ -174,53 +82,26 @@
                 {{ "Patient Race" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
-                <form
-                  name="frmFilter"
-                  id="frmFilter"
-                  class="form-inline float-right fmx"
-                  action="/bn_moh_uat/mnt/lookup/index.cfm?tid=fn0_5"
-                  method="post"
-                >
-                  <input
-                    type="hidden"
-                    name="ugroup"
-                    id="ugroup"
-                    value="RACE_CD"
-                  />
+                <form name="frmFilter" id="frmFilter" class="form-inline float-right fmx"
+                  action="/bn_moh_uat/mnt/lookup/index.cfm?tid=fn0_5" method="post">
+                  <input type="hidden" name="ugroup" id="ugroup" value="RACE_CD" />
                   <input type="hidden" name="recno" id="recno" value="25" />
                   <div class="form-group mr-2">
-                    <input
-                      name="desc"
-                      id="desc"
-                      type="text"
-                      class="form-control"
-                      placeholder="{{ 'Search' | translate }}..."
-                      value
-                    />
+                    <input name="desc" id="desc" type="text" class="form-control"
+                      placeholder="{{ 'Search' | translate }}..." value />
                   </div>
                   <div class="form-group mr-2">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnSearch"
-                        id="btnSearch"
-                        class="form-control btn bg-primary text-white"
-                        [title]="'Search' | translate"
-                      >
+                      <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white"
+                        [title]="'Search' | translate">
                         <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnNew"
-                        id="btnNew"
-                        class="form-control btn bg-primary text-white"
-                        data-group="RACE_CD"
-                        data-std="Y"
-                        title="New"
-                        (click)="onCreate()"
-                      >
+                      <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white"
+                        data-group="RACE_CD" data-std="Y" title="New" (click)="onCreate()">
                         <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>
@@ -245,10 +126,7 @@
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12"></div>
                 </div>
 
-                <div
-                  id="pg-1"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">1</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Chinese
@@ -258,25 +136,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_1"
-                      name="pedit"
-                      class="pedit"
-                      href="#"
-                      data-id="1"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      (click)="onEdit()"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="1" data-group="RACE_CD" data-std="Y"
+                      title="Edit" (click)="onEdit()"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-2"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">2</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Malay</div>
 
@@ -284,24 +149,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_2"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="2"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_2" name="pedit" class="pedit" href data-id="2" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-3"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">3</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Indian</div>
 
@@ -309,24 +162,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_3"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="3"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_3" name="pedit" class="pedit" href data-id="3" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-4"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">45</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Vietnamese
@@ -336,24 +177,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_4"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="45"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_4" name="pedit" class="pedit" href data-id="45" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-5"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">46</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Filipino
@@ -363,24 +192,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_5"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="46"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_5" name="pedit" class="pedit" href data-id="46" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-6"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-6" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">47</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">White</div>
 
@@ -388,24 +205,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_6"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="47"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_6" name="pedit" class="pedit" href data-id="47" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-7"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-7" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">48</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Bangladeshi
@@ -415,24 +220,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_7"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="48"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_7" name="pedit" class="pedit" href data-id="48" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-8"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-8" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">49</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Burma</div>
 
@@ -440,24 +233,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_8"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="49"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_8" name="pedit" class="pedit" href data-id="49" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-9"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-9" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">4</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Others</div>
 
@@ -465,24 +246,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_9"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="4"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_9" name="pedit" class="pedit" href data-id="4" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-10"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-10" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">8</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Acehnese
@@ -492,24 +261,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_10"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="8"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_10" name="pedit" class="pedit" href data-id="8" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-11"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-11" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">9</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     African Americans
@@ -519,24 +276,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_11"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="9"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_11" name="pedit" class="pedit" href data-id="9" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-12"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-12" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">10</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Americans
@@ -546,24 +291,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_12"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="10"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_12" name="pedit" class="pedit" href data-id="10" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-13"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-13" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">11</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Arabs</div>
 
@@ -571,24 +304,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_13"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="11"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_13" name="pedit" class="pedit" href data-id="11" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-14"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-14" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">12</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Asian American
@@ -598,24 +319,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_14"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="12"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_14" name="pedit" class="pedit" href data-id="12" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-15"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-15" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">13</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Balinese
@@ -625,24 +334,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_15"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="13"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_15" name="pedit" class="pedit" href data-id="13" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-16"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-16" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">14</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Bamar</div>
 
@@ -650,24 +347,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_16"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="14"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_16" name="pedit" class="pedit" href data-id="14" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-17"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-17" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">15</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Batak</div>
 
@@ -675,24 +360,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_17"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="15"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_17" name="pedit" class="pedit" href data-id="15" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-18"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-18" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">16</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     British
@@ -702,24 +375,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_18"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="16"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_18" name="pedit" class="pedit" href data-id="16" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-19"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-19" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">17</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Danes</div>
 
@@ -727,24 +388,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_19"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="17"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_19" name="pedit" class="pedit" href data-id="17" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-20"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-20" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">18</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Dutch</div>
 
@@ -752,24 +401,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_20"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="18"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_20" name="pedit" class="pedit" href data-id="18" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-21"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-21" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">19</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     English
@@ -779,24 +416,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_21"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="19"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_21" name="pedit" class="pedit" href data-id="19" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-22"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-22" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">20</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     European Americans
@@ -806,24 +431,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_22"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="20"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_22" name="pedit" class="pedit" href data-id="20" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-23"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-23" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">21</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Finns</div>
 
@@ -831,24 +444,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_23"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="21"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_23" name="pedit" class="pedit" href data-id="21" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-24"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-24" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">22</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">French</div>
 
@@ -856,24 +457,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_24"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="22"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_24" name="pedit" class="pedit" href data-id="22" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-25"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-25" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">23</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Germans
@@ -883,25 +472,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_25"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="23"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_25" name="pedit" class="pedit" href data-id="23" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-26"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-26" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">24</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Greeks</div>
 
@@ -909,25 +485,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_26"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="24"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_26" name="pedit" class="pedit" href data-id="24" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-27"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-27" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">25</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Hispanic
@@ -937,25 +500,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_27"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="25"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_27" name="pedit" class="pedit" href data-id="25" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-28"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-28" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">26</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Hmong</div>
 
@@ -963,25 +513,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_28"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="26"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_28" name="pedit" class="pedit" href data-id="26" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-29"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-29" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">27</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Iban</div>
 
@@ -989,25 +526,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_29"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="27"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_29" name="pedit" class="pedit" href data-id="27" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-30"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-30" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">28</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Icelanders
@@ -1017,25 +541,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_30"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="28"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_30" name="pedit" class="pedit" href data-id="28" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-31"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-31" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">29</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Irish</div>
 
@@ -1043,25 +554,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_31"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="29"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_31" name="pedit" class="pedit" href data-id="29" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-32"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-32" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">30</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Italians
@@ -1071,25 +569,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_32"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="30"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_32" name="pedit" class="pedit" href data-id="30" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-33"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-33" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">31</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Japanese
@@ -1099,25 +584,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_33"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="31"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_33" name="pedit" class="pedit" href data-id="31" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-34"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-34" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">32</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Javanese
@@ -1127,25 +599,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_34"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="32"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_34" name="pedit" class="pedit" href data-id="32" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-35"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-35" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">33</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Khmer</div>
 
@@ -1153,25 +612,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_35"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="33"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_35" name="pedit" class="pedit" href data-id="33" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-36"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-36" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">34</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Korean</div>
 
@@ -1179,25 +625,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_36"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="34"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_36" name="pedit" class="pedit" href data-id="34" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-37"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-37" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">35</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Lao</div>
 
@@ -1205,25 +638,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_37"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="35"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_37" name="pedit" class="pedit" href data-id="35" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-38"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-38" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">50</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Mongol</div>
 
@@ -1231,25 +651,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_38"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="50"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_38" name="pedit" class="pedit" href data-id="50" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-39"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-39" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">36</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Norwegians
@@ -1259,25 +666,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_39"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="36"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_39" name="pedit" class="pedit" href data-id="36" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-40"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-40" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">37</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Polish</div>
 
@@ -1285,25 +679,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_40"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="37"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_40" name="pedit" class="pedit" href data-id="37" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-41"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-41" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">38</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Portuguese
@@ -1313,25 +694,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_41"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="38"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_41" name="pedit" class="pedit" href data-id="38" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-42"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-42" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">39</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Scottish
@@ -1341,25 +709,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_42"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="39"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_42" name="pedit" class="pedit" href data-id="39" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-43"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-43" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">40</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Shan</div>
 
@@ -1367,25 +722,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_43"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="40"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_43" name="pedit" class="pedit" href data-id="40" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-44"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-44" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">41</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Sinhalese
@@ -1395,25 +737,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_44"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="41"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_44" name="pedit" class="pedit" href data-id="41" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-45"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-45" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">42</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Spaniards
@@ -1423,25 +752,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_45"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="42"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_45" name="pedit" class="pedit" href data-id="42" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-46"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-46" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">43</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Thais</div>
 
@@ -1449,25 +765,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_46"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="43"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_46" name="pedit" class="pedit" href data-id="43" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-47"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                  style="display: none"
-                >
+                <div id="pg-47" class="rec-img row p-1 xborder-bottom bg-white text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">44</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">Welsh</div>
 
@@ -1475,25 +778,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_47"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="44"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_47" name="pedit" class="pedit" href data-id="44" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-48"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                  style="display: none"
-                >
+                <div id="pg-48" class="rec-img row p-1 xborder-bottom bg-light text-dark" style="display: none">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">99</div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     Unknown
@@ -1503,17 +793,8 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Yes</div>
 
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_48"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="99"
-                      data-group="RACE_CD"
-                      data-std="Y"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_48" name="pedit" class="pedit" href data-id="99" data-group="RACE_CD" data-std="Y"
+                      title="Edit"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
               </div>
@@ -1522,12 +803,8 @@
               <div class="col-lg-4 col-md-4 col-sm-12 py-2">
                 <div class="xform-group row">
                   <label class="pl-3 pr-2 text-muted">Show </label>
-                  <select
-                    class="form-control form-control-sm custom-select custom-select-sm"
-                    name="pagerec"
-                    id="pagerec"
-                    style="max-width: 80px"
-                  >
+                  <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec"
+                    id="pagerec" style="max-width: 80px">
                     <option value="10">10</option>
                     <option value="25" selected>25</option>
                     <option value="50">50</option>
@@ -1536,51 +813,25 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
-                <span id="dispdesc" class="text-muted"
-                  >Showing 1 to 25 of 48</span
-                >
+                <span id="dispdesc" class="text-muted">Showing 1 to 25 of 48</span>
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2">
                 <ul class="pagination pagination-sm float-right">
-                  <li
-                    id="pgn_prev"
-                    class="page-item disabled"
-                    disabled
-                    data-pgn-current="1"
-                    data-pgn-start="1"
-                    data-pgn-end="25"
-                  >
+                  <li id="pgn_prev" class="page-item disabled" disabled data-pgn-current="1" data-pgn-start="1"
+                    data-pgn-end="25">
                     <a class="page-link" href>First</a>
                   </li>
 
-                  <li
-                    id="pgn_1"
-                    class="page-item active"
-                    data-pgn-current="1"
-                    data-pgn-start="1"
-                    data-pgn-end="25"
-                  >
+                  <li id="pgn_1" class="page-item active" data-pgn-current="1" data-pgn-start="1" data-pgn-end="25">
                     <a class="page-link" href>1</a>
                   </li>
 
-                  <li
-                    id="pgn_2"
-                    class="page-item"
-                    data-pgn-current="2"
-                    data-pgn-start="26"
-                    data-pgn-end="48"
-                  >
+                  <li id="pgn_2" class="page-item" data-pgn-current="2" data-pgn-start="26" data-pgn-end="48">
                     <a class="page-link" href>2</a>
                   </li>
 
-                  <li
-                    id="pgn_next"
-                    class="page-item"
-                    data-pgn-current="2"
-                    data-pgn-start="26"
-                    data-pgn-end="48"
-                  >
+                  <li id="pgn_next" class="page-item" data-pgn-current="2" data-pgn-start="26" data-pgn-end="48">
                     <a class="page-link" href>Last</a>
                   </li>
                 </ul>

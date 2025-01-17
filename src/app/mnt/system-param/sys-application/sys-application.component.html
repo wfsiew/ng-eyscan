@@ -1,45 +1,23 @@
-<app-header
-  [reload]="'/mnt/system-param/application'"
-  [headerid]="'fn0'"
-  [title]="'Manage Parameters' | translate"
-></app-header>
+<app-header [reload]="'/mnt/system-param/application'" [headerid]="'fn0'"
+  [title]="'Manage Parameters' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +34,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,45 +55,18 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-4 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link lookup"
-          id="SYSTEM"
-          data-toggle="pill"
-          data-param-type="SYSTEM"
-          data-xfunction="fn0_11"
-          href="#"
-          role="tab"
-          aria-controls="v-pills-system"
-          aria-selected="true"
-          (click)="goto('/mnt/system-param/system')"
-          >{{ "System" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
+        <a class="nav-link lookup" id="SYSTEM" data-toggle="pill" data-param-type="SYSTEM" data-xfunction="fn0_11"
+          href="#" role="tab" aria-controls="v-pills-system" aria-selected="true"
+          (click)="goto('/mnt/system-param/system')">{{ "System" | translate }}</a>
 
-        <a
-          class="nav-link lookup active"
-          id="APPLICATION"
-          data-toggle="pill"
-          data-param-type="APPLICATION"
-          data-xfunction="fn0_11"
-          href="#"
-          role="tab"
-          aria-controls="v-pills-application"
-          aria-selected="false"
-          (click)="goto('/mnt/system-param/application', true)"
-          >{{ "Application" | translate }}</a
-        >
+        <a class="nav-link lookup active" id="APPLICATION" data-toggle="pill" data-param-type="APPLICATION"
+          data-xfunction="fn0_11" href="#" role="tab" aria-controls="v-pills-application" aria-selected="false"
+          (click)="goto('/mnt/system-param/application', true)">{{ "Application" | translate }}</a>
       </div>
 
-      <div
-        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
-        id="v-pills-tabContent"
-      >
+      <div class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12" id="v-pills-tabContent">
         <div class="tab-pane fade xborder show active" role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
@@ -138,51 +74,21 @@
                 {{ "Application Parameters" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
-                <form
-                  name="frmFilter"
-                  id="frmFilter"
-                  class="form-inline float-right"
-                  action="/bn_moh_uat/mnt/system_param/index.cfm?tid=fn0_11"
-                  method="post"
-                >
+                <form name="frmFilter" id="frmFilter" class="form-inline float-right"
+                  action="/bn_moh_uat/mnt/system_param/index.cfm?tid=fn0_11" method="post">
                   <input type="hidden" name="recno" id="recno" value="25" />
-                  <input
-                    type="hidden"
-                    name="function_id"
-                    id="function_id"
-                    value="fn0_11"
-                  />
-                  <input
-                    type="hidden"
-                    name="param_code"
-                    id="param_code"
-                    value
-                  />
-                  <input
-                    type="hidden"
-                    name="param_type"
-                    id="param_type"
-                    value="APPLICATION"
-                  />
+                  <input type="hidden" name="function_id" id="function_id" value="fn0_11" />
+                  <input type="hidden" name="param_code" id="param_code" value />
+                  <input type="hidden" name="param_type" id="param_type" value="APPLICATION" />
 
                   <div class="form-group mr-2">
-                    <input
-                      name="desc"
-                      id="desc"
-                      type="text"
-                      class="form-control"
-                      placeholder="{{ 'Search' | translate }}..."
-                      value
-                    />
+                    <input name="desc" id="desc" type="text" class="form-control"
+                      placeholder="{{ 'Search' | translate }}..." value />
                   </div>
                   <div class="form-group mr-2">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnSearch"
-                        id="btnSearch"
-                        class="form-control btn bg-primary text-white"
-                        [title]="'Search' | translate"
-                      >
+                      <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white"
+                        [title]="'Search' | translate">
                         <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
@@ -206,396 +112,192 @@
                 <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-0">
                     <div class="accordion" id="accordionParameter">
-                      <div
-                        class="col-12 p-0"
-                        id="rec-ACQUIRE_IMAGE_FROM_CAMERA"
-                      >
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ACQUIRE_IMAGE_FROM_CAMERA"
-                        >
-                          <div
-                            id="chr-ACQUIRE_IMAGE_FROM_CAMERA"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-1"
-                            aria-expanded="false"
-                            aria-controls="parameter-1"
-                            style="cursor: pointer"
-                          >
+                      <div class="col-12 p-0" id="rec-ACQUIRE_IMAGE_FROM_CAMERA">
+                        <div class="card-header bg-light" id="ch-ACQUIRE_IMAGE_FROM_CAMERA">
+                          <div id="chr-ACQUIRE_IMAGE_FROM_CAMERA" class="row" data-toggle="collapse"
+                            data-target="#parameter-1" aria-expanded="false" aria-controls="parameter-1"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                              <i
-                                class="fa fa-chevron-circle-down text-secondary"
-                                id="iconparam-1"
-                              ></i>
+                              <i class="fa fa-chevron-circle-down text-secondary" id="iconparam-1"></i>
                               Acquire image from camera
                               <span class="badge badge-info">5</span>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Yes - Manual Submit
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd1"
-                                    name="padd1"
-                                    class="padd"
-                                    href="#"
-                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    (click)="onCreate($event)"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd1" name="padd1" class="padd" href="#"
+                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="0"
+                                    title="Add Organization" (click)="onCreate($event)"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit1"
-                                    name="pedit1"
-                                    class="pedit"
-                                    href="#"
-                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    (click)="onEdit($event)"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit1" name="pedit1" class="pedit" href="#"
+                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value" (click)="onEdit($event)"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata1"
-                                    name="pdata1"
-                                    class="pdata"
-                                    href
-                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata1" name="pdata1" class="pdata" href
+                                    data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        <div
-                          id="parameter-1"
-                          class="collapse"
-                          aria-labelledby="ch-ACQUIRE_IMAGE_FROM_CAMERA"
-                          xdata-parent="#accordionParameter"
-                          data-param-icon="iconparam-1"
-                        >
-                          <div
-                            class="card-body py-0"
-                            id="cb-ACQUIRE_IMAGE_FROM_CAMERA"
-                          >
+                        <div id="parameter-1" class="collapse" aria-labelledby="ch-ACQUIRE_IMAGE_FROM_CAMERA"
+                          xdata-parent="#accordionParameter" data-param-icon="iconparam-1">
+                          <div class="card-body py-0" id="cb-ACQUIRE_IMAGE_FROM_CAMERA">
                             <div class="row pl-3 pr-4 xpx-4 py-2">
-                              <div
-                                class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                              >
+                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="row bg-secondary text-light">
-                                  <div
-                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                                  >
+                                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     Organization
                                   </div>
-                                  <div
-                                    class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                  >
+                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                     Parameter Value
                                   </div>
-                                  <div
-                                    class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"
-                                  ></div>
+                                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"></div>
                                 </div>
                                 <div class="row px-3 py-2">
-                                  <div
-                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                                  >
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-2"
+                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-2"
                                       class="row py-2 border-bottom border-secondary"
-                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                      data-company-id="8"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="8">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         Belait Hospital (TOPCON)
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         No
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete2"
-                                              name="rdelete2"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete2" name="rdelete2" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Belait Hospital (TOPCON)"
-                                              data-company-id="8"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="Belait Hospital (TOPCON)" data-company-id="8"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit2"
-                                              name="redit2"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit2" name="redit2" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Belait Hospital (TOPCON)"
-                                              data-company-id="8"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="Belait Hospital (TOPCON)" data-company-id="8"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-3"
+                                    <div id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-3"
                                       class="row py-2 border-bottom border-secondary"
-                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                      data-company-id="3"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="3">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         Brunei MOH Ocular Reading Centre
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         No
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete3"
-                                              name="rdelete3"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete3" name="rdelete3" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Brunei MOH Ocular Reading Centre"
-                                              data-company-id="3"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="Brunei MOH Ocular Reading Centre" data-company-id="3"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit3"
-                                              name="redit3"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit3" name="redit3" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Brunei MOH Ocular Reading Centre"
-                                              data-company-id="3"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="Brunei MOH Ocular Reading Centre" data-company-id="3"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-4"
+                                    <div id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-4"
                                       class="row py-2 border-bottom border-secondary"
-                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                      data-company-id="5"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="5">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         RIPAS Hospital (TOPCON)
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         Yes - Manual Submit
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete4"
-                                              name="rdelete4"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete4" name="rdelete4" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="RIPAS Hospital (TOPCON)"
-                                              data-company-id="5"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="RIPAS Hospital (TOPCON)" data-company-id="5"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit4"
-                                              name="redit4"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit4" name="redit4" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="RIPAS Hospital (TOPCON)"
-                                              data-company-id="5"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="RIPAS Hospital (TOPCON)" data-company-id="5"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-5"
+                                    <div id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-5"
                                       class="row py-2 border-bottom border-secondary"
-                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                      data-company-id="7"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="7">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         Tutong Hospital (TOPCON)
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         No
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete5"
-                                              name="rdelete5"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete5" name="rdelete5" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Tutong Hospital (TOPCON)"
-                                              data-company-id="7"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="Tutong Hospital (TOPCON)" data-company-id="7"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit5"
-                                              name="redit5"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit5" name="redit5" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="Tutong Hospital (TOPCON)"
-                                              data-company-id="7"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="Tutong Hospital (TOPCON)" data-company-id="7"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-6"
-                                      class="row py-2"
-                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                      data-company-id="17"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                    <div id="cbr-ACQUIRE_IMAGE_FROM_CAMERA-6" class="row py-2"
+                                      data-param-code="ACQUIRE_IMAGE_FROM_CAMERA" data-company-id="17">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         zGrading Centre
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         No
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete6"
-                                              name="rdelete6"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete6" name="rdelete6" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="zGrading Centre"
-                                              data-company-id="17"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="zGrading Centre" data-company-id="17"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit6"
-                                              name="redit6"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit6" name="redit6" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FROM_CAMERA"
-                                              data-company-desc="zGrading Centre"
-                                              data-company-id="17"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="zGrading Centre" data-company-id="17"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
@@ -608,80 +310,34 @@
                         </div>
                       </div>
 
-                      <div
-                        class="col-12 p-0"
-                        id="rec-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                      >
-                        <div
-                          class="card-header bg-light"
-                          id="ch-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                        >
-                          <div
-                            id="chr-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-2"
-                            aria-expanded="false"
-                            aria-controls="parameter-2"
-                            style="cursor: pointer"
-                          >
+                      <div class="col-12 p-0" id="rec-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG">
+                        <div class="card-header bg-light" id="ch-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG">
+                          <div id="chr-PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-2" aria-expanded="false" aria-controls="parameter-2"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Allow image download
                               from primary care function
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Yes
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd2"
-                                    name="padd2"
-                                    class="padd"
-                                    href
-                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd2" name="padd2" class="padd" href
+                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit2"
-                                    name="pedit2"
-                                    class="pedit"
-                                    href
-                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit2" name="pedit2" class="pedit" href
+                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" data-company-id="0"
+                                    data-company-desc title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata2"
-                                    name="pdata2"
-                                    class="pdata"
-                                    href
-                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata2" name="pdata2" class="pdata" href
+                                    data-param-code="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -690,75 +346,31 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-SYSTEM_PWD_RESET_FLAG">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-SYSTEM_PWD_RESET_FLAG"
-                        >
-                          <div
-                            id="chr-SYSTEM_PWD_RESET_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-3"
-                            aria-expanded="false"
-                            aria-controls="parameter-3"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-SYSTEM_PWD_RESET_FLAG">
+                          <div id="chr-SYSTEM_PWD_RESET_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-3" aria-expanded="false" aria-controls="parameter-3"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Allow password reset
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd3"
-                                    name="padd3"
-                                    class="padd"
-                                    href
-                                    data-param-code="SYSTEM_PWD_RESET_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd3" name="padd3" class="padd" href data-param-code="SYSTEM_PWD_RESET_FLAG"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit3"
-                                    name="pedit3"
-                                    class="pedit"
-                                    href
-                                    data-param-code="SYSTEM_PWD_RESET_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit3" name="pedit3" class="pedit" href
+                                    data-param-code="SYSTEM_PWD_RESET_FLAG" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata3"
-                                    name="pdata3"
-                                    class="pdata"
-                                    href
-                                    data-param-code="SYSTEM_PWD_RESET_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata3" name="pdata3" class="pdata" href
+                                    data-param-code="SYSTEM_PWD_RESET_FLAG" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -767,65 +379,30 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-CASE_INFO_VISIBILITY_IND">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-CASE_INFO_VISIBILITY_IND"
-                        >
-                          <div
-                            id="chr-CASE_INFO_VISIBILITY_IND"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-4"
-                            aria-expanded="false"
-                            aria-controls="parameter-4"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-CASE_INFO_VISIBILITY_IND">
+                          <div id="chr-CASE_INFO_VISIBILITY_IND" class="row" data-toggle="collapse"
+                            data-target="#parameter-4" aria-expanded="false" aria-controls="parameter-4"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Assessment report case
                               information visibility indicator
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               N
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd4"
-                                    name="padd4"
-                                    class="padd"
-                                    href
-                                    data-param-code="CASE_INFO_VISIBILITY_IND"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd4" name="padd4" class="padd" href
+                                    data-param-code="CASE_INFO_VISIBILITY_IND" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit4"
-                                    name="pedit4"
-                                    class="pedit"
-                                    href
-                                    data-param-code="CASE_INFO_VISIBILITY_IND"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit4" name="pedit4" class="pedit" href
+                                    data-param-code="CASE_INFO_VISIBILITY_IND" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -835,65 +412,30 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_MEDIWHALE_NORM">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_MEDIWHALE_NORM"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_MEDIWHALE_NORM"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-5"
-                            aria-expanded="false"
-                            aria-controls="parameter-5"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_MEDIWHALE_NORM">
+                          <div id="chr-ASSESSMNT_MEDIWHALE_NORM" class="row" data-toggle="collapse"
+                            data-target="#parameter-5" aria-expanded="false" aria-controls="parameter-5"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: Mediwhale
                               No Findings/Normal Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No referral required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd5"
-                                    name="padd5"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_MEDIWHALE_NORM"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd5" name="padd5" class="padd" href
+                                    data-param-code="ASSESSMNT_MEDIWHALE_NORM" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit5"
-                                    name="pedit5"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_MEDIWHALE_NORM"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit5" name="pedit5" class="pedit" href
+                                    data-param-code="ASSESSMNT_MEDIWHALE_NORM" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -903,65 +445,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_MEDIWHALE_ABN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_MEDIWHALE_ABN"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_MEDIWHALE_ABN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-6"
-                            aria-expanded="false"
-                            aria-controls="parameter-6"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_MEDIWHALE_ABN">
+                          <div id="chr-ASSESSMNT_MEDIWHALE_ABN" class="row" data-toggle="collapse"
+                            data-target="#parameter-6" aria-expanded="false" aria-controls="parameter-6"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: Mediwhale
                               Recommendation for Abnormal/Referrable Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Consultation with a cardiologist may be required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd6"
-                                    name="padd6"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_MEDIWHALE_ABN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd6" name="padd6" class="padd" href data-param-code="ASSESSMNT_MEDIWHALE_ABN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit6"
-                                    name="pedit6"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_MEDIWHALE_ABN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit6" name="pedit6" class="pedit" href
+                                    data-param-code="ASSESSMNT_MEDIWHALE_ABN" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -971,65 +477,28 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_CKD_NORM">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_CKD_NORM"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_CKD_NORM"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-7"
-                            aria-expanded="false"
-                            aria-controls="parameter-7"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_CKD_NORM">
+                          <div id="chr-ASSESSMNT_CKD_NORM" class="row" data-toggle="collapse" data-target="#parameter-7"
+                            aria-expanded="false" aria-controls="parameter-7" style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: RetiKid No
                               Findings/Normal Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No referral required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd7"
-                                    name="padd7"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_CKD_NORM"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd7" name="padd7" class="padd" href data-param-code="ASSESSMNT_CKD_NORM"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit7"
-                                    name="pedit7"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_CKD_NORM"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit7" name="pedit7" class="pedit" href data-param-code="ASSESSMNT_CKD_NORM"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1039,65 +508,28 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_CKD_ABN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_CKD_ABN"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_CKD_ABN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-8"
-                            aria-expanded="false"
-                            aria-controls="parameter-8"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_CKD_ABN">
+                          <div id="chr-ASSESSMNT_CKD_ABN" class="row" data-toggle="collapse" data-target="#parameter-8"
+                            aria-expanded="false" aria-controls="parameter-8" style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: RetiKid
                               Recommendation for Abnormal/Referrable Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Consultation with a nephrologist may be required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd8"
-                                    name="padd8"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_CKD_ABN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd8" name="padd8" class="padd" href data-param-code="ASSESSMNT_CKD_ABN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit8"
-                                    name="pedit8"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_CKD_ABN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit8" name="pedit8" class="pedit" href data-param-code="ASSESSMNT_CKD_ABN"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1107,65 +539,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_SELENA_NORM">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_SELENA_NORM"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_SELENA_NORM"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-9"
-                            aria-expanded="false"
-                            aria-controls="parameter-9"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_SELENA_NORM">
+                          <div id="chr-ASSESSMNT_SELENA_NORM" class="row" data-toggle="collapse"
+                            data-target="#parameter-9" aria-expanded="false" aria-controls="parameter-9"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: SELENA+ No
                               Findings/Normal Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No referral required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd9"
-                                    name="padd9"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_SELENA_NORM"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd9" name="padd9" class="padd" href data-param-code="ASSESSMNT_SELENA_NORM"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit9"
-                                    name="pedit9"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_SELENA_NORM"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit9" name="pedit9" class="pedit" href
+                                    data-param-code="ASSESSMNT_SELENA_NORM" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1175,66 +571,30 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_SELENA_ABN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_SELENA_ABN"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_SELENA_ABN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-10"
-                            aria-expanded="false"
-                            aria-controls="parameter-10"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_SELENA_ABN">
+                          <div id="chr-ASSESSMNT_SELENA_ABN" class="row" data-toggle="collapse"
+                            data-target="#parameter-10" aria-expanded="false" aria-controls="parameter-10"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: SELENA+
                               Recommendation for Abnormal/Referrable Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Consultation with an eye-specialist or
                               ophthalmologist may be required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd10"
-                                    name="padd10"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_SELENA_ABN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd10" name="padd10" class="padd" href data-param-code="ASSESSMNT_SELENA_ABN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit10"
-                                    name="pedit10"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_SELENA_ABN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit10" name="pedit10" class="pedit" href
+                                    data-param-code="ASSESSMNT_SELENA_ABN" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1244,65 +604,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_VUNO_NORM">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_VUNO_NORM"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_VUNO_NORM"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-11"
-                            aria-expanded="false"
-                            aria-controls="parameter-11"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_VUNO_NORM">
+                          <div id="chr-ASSESSMNT_VUNO_NORM" class="row" data-toggle="collapse"
+                            data-target="#parameter-11" aria-expanded="false" aria-controls="parameter-11"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: VUNO Med
                               No Findings/Normal Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No referral required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd11"
-                                    name="padd11"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_VUNO_NORM"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd11" name="padd11" class="padd" href data-param-code="ASSESSMNT_VUNO_NORM"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit11"
-                                    name="pedit11"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_VUNO_NORM"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit11" name="pedit11" class="pedit" href
+                                    data-param-code="ASSESSMNT_VUNO_NORM" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1312,66 +636,30 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ASSESSMNT_VUNO_ABN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ASSESSMNT_VUNO_ABN"
-                        >
-                          <div
-                            id="chr-ASSESSMNT_VUNO_ABN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-12"
-                            aria-expanded="false"
-                            aria-controls="parameter-12"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ASSESSMNT_VUNO_ABN">
+                          <div id="chr-ASSESSMNT_VUNO_ABN" class="row" data-toggle="collapse"
+                            data-target="#parameter-12" aria-expanded="false" aria-controls="parameter-12"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ASSESSMENT: VUNO Med
                               Recommendation for Abnormal/Referrable Assessment
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Consultation with an eye-specialist or
                               ophthalmologist may be required.
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd12"
-                                    name="padd12"
-                                    class="padd"
-                                    href
-                                    data-param-code="ASSESSMNT_VUNO_ABN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd12" name="padd12" class="padd" href data-param-code="ASSESSMNT_VUNO_ABN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit12"
-                                    name="pedit12"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ASSESSMNT_VUNO_ABN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit12" name="pedit12" class="pedit" href data-param-code="ASSESSMNT_VUNO_ABN"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1381,76 +669,32 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-CASE_DOWNLOAD_FLAG">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-CASE_DOWNLOAD_FLAG"
-                        >
-                          <div
-                            id="chr-CASE_DOWNLOAD_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-13"
-                            aria-expanded="false"
-                            aria-controls="parameter-13"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-CASE_DOWNLOAD_FLAG">
+                          <div id="chr-CASE_DOWNLOAD_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-13" aria-expanded="false" aria-controls="parameter-13"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Case Mass Download
                               Flag
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd13"
-                                    name="padd13"
-                                    class="padd"
-                                    href
-                                    data-param-code="CASE_DOWNLOAD_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd13" name="padd13" class="padd" href data-param-code="CASE_DOWNLOAD_FLAG"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit13"
-                                    name="pedit13"
-                                    class="pedit"
-                                    href
-                                    data-param-code="CASE_DOWNLOAD_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit13" name="pedit13" class="pedit" href data-param-code="CASE_DOWNLOAD_FLAG"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata13"
-                                    name="pdata13"
-                                    class="pdata"
-                                    href
-                                    data-param-code="CASE_DOWNLOAD_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata13" name="pdata13" class="pdata" href data-param-code="CASE_DOWNLOAD_FLAG"
+                                    data-param-type="APPLICATION" data-company-desc title="Setup Parameter Data"><i
+                                      class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -1459,65 +703,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-CASE_DOWNLOAD_LIMIT">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-CASE_DOWNLOAD_LIMIT"
-                        >
-                          <div
-                            id="chr-CASE_DOWNLOAD_LIMIT"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-14"
-                            aria-expanded="false"
-                            aria-controls="parameter-14"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-CASE_DOWNLOAD_LIMIT">
+                          <div id="chr-CASE_DOWNLOAD_LIMIT" class="row" data-toggle="collapse"
+                            data-target="#parameter-14" aria-expanded="false" aria-controls="parameter-14"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Case Mass Download
                               Records Number Limit
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               100
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd14"
-                                    name="padd14"
-                                    class="padd"
-                                    href
-                                    data-param-code="CASE_DOWNLOAD_LIMIT"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd14" name="padd14" class="padd" href data-param-code="CASE_DOWNLOAD_LIMIT"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit14"
-                                    name="pedit14"
-                                    class="pedit"
-                                    href
-                                    data-param-code="CASE_DOWNLOAD_LIMIT"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit14" name="pedit14" class="pedit" href
+                                    data-param-code="CASE_DOWNLOAD_LIMIT" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1527,65 +735,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-NOTIFICATION_CREDITS">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-NOTIFICATION_CREDITS"
-                        >
-                          <div
-                            id="chr-NOTIFICATION_CREDITS"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-15"
-                            aria-expanded="false"
-                            aria-controls="parameter-15"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-NOTIFICATION_CREDITS">
+                          <div id="chr-NOTIFICATION_CREDITS" class="row" data-toggle="collapse"
+                            data-target="#parameter-15" aria-expanded="false" aria-controls="parameter-15"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Credits threshold for
                               email notification
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               0
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd15"
-                                    name="padd15"
-                                    class="padd"
-                                    href
-                                    data-param-code="NOTIFICATION_CREDITS"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd15" name="padd15" class="padd" href data-param-code="NOTIFICATION_CREDITS"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit15"
-                                    name="pedit15"
-                                    class="pedit"
-                                    href
-                                    data-param-code="NOTIFICATION_CREDITS"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit15" name="pedit15" class="pedit" href
+                                    data-param-code="NOTIFICATION_CREDITS" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1594,69 +766,31 @@
                         </div>
                       </div>
 
-                      <div
-                        class="col-12 p-0"
-                        id="rec-NOTIFICATION_CREDITS_RECIPIENT"
-                      >
-                        <div
-                          class="card-header bg-light"
-                          id="ch-NOTIFICATION_CREDITS_RECIPIENT"
-                        >
-                          <div
-                            id="chr-NOTIFICATION_CREDITS_RECIPIENT"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-16"
-                            aria-expanded="false"
-                            aria-controls="parameter-16"
-                            style="cursor: pointer"
-                          >
+                      <div class="col-12 p-0" id="rec-NOTIFICATION_CREDITS_RECIPIENT">
+                        <div class="card-header bg-light" id="ch-NOTIFICATION_CREDITS_RECIPIENT">
+                          <div id="chr-NOTIFICATION_CREDITS_RECIPIENT" class="row" data-toggle="collapse"
+                            data-target="#parameter-16" aria-expanded="false" aria-controls="parameter-16"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Credits threshold
                               notification recipients
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               customercare&#64;eyris.io
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd16"
-                                    name="padd16"
-                                    class="padd"
-                                    href
-                                    data-param-code="NOTIFICATION_CREDITS_RECIPIENT"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd16" name="padd16" class="padd" href
+                                    data-param-code="NOTIFICATION_CREDITS_RECIPIENT" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit16"
-                                    name="pedit16"
-                                    class="pedit"
-                                    href
-                                    data-param-code="NOTIFICATION_CREDITS_RECIPIENT"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit16" name="pedit16" class="pedit" href
+                                    data-param-code="NOTIFICATION_CREDITS_RECIPIENT" data-company-id="0"
+                                    data-company-desc title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1665,69 +799,31 @@
                         </div>
                       </div>
 
-                      <div
-                        class="col-12 p-0"
-                        id="rec-CREDITS_NOTIFICATION_EMAIL"
-                      >
-                        <div
-                          class="card-header bg-light"
-                          id="ch-CREDITS_NOTIFICATION_EMAIL"
-                        >
-                          <div
-                            id="chr-CREDITS_NOTIFICATION_EMAIL"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-17"
-                            aria-expanded="false"
-                            aria-controls="parameter-17"
-                            style="cursor: pointer"
-                          >
+                      <div class="col-12 p-0" id="rec-CREDITS_NOTIFICATION_EMAIL">
+                        <div class="card-header bg-light" id="ch-CREDITS_NOTIFICATION_EMAIL">
+                          <div id="chr-CREDITS_NOTIFICATION_EMAIL" class="row" data-toggle="collapse"
+                            data-target="#parameter-17" aria-expanded="false" aria-controls="parameter-17"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Email list to receive
                               organization credits consuming notification
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               hubo&#64;nova-hub.com
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd17"
-                                    name="padd17"
-                                    class="padd"
-                                    href
-                                    data-param-code="CREDITS_NOTIFICATION_EMAIL"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd17" name="padd17" class="padd" href
+                                    data-param-code="CREDITS_NOTIFICATION_EMAIL" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit17"
-                                    name="pedit17"
-                                    class="pedit"
-                                    href
-                                    data-param-code="CREDITS_NOTIFICATION_EMAIL"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit17" name="pedit17" class="pedit" href
+                                    data-param-code="CREDITS_NOTIFICATION_EMAIL" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1737,65 +833,29 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-HIDE_GLAUCOMA_CREDITS">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-HIDE_GLAUCOMA_CREDITS"
-                        >
-                          <div
-                            id="chr-HIDE_GLAUCOMA_CREDITS"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-18"
-                            aria-expanded="false"
-                            aria-controls="parameter-18"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-HIDE_GLAUCOMA_CREDITS">
+                          <div id="chr-HIDE_GLAUCOMA_CREDITS" class="row" data-toggle="collapse"
+                            data-target="#parameter-18" aria-expanded="false" aria-controls="parameter-18"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Hide glaucoma disease
                               after number of credits consumed
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               0
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd18"
-                                    name="padd18"
-                                    class="padd"
-                                    href
-                                    data-param-code="HIDE_GLAUCOMA_CREDITS"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd18" name="padd18" class="padd" href data-param-code="HIDE_GLAUCOMA_CREDITS"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit18"
-                                    name="pedit18"
-                                    class="pedit"
-                                    href
-                                    data-param-code="HIDE_GLAUCOMA_CREDITS"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit18" name="pedit18" class="pedit" href
+                                    data-param-code="HIDE_GLAUCOMA_CREDITS" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -1804,174 +864,79 @@
                         </div>
                       </div>
 
-                      <div
-                        class="col-12 p-0"
-                        id="rec-NEW_CAMERA_INTEGRATION_FLAG"
-                      >
-                        <div
-                          class="card-header bg-light"
-                          id="ch-NEW_CAMERA_INTEGRATION_FLAG"
-                        >
-                          <div
-                            id="chr-NEW_CAMERA_INTEGRATION_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-19"
-                            aria-expanded="false"
-                            aria-controls="parameter-19"
-                            style="cursor: pointer"
-                          >
+                      <div class="col-12 p-0" id="rec-NEW_CAMERA_INTEGRATION_FLAG">
+                        <div class="card-header bg-light" id="ch-NEW_CAMERA_INTEGRATION_FLAG">
+                          <div id="chr-NEW_CAMERA_INTEGRATION_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-19" aria-expanded="false" aria-controls="parameter-19"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                              <i
-                                class="fa fa-chevron-circle-down text-secondary"
-                                id="iconparam-19"
-                              ></i>
+                              <i class="fa fa-chevron-circle-down text-secondary" id="iconparam-19"></i>
                               New camera integration flag
                               <span class="badge badge-info">1</span>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Yes
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd19"
-                                    name="padd19"
-                                    class="padd"
-                                    href
-                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd19" name="padd19" class="padd" href
+                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit19"
-                                    name="pedit19"
-                                    class="pedit"
-                                    href
-                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit19" name="pedit19" class="pedit" href
+                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata19"
-                                    name="pdata19"
-                                    class="pdata"
-                                    href
-                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata19" name="pdata19" class="pdata" href
+                                    data-param-code="NEW_CAMERA_INTEGRATION_FLAG" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        <div
-                          id="parameter-19"
-                          class="collapse"
-                          aria-labelledby="ch-NEW_CAMERA_INTEGRATION_FLAG"
-                          xdata-parent="#accordionParameter"
-                          data-param-icon="iconparam-19"
-                        >
-                          <div
-                            class="card-body py-0"
-                            id="cb-NEW_CAMERA_INTEGRATION_FLAG"
-                          >
+                        <div id="parameter-19" class="collapse" aria-labelledby="ch-NEW_CAMERA_INTEGRATION_FLAG"
+                          xdata-parent="#accordionParameter" data-param-icon="iconparam-19">
+                          <div class="card-body py-0" id="cb-NEW_CAMERA_INTEGRATION_FLAG">
                             <div class="row pl-3 pr-4 xpx-4 py-2">
-                              <div
-                                class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                              >
+                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="row bg-secondary text-light">
-                                  <div
-                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                                  >
+                                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     Organization
                                   </div>
-                                  <div
-                                    class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                  >
+                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                     Parameter Value
                                   </div>
-                                  <div
-                                    class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"
-                                  ></div>
+                                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"></div>
                                 </div>
                                 <div class="row px-3 py-2">
-                                  <div
-                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                                  >
-                                    <div
-                                      id="cbr-NEW_CAMERA_INTEGRATION_FLAG-25"
-                                      class="row py-2"
-                                      data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                      data-company-id="13"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div id="cbr-NEW_CAMERA_INTEGRATION_FLAG-25" class="row py-2"
+                                      data-param-code="NEW_CAMERA_INTEGRATION_FLAG" data-company-id="13">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         Sengkurong Health Centre
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         Yes
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete25"
-                                              name="rdelete25"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete25" name="rdelete25" class="rdelete" href
                                               data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                              data-company-desc="Sengkurong Health Centre"
-                                              data-company-id="13"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="Sengkurong Health Centre" data-company-id="13"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit25"
-                                              name="redit25"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit25" name="redit25" class="redit" href
                                               data-param-code="NEW_CAMERA_INTEGRATION_FLAG"
-                                              data-company-desc="Sengkurong Health Centre"
-                                              data-company-id="13"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="Sengkurong Health Centre" data-company-id="13"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
@@ -1985,76 +950,32 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ORG_UPDATE_AUTH_FLAG">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ORG_UPDATE_AUTH_FLAG"
-                        >
-                          <div
-                            id="chr-ORG_UPDATE_AUTH_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-20"
-                            aria-expanded="false"
-                            aria-controls="parameter-20"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ORG_UPDATE_AUTH_FLAG">
+                          <div id="chr-ORG_UPDATE_AUTH_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-20" aria-expanded="false" aria-controls="parameter-20"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> ORG: Organization
                               Update Authorization Flag
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd20"
-                                    name="padd20"
-                                    class="padd"
-                                    href
-                                    data-param-code="ORG_UPDATE_AUTH_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd20" name="padd20" class="padd" href data-param-code="ORG_UPDATE_AUTH_FLAG"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit20"
-                                    name="pedit20"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ORG_UPDATE_AUTH_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit20" name="pedit20" class="pedit" href
+                                    data-param-code="ORG_UPDATE_AUTH_FLAG" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata20"
-                                    name="pdata20"
-                                    class="pdata"
-                                    href
-                                    data-param-code="ORG_UPDATE_AUTH_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata20" name="pdata20" class="pdata" href
+                                    data-param-code="ORG_UPDATE_AUTH_FLAG" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -2063,67 +984,31 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-PCT_CREDITS_USED_EN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-PCT_CREDITS_USED_EN"
-                        >
-                          <div
-                            id="chr-PCT_CREDITS_USED_EN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-21"
-                            aria-expanded="false"
-                            aria-controls="parameter-21"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-PCT_CREDITS_USED_EN">
+                          <div id="chr-PCT_CREDITS_USED_EN" class="row" data-toggle="collapse"
+                            data-target="#parameter-21" aria-expanded="false" aria-controls="parameter-21"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Percentage of credits
                               used in X percentage of days of monthly
                               subscription before triggering email notification
                               to BD
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               80
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd21"
-                                    name="padd21"
-                                    class="padd"
-                                    href
-                                    data-param-code="PCT_CREDITS_USED_EN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd21" name="padd21" class="padd" href data-param-code="PCT_CREDITS_USED_EN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit21"
-                                    name="pedit21"
-                                    class="pedit"
-                                    href
-                                    data-param-code="PCT_CREDITS_USED_EN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit21" name="pedit21" class="pedit" href
+                                    data-param-code="PCT_CREDITS_USED_EN" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -2133,66 +1018,30 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-PCT_DAYS_PASSED_EN">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-PCT_DAYS_PASSED_EN"
-                        >
-                          <div
-                            id="chr-PCT_DAYS_PASSED_EN"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-22"
-                            aria-expanded="false"
-                            aria-controls="parameter-22"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-PCT_DAYS_PASSED_EN">
+                          <div id="chr-PCT_DAYS_PASSED_EN" class="row" data-toggle="collapse"
+                            data-target="#parameter-22" aria-expanded="false" aria-controls="parameter-22"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Percentage of days
                               passed when X percentage of credits used before
                               triggering email notification to BD
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               25
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd22"
-                                    name="padd22"
-                                    class="padd"
-                                    href
-                                    data-param-code="PCT_DAYS_PASSED_EN"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd22" name="padd22" class="padd" href data-param-code="PCT_DAYS_PASSED_EN"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit22"
-                                    name="pedit22"
-                                    class="pedit"
-                                    href
-                                    data-param-code="PCT_DAYS_PASSED_EN"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit22" name="pedit22" class="pedit" href data-param-code="PCT_DAYS_PASSED_EN"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -2202,76 +1051,32 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-SHOW_SECONDARY_GRADER">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-SHOW_SECONDARY_GRADER"
-                        >
-                          <div
-                            id="chr-SHOW_SECONDARY_GRADER"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-23"
-                            aria-expanded="false"
-                            aria-controls="parameter-23"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-SHOW_SECONDARY_GRADER">
+                          <div id="chr-SHOW_SECONDARY_GRADER" class="row" data-toggle="collapse"
+                            data-target="#parameter-23" aria-expanded="false" aria-controls="parameter-23"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Secondary Grader
                               indicator to show function
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Yes
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd23"
-                                    name="padd23"
-                                    class="padd"
-                                    href
-                                    data-param-code="SHOW_SECONDARY_GRADER"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd23" name="padd23" class="padd" href data-param-code="SHOW_SECONDARY_GRADER"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit23"
-                                    name="pedit23"
-                                    class="pedit"
-                                    href
-                                    data-param-code="SHOW_SECONDARY_GRADER"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit23" name="pedit23" class="pedit" href
+                                    data-param-code="SHOW_SECONDARY_GRADER" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata23"
-                                    name="pdata23"
-                                    class="pdata"
-                                    href
-                                    data-param-code="SHOW_SECONDARY_GRADER"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata23" name="pdata23" class="pdata" href
+                                    data-param-code="SHOW_SECONDARY_GRADER" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -2281,61 +1086,27 @@
 
                       <div class="col-12 p-0" id="rec-DATERANGE">
                         <div class="card-header bg-light" id="ch-DATERANGE">
-                          <div
-                            id="chr-DATERANGE"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-24"
-                            aria-expanded="false"
-                            aria-controls="parameter-24"
-                            style="cursor: pointer"
-                          >
+                          <div id="chr-DATERANGE" class="row" data-toggle="collapse" data-target="#parameter-24"
+                            aria-expanded="false" aria-controls="parameter-24" style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Set date range filter
                               number in days
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               366
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd24"
-                                    name="padd24"
-                                    class="padd"
-                                    href
-                                    data-param-code="DATERANGE"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd24" name="padd24" class="padd" href data-param-code="DATERANGE"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit24"
-                                    name="pedit24"
-                                    class="pedit"
-                                    href
-                                    data-param-code="DATERANGE"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit24" name="pedit24" class="pedit" href data-param-code="DATERANGE"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                                   <img style="width: 16px" />
                                 </div>
                               </div>
@@ -2345,170 +1116,78 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ACQUIRE_IMAGE_FIELDVIEW">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ACQUIRE_IMAGE_FIELDVIEW"
-                        >
-                          <div
-                            id="chr-ACQUIRE_IMAGE_FIELDVIEW"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-25"
-                            aria-expanded="false"
-                            aria-controls="parameter-25"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ACQUIRE_IMAGE_FIELDVIEW">
+                          <div id="chr-ACQUIRE_IMAGE_FIELDVIEW" class="row" data-toggle="collapse"
+                            data-target="#parameter-25" aria-expanded="false" aria-controls="parameter-25"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                              <i
-                                class="fa fa-chevron-circle-down text-secondary"
-                                id="iconparam-25"
-                              ></i>
+                              <i class="fa fa-chevron-circle-down text-secondary" id="iconparam-25"></i>
                               To indicate how many field view to be captured
                               <span class="badge badge-info">1</span>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Two views (Macular and Optic)
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd25"
-                                    name="padd25"
-                                    class="padd"
-                                    href
-                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd25" name="padd25" class="padd" href
+                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit25"
-                                    name="pedit25"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit25" name="pedit25" class="pedit" href
+                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata25"
-                                    name="pdata25"
-                                    class="pdata"
-                                    href
-                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata25" name="pdata25" class="pdata" href
+                                    data-param-code="ACQUIRE_IMAGE_FIELDVIEW" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        <div
-                          id="parameter-25"
-                          class="collapse"
-                          aria-labelledby="ch-ACQUIRE_IMAGE_FIELDVIEW"
-                          xdata-parent="#accordionParameter"
-                          data-param-icon="iconparam-25"
-                        >
-                          <div
-                            class="card-body py-0"
-                            id="cb-ACQUIRE_IMAGE_FIELDVIEW"
-                          >
+                        <div id="parameter-25" class="collapse" aria-labelledby="ch-ACQUIRE_IMAGE_FIELDVIEW"
+                          xdata-parent="#accordionParameter" data-param-icon="iconparam-25">
+                          <div class="card-body py-0" id="cb-ACQUIRE_IMAGE_FIELDVIEW">
                             <div class="row pl-3 pr-4 xpx-4 py-2">
-                              <div
-                                class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                              >
+                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="row bg-secondary text-light">
-                                  <div
-                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                                  >
+                                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     Organization
                                   </div>
-                                  <div
-                                    class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                  >
+                                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                     Parameter Value
                                   </div>
-                                  <div
-                                    class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"
-                                  ></div>
+                                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 pl-4"></div>
                                 </div>
                                 <div class="row px-3 py-2">
-                                  <div
-                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                                  >
-                                    <div
-                                      id="cbr-ACQUIRE_IMAGE_FIELDVIEW-32"
-                                      class="row py-2"
-                                      data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                      data-company-id="13"
-                                    >
-                                      <div
-                                        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0"
-                                      >
+                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div id="cbr-ACQUIRE_IMAGE_FIELDVIEW-32" class="row py-2"
+                                      data-param-code="ACQUIRE_IMAGE_FIELDVIEW" data-company-id="13">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
                                         Sengkurong Health Centre
                                       </div>
-                                      <div
-                                        class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                                        style="overflow-wrap: break-word"
-                                      >
+                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                                        style="overflow-wrap: break-word">
                                         Two views (Macular and Optic)
                                       </div>
-                                      <div
-                                        class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                                      >
+                                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                                         <div class="row">
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="rdelete32"
-                                              name="rdelete32"
-                                              class="rdelete"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="rdelete32" name="rdelete32" class="rdelete" href
                                               data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                              data-company-desc="Sengkurong Health Centre"
-                                              data-company-id="13"
-                                              title="Delete Organization"
-                                              ><i class="fa fa-trash"></i
-                                            ></a>
+                                              data-company-desc="Sengkurong Health Centre" data-company-id="13"
+                                              title="Delete Organization"><i class="fa fa-trash"></i></a>
                                           </div>
-                                          <div
-                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                          >
-                                            <a
-                                              id="redit32"
-                                              name="redit32"
-                                              class="redit"
-                                              href
+                                          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <a id="redit32" name="redit32" class="redit" href
                                               data-param-code="ACQUIRE_IMAGE_FIELDVIEW"
-                                              data-company-desc="Sengkurong Health Centre"
-                                              data-company-id="13"
-                                              title="Edit Parameter Value"
-                                              ><i class="fa fa-pencil-alt"></i
-                                            ></a>
+                                              data-company-desc="Sengkurong Health Centre" data-company-id="13"
+                                              title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                           </div>
                                         </div>
                                       </div>
@@ -2522,77 +1201,34 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-ALLOW_MANUAL_SUBMISSION">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-ALLOW_MANUAL_SUBMISSION"
-                        >
-                          <div
-                            id="chr-ALLOW_MANUAL_SUBMISSION"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-26"
-                            aria-expanded="false"
-                            aria-controls="parameter-26"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-ALLOW_MANUAL_SUBMISSION">
+                          <div id="chr-ALLOW_MANUAL_SUBMISSION" class="row" data-toggle="collapse"
+                            data-target="#parameter-26" aria-expanded="false" aria-controls="parameter-26"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> To indicate whether
                               the organization is allowed to do manual
                               submission from web portal
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               Yes
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd26"
-                                    name="padd26"
-                                    class="padd"
-                                    href
-                                    data-param-code="ALLOW_MANUAL_SUBMISSION"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd26" name="padd26" class="padd" href
+                                    data-param-code="ALLOW_MANUAL_SUBMISSION" data-company-id="0"
+                                    title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit26"
-                                    name="pedit26"
-                                    class="pedit"
-                                    href
-                                    data-param-code="ALLOW_MANUAL_SUBMISSION"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit26" name="pedit26" class="pedit" href
+                                    data-param-code="ALLOW_MANUAL_SUBMISSION" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata26"
-                                    name="pdata26"
-                                    class="pdata"
-                                    href
-                                    data-param-code="ALLOW_MANUAL_SUBMISSION"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata26" name="pdata26" class="pdata" href
+                                    data-param-code="ALLOW_MANUAL_SUBMISSION" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -2601,76 +1237,32 @@
                       </div>
 
                       <div class="col-12 p-0" id="rec-UNCHECK_OTHER_AI_FLAG">
-                        <div
-                          class="card-header bg-light"
-                          id="ch-UNCHECK_OTHER_AI_FLAG"
-                        >
-                          <div
-                            id="chr-UNCHECK_OTHER_AI_FLAG"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-27"
-                            aria-expanded="false"
-                            aria-controls="parameter-27"
-                            style="cursor: pointer"
-                          >
+                        <div class="card-header bg-light" id="ch-UNCHECK_OTHER_AI_FLAG">
+                          <div id="chr-UNCHECK_OTHER_AI_FLAG" class="row" data-toggle="collapse"
+                            data-target="#parameter-27" aria-expanded="false" aria-controls="parameter-27"
+                            style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Uncheck other AIs in
                               submit image
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               No
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd27"
-                                    name="padd27"
-                                    class="padd"
-                                    href
-                                    data-param-code="UNCHECK_OTHER_AI_FLAG"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd27" name="padd27" class="padd" href data-param-code="UNCHECK_OTHER_AI_FLAG"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit27"
-                                    name="pedit27"
-                                    class="pedit"
-                                    href
-                                    data-param-code="UNCHECK_OTHER_AI_FLAG"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit27" name="pedit27" class="pedit" href
+                                    data-param-code="UNCHECK_OTHER_AI_FLAG" data-company-id="0" data-company-desc
+                                    title="Edit Parameter Value"><i class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata27"
-                                    name="pdata27"
-                                    class="pdata"
-                                    href
-                                    data-param-code="UNCHECK_OTHER_AI_FLAG"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata27" name="pdata27" class="pdata" href
+                                    data-param-code="UNCHECK_OTHER_AI_FLAG" data-param-type="APPLICATION"
+                                    data-company-desc title="Setup Parameter Data"><i class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -2680,72 +1272,30 @@
 
                       <div class="col-12 p-0" id="rec-VISUAL_ACUITY">
                         <div class="card-header bg-light" id="ch-VISUAL_ACUITY">
-                          <div
-                            id="chr-VISUAL_ACUITY"
-                            class="row"
-                            data-toggle="collapse"
-                            data-target="#parameter-28"
-                            aria-expanded="false"
-                            aria-controls="parameter-28"
-                            style="cursor: pointer"
-                          >
+                          <div id="chr-VISUAL_ACUITY" class="row" data-toggle="collapse" data-target="#parameter-28"
+                            aria-expanded="false" aria-controls="parameter-28" style="cursor: pointer">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                               <img style="width: 16px" /> Visual Acuity chart
                               type default setup
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
-                              style="overflow-wrap: break-word"
-                            >
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="overflow-wrap: break-word">
                               SNELLEN
                             </div>
-                            <div
-                              class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end"
-                            >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 d-flex justify-content-end">
                               <div class="row">
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="padd28"
-                                    name="padd28"
-                                    class="padd"
-                                    href
-                                    data-param-code="VISUAL_ACUITY"
-                                    data-company-id="0"
-                                    title="Add Organization"
-                                    ><i class="fa fa-plus"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="padd28" name="padd28" class="padd" href data-param-code="VISUAL_ACUITY"
+                                    data-company-id="0" title="Add Organization"><i class="fa fa-plus"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pedit28"
-                                    name="pedit28"
-                                    class="pedit"
-                                    href
-                                    data-param-code="VISUAL_ACUITY"
-                                    data-company-id="0"
-                                    data-company-desc
-                                    title="Edit Parameter Value"
-                                    ><i class="fa fa-pencil-alt"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pedit28" name="pedit28" class="pedit" href data-param-code="VISUAL_ACUITY"
+                                    data-company-id="0" data-company-desc title="Edit Parameter Value"><i
+                                      class="fa fa-pencil-alt"></i></a>
                                 </div>
-                                <div
-                                  class="col-xl-2 col-lg-2 col-md-2 col-sm-2"
-                                >
-                                  <a
-                                    id="pdata28"
-                                    name="pdata28"
-                                    class="pdata"
-                                    href
-                                    data-param-code="VISUAL_ACUITY"
-                                    data-param-type="APPLICATION"
-                                    data-company-desc
-                                    title="Setup Parameter Data"
-                                    ><i class="fa fa-list"></i
-                                  ></a>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                  <a id="pdata28" name="pdata28" class="pdata" href data-param-code="VISUAL_ACUITY"
+                                    data-param-type="APPLICATION" data-company-desc title="Setup Parameter Data"><i
+                                      class="fa fa-list"></i></a>
                                 </div>
                               </div>
                             </div>

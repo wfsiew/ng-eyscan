@@ -1,12 +1,7 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ "Question" | translate }}</h5>
-  <button
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal" aria-label="Close"
+    (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
@@ -18,144 +13,90 @@
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_bb"
-              [checked]="listx.image_bb"
-              (change)="listx.image_bb = !listx.image_bb"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_bb"
-              style="cursor: pointer"
-              >{{ "Both eyes with macular and optic centred views" | translate }}</label
-            >
+            <input class="form-check-input" type="checkbox" id="image_bb" [checked]="listx.image_bb"
+              (change)="listx.image_bb = !listx.image_bb" />
+            <label class="form-check-label pl-1" for="image_bb" style="cursor: pointer">{{ "Both eyes with macular and optic centred views" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_bm"
-              [checked]="listx.image_bm"
-              (change)="listx.image_bm = !listx.image_bm"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_bm"
-              style="cursor: pointer"
-              >{{ "Both eyes with macular-centred view" | translate }}</label
-            >
+            <input class="form-check-input" type="checkbox" id="image_bm" [checked]="listx.image_bm"
+              (change)="listx.image_bm = !listx.image_bm" />
+            <label class="form-check-label pl-1" for="image_bm" style="cursor: pointer">{{ "Both eyes with macular-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_bo"
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              id="image_bo" 
               [checked]="listx.image_bo"
-              (change)="listx.image_bo = !listx.image_bo"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_bo"
-              style="cursor: pointer"
-              >{{ "Both eyes with optic-centred view" | translate }}</label
-            >
+              (change)="listx.image_bo = !listx.image_bo" />
+            <label class="form-check-label pl-1" for="image_bo" style="cursor: pointer">{{ "Both eyes with optic-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_lm"
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              id="image_lm" 
               [checked]="listx.image_lm"
-              (change)="listx.image_lm = !listx.image_lm"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_lm"
-              style="cursor: pointer"
-              >{{ "Left eye with macular-centred view" | translate }}</label
-            >
+              (change)="listx.image_lm = !listx.image_lm" />
+            <label class="form-check-label pl-1" for="image_lm" style="cursor: pointer">{{ "Left eye with macular-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_lo"
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              id="image_lo" 
               [checked]="listx.image_lo"
-              (change)="listx.image_lo = !listx.image_lo"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_lo"
-              style="cursor: pointer"
-              >{{ "Left eye with optic-centred view" | translate }}</label
-            >
+              (change)="listx.image_lo = !listx.image_lo" />
+            <label class="form-check-label pl-1" for="image_lo" style="cursor: pointer">{{ "Left eye with optic-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_rm"
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              id="image_rm" 
               [checked]="listx.image_rm"
-              (change)="listx.image_rm = !listx.image_rm"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_rm"
-              style="cursor: pointer"
-              >{{ "Right eye with macular-centred view" | translate }}</label
-            >
+              (change)="listx.image_rm = !listx.image_rm" />
+            <label class="form-check-label pl-1" for="image_rm" style="cursor: pointer">{{ "Right eye with macular-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
           <div class="form-check col-12">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="image_ro"
+            <input 
+              class="form-check-input" 
+              type="checkbox" 
+              id="image_ro" 
               [checked]="listx.image_ro"
-              (change)="listx.image_ro = !listx.image_ro"
-            />
-            <label
-              class="form-check-label pl-1"
-              for="image_ro"
-              style="cursor: pointer"
-              >{{ "Right eye with optic-centred view" | translate }}</label
-            >
+              (change)="listx.image_ro = !listx.image_ro" />
+            <label class="form-check-label pl-1" for="image_ro" style="cursor: pointer">{{ "Right eye with optic-centred view" | translate }}</label>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col-12 pl-3 py-1 pt-3">
           {{ "Helper Language" | translate }}
-          <select
-            class="form-control custom-select custom-select-sm"
-            id="helper_language"
-            style="width: auto"
-          >
+          <select class="form-control custom-select custom-select-sm" id="helper_language" style="width: auto">
             <option value="EN" selected>English</option>
 
             <option value="CHINESE">简体中文</option>
@@ -169,33 +110,14 @@
         </div>
       </div>
       <div class="xbottom" [hidden]="isEmpty"></div>
-      <div
-        class="alert alert-danger text-center small py-1"
-        role="alert"
-        [hidden]="!isEmpty"
-      >
+      <div class="alert alert-danger text-center small py-1" role="alert" [hidden]="!isEmpty">
         Please select the image view to be captured.
       </div>
-      <div
-        class="container-fluid px-0 py-2 text-center xborder bg-white border-top"
-        [class.xbottom1]="isEmpty"
-      >
-        <input
-          type="button"
-          align="middle"
-          value="{{ 'Yes' | translate }}"
-          name="btnOk"
-          class="btn bg-button text-white mr-1"
-          [disabled]="isEmpty"
-          (click)="onYes()"
-        />
-        <input
-          type="button"
-          align="middle"
-          value="{{ 'No' | translate }}"
-          class="btn bg-button text-white"
-          (click)="onHide()"
-        />
+      <div class="container-fluid px-0 py-2 text-center xborder bg-white border-top" [class.xbottom1]="isEmpty">
+        <input type="button" align="middle" value="{{ 'Yes' | translate }}" name="btnOk"
+          class="btn bg-button text-white mr-1" [disabled]="isEmpty" (click)="onYes()" />
+        <input type="button" align="middle" value="{{ 'No' | translate }}" class="btn bg-button text-white"
+          (click)="onHide()" />
       </div>
     </div>
   </main>

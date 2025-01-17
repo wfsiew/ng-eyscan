@@ -1,45 +1,21 @@
-<app-header
-  [reload]="'/application/primary'"
-  [headerid]="'fn2'"
-  [title]="'Image Report' | translate"
-></app-header>
+<app-header [reload]="'/application/primary'" [headerid]="'fn2'" [title]="'Image Report' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="
+    <div class="modal-content" style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +32,19 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
-  style="
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -93,14 +53,8 @@
   <div class="container-fluid pb-4">
     <div class="row pb-1">
       <div id="filter" class="container-fluid py-2 pl-0">
-        <form
-          *ngIf="mform"
-          name="frmFilter"
-          [formGroup]="mform"
-          xclass="form-inline"
-          action="/bn_moh_uat/application/primary/index.cfm"
-          method="post"
-        >
+        <form *ngIf="mform" name="frmFilter" [formGroup]="mform" xclass="form-inline"
+          action="/bn_moh_uat/application/primary/index.cfm" method="post">
           <input type="hidden" name="recno" id="recno" value="25" />
           <input type="hidden" name="image_from" id="image_from" value />
           <input type="hidden" name="hfindings" id="hfindings" value />
@@ -117,120 +71,85 @@
                   <div class="form-row">
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
                       <div class="form-row">
-                        <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
-                        >
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
                           {{ "Diseases" | translate }}
                         </div>
                       </div>
 
                       <div class="form-row border rounded bg-white">
-                        <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small"
-                        >
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small">
                           <div class="form-row">
-                            <div
-                              class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  id="disease_dr"
+                                <input 
+                                  class="form-check-input" 
+                                  type="checkbox" 
+                                  id="disease_dr" 
                                   name="disease_dr"
-                                  value="DR"
+                                  value="DR" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_dr"
-                                  style="cursor: pointer"
-                                >
+                                  " />
+                                <label class="form-check-label pl-1" for="disease_dr" style="cursor: pointer">
                                   {{ "Diabetic Retinopathy" | translate }}
                                 </label>
                               </div>
                             </div>
 
-                            <div
-                              class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
+                                <input 
+                                  class="form-check-input" 
+                                  type="checkbox" 
                                   id="disease_glaucoma"
-                                  name="disease_glaucoma"
-                                  value="GLAUCOMA"
+                                  name="disease_glaucoma" 
+                                  value="GLAUCOMA" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_glaucoma"
-                                  style="cursor: pointer"
-                                >
+                                  " />
+                                <label class="form-check-label pl-1" for="disease_glaucoma" style="cursor: pointer">
                                   {{ "Glaucoma Suspect" | translate }}
                                 </label>
                               </div>
                             </div>
 
-                            <div
-                              class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  id="disease_amd"
+                                <input 
+                                  class="form-check-input" 
+                                  type="checkbox" 
+                                  id="disease_amd" 
                                   name="disease_amd"
-                                  value="AMD"
+                                  value="AMD" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_amd"
-                                  style="cursor: pointer"
-                                >
-                                  {{
-                                    "Age-related Macular Degeneration"
-                                      | translate
-                                  }}
+                                  " />
+                                <label class="form-check-label pl-1" for="disease_amd" style="cursor: pointer">
+                                  {{ "Age-related Macular Degeneration" | translate }}
                                 </label>
                               </div>
                             </div>
 
-                            <div
-                              class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  id="disease_ckd"
+                                <input 
+                                  class="form-check-input" 
+                                  type="checkbox" 
+                                  id="disease_ckd" 
                                   name="disease_ckd"
-                                  value="CKD"
+                                  value="CKD" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="disease_ckd"
-                                  style="cursor: pointer"
-                                >
+                                  " />
+                                <label class="form-check-label pl-1" for="disease_ckd" style="cursor: pointer">
                                   {{ "Chronic Kidney Disease" | translate }}
                                 </label>
                               </div>
@@ -246,140 +165,99 @@
                   <div class="form-row">
                     <div class="col-12 xborder xrounded px-2 py-1 xbg-white">
                       <div class="form-row">
-                        <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1"
-                        >
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-1">
                           {{ "Result" | translate }}
                         </div>
                       </div>
                       <div class="form-row border rounded bg-white">
-                        <div
-                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small"
-                        >
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1 small">
                           <div class="form-row">
-                            <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input sel_result"
-                                  type="checkbox"
+                                <input 
+                                  class="form-check-input sel_result" 
+                                  type="checkbox" 
                                   id="referable"
                                   name="referable"
-                                  data-result-code="R,RDR,VTDR,Referable,A,Clinically Significant,elevated"
+                                  data-result-code="R,RDR,VTDR,Referable,A,Clinically Significant,elevated" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="referable"
-                                  style="cursor: pointer"
-                                  >{{ "Referable" | translate }}/{{
-                                    "Clinically Significant" | translate
-                                  }}</label
-                                >
-                              </div>
-                            </div>
-                            <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
-                            >
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input sel_result"
-                                  type="checkbox"
-                                  id="non-referable"
-                                  name="nonreferable"
-                                  data-result-code="N,Non Referable,Non-clinically Significant,non-elevated"
-                                  style="
-                                    cursor: pointer;
-                                    height: 16px;
-                                    width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="non-referable"
-                                  style="cursor: pointer"
-                                  >{{ "NON REFERABLE" | translate }}/{{
-                                    "Non-clinically Significant" | translate
-                                  }}
+                                  " />
+                                <label class="form-check-label pl-1" for="referable" style="cursor: pointer">
+                                  {{ "Referable" | translate }}/{{ "Clinically Significant" | translate }}
                                 </label>
                               </div>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input sel_result"
-                                  type="checkbox"
+                                <input 
+                                  class="form-check-input sel_result" 
+                                  type="checkbox" 
+                                  id="non-referable"
+                                  name="nonreferable"
+                                  data-result-code="N,Non Referable,Non-clinically Significant,non-elevated" 
+                                  style="
+                                    cursor: pointer;
+                                    height: 16px;
+                                    width: 16px;
+                                  " />
+                                <label class="form-check-label pl-1" for="non-referable" style="cursor: pointer">
+                                  {{ "NON REFERABLE" | translate }}/{{ "Non-clinically Significant" | translate }}
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
+                              <div class="form-check">
+                                <input 
+                                  class="form-check-input sel_result" 
+                                  type="checkbox" 
                                   id="ungradable"
-                                  name="ungradable"
-                                  data-result-code="U"
+                                  name="ungradable" 
+                                  data-result-code="U" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="ungradable"
-                                  style="cursor: pointer"
-                                  >{{ "Ungradable" | translate }}</label
-                                >
+                                  " />
+                                <label class="form-check-label pl-1" for="ungradable" style="cursor: pointer">
+                                  {{ "Ungradable" | translate }}
+                                </label>
                               </div>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input sel_result"
-                                  type="checkbox"
-                                  id="fail"
-                                  name="fail"
-                                  data-result-code="F"
+                                <input 
+                                  class="form-check-input sel_result" 
+                                  type="checkbox" 
+                                  id="fail" name="fail"
+                                  data-result-code="F" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="fail"
-                                  style="cursor: pointer"
-                                  >{{ "Error" | translate }}</label
-                                >
+                                  " />
+                                <label class="form-check-label pl-1" for="fail" style="cursor: pointer">
+                                  {{ "Error" | translate }}
+                                </label>
                               </div>
                             </div>
-                            <div
-                              class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1"
-                            >
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 py-1">
                               <div class="form-check">
-                                <input
-                                  class="form-check-input sel_result"
-                                  type="checkbox"
-                                  id="all-nr"
+                                <input 
+                                  class="form-check-input sel_result" 
+                                  type="checkbox" 
+                                  id="all-nr" 
                                   name="allnr"
-                                  data-result-code="ANR"
+                                  data-result-code="ANR" 
                                   style="
                                     cursor: pointer;
                                     height: 16px;
                                     width: 16px;
-                                  "
-                                />
-                                <label
-                                  class="form-check-label pl-1"
-                                  for="all-nr"
-                                  style="cursor: pointer"
-                                  >{{ "All Non Referable" | translate }}/{{
-                                    "Non-clinically Significant" | translate
-                                  }}
+                                  " />
+                                <label class="form-check-label pl-1" for="all-nr" style="cursor: pointer">
+                                  {{ "All Non Referable" | translate }}/{{ "Non-clinically Significant" | translate }}
                                 </label>
                               </div>
                             </div>
@@ -397,23 +275,12 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="form-group fgx">
                 <label class="control-label mb-1">{{ "Case Reference ID" | translate }} </label>
-                <input
-                  name="pid"
-                  id="pid"
-                  type="text"
-                  class="form-control"
-                  placeholder
-                  value
-                />
+                <input name="pid" id="pid" type="text" class="form-control" placeholder value />
               </div>
 
               <div class="form-group fgx">
                 <label class="control-label mb-1">&nbsp;</label>
-                <select
-                  class="form-control custom-select"
-                  name="selDate"
-                  id="selDate"
-                >
+                <select class="form-control custom-select" name="selDate" id="selDate">
                   <option value="DS" data-date-option="Date Submitted">
                     {{ "Date Submitted" | translate }}
                   </option>
@@ -429,26 +296,24 @@
               <div class="form-group fgx">
                 <label class="control-label mb-1">{{ "From" | translate }} </label>
                 <div class="input-group">
-                  <input
-                    name="date_from"
-                    type="text"
-                    class="form-control"
-                    style="max-width: 145px"
+                  <input 
+                    name="date_from" 
+                    type="text" 
+                    class="form-control" 
+                    style="max-width: 145px" 
                     maxlength="11"
-                    onkeydown="return false"
-                    (keyup)="onKeyupDate($event, 'date_from')"
-                    #datepickerFrom="bsDatepicker"
-                    bsDatepicker
-                    placement="bottom"
-                    formControlName="date_from"
+                    onkeydown="return false" 
+                    (keyup)="onKeyupDate($event, 'date_from')" #datepickerFrom="bsDatepicker"
+                    bsDatepicker 
+                    placement="bottom" 
+                    formControlName="date_from" 
                     [bsConfig]="{
                       dateInputFormat: 'DD-MMM-YYYY',
                       containerClass: 'theme-dark-blue',
                       showTodayButton: true,
                       showClearButton: true,
                       customTodayClass: 'custom-today-class'
-                    }"
-                  />
+                    }" />
                   <!-- <input id="date_from" name="date_from" type="text" class="form-control" style="max-width: 145px;"
                     maxlength="11" value="27-Dec-2024" onblur="if(!(check_date(this))){this.value='';}"> -->
                 </div>
@@ -457,26 +322,25 @@
               <div class="form-group fgx">
                 <label class="control-label mb-1">{{ "To" | translate }} </label>
                 <div class="input-group">
-                  <input
-                    name="date_to"
-                    type="text"
-                    class="form-control"
-                    style="max-width: 145px"
+                  <input 
+                    name="date_to" 
+                    type="text" 
+                    class="form-control" 
+                    style="max-width: 145px" 
                     maxlength="11"
                     onkeydown="return false"
-                    (keyup)="onKeyupDate($event, 'date_to')"
+                    (keyup)="onKeyupDate($event, 'date_to')" 
                     #datepickerTo="bsDatepicker"
-                    bsDatepicker
-                    placement="bottom"
-                    formControlName="date_to"
+                    bsDatepicker 
+                    placement="bottom" 
+                    formControlName="date_to" 
                     [bsConfig]="{
                       dateInputFormat: 'DD-MMM-YYYY',
                       containerClass: 'theme-dark-blue',
                       showTodayButton: true,
                       showClearButton: true,
                       customTodayClass: 'custom-today-class'
-                    }"
-                  />
+                    }" />
                   <!-- <input id="date_to" name="date_to" type="text" class="form-control" style="max-width: 145px;"
                     maxlength="11" value="03-Jan-2025" onblur="if(!(check_date(this))){this.value='';}"> -->
                 </div>
@@ -484,25 +348,15 @@
 
               <div class="form-group fgx">
                 <label class="control-label mb-1">&nbsp;</label>
-                <button
-                  name="btnSearch"
-                  id="btnSearch"
-                  class="form-control btn bg-primary text-white"
-                  value="Search"
-                >
+                <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white" value="Search">
                   <i class="fa fa-search"></i> {{ "Search" | translate }}
                 </button>
               </div>
 
               <div class="form-group fgx">
                 <label class="control-label mb-1">&nbsp;</label>
-                <button
-                  name="btnDownload"
-                  id="btnDownload"
-                  class="form-control btn bg-primary text-white"
-                  value="Download Images"
-                  disabled
-                >
+                <button name="btnDownload" id="btnDownload" class="form-control btn bg-primary text-white"
+                  value="Download Images" disabled>
                   <i class="fa fa-cloud-download-alt"></i> {{ "Download Image" | translate }}
                 </button>
               </div>
@@ -519,13 +373,7 @@
             <div class="row">
               <div class="col" style="max-width: 30px">
                 <div class="checkbox">
-                  <input
-                    name="chk_all"
-                    id="chk_all"
-                    type="checkbox"
-                    style="cursor: pointer"
-                    disabled
-                  />
+                  <input name="chk_all" id="chk_all" type="checkbox" style="cursor: pointer" disabled />
                 </div>
               </div>
 

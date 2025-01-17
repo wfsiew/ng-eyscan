@@ -1,94 +1,41 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title }}</h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form
-      *ngIf="mform"
-      name="frmMain"
-      id="frmMain"
-      method="post"
-      class="xbg-secondary"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
-      <div
-        class="container-fluid py-1 xpt-2 xpb-2 px-2 bg-light xborder-bottom"
-      >
+    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" class="xbg-secondary" [formGroup]="mform"
+      ngNativeValidate (ngSubmit)="onSubmit()">
+      <div class="container-fluid py-1 xpt-2 xpb-2 px-2 bg-light xborder-bottom">
         <input type="hidden" name="item_id" id="item_id" value="0" />
         <input type="hidden" name="tmp_trial_ind" id="tmp_trial_ind" value />
         <input type="hidden" name="hstatus" id="hstatus" value="A" />
-        <input
-          type="hidden"
-          name="nameSpecialChars"
-          value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?"
-        />
-        <input
-          type="hidden"
-          name="descSpecialChars"
-          value="~`!@#$%^&*-_+={}[]|\:;,.<>/?"
-        />
+        <input type="hidden" name="nameSpecialChars" value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
+        <input type="hidden" name="descSpecialChars" value="~`!@#$%^&*-_+={}[]|\:;,.<>/?" />
 
-        <input
-          type="hidden"
+        <input type="hidden"
           name="f7872AA5743F4B31635BEEF26B56A87E0225A47BDD9D210FF5C001F7CA5EEE92E3D06EB83FD179876FA7E3F0B5822AB487E1AE124FE34E83CEC0BFAA694A26414"
-          value="E615353F9E20C27F1F747A8827A18890A558CD98"
-        />
+          value="E615353F9E20C27F1F747A8827A18890A558CD98" />
 
         <div class="row pb-2">
           <div class="col-12">
             <ul class="nav nav-tabs p-0" id="orgTab" role="tablist">
               <li class="nav-item p-0">
-                <a
-                  class="nav-link active"
-                  id="detail-tab"
-                  name="detail-tab"
-                  data-toggle="tab"
-                  role="tab"
-                  aria-controls="detail"
-                  aria-selected="true"
-                  href="#detail-tabcontent"
-                  >Organization Info</a
-                >
+                <a class="nav-link active" id="detail-tab" name="detail-tab" data-toggle="tab" role="tab"
+                  aria-controls="detail" aria-selected="true" href="#detail-tabcontent">Organization Info</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  id="threshold-tab"
-                  name="threshold-tab"
-                  data-toggle="tab"
-                  role="tab"
-                  aria-controls="threshold"
-                  aria-selected="false"
-                  href="#threshold-tabcontent"
-                  >SELENA+ Threshold</a
-                >
+                <a class="nav-link disabled" id="threshold-tab" name="threshold-tab" data-toggle="tab" role="tab"
+                  aria-controls="threshold" aria-selected="false" href="#threshold-tabcontent">SELENA+ Threshold</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  id="ckdthreshold-tab"
-                  name="ckdthreshold-tab"
-                  data-toggle="tab"
-                  role="tab"
-                  aria-controls="threshold"
-                  aria-selected="false"
-                  href="#ckdthreshold-tabcontent"
-                  >RetiKID Threshold</a
-                >
+                <a class="nav-link disabled" id="ckdthreshold-tab" name="ckdthreshold-tab" data-toggle="tab" role="tab"
+                  aria-controls="threshold" aria-selected="false" href="#ckdthreshold-tabcontent">RetiKID Threshold</a>
               </li>
             </ul>
           </div>
@@ -97,37 +44,21 @@
         <div class="row">
           <div class="col-12">
             <div class="tab-content col-12" id="orgTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="detail-tabcontent"
-                role="tabpanel"
-                aria-labelledby="detail-tab"
-              >
+              <div class="tab-pane fade show active" id="detail-tabcontent" role="tabpanel"
+                aria-labelledby="detail-tab">
                 <div class="row">
                   <div class="col-12">
                     <div class="form-group mb-2">
                       <label class="control-label mb-0">Description</label>
-                      <input
-                        type="text"
-                        class="form-control mb-0"
-                        formControlName="description"
+                      <input 
+                        type="text" 
+                        class="form-control mb-0" 
+                        formControlName="description" 
                         required
-                        maxlength="200"
-                        (invalid)="
-                          setCustomValidity(
-                            $event,
-                            'Please fill out this field.'
-                          )
-                        "
-                        oninput="setCustomValidity('')"
-                        (keyup)="
-                          onKeyupValidateSpecialChar(
-                            $event,
-                            descSpecialChars,
-                            'description'
-                          )
-                        "
-                      />
+                        maxlength="200" 
+                        (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                        oninput="setCustomValidity('')" 
+                        (keyup)="onKeyupValidateSpecialChar($event, descSpecialChars, 'description')" />
                     </div>
                   </div>
                 </div>
@@ -139,60 +70,37 @@
                         <div class="col border border-info rounded p-2 mb-2">
                           <div class="form-row mb-1">
                             <div class="form-group col-4">
-                              <label class="control-label mb-1"
-                                >Screening Model
+                              <label class="control-label mb-1">Screening Model
                               </label>
-                              <select
-                                class="form-control custom-select"
-                                formControlName="grading_id"
-                                required
-                              >
+                              <select class="form-control custom-select" formControlName="grading_id" required>
                                 <option value="P">Fully Automated</option>
 
                                 <option value="S">Semi-Automated</option>
                               </select>
                             </div>
                             <div class="form-group col-5">
-                              <label class="control-label mb-1"
-                                >Image Report Preference
+                              <label class="control-label mb-1">Image Report Preference
                               </label>
-                              <select
-                                class="form-control custom-select"
-                                formControlName="report_ind"
-                                required
-                              >
+                              <select class="form-control custom-select" formControlName="report_ind" required>
                                 <option value="MC">Macula Centered</option>
                                 <option value="OC">Optic Disc Centered</option>
                               </select>
                             </div>
                             <div class="form-group col-3">
-                              <label class="control-label mb-1"
-                                >Audit Threshold
+                              <label class="control-label mb-1">Audit Threshold
                               </label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                formControlName="auditing_threshold"
+                              <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="auditing_threshold" 
                                 maxlength="4"
-                                (keyup)="
-                                  onKeyupChkposval(
-                                    $event,
-                                    'auditing_threshold',
-                                    2
-                                  )
-                                "
-                              />
+                                (keyup)="onKeyupChkposval($event, 'auditing_threshold', 2)" />
                             </div>
                           </div>
                           <div class="form-row mb-1">
                             <div class="form-group col-6">
-                              <label class="control-label mb-1"
-                                >Parent Organization
-                              </label>
-                              <select
-                                class="form-control custom-select"
-                                formControlName="parent_company_id"
-                              >
+                              <label class="control-label mb-1">Parent Organization</label>
+                              <select class="form-control custom-select" formControlName="parent_company_id">
                                 <option value></option>
 
                                 <option value="8">
@@ -240,26 +148,16 @@
                             </div>
 
                             <div class="form-group col-6">
-                              <label class="control-label mb-1"
-                                >Camera ID
+                              <label class="control-label mb-1">Camera ID
                               </label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                formControlName="camera_id"
-                                maxlength="50"
-                              />
+                              <input type="text" class="form-control" formControlName="camera_id" maxlength="50" />
                             </div>
                           </div>
                           <div class="form-row">
                             <div class="form-group col-6">
-                              <label class="control-label mb-1"
-                                >Ocular Reading Centre
+                              <label class="control-label mb-1">Ocular Reading Centre
                               </label>
-                              <select
-                                class="form-control custom-select"
-                                formControlName="secondary_id"
-                              >
+                              <select class="form-control custom-select" formControlName="secondary_id">
                                 <option value></option>
 
                                 <option value="8">
@@ -306,13 +204,9 @@
                               </select>
                             </div>
                             <div class="form-group col-6">
-                              <label class="control-label mb-1"
-                                >Auxiliary Image Acquisition
+                              <label class="control-label mb-1">Auxiliary Image Acquisition
                               </label>
-                              <select
-                                class="form-control custom-select"
-                                formControlName="collect_company_id"
-                              >
+                              <select class="form-control custom-select" formControlName="collect_company_id">
                                 <option value></option>
 
                                 <option value="8">
@@ -361,82 +255,47 @@
                           </div>
                           <div class="form-row">
                             <div class="form-group col-4">
-                              <label class="control-label mb-1"
-                                >Contact Name
-                              </label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                formControlName="contact_name"
+                              <label class="control-label mb-1">Contact Name </label>
+                              <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="contact_name" 
                                 maxlength="200"
-                                (keyup)="
-                                  onKeyupValidateSpecialChar(
-                                    $event,
-                                    nameSpecialChars,
-                                    'contact_name'
-                                  )
-                                "
-                              />
+                                (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')" />
                             </div>
                             <div class="form-group col-4">
                               <label class="control-label mb-1">Email </label>
-                              <input
-                                type="email"
-                                class="form-control"
-                                formControlName="contact_email"
+                              <input 
+                                type="email" 
+                                class="form-control" 
+                                formControlName="contact_email" 
                                 maxlength="50"
-                                (invalid)="
-                                  setCustomValidity(
-                                    $event,
-                                    'Please enter a valid email address.'
-                                  )
-                                "
+                                (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
                                 oninput="setCustomValidity('')"
-                                onchange="if (this.value==''){setCustomValidity('');}"
-                              />
+                                onchange="if (this.value==''){setCustomValidity('');}" />
                             </div>
                             <div class="form-group col-4">
-                              <label class="control-label mb-1"
-                                >Contact Number
-                              </label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                formControlName="contact_no"
+                              <label class="control-label mb-1">Contact Number </label>
+                              <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="contact_no" 
                                 maxlength="20"
-                                (keyup)="
-                                  onKeyupChkposval($event, 'contact_no', 2)
-                                "
-                              />
+                                (keyup)="onKeyupChkposval($event, 'contact_no', 2)" />
                             </div>
                           </div>
 
                           <div class="form-row">
                             <div class="form-group col-7">
-                              <label class="control-label mb-1"
-                                >Contact Address
-                              </label>
-                              <textarea
-                                class="form-control"
-                                formControlName="contact_address"
-                                maxlength="200"
-                                style="height: 60px"
-                              ></textarea>
+                              <label class="control-label mb-1">Contact Address </label>
+                              <textarea class="form-control" formControlName="contact_address" maxlength="200" style="height: 60px"></textarea>
                             </div>
                             <div class="form-group col-2 pl-4">
                               <div class="row">
                                 <div class="col-12 xtext-center">
-                                  <label
-                                    class="control-label"
-                                    style="cursor: pointer"
-                                    >Status </label
-                                  ><br />
+                                  <label class="control-label" style="cursor: pointer">Status </label><br />
                                   <label class="switch">
-                                    <input
-                                      type="checkbox"
-                                      formControlName="status"
-                                      value="A"
-                                    />
+                                    <input type="checkbox" formControlName="status" value="A" />
                                     <span class="slider round"></span>
                                   </label>
 
@@ -448,163 +307,106 @@
                             </div>
                             <div class="form-group col-3">
                               Agreement<br />
-                              <button
-                                type="button"
-                                name="btnUpload"
-                                id="btnUpload"
-                                class="btn btn-sm bg-success mt-1 text-white"
-                                title="Upload Agreement"
-                              >
+                              <button type="button" name="btnUpload" id="btnUpload"
+                                class="btn btn-sm bg-success mt-1 text-white" title="Upload Agreement">
                                 <i class="fa fa-cloud-upload-alt"></i>
-                                <span
-                                  id="file_badge"
-                                  class="badge badge-light d-none"
-                                  >1</span
-                                >
+                                <span id="file_badge" class="badge badge-light d-none">1</span>
                               </button>
 
-                              <input
-                                id="agreement_file"
-                                name="agreement_file"
-                                type="file"
-                                accept=".pdf"
-                                style="display: none"
-                              />
+                              <input id="agreement_file" name="agreement_file" type="file" accept=".pdf"
+                                style="display: none" />
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div
-                        class="col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-2 d-flex"
-                      >
-                        <div
-                          class="col border border-info rounded p-2 mb-2 h-100"
-                        >
+                      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-2 d-flex">
+                        <div class="col border border-info rounded p-2 mb-2 h-100">
                           <div class="form-row mb-0">
                             <div class="form-group col-12">
                               <div class="form-row">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                   Diseases
                                 </div>
                               </div>
 
                               <div class="form-row">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 xpy-1 xfont-weight-bold"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 xpy-1 xfont-weight-bold">
                                   SELENA+
                                 </div>
                               </div>
 
                               <div class="form-row pl-4">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                                   <div class="form-check col-12">
-                                    <input
-                                      class="form-check-input diseases"
+                                    <input 
+                                      class="form-check-input diseases" 
                                       type="checkbox"
-                                      formControlName="disease_cd_1"
-                                      data-id="DR"
+                                      formControlName="disease_cd_1" 
+                                      data-id="DR" 
                                       value="DR"
-                                      style="height: 16px; width: 16px"
-                                    />
-                                    <label
-                                      class="form-check-label pl-1"
-                                      for="disease_cd_1"
-                                      style="cursor: pointer"
-                                      >Diabetic Retinopathy</label
-                                    >
+                                      style="height: 16px; width: 16px" />
+                                    <label class="form-check-label pl-1" for="disease_cd_1"
+                                      style="cursor: pointer">Diabetic Retinopathy</label>
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-row pl-4">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                                   <div class="form-check col-12">
-                                    <input
-                                      class="form-check-input diseases"
+                                    <input 
+                                      class="form-check-input diseases" 
                                       type="checkbox"
-                                      formControlName="disease_cd_2"
-                                      data-id="GLAUCOMA"
+                                      formControlName="disease_cd_2" 
+                                      data-id="GLAUCOMA" 
                                       value="GLAUCOMA"
-                                      style="height: 16px; width: 16px"
-                                    />
-                                    <label
-                                      class="form-check-label pl-1"
-                                      for="disease_cd_2"
-                                      style="cursor: pointer"
-                                      >Glaucoma Suspect</label
-                                    >
+                                      style="height: 16px; width: 16px" />
+                                    <label class="form-check-label pl-1" for="disease_cd_2"
+                                      style="cursor: pointer">Glaucoma Suspect</label>
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-row pl-4">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                                   <div class="form-check col-12">
-                                    <input
-                                      class="form-check-input diseases"
+                                    <input 
+                                      class="form-check-input diseases" 
                                       type="checkbox"
-                                      formControlName="disease_cd_3"
-                                      data-id="AMD"
+                                      formControlName="disease_cd_3" 
+                                      data-id="AMD" 
                                       value="AMD"
-                                      style="height: 16px; width: 16px"
-                                    />
-                                    <label
-                                      class="form-check-label pl-1"
-                                      for="disease_cd_3"
-                                      style="cursor: pointer"
-                                      >Age-Related Macular Degeneration</label
-                                    >
+                                      style="height: 16px; width: 16px" />
+                                    <label class="form-check-label pl-1" for="disease_cd_3"
+                                      style="cursor: pointer">Age-Related Macular Degeneration</label>
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-row">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 xpy-1 xfont-weight-bold"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 xpy-1 xfont-weight-bold">
                                   RetiKID
                                 </div>
                               </div>
 
                               <div class="form-row pl-4">
-                                <div
-                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1"
-                                >
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pl-3 py-1">
                                   <div class="form-check col-12">
-                                    <input
-                                      class="form-check-input diseases"
+                                    <input 
+                                      class="form-check-input diseases" 
                                       type="checkbox"
-                                      formControlName="disease_cd_4"
-                                      data-id="CKD"
+                                      formControlName="disease_cd_4" 
+                                      data-id="CKD" 
                                       value="CKD"
-                                      style="height: 16px; width: 16px"
-                                    />
-                                    <label
-                                      class="form-check-label pl-1"
-                                      for="disease_cd_4"
-                                      style="cursor: pointer"
-                                      >Chronic Kidney Disease</label
-                                    >
+                                      style="height: 16px; width: 16px" />
+                                    <label class="form-check-label pl-1" for="disease_cd_4"
+                                      style="cursor: pointer">Chronic Kidney Disease</label>
                                   </div>
                                 </div>
                               </div>
 
-                              <input
-                                type="hidden"
-                                id="diseases_count"
-                                name="diseases_count"
-                                value="4"
-                              />
+                              <input type="hidden" id="diseases_count" name="diseases_count" value="4" />
                             </div>
                           </div>
                         </div>
@@ -616,31 +418,17 @@
                 <div class="form-row mb-0">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-2">
                     <div class="form-row">
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex"
-                      >
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
                         <div class="col border border-info rounded p-2 mb-2">
                           <div class="form-row">
                             <div class="col-12 pr-2">
                               <div class="form-row py-0">
                                 <div class="form-group form-inline col-12 pb-2">
-                                  <div
-                                    class="custom-control custom-checkbox pl-0"
-                                  >
-                                    <label
-                                      class="form-check-label"
-                                      style="cursor: pointer"
-                                      ><i
-                                        class="fa fa-gift text-primary fa-lg pr-2"
-                                      ></i>
+                                  <div class="custom-control custom-checkbox pl-0">
+                                    <label class="form-check-label" style="cursor: pointer"><i class="fa fa-gift text-primary fa-lg pr-2"></i>
                                       Free Trial Account &nbsp;
-                                      <input
-                                        type="checkbox"
-                                        class="custom-control pl-4"
-                                        formControlName="trial_ind"
-                                        value="Y"
-                                        style="height: 16px; width: 16px"
-                                      />
+                                      <input type="checkbox" class="custom-control pl-4" formControlName="trial_ind"
+                                        value="Y" style="height: 16px; width: 16px" />
                                     </label>
                                   </div>
                                 </div>
@@ -648,35 +436,28 @@
 
                               <div class="form-row">
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Effective Date From
-                                  </label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
+                                  <label class="control-label mb-1">Effective Date From</label>
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
                                     formControlName="trial_startdate"
-                                    style="max-width: 255px"
-                                    maxlength="11"
-                                    required
-                                    onkeydown="return false"
-                                    (keyup)="
-                                      onKeyupDate($event, 'trial_startdate')
-                                    "
-                                    #mdatepickerTrialFrom
-                                    #datepickerTrialFrom="bsDatepicker"
+                                    style="max-width: 255px" 
+                                    maxlength="11" 
+                                    required 
+                                    onkeydown="return false" 
+                                    (keyup)="onKeyupDate($event, 'trial_startdate')" 
+                                    #mdatepickerTrialFrom 
+                                    #datepickerTrialFrom="bsDatepicker" 
                                     bsDatepicker
-                                    placement="top"
-                                    (bsValueChange)="
-                                      onDateChange($event, mdatepickerTrialFrom)
-                                    "
+                                    placement="top" 
+                                    (bsValueChange)="onDateChange($event, mdatepickerTrialFrom)" 
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
                                       showTodayButton: true,
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
-                                    }"
-                                  />
+                                    }" />
                                   <!-- <input
                                     type="text"
                                     class="form-control"
@@ -691,35 +472,28 @@
                                   /> -->
                                 </div>
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Date To
-                                  </label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
+                                  <label class="control-label mb-1">Date To</label>
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
                                     formControlName="trial_enddate"
-                                    style="max-width: 255px"
-                                    maxlength="11"
-                                    required
-                                    onkeydown="return false"
-                                    (keyup)="
-                                      onKeyupDate($event, 'trial_enddate')
-                                    "
-                                    #mdatepickerTrialTo
-                                    #datepickerTrialTo="bsDatepicker"
+                                    style="max-width: 255px" 
+                                    maxlength="11" 
+                                    required 
+                                    onkeydown="return false" 
+                                    (keyup)="onKeyupDate($event, 'trial_enddate')" 
+                                    #mdatepickerTrialTo 
+                                    #datepickerTrialTo="bsDatepicker" 
                                     bsDatepicker
-                                    placement="top"
-                                    (bsValueChange)="
-                                      onDateChange($event, mdatepickerTrialTo)
-                                    "
+                                    placement="top" 
+                                    (bsValueChange)="onDateChange($event, mdatepickerTrialTo)" 
                                     [bsConfig]="{
                                       dateInputFormat: 'DD-MMM-YYYY',
                                       containerClass: 'theme-dark-blue',
                                       showTodayButton: true,
                                       showClearButton: true,
                                       customTodayClass: 'custom-today-class'
-                                    }"
-                                  />
+                                    }" />
                                   <!-- <input
                                     type="text"
                                     class="form-control"
@@ -733,37 +507,22 @@
                                   /> -->
                                 </div>
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Trial Count
-                                  </label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    formControlName="trial_count"
+                                  <label class="control-label mb-1">Trial Count</label>
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    formControlName="trial_count" 
                                     maxlength="4"
-                                    (keyup)="
-                                      onKeyupChkposval($event, 'trial_count', 2)
-                                    "
-                                    style="max-width: 255px"
-                                  />
+                                    (keyup)="onKeyupChkposval($event, 'trial_count', 2)" style="max-width: 255px" />
                                 </div>
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Submitted Count
-                                  </label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
+                                  <label class="control-label mb-1">Submitted Count</label>
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
                                     formControlName="submitted_count"
-                                    maxlength="4"
-                                    (keyup)="
-                                      onKeyupChkposval(
-                                        $event,
-                                        'submitted_count',
-                                        2
-                                      )
-                                    "
-                                  />
+                                    maxlength="4" 
+                                    (keyup)="onKeyupChkposval($event, 'submitted_count', 2)" />
                                 </div>
                               </div>
                             </div>
@@ -772,28 +531,17 @@
                           <div class="form-row">
                             <div class="col-12 pt-2">
                               <div class="form-row">
-                                <div
-                                  id="div_acc_upgrade"
-                                  class="form-group col-12"
-                                >
-                                  <button
-                                    type="button"
-                                    name="btnSubscribe"
-                                    id="btnSubscribe"
-                                    class="btn btn-sm bg-warning text-dark xtext-white col-12"
-                                    title="Upgrade Account"
-                                    style="cursor: pointer"
-                                  >
-                                    <i class="fa fa-user-tag fa-lg"></i> Click
-                                    to upgrade Account
+                                <div id="div_acc_upgrade" class="form-group col-12">
+                                  <button type="button" name="btnSubscribe" id="btnSubscribe"
+                                    class="btn btn-sm bg-warning text-dark xtext-white col-12" title="Upgrade Account"
+                                    style="cursor: pointer">
+                                    <i class="fa fa-user-tag fa-lg"></i> Click to upgrade Account
                                   </button>
                                 </div>
                               </div>
                               <div class="form-row">
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Effective Date From
-                                  </label>
+                                  <label class="control-label mb-1">Effective Date From</label>
                                   <!-- <input
                                     type="text"
                                     class="form-control"
@@ -814,28 +562,20 @@
                                       customTodayClass: 'custom-today-class'
                                     }"
                                   /> -->
-                                  <input
-                                    type="text"
-                                    class="form-control"
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
                                     formControlName="subscribe_startdate"
-                                    style="max-width: 255px"
+                                    style="max-width: 255px" 
                                     maxlength="11"
-                                    onblur="if(!(check_date(this))){this.value='';}"
-                                    readonly
-                                    (invalid)="
-                                      setCustomValidity(
-                                        $event,
-                                        'Please fill out this field.'
-                                      )
-                                    "
+                                    onblur="if(!(check_date(this))){this.value='';}" 
+                                    readonly 
+                                    (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                                     oninput="setCustomValidity('')"
-                                    onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                    onchange="if(this.value!=''){setCustomValidity('');}" />
                                 </div>
                                 <div class="form-group col-3">
-                                  <label class="control-label mb-1"
-                                    >Date To
-                                  </label>
+                                  <label class="control-label mb-1">Date To</label>
                                   <!-- <input
                                     type="text"
                                     class="form-control"
@@ -856,34 +596,22 @@
                                       customTodayClass: 'custom-today-class'
                                     }"
                                   /> -->
-                                  <input
-                                    type="text"
-                                    class="form-control"
+                                  <input 
+                                    type="text" 
+                                    class="form-control" 
                                     formControlName="subscribe_enddate"
-                                    style="max-width: 255px"
-                                    maxlength="11"
-                                    value
-                                    onblur="if(!(check_date(this))){this.value='';}"
-                                    readonly
-                                    (invalid)="
-                                      setCustomValidity(
-                                        $event,
-                                        'Please fill out this field.'
-                                      )
-                                    "
+                                    style="max-width: 255px" 
+                                    maxlength="11" value
+                                    onblur="if(!(check_date(this))){this.value='';}" 
+                                    readonly 
+                                    (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                                     oninput="setCustomValidity('')"
-                                    onchange="if(this.value!=''){setCustomValidity('');}"
-                                  />
+                                    onchange="if(this.value!=''){setCustomValidity('');}" />
                                 </div>
                                 <div class="form-group col-6">
-                                  <label class="control-label mb-1"
-                                    >Billing Mode</label
-                                  >
-                                  <select
-                                    class="form-control custom-select"
-                                    formControlName="billing_mode"
-                                    [disabled]="true"
-                                  >
+                                  <label class="control-label mb-1">Billing Mode</label>
+                                  <select class="form-control custom-select" formControlName="billing_mode"
+                                    [disabled]="true">
                                     <option value></option>
                                     <option value="CREDITS">By Credits</option>
                                     <option value="TIER">By Tier</option>
@@ -899,33 +627,21 @@
                 </div>
               </div>
 
-              <div
-                class="tab-pane fade"
-                id="threshold-tabcontent"
-                role="tabpanel"
-                aria-labelledby="threshold-tab"
-              >
-                <div
-                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex p-1 xpl-0"
-                >
+              <div class="tab-pane fade" id="threshold-tabcontent" role="tabpanel" aria-labelledby="threshold-tab">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex p-1 xpl-0">
                   <div class="col border border-info rounded p-2 mb-2">
                     <div class="form-row mb-2">
                       <div class="form-group col">
-                        <label class="control-label mb-0"
-                          >SELENA+ Threshold
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          formControlName="selena_threshold"
+                        <label class="control-label mb-0">SELENA+ Threshold</label>
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          formControlName="selena_threshold" 
                           maxlength="100"
-                          onchange="checkDetail();"
-                        />
+                          onchange="checkDetail();" />
                       </div>
                     </div>
-                    <div
-                      class="form-row xtext-white xbg-secondary mx-1 xrounded xborder xborder-info"
-                    >
+                    <div class="form-row xtext-white xbg-secondary mx-1 xrounded xborder xborder-info">
                       <div class="col-12 small pb-2">
                         <div class="form-row text-white bg-secondary py-1">
                           <div class="col-6">Eye Diseases</div>
@@ -943,24 +659,15 @@
                                     No apparent retinopathy/Mild
                                     non-proliferative DR
                                   </div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="ndr"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="ndr"></div>
                                 </div>
                                 <div class="form-row bg-light">
                                   <div class="col-6">Referable DR</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="rdr"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="rdr"></div>
                                 </div>
                                 <div class="form-row bg-white">
                                   <div class="col-6">Vision Threatening DR</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="vtdr"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="vtdr"></div>
                                 </div>
                               </div>
                             </div>
@@ -974,17 +681,11 @@
                               <div class="col-12 pl-3">
                                 <div class="form-row bg-white">
                                   <div class="col-6">No AMD</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="namd"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="namd"></div>
                                 </div>
                                 <div class="form-row bg-light">
                                   <div class="col-6">Referable AMD</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="ramd"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="ramd"></div>
                                 </div>
                               </div>
                             </div>
@@ -996,17 +697,11 @@
                               <div class="col-12 pl-3">
                                 <div class="form-row bg-light">
                                   <div class="col-6">No Glaucoma</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="ngla"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="ngla"></div>
                                 </div>
                                 <div class="form-row bg-white">
                                   <div class="col-6">Referable Glaucoma</div>
-                                  <div
-                                    class="col-6 selena-scale"
-                                    id="rgla"
-                                  ></div>
+                                  <div class="col-6 selena-scale" id="rgla"></div>
                                 </div>
                               </div>
                             </div>
@@ -1018,80 +713,48 @@
                 </div>
               </div>
 
-              <div
-                class="tab-pane fade"
-                id="ckdthreshold-tabcontent"
-                role="tabpanel"
-                aria-labelledby="threshold-tab"
-              >
-                <div
-                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex p-1 xpl-0"
-                >
+              <div class="tab-pane fade" id="ckdthreshold-tabcontent" role="tabpanel" aria-labelledby="threshold-tab">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex p-1 xpl-0">
                   <div class="col border border-info rounded p-2 mb-2">
                     <div class="form-row mb-2">
                       <div class="form-group col">
-                        <label class="control-label mb-0"
-                          >Left Image Quality Threshold
-                        </label>
-                        <input
-                          type="text"
-                          xvalue="0.9433"
+                        <label class="control-label mb-0">Left Image Quality Threshold</label>
+                        <input 
+                          type="text" 
+                          xvalue="0.9433" 
                           class="form-control"
-                          formControlName="ckd_image_left_threshold"
-                          maxlength="100"
-                          (keyup)="
-                            onKeyupCkdIm($event, 'ckd_image_left_threshold', 8)
-                          "
-                          (blur)="
-                            onBlurCkdIm($event, 'ckd_image_left_threshold', 8)
-                          "
-                        />
+                          formControlName="ckd_image_left_threshold" 
+                          maxlength="100" 
+                          (keyup)="onKeyupCkdIm($event, 'ckd_image_left_threshold', 8)" 
+                          (blur)="onBlurCkdIm($event, 'ckd_image_left_threshold', 8)" />
                       </div>
                     </div>
                     <div class="form-row mb-2">
                       <div class="form-group col">
-                        <label class="control-label mb-0"
-                          >Right Image Quality Threshold
-                        </label>
-                        <input
-                          type="text"
-                          xvalue="0.9567"
+                        <label class="control-label mb-0">Right Image Quality Threshold</label>
+                        <input 
+                          type="text" 
+                          xvalue="0.9567" 
                           class="form-control"
-                          formControlName="ckd_image_right_threshold"
-                          maxlength="100"
-                          (keyup)="
-                            onKeyupCkdIm($event, 'ckd_image_right_threshold', 8)
-                          "
-                          (blur)="
-                            onBlurCkdIm($event, 'ckd_image_right_threshold', 8)
-                          "
-                        />
+                          formControlName="ckd_image_right_threshold" 
+                          maxlength="100" 
+                          (keyup)="onKeyupCkdIm($event, 'ckd_image_right_threshold', 8)" 
+                          (blur)="onBlurCkdIm($event, 'ckd_image_right_threshold', 8)" />
                       </div>
                     </div>
                     <div class="form-row mb-2">
                       <div class="form-group col">
-                        <label class="control-label mb-0"
-                          >Image Result Threshold
-                        </label>
-                        <input
-                          type="text"
-                          xvalue="0.6"
+                        <label class="control-label mb-0">Image Result Threshold</label>
+                        <input 
+                          type="text" 
+                          xvalue="0.6" 
                           class="form-control"
-                          formControlName="ckd_image_result_threshold"
-                          maxlength="100"
-                          (keyup)="
-                            onKeyupCkdIm(
-                              $event,
-                              'ckd_image_result_threshold',
-                              8
-                            )
-                          "
-                          (blur)="
-                            onBlurCkdIm($event, 'ckd_image_result_threshold', 8)
-                          "
+                          formControlName="ckd_image_result_threshold" 
+                          maxlength="100" 
+                          (keyup)="onKeyupCkdIm($event, 'ckd_image_result_threshold', 8)" 
+                          (blur)="onBlurCkdIm($event, 'ckd_image_result_threshold', 8)" 
                           onkeyup="reject_space(this);chkposval(this, 8, 'ckd_image_result_threshold');"
-                          onblur="reject_space(this);chkposval(this, 8, 'ckd_image_result_threshold');"
-                        />
+                          onblur="reject_space(this);chkposval(this, 8, 'ckd_image_result_threshold');" />
                       </div>
                     </div>
                   </div>
@@ -1103,26 +766,13 @@
         <div class="xbottom"></div>
       </div>
 
-      <div
-        class="container-fluid px-0 py-2 text-center xborder bg-white border-top"
-      >
-        <button
-          type="button"
-          name="btnCancel"
-          id="btnCancel"
-          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          title="Cancel"
-          (click)="onHide()"
-        >
+      <div class="container-fluid px-0 py-2 text-center xborder bg-white border-top">
+        <button type="button" name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
+          title="Cancel" (click)="onHide()">
           <i class="fa fa-times"></i> Cancel
         </button>
-        <button
-          type="submit"
-          name="btnSave"
-          id="btnSave"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          title="Save"
-        >
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          title="Save">
           <i class="fa fa-save"></i> Save
         </button>
       </div>

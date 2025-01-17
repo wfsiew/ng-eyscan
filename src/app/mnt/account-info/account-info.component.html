@@ -1,45 +1,22 @@
-<app-header
-  [reload]="'/mnt/user'"
-  [headerid]="'fnprof1'"
-  [title]="'Account Info' | translate"
-></app-header>
+<app-header [reload]="'/mnt/user'" [headerid]="'fnprof1'" [title]="'Account Info' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +33,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,298 +54,155 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-2 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-lg-2"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link active"
-          id="v-pills-home-tab"
-          data-toggle="pill"
-          href="#v-pills-home"
-          role="tab"
-          aria-controls="v-pills-home"
-          aria-selected=" true  "
-          >{{ "Personal Info" | translate }}</a
-        >
-        <a
-          class="nav-link"
-          id="v-pills-profile-tab"
-          data-toggle="pill"
-          href="#v-pills-profile"
-          role="tab"
-          aria-controls="v-pills-profile"
-          aria-selected=" false "
-          >{{ "Change Password" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-lg-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+          aria-controls="v-pills-home" aria-selected=" true  ">{{ "Personal Info" | translate }}</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+          aria-controls="v-pills-profile" aria-selected=" false ">{{ "Change Password" | translate }}</a>
       </div>
       <div class="tab-content xp-4 col-lg-10" id="v-pills-tabContent">
-        <div
-          class="tab-pane fade border show active"
-          id="v-pills-home"
-          role="tabpanel"
-          aria-labelledby="v-pills-home-tab"
-        >
+        <div class="tab-pane fade border show active" id="v-pills-home" role="tabpanel"
+          aria-labelledby="v-pills-home-tab">
           <h2 id="hd_text" class="container-fluid">
             {{ "Personal Info" | translate }}
           </h2>
           <div class="container-fluid">
-            <form
-              *ngIf="mform"
-              frmMain
-              id="frmMain"
-              method="post"
-              [formGroup]="mform"
-              ngNativeValidate
-              (ngSubmit)="onSubmit()"
-            >
-              <input
-                type="hidden"
-                name="nameSpecialChars"
-                id="nameSpecialChars"
-                value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?"
-              />
+            <form *ngIf="mform" frmMain id="frmMain" method="post" [formGroup]="mform" ngNativeValidate (ngSubmit)="onSubmit()">
+              <input type="hidden" name="nameSpecialChars" id="nameSpecialChars"
+                value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
 
-              <input
-                type="hidden"
+              <input type="hidden"
                 name="fF8FF917ADB4FC75FBC3341A3EB823F2BA5CE0B1E1A1C3394CBC29BBBD80842EE6A50483C8659FCA9306A9F4E5DD45858F62A82F83CAB5D106CB2AB02EE25F709"
-                value="F2EC22596292B8EB1CE3D8A053A031355BC12843"
-              />
+                value="F2EC22596292B8EB1CE3D8A053A031355BC12843" />
 
               <div class="form-group">
                 <label>{{ "Display Name" | translate }} </label>
-                <input
-                  type="text"
-                  maxlength="20"
-                  class="form-control"
-                  formControlName="displayname"
+                <input 
+                  type="text" 
+                  maxlength="20" 
+                  class="form-control" 
+                  formControlName="displayname" 
                   placeholder
-                  value="KC"
-                  (keyup)="
-                    onKeyupValidateSpecialChar(
-                      $event,
-                      nameSpecialChars,
-                      'displayname'
-                    )
-                  "
-                  autocomplete="off"
-                />
+                  value="KC" 
+                  (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'displayname')" 
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>{{ "First Name" | translate }} </label>
-                <input
-                  type="text"
-                  maxlength="100"
-                  class="form-control"
-                  formControlName="firstname"
+                <input 
+                  type="text" 
+                  maxlength="100" 
+                  class="form-control" 
+                  formControlName="firstname" 
                   placeholder
-                  value="Kian Cheong"
-                  (keyup)="
-                    onKeyupValidateSpecialChar(
-                      $event,
-                      nameSpecialChars,
-                      'firstname'
-                    )
-                  "
-                  autocomplete="off"
-                />
+                  value="Kian Cheong" 
+                  (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'firstname')" 
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>{{ "Last Name" | translate }} </label>
-                <input
-                  type="text"
-                  maxlength="100"
-                  class="form-control"
-                  formControlName="lastname"
+                <input 
+                  type="text" 
+                  maxlength="100" 
+                  class="form-control" 
+                  formControlName="lastname" 
                   placeholder
-                  value="Lam"
-                  (keyup)="
-                    onKeyupValidateSpecialChar(
-                      $event,
-                      nameSpecialChars,
-                      'lastname'
-                    )
-                  "
-                  autocomplete="off"
-                />
+                  value="Lam" 
+                  (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'lastname')" 
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>{{ "Contact No" | translate }} </label>
-                <input
-                  type="text"
-                  maxlength="20"
-                  class="form-control"
-                  formControlName="contactno"
-                  placeholder
+                <input 
+                  type="text" 
+                  maxlength="20" 
+                  class="form-control" 
+                  formControlName="contactno" 
+                  placeholder 
                   value
-                  (keyup)="onKeyupChkposval($event, 'contactno', 2)"
-                  autocomplete="off"
-                />
+                  (keyup)="onKeyupChkposval($event, 'contactno', 2)" 
+                  autocomplete="off" />
               </div>
 
               <div class="form-group">
                 <label>{{ "Grading Group" | translate }}</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="grading_group"
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="grading_group" 
                   placeholder
-                  value="Primary Screener"
-                  readonly
-                />
+                  value="Primary Screener" 
+                  readonly />
               </div>
 
               <div class="form-group">
                 <label>{{ "Company" | translate }}</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="company"
-                  placeholder
-                  value="EyRIS"
-                  readonly
-                />
+                <input type="text" class="form-control" formControlName="company" placeholder value="EyRIS" readonly />
               </div>
 
               <div class="form-group">
                 <label>{{ "Timezone" | translate }}</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="timezone"
-                  placeholder
-                  value="Singapore"
-                  readonly
-                />
+                <input type="text" class="form-control" formControlName="timezone" placeholder value="Singapore" readonly />
               </div>
 
-              <button
-                name="btnSave"
-                id="btnSave"
-                type="submit"
-                class="btn bg-primary text-white float-right mt-3"
-                [title]="'Save' | translate"
-              >
+              <button name="btnSave" id="btnSave" type="submit" class="btn bg-primary text-white float-right mt-3"
+                [title]="'Save' | translate">
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
             </form>
           </div>
         </div>
 
-        <div
-          class="tab-pane fade border"
-          id="v-pills-profile"
-          role="tabpanel"
-          aria-labelledby="v-pills-profile-tab"
-        >
+        <div class="tab-pane fade border" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
           <h2 id="hd_text" class="container-fluid">
             {{ "Change Password" | translate }}
           </h2>
           <div class="container-fluid">
-            <form
-              *ngIf="pform"
-              name="frmChangePWD"
-              id="frmChangePWD"
-              method="post"
-              [formGroup]="pform"
-              ngNativeValidate
-              (ngSubmit)="onSubmitChangePwd()"
-            >
-              <input
-                type="hidden"
-                name="passwordSpecialChars"
-                id="passwordSpecialChars"
-                value="%"
-              />
+            <form *ngIf="pform" name="frmChangePWD" id="frmChangePWD" method="post" [formGroup]="pform" ngNativeValidate (ngSubmit)="onSubmitChangePwd()">
+              <input type="hidden" name="passwordSpecialChars" id="passwordSpecialChars" value="%" />
 
               <div class="form-group">
                 <label>{{ "Current Password" | translate }} </label>
-                <input
-                  type="password"
-                  class="form-control"
-                  formControlName="old_pwd"
-                  placeholder
-                  autocomplete="off"
-                />
-                <input
-                  name="old_pwd_hnd"
-                  id="old_pwd_hnd"
-                  type="hidden"
-                  value
-                />
+                <input type="password" class="form-control" formControlName="old_pwd" placeholder autocomplete="off" />
+                <input name="old_pwd_hnd" id="old_pwd_hnd" type="hidden" value />
 
-                <input
-                  type="hidden"
+                <input type="hidden"
                   name="f17BB4A345F7E3C6BF27B56349355B94273C15CB04D15126C82C0AF7BDBB67982A9E659867A9801B46E7DD44FB18AE5DBD8DDFCAF5D356ADBEBF2E55A00D13DF6"
-                  value="A716A3771C312773183B6F8A648BFA83EF11C42D"
-                />
+                  value="A716A3771C312773183B6F8A648BFA83EF11C42D" />
               </div>
               <div class="form-group mb-1">
                 <label>{{ "New Password" | translate }} </label>
-                <input
-                  type="password"
-                  class="form-control"
-                  formControlName="new_pwd"
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  formControlName="new_pwd" 
                   placeholder
-                  (keyup)="onKeyupNewPwd($event)"
-                  autocomplete="off"
-                />
-                <input
-                  name="new_pwd_hnd"
-                  id="new_pwd_hnd"
-                  type="hidden"
-                  value
-                />
+                  (keyup)="onKeyupNewPwd($event)" 
+                  autocomplete="off" />
+                <input name="new_pwd_hnd" id="new_pwd_hnd" type="hidden" value />
               </div>
 
               <div id="ver_div" class="form-group mt-0 mb-3 pl-3">
-                <div
-                  id="ver1"
-                  class="col-12 small text-dark"
-                  [class.text-success]="ver1"
-                  [class.text-dark]="!ver1"
-                >
+                <div id="ver1" class="col-12 small text-dark" [class.text-success]="ver1" [class.text-dark]="!ver1">
                   <i class="fas fa-check-circle fa-sm"></i>
                   {{ "contains lowercase letters" | translate }}
                 </div>
-                <div
-                  id="ver2"
-                  class="col-12 small"
-                  [class.text-success]="ver2"
-                  [class.text-dark]="!ver2"
-                >
+                <div id="ver2" class="col-12 small" [class.text-success]="ver2" [class.text-dark]="!ver2">
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains uppercase letters" | translate }}
                 </div>
-                <div
-                  id="ver3"
-                  class="col-12 small"
-                  [class.text-success]="ver3"
-                  [class.text-dark]="!ver3"
-                >
+                <div id="ver3" class="col-12 small" [class.text-success]="ver3" [class.text-dark]="!ver3">
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains a number" | translate }}
                 </div>
-                <div
-                  id="ver4"
-                  class="col-12 small"
-                  [class.text-success]="ver4"
-                  [class.text-dark]="!ver4"
-                >
+                <div id="ver4" class="col-12 small" [class.text-success]="ver4" [class.text-dark]="!ver4">
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains at least 1 special character" | translate }}
                 </div>
-                <div
-                  id="ver5"
-                  class="col-12 small"
-                  [class.text-success]="ver5"
-                  [class.text-dark]="!ver5"
-                >
+                <div id="ver5" class="col-12 small" [class.text-success]="ver5" [class.text-dark]="!ver5">
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains at least {{min}} and not more than {{max}} characters (no spaces)" | translate: {min:8, max:20} }}
                 </div>
@@ -391,23 +210,11 @@
 
               <div class="form-group">
                 <label>{{ "Re-enter New Password" | translate }} </label>
-                <input
-                  type="password"
-                  class="form-control"
-                  formControlName="new_pwd_confirm"
-                  placeholder
-                  autocomplete="off"
-                />
+                <input type="password" class="form-control" formControlName="new_pwd_confirm" placeholder autocomplete="off" />
               </div>
 
-              <button
-                name="btnChangePWD"
-                id="btnChangePWD"
-                [disabled]="disableChangePwd"
-                type="submit"
-                class="btn bg-primary text-white float-right mt-3"
-                [title]="'Save' | translate"
-              >
+              <button name="btnChangePWD" id="btnChangePWD" [disabled]="disableChangePwd" type="submit"
+                class="btn bg-primary text-white float-right mt-3" [title]="'Save' | translate">
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
             </form>

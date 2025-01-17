@@ -1,98 +1,47 @@
 <div id="login">
   <ng-container *ngIf="lang === 'cn'">
     <div class="xtext-center px-0 pb-2 xborder">
-      <img
-        class="p-0 xborder"
-        src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7"
-        style="max-width: 200px"
-        alt
-      />
+      <img class="p-0 xborder" src="assets/img/eyris_login_hd_ch.png?v=Ver1.4.7" style="max-width: 200px" alt />
     </div>
   </ng-container>
   <ng-container *ngIf="lang !== 'cn'">
     <div class="xtext-center px-0 pb-4 xborder">
       <a href="https://eyris.io" target="_blank" title>
-        <img
-          class="p-0 xborder"
-          src="assets/img/eyris_login_hd.png?v=Ver1.4.7"
-          style="max-width: 400px"
-          alt
-        />
+        <img class="p-0 xborder" src="assets/img/eyris_login_hd.png?v=Ver1.4.7" style="max-width: 400px" alt />
 
-        <img
-          class="pl-4 xp-0 xborder"
-          src="assets/img/eyris_tagline_white.png?v=Ver1.4.7"
-          style="max-width: 320px"
-          alt
-        />
+        <img class="pl-4 xp-0 xborder" src="assets/img/eyris_tagline_white.png?v=Ver1.4.7" style="max-width: 320px"
+          alt />
       </a>
     </div>
   </ng-container>
-  <div
-    name="dispMsg"
-    id="dispMsg"
-    class="alert alert-danger text-center small py-1"
-    role="alert"
-    [hidden]="true"
-  >
+  <div name="dispMsg" id="dispMsg" class="alert alert-danger text-center small py-1" role="alert" [hidden]="true">
     {{ "Email and password combination is not valid !!!" | translate }}
-    Email and password combination is not valid !!!
   </div>
 
-  <form
-    *ngIf="mform"
-    name="frm_signon"
-    id="frm_signon"
-    method="post"
-    [formGroup]="mform"
-    ngNativeValidate
-    (ngSubmit)="onSubmit()"
-  >
+  <form *ngIf="mform" name="frm_signon" id="frm_signon" method="post" [formGroup]="mform" ngNativeValidate
+    (ngSubmit)="onSubmit()">
     <input type="hidden" name="hdnPwd" id="hdnPwd" value />
     <div class="form-group">
       <label>{{ "Email Address" | translate }}</label>
-      <input
-        type="email"
-        class="form-control"
-        formControlName="inEmail"
-        [placeholder]="'Email Address' | translate"
-        required
-        autofocus
-        (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
-        oninput="setCustomValidity('')"
-        [title]="'Email Address' | translate"
-        autocomplete="off"
-      />
+      <input type="email" class="form-control" formControlName="inEmail" [placeholder]="'Email Address' | translate"
+        required autofocus (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
+        oninput="setCustomValidity('')" [title]="'Email Address' | translate" autocomplete="off" />
     </div>
     <div class="form-group">
       <label>{{ "Password" | translate }}</label>
-      <input
-        type="password"
-        class="form-control"
-        formControlName="inPassword"
-        [placeholder]="'Password' | translate"
-        required
-        (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-        oninput="setCustomValidity('')"
-        autocomplete="off"
-      />
+      <input type="password" class="form-control" formControlName="inPassword" [placeholder]="'Password' | translate"
+        required (invalid)="setCustomValidity($event, 'Please fill out this field.')" oninput="setCustomValidity('')"
+        autocomplete="off" />
     </div>
     <div class="form-group">
-      <button
-        type="submit"
-        class="btn xbtn-primary xbtn-md btn-block btn_login"
-      >
+      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login">
         {{ "Log In" | translate }}
       </button>
     </div>
     <div class="row">
       <div class="col text-left">
-        <select
-          class="form-control custom-select custom-select-sm"
-          style="width: auto"
-          (change)="onChangeLang($event)"
-          formControlName="inLang"
-        >
+        <select class="form-control custom-select custom-select-sm" style="width: auto" (change)="onChangeLang($event)"
+          formControlName="inLang">
           <option value="en" [selected]="lang === 'en'">English</option>
 
           <option value="cn" [selected]="lang === 'cn'">简体中文</option>
@@ -109,49 +58,31 @@
       <div class="col text-right">
         <a href="#" (click)="onForgotPwd()">{{
           "Forgot password?" | translate
-        }}</a>
+          }}</a>
       </div>
     </div>
 
     <div class="row xmy-2 mt-2 xmb-1 xborder-bottom">
       <div class="col-1 py-0 pl-3 pr-0">
-        <img
-          alt="Barcode Generator TEC-IT"
-          style="max-height: 30px"
-          src="assets/img/udi.gif?Ver1.4.7"
-        />
+        <img alt="Barcode Generator TEC-IT" style="max-height: 30px" src="assets/img/udi.gif?Ver1.4.7" />
       </div>
       <div class="col-11 py-2 text-left small">
-        <small
-          >Powered by SELENA+ Ver1.7.0 and EySCAN Ver1.4.7 &copy; 2025 EyRIS Pte
-          Ltd</small
-        >
+        <small>Powered by SELENA+ Ver1.7.0 and EySCAN Ver1.4.7 &copy; 2025 EyRIS Pte
+          Ltd</small>
       </div>
     </div>
 
     <div class="row xp-0 py-2 px-0">
       <div class="col-12 py-0 pl-3 pr-0">
-        <img
-          class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
-          src="assets/img/CE.png?v=Ver1.4.7"
-          style="max-height: 20px"
-          alt
-        /><span
-          class="py-0 pl-1 pr-4 align-bottom"
-          style="color: black; font-weight: bold"
-          >0123</span
-        >
+        <img class="py-0 pl-0 xpr-1 xpx-2 xalign-top" src="assets/img/CE.png?v=Ver1.4.7" style="max-height: 20px"
+          alt /><span class="py-0 pl-1 pr-4 align-bottom" style="color: black; font-weight: bold">0123</span>
       </div>
     </div>
 
     <div class="row xp-0 pt-2 px-0">
       <div class="col-3 py-0 pl-3 pr-0 text-center">
-        <img
-          class="py-0 pl-0 xpr-1 xpx-2 xalign-top"
-          src="assets/img/manufacture-symbol.png?v=Ver1.4.7"
-          style="max-height: 28px"
-          alt
-        />
+        <img class="py-0 pl-0 xpr-1 xpx-2 xalign-top" src="assets/img/manufacture-symbol.png?v=Ver1.4.7"
+          style="max-height: 28px" alt />
       </div>
       <div class="col-9 p-0">
         <p class="xalign-top" style="font-size: 8pt">
@@ -163,12 +94,8 @@
 
     <div class="row p-0 pt-1">
       <div class="col-3 p-0 py-0 text-center">
-        <img
-          class="py-0 pl-4 pr-2 align-top"
-          src="assets/img/ECRep_MedNet.png?v=Ver1.4.7"
-          style="max-height: 20px"
-          alt
-        />
+        <img class="py-0 pl-4 pr-2 align-top" src="assets/img/ECRep_MedNet.png?v=Ver1.4.7" style="max-height: 20px"
+          alt />
       </div>
       <div class="col-9 p-0">
         <p class="xalign-top" style="font-size: 8pt">
@@ -181,69 +108,34 @@
     <div class="row mt-2 border-top">
       <div class="col-12 p-0 xsmall px-0" style="font-size: 0.7rem">
         <nav class="nav">
-          <a
-            class="nav-link"
-            target="_blank"
-            style="text-decoration: none"
-            href="assets/docs/EN_IMPD-001.pdf"
-            >{{ "Importer Details" | translate }}</a
-          >
-          <a
-            class="nav-link xpl-0"
-            target="_blank"
-            style="text-decoration: none"
-            href="assets/docs/EN_TAC-001.pdf"
-            >{{ "Terms & Conditions" | translate }}</a
-          >
-          <a
-            class="nav-link xpx-0"
-            target="_blank"
-            style="text-decoration: none"
-            href="assets/docs/EN_PRIVPOLICY-001.pdf"
-            >{{ "Privacy Policy" | translate }}</a
-          >
+          <a class="nav-link" target="_blank" style="text-decoration: none" href="assets/docs/EN_IMPD-001.pdf">{{
+            "Importer Details" | translate }}</a>
+          <a class="nav-link xpl-0" target="_blank" style="text-decoration: none" href="assets/docs/EN_TAC-001.pdf">{{
+            "Terms & Conditions" | translate }}</a>
+          <a class="nav-link xpx-0" target="_blank" style="text-decoration: none"
+            href="assets/docs/EN_PRIVPOLICY-001.pdf">{{ "Privacy Policy" | translate }}</a>
         </nav>
       </div>
     </div>
   </form>
 </div>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="
+    <div class="modal-content" style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -260,35 +152,19 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
-  style="
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>

@@ -1,45 +1,23 @@
-<app-header
-  [reload]="'/mnt/accounts/primary-secondary-user'"
-  [headerid]="'fn0'"
-  [title]="'Manage Users' | translate"
-></app-header>
+<app-header [reload]="'/mnt/accounts/primary-secondary-user'" [headerid]="'fn0'"
+  [title]="'Manage Users' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +34,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,125 +55,53 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-4 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link"
-          id="pill_primary"
-          data-toggle="pill"
-          data-group="1"
-          data-function="fn0_2"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/primary-screeners')"
-          >{{ "Primary Screeners" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
+        <a class="nav-link" id="pill_primary" data-toggle="pill" data-group="1" data-function="fn0_2"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/primary-screeners')">{{ "Primary Screeners" | translate }}</a>
 
-        <a
-          class="nav-link"
-          id="pill_secondary"
-          data-toggle="pill"
-          data-group="2"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/secondary-graders')"
-          >{{ "Secondary Graders" | translate }}</a
-        >
+        <a class="nav-link" id="pill_secondary" data-toggle="pill" data-group="2" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/secondary-graders')">{{ "Secondary Graders" | translate }}</a>
 
-        <a
-          class="nav-link active"
-          id="pill_prisec"
-          data-toggle="pill"
-          data-group="3"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="true"
-          (click)="goto('/mnt/accounts/primary-secondary-user', true)"
-          >{{ "Primary/Secondary User" | translate }}</a
-        >
+        <a class="nav-link active" id="pill_prisec" data-toggle="pill" data-group="3" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true"
+          (click)="goto('/mnt/accounts/primary-secondary-user', true)">{{ "Primary/Secondary User" | translate }}</a>
 
-        <a
-          class="nav-link"
-          id="pill_uadmin"
-          data-toggle="pill"
-          data-group="10"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/admin-user')"
-          >{{ "User Admin" | translate }}</a
-        >
+        <a class="nav-link" id="pill_uadmin" data-toggle="pill" data-group="10" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/admin-user')">{{ "User Admin" | translate }}</a>
       </div>
 
-      <div
-        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
-        id="v-pills-tabContent"
-      >
-        <div
-          class="tab-pane fade show active"
-          id="v-pills-user"
-          role="tabpanel"
-        >
+      <div class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-user" role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
                 {{ "Primary/Secondary User" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
-                <form
-                  name="frmFilter"
-                  id="frmFilter"
-                  class="form-inline float-right fmx"
-                  action="/bn_moh_uat/mnt/accounts/index.cfm?tid=fn0_3"
-                  method="post"
-                >
+                <form name="frmFilter" id="frmFilter" class="form-inline float-right fmx"
+                  action="/bn_moh_uat/mnt/accounts/index.cfm?tid=fn0_3" method="post">
                   <input type="hidden" name="ugroup" id="ugroup" value="3" />
                   <input type="hidden" name="recno" id="recno" value="25" />
                   <div class="form-group mr-2">
-                    <input
-                      name="desc"
-                      id="desc"
-                      type="text"
-                      class="form-control"
-                      placeholder="{{ 'Search' | translate }}..."
-                      value
-                    />
+                    <input name="desc" id="desc" type="text" class="form-control"
+                      placeholder="{{ 'Search' | translate }}..." value />
                   </div>
                   <div class="form-group mr-2">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnSearch"
-                        id="btnSearch"
-                        class="form-control btn bg-primary text-white"
-                        [title]="'Search' | translate"
-                      >
+                      <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white"
+                        [title]="'Search' | translate">
                         <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnNew"
-                        id="btnNew"
-                        class="form-control btn bg-primary text-white"
-                        data-group="3"
-                        [title]="'New' | translate"
-                        (click)="onCreate()"
-                      >
+                      <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white" data-group="3"
+                        [title]="'New' | translate" (click)="onCreate()">
                         <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>

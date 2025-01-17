@@ -1,129 +1,84 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="bsModalRef.hide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="bsModalRef.hide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form
-      *ngIf="mform"
-      name="frmMain"
-      id="frmMain"
-      method="post"
-      class="xbg-secondary"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
+    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" class="xbg-secondary" [formGroup]="mform"
+      ngNativeValidate (ngSubmit)="onSubmit()">
       <div class="container-fluid pt-2 pb-3 px-4 bg-light border-bottom">
         <input type="hidden" name="item_id" id="item_id" value />
-        <input
-          type="hidden"
-          name="lookup_type"
-          id="lookup_type"
-          value="LANGUAGE_CD"
-        />
+        <input type="hidden" name="lookup_type" id="lookup_type" value="LANGUAGE_CD" />
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "Code" | translate }} </label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="code"
-            required
-            maxlength="20"
-            onchange="c_upper(this);"
+          <input 
+            type="text" 
+            class="form-control" 
+            formControlName="code" 
+            required maxlength="20"
+            onchange="c_upper(this);" 
             onkeyup="c_upper(this);reject_space(this);"
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-          />
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            oninput="setCustomValidity('')" />
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "Description" | translate }}</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="description"
-            required
+          <input 
+            type="text" 
+            class="form-control" 
+            formControlName="description" 
+            required 
             maxlength="200"
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-          />
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            oninput="setCustomValidity('')" />
         </div>
         <div class="form-group">
           <label class="control-label mb-1">{{ "English Description" | translate }} </label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="english_desc"
-            required
-            maxlength="200"
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-          />
+          <input 
+            type="text" 
+            class="form-control" 
+            formControlName="english_desc" 
+            required maxlength="200"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            oninput="setCustomValidity('')" />
         </div>
 
         <div class="form-row">
           <div class="form-group col-6">
             <label class="control-label mb-1">{{ "Display Order" | translate }} </label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="sort_seq"
-              required
-              maxlength="5"
-              (keyup)="onKeyupSortSeq($event, 'sort_seq', 2)"
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="sort_seq" 
+              required maxlength="5"
+              (keyup)="onKeyupSortSeq($event, 'sort_seq', 2)" 
               (blur)="onBlurSortSeq($event, 'sort_seq', 2)"
-              (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-              oninput="setCustomValidity('')"
-            />
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+              oninput="setCustomValidity('')" />
           </div>
           <div class="form-group col-2"></div>
           <div class="form-group col-4">
-            <label
-              class="control-label mb-1"
-              for="status"
-              style="cursor: pointer"
-              >{{ "Active" | translate }}
+            <label class="control-label mb-1" for="status" style="cursor: pointer">{{ "Active" | translate }}
             </label>
             <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control custom-control-lg"
-                formControlName="status"
-                value="A"
-                style="cursor: pointer; height: 16px; width: 16px"
-              />
+              <input type="checkbox" class="custom-control custom-control-lg" formControlName="status" value="A"
+                style="cursor: pointer; height: 16px; width: 16px" />
             </div>
           </div>
         </div>
       </div>
       <div class="container px-0 py-2 text-center xborder">
-        <button
-          name="btnCancel"
-          id="btnCancel"
-          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          value="Close"
-          (click)="bsModalRef.hide()"
-        >
+        <button name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1" value="Close"
+          (click)="bsModalRef.hide()">
           <i class="fa fa-times"></i> {{ "Close" | translate }}
         </button>
-        <button
-          type="submit"
-          name="btnSave"
-          id="btnSave"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          value="Save"
-        >
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          value="Save">
           <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>

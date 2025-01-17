@@ -1,127 +1,91 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
   <h5 class="modal-title" id="__nhPopWindow_title">{{ title | translate }}</h5>
-  <button
-    id="__nhPopWindow_close"
-    type="button"
-    class="close btn-md m-1 p-0 bg-header text-white"
-    data-dismiss="modal"
-    aria-label="Close"
-    (click)="onHide()"
-  >
+  <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white" data-dismiss="modal"
+    aria-label="Close" (click)="onHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form
-      *ngIf="mform"
-      name="frmMain"
-      id="frmMain"
-      method="post"
-      [formGroup]="mform"
-      ngNativeValidate
-      (ngSubmit)="onSubmit()"
-    >
+    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" [formGroup]="mform" ngNativeValidate
+      (ngSubmit)="onSubmit()">
       <div class="container-fluid pt-2 pb-3 px-4 bg-light">
         <input type="hidden" name="item_id" id="item_id" value="0" />
         <input type="hidden" name="addressSpecialChars" value="~!$%^&" />
-        <input
-          type="hidden"
-          name="nameSpecialChars"
-          value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?"
-        />
-        <input
-          type="hidden"
-          name="user_status_old"
-          id="user_status_old"
-          value
-        />
-        <input
-          type="hidden"
-          name="hcredits_management_ind"
-          id="hcredits_management_ind"
-          value="N"
-        />
+        <input type="hidden" name="nameSpecialChars" value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
+        <input type="hidden" name="user_status_old" id="user_status_old" value />
+        <input type="hidden" name="hcredits_management_ind" id="hcredits_management_ind" value="N" />
 
-        <input
-          type="hidden"
+        <input type="hidden"
           name="f91F36F40EE5F8A6D76215CBE9463DB6B2EEB9ADEFA2EE5A617EE2C1080040D79769FE2D5853D94D3855ED3B44D840687DFA51D5BA59C76848075487B5F278E8E"
-          value="E4CAC99292312ADF23AC08B8F90B05328DCE3D14"
-        />
+          value="E4CAC99292312ADF23AC08B8F90B05328DCE3D14" />
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "eMail" | translate }} </label>
-          <input
-            type="email"
-            class="form-control"
-            formControlName="email"
-            required
-            maxlength="50"
+          <input 
+            type="email" 
+            class="form-control" 
+            formControlName="email" 
+            required maxlength="50"
             (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
-            oninput="setCustomValidity('')"
-          />
+            oninput="setCustomValidity('')" />
         </div>
 
         <div class="form-row">
           <div class="form-group col-6">
             <label class="control-label mb-1">{{ "Display Name" | translate }} </label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="display_name"
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="display_name" 
               maxlength="20"
-              (keyup)="onKeyupValidateSpecialChar($event, 'display_name')"
-            />
+              (keyup)="onKeyupValidateSpecialChar($event, 'display_name')" />
           </div>
           <div class="form-group col-6">
             <label class="control-label mb-1">{{ "Contact No" | translate }} </label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="contact_no"
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="contact_no" 
               maxlength="20"
-              (keyup)="onKeyupContact($event)"
-            />
+              (keyup)="onKeyupContact($event)" />
           </div>
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "First Name" | translate }} </label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="first_name"
-            required
+          <input 
+            type="text" 
+            class="form-control" 
+            formControlName="first_name" 
+            required 
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'first_name')"
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-          />
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            oninput="setCustomValidity('')" />
         </div>
         <div class="form-group">
           <label class="control-label mb-1">{{ "Last Name" | translate }} </label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="last_name"
-            required
+          <input 
+            type="text" 
+            class="form-control" 
+            formControlName="last_name" 
+            required 
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'last_name')"
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            oninput="setCustomValidity('')"
-          />
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            oninput="setCustomValidity('')" />
         </div>
 
         <div class="form-group">
           <label class="control-label mb-1">{{ "Company" | translate }} </label>
 
-          <select
-            class="form-control custom-select"
-            formControlName="company_id"
+          <select 
+            class="form-control custom-select" 
+            formControlName="company_id" 
             required
-            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
-            onchange="setCustomValidity('')"
-          >
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+            onchange="setCustomValidity('')">
             <option value></option>
 
             <option value="8">Belait Hospital (TOPCON)</option>
@@ -163,11 +127,7 @@
         <div class="form-row">
           <div class="form-group col-7">
             <label class="control-label mb-1">{{ "Grading Group" | translate }} </label>
-            <select
-              class="form-control custom-select"
-              formControlName="user_group"
-              required
-            >
+            <select class="form-control custom-select" formControlName="user_group" required>
               <option value="1" selected>{{ "Primary Screener" | translate }}</option>
 
               <option value="2">{{ "Secondary Grader" | translate }}</option>
@@ -180,15 +140,10 @@
 
           <div class="form-group col-5 d-none" id="amend_credit_ind_group">
             <div class="col-12 xtext-center">
-              <label class="control-label" style="cursor: pointer"
-                >{{ "Application Management" | translate }} </label
-              ><br />
+              <label class="control-label" style="cursor: pointer">{{ "Application Management" | translate }}
+              </label><br />
               <label class="switch">
-                <input
-                  type="checkbox"
-                  formControlName="credits_management_ind"
-                  value="Y"
-                />
+                <input type="checkbox" formControlName="credits_management_ind" value="Y" />
                 <span class="slider round"></span>
               </label>
 
@@ -201,14 +156,13 @@
           <div class="form-group col-5">
             <label class="control-label mb-1">{{ "Time Zone" | translate }} </label>
 
-            <select
-              class="form-control custom-select"
-              formControlName="timezone_name"
+            <select 
+              class="form-control custom-select" 
+              formControlName="timezone_name" 
               required
-              (invalid)="setCustomValidity($event, 'Please fill out this field.')"
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
               oninput="setCustomValidity('')"
-              onchange="setCustomValidity('')"
-            >
+              onchange="setCustomValidity('')">
               <option value></option>
 
               <option value="Africa/Abidjan">Africa/Abidjan</option>
@@ -1475,11 +1429,7 @@
 
           <div class="form-group col-3">
             <label class="control-label mb-1" for="user_status">{{ "Status" | translate }} </label>
-            <select
-              class="form-control custom-select"
-              formControlName="user_status"
-              required
-            >
+            <select class="form-control custom-select" formControlName="user_status" required>
               <option value="A">{{ "Active" | translate }}</option>
               <option value="I">{{ "Inactive" | translate }}</option>
               <option value="S">{{ "Suspended" | translate }}</option>
@@ -1488,55 +1438,40 @@
 
           <div class="form-group col-4">
             <label class="control-label mb-1">{{ "Inactive Date" | translate }} </label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="inactive_date"
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="inactive_date" 
               style="max-width: 145px"
-              maxlength="11"
-              onkeydown="return false"
+              maxlength="11" 
+              onkeydown="return false" 
               (keyup)="onKeyupInactiveDate($event)"
-              #datepickerInactiveDate="bsDatepicker"
-              bsDatepicker
-              placement="top"
+              #datepickerInactiveDate="bsDatepicker" 
+              bsDatepicker placement="top" 
               [bsConfig]="{
                 dateInputFormat: 'DD-MMM-YYYY',
                 containerClass: 'theme-dark-blue',
                 showTodayButton: true,
                 showClearButton: true,
                 customTodayClass: 'custom-today-class'
-              }"
-            />
+              }" />
           </div>
         </div>
 
         <div class="xbottom"></div>
       </div>
 
-      <div
-        class="container-fluid my-0 xpb-2 px-4 bg-light xborder-bottom"
-        [hidden]="true"
-      >
+      <div class="container-fluid my-0 xpb-2 px-4 bg-light xborder-bottom" [hidden]="true">
         <div id="d_err"></div>
       </div>
 
       <div class="container-fluid px-0 py-2 text-center bg-white border-top">
-        <button
-          name="btnCancel"
-          id="btnCancel"
-          class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
-          value="Cancel"
-          (click)="onHide()"
-        >
+        <button name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1" value="Cancel"
+          (click)="onHide()">
           <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
-        <button
-          type="submit"
-          name="btnSave"
-          id="btnSave"
-          class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          value="Save"
-        >
+        <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
+          value="Save">
           <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>

@@ -1,45 +1,22 @@
-<app-header
-  [reload]="'/mnt/accounts/admin-user'"
-  [headerid]="'fn0'"
-  [title]="'Manage Users' | translate"
-></app-header>
+<app-header [reload]="'/mnt/accounts/admin-user'" [headerid]="'fn0'" [title]="'Manage Users' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
+    <div class="modal-content" 
       style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +33,20 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" 
   style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -92,125 +54,53 @@
 <main role="main" class="container-fluid">
   <div class="container-fluid pt-4 pb-4">
     <div class="row main-body">
-      <div
-        class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
-      >
-        <a
-          class="nav-link"
-          id="pill_primary"
-          data-toggle="pill"
-          data-group="1"
-          data-function="fn0_2"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/primary-screeners')"
-          >{{ "Primary Screeners" | translate }}</a
-        >
+      <div class="nav flex-column nav-pills col-xl-2 col-lg-2 col-md-2 col-sm-12" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
+        <a class="nav-link" id="pill_primary" data-toggle="pill" data-group="1" data-function="fn0_2"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/primary-screeners')">{{ "Primary Screeners" | translate }}</a>
 
-        <a
-          class="nav-link"
-          id="pill_secondary"
-          data-toggle="pill"
-          data-group="2"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/secondary-graders')"
-          >{{ "Secondary Graders" | translate }}</a
-        >
+        <a class="nav-link" id="pill_secondary" data-toggle="pill" data-group="2" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/secondary-graders')">{{ "Secondary Graders" | translate }}</a>
 
-        <a
-          class="nav-link"
-          id="pill_prisec"
-          data-toggle="pill"
-          data-group="3"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="false"
-          (click)="goto('/mnt/accounts/primary-secondary-user')"
-          >{{ "Primary/Secondary User" | translate }}</a
-        >
+        <a class="nav-link" id="pill_prisec" data-toggle="pill" data-group="3" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false"
+          (click)="goto('/mnt/accounts/primary-secondary-user')">{{ "Primary/Secondary User" | translate }}</a>
 
-        <a
-          class="nav-link active"
-          id="pill_uadmin"
-          data-toggle="pill"
-          data-group="10"
-          data-function="fn0_3"
-          href="#v-pills-user"
-          role="tab"
-          aria-controls="v-pills-user"
-          aria-selected="true"
-          (click)="goto('/mnt/accounts/admin-user', true)"
-          >{{ "User Admin" | translate }}</a
-        >
+        <a class="nav-link active" id="pill_uadmin" data-toggle="pill" data-group="10" data-function="fn0_3"
+          href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true"
+          (click)="goto('/mnt/accounts/admin-user', true)">{{ "User Admin" | translate }}</a>
       </div>
 
-      <div
-        class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12"
-        id="v-pills-tabContent"
-      >
-        <div
-          class="tab-pane fade show active"
-          id="v-pills-user"
-          role="tabpanel"
-        >
+      <div class="tab-content xp-4 col-xl-10 col-lg-10 col-md-10 col-sm-12" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-user" role="tabpanel">
           <div class="container-fluid">
             <div class="row pb-2 justify-content-center">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pl-0 h4">
                 {{ "Admin User" | translate }}
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 px-0">
-                <form
-                  name="frmFilter"
-                  id="frmFilter"
-                  class="form-inline float-right fmx"
-                  action="/bn_moh_uat/mnt/accounts/index.cfm?tid=fn0_3"
-                  method="post"
-                >
+                <form name="frmFilter" id="frmFilter" class="form-inline float-right fmx"
+                  action="/bn_moh_uat/mnt/accounts/index.cfm?tid=fn0_3" method="post">
                   <input type="hidden" name="ugroup" id="ugroup" value="10" />
                   <input type="hidden" name="recno" id="recno" value="25" />
                   <div class="form-group mr-2">
-                    <input
-                      name="desc"
-                      id="desc"
-                      type="text"
-                      class="form-control"
-                      placeholder="{{ 'Search' | translate }}..."
-                      value
-                    />
+                    <input name="desc" id="desc" type="text" class="form-control"
+                      placeholder="{{ 'Search' | translate }}..." value />
                   </div>
                   <div class="form-group mr-2">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnSearch"
-                        id="btnSearch"
-                        class="form-control btn bg-primary text-white"
-                        [title]="'Search' | translate"
-                      >
+                      <button name="btnSearch" id="btnSearch" class="form-control btn bg-primary text-white"
+                        [title]="'Search' | translate">
                         <i class="fa fa-search"></i> {{ "Search" | translate }}
                       </button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="btn-toolbar float-right">
-                      <button
-                        name="btnNew"
-                        id="btnNew"
-                        class="form-control btn bg-primary text-white"
-                        data-group="10"
-                        [title]="'New' | translate"
-                        (click)="onCreate()"
-                      >
+                      <button name="btnNew" id="btnNew" class="form-control btn bg-primary text-white" data-group="10"
+                        [title]="'New' | translate" (click)="onCreate()">
                         <i class="fa fa-plus"></i> {{ "New" | translate }}
                       </button>
                     </div>
@@ -237,10 +127,7 @@
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12"></div>
                 </div>
 
-                <div
-                  id="pg-1"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-1" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     angie.leong&#64;nova-hub.com
                   </div>
@@ -252,24 +139,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">EyRIS</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_1"
-                      name="pedit"
-                      class="pedit"
-                      href="#"
-                      data-id="39"
-                      data-group="10"
-                      title="Edit"
-                      (click)="onEdit()"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_1" name="pedit" class="pedit" href="#" data-id="39" data-group="10" title="Edit"
+                      (click)="onEdit()"><i class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-2"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-2" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     april.ilar&#64;jpmc.com.bn
                   </div>
@@ -281,23 +156,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_2"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="6"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_2" name="pedit" class="pedit" href data-id="6" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-3"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-3" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     chengkian.chua&#64;nova-hub.com
                   </div>
@@ -309,23 +173,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">EyRIS</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_3"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="2"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_3" name="pedit" class="pedit" href data-id="2" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-4"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-4" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     edward.valencia&#64;jpmc.com.bn
                   </div>
@@ -335,23 +188,12 @@
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">Edward</div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_4"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="8"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_4" name="pedit" class="pedit" href data-id="8" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-5"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-5" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     hernando.jacinto&#64;jpmc.com.bn
                   </div>
@@ -363,23 +205,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_5"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="9"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_5" name="pedit" class="pedit" href data-id="9" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-6"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-6" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     hubo&#64;nova-hub.com
                   </div>
@@ -389,23 +220,12 @@
                     Tutong Hospital (TOPCON)
                   </div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_6"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="28"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_6" name="pedit" class="pedit" href data-id="28" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-7"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-7" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     jasmine.sie&#64;nova-hub.com
                   </div>
@@ -417,23 +237,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">EyRIS</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_7"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="3"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_7" name="pedit" class="pedit" href data-id="3" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-8"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-8" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     kane.cuaton&#64;jpmc.com.bn
                   </div>
@@ -445,23 +254,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_8"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="7"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_8" name="pedit" class="pedit" href data-id="7" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-9"
-                  class="rec-img row p-1 xborder-bottom bg-white text-dark"
-                >
+                <div id="pg-9" class="rec-img row p-1 xborder-bottom bg-white text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     mariper.marribay&#64;jpmc.com.bn
                   </div>
@@ -473,23 +271,12 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_9"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="13"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_9" name="pedit" class="pedit" href data-id="13" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
 
-                <div
-                  id="pg-10"
-                  class="rec-img row p-1 xborder-bottom bg-light text-dark"
-                >
+                <div id="pg-10" class="rec-img row p-1 xborder-bottom bg-light text-dark">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     mayla.holgado&#64;jpmc.com.bn
                   </div>
@@ -501,16 +288,8 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">JPMC</div>
                   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 text-center">
-                    <a
-                      id="pedit_10"
-                      name="pedit"
-                      class="pedit"
-                      href
-                      data-id="10"
-                      data-group="10"
-                      title="Edit"
-                      ><i class="fa fa-pencil-alt"></i
-                    ></a>
+                    <a id="pedit_10" name="pedit" class="pedit" href data-id="10" data-group="10" title="Edit"><i
+                        class="fa fa-pencil-alt"></i></a>
                   </div>
                 </div>
               </div>
@@ -519,12 +298,8 @@
               <div class="col-lg-4 col-md-4 col-sm-12 py-2">
                 <div class="xform-group row">
                   <label class="pl-3 pr-2 text-muted">Show </label>
-                  <select
-                    class="form-control form-control-sm custom-select custom-select-sm"
-                    name="pagerec"
-                    id="pagerec"
-                    style="max-width: 80px"
-                  >
+                  <select class="form-control form-control-sm custom-select custom-select-sm" name="pagerec"
+                    id="pagerec" style="max-width: 80px">
                     <option value="10">10</option>
                     <option value="25" selected>25</option>
                     <option value="50">50</option>
@@ -533,9 +308,7 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
-                <span id="dispdesc" class="text-muted"
-                  >Showing 1 to 10 of 10</span
-                >
+                <span id="dispdesc" class="text-muted">Showing 1 to 10 of 10</span>
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-12 pt-2"></div>

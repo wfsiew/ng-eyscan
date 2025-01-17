@@ -1,169 +1,81 @@
 <div class="fixed-top bg-white">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 pl-1 pr-3">
-    <a
-      class="navbar-brand pl-1 align-middle"
-      href="#"
-      data-target="fn1"
-      (click)="goto('/application/home')"
-    >
-      <img
-        class="d-inline-block align-middle"
-        style="max-height: 50px"
-        src="assets/img/eyris_navbar.png?v=Ver1.4.7"
-        alt="EyRIS"
-      />
+    <a class="navbar-brand pl-1 align-middle" href="#" data-target="fn1" (click)="goto('/application/home')">
+      <img class="d-inline-block align-middle" style="max-height: 50px" src="assets/img/eyris_navbar.png?v=Ver1.4.7" alt="EyRIS" />
     </a>
-    <button
-      class="navbar-toggler collapsed hidden-lg-up"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarsMenu"
-      aria-controls="navbarsMenu"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler collapsed hidden-lg-up" type="button" data-toggle="collapse"
+      data-target="#navbarsMenu" aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse pl-4" id="navbarsMenu">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" [class.active]="headerid === 'fn1'" id="fn1">
-          <a
-            id="fn1"
-            class="nav-link"
-            data-target="fn1"
-            href="#"
-            (click)="goto('/application/home')"
-            >{{ "Home" | translate }}</a
-          >
+          <a id="fn1" class="nav-link" data-target="fn1" href="#" (click)="goto('/application/home')">
+            {{ "Home" | translate }}
+          </a>
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn3'" id="fn3">
-          <a
-            class="nav-link"
-            data-target="fn3"
-            href="#"
-            (click)="goto('/application/submit-image')"
-            >{{ "Submit Image" | translate }}</a
-          >
+          <a class="nav-link" data-target="fn3" href="#" (click)="goto('/application/submit-image')">
+            {{ "Submit Image" | translate }}
+          </a>
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn2'" id="fn2">
-          <a
-            class="nav-link"
-            data-target="fn2"
-            href="#"
-            (click)="goto('/application/primary')"
-            >{{ "Primary Care" | translate }}</a
-          >
+          <a class="nav-link" data-target="fn2" href="#" (click)="goto('/application/primary')">
+            {{ "Primary Care" | translate }}
+          </a>
         </li>
         <li class="nav-item" [class.active]="headerid === 'fn4'" id="fn4">
-          <a
-            class="nav-link"
-            data-target="fn4"
-            href="#"
-            (click)="goto('/application/secondary/index')"
-            >{{ "Secondary Grader" | translate }}</a
-          >
+          <a class="nav-link" data-target="fn4" href="#" (click)="goto('/application/secondary/index')">
+            {{ "Secondary Grader" | translate }}
+          </a>
         </li>
-        <li
-          class="nav-item dropdown"
-          [class.active]="headerid === 'fn0'"
-          id="fn0"
-        >
-          <a
-            class="nav-link dropdown-toggle"
-            data-target="fn0"
-            href
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            >{{ "Portal Administrator" | translate }}</a
-          >
+        <li class="nav-item dropdown" [class.active]="headerid === 'fn0'" id="fn0">
+          <a class="nav-link dropdown-toggle" data-target="fn0" href data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">{{ "Portal Administrator" | translate }}</a>
           <div class="dropdown-menu p-0" aria-labelledby="fn0">
-            <a
-              class="dropdown-item"
-              data-target="fn0_1"
-              href="#"
-              (click)="goto('/mnt/company')"
-              >{{ "Maintain Organizations" | translate }}</a
-            >
-            <a
-              class="dropdown-item"
-              data-target="fn0_2"
-              href="#"
-              (click)="goto('/mnt/accounts/primary-screeners')"
-              >{{ "Manage Users" | translate }}</a
-            >
-            <a
-              class="dropdown-item"
-              data-target="fn0_9"
-              href="#"
-              (click)="goto('/mnt/application')"
-              >{{ "Manage Organization Applications" | translate }}</a
-            >
+            <a class="dropdown-item" data-target="fn0_1" href="#" (click)="goto('/mnt/company')">
+              {{ "Maintain Organizations" | translate }}
+            </a>
+            <a class="dropdown-item" data-target="fn0_2" href="#" (click)="goto('/mnt/accounts/primary-screeners')">{{
+              "Manage Users" | translate }}
+            </a>
+            <a class="dropdown-item" data-target="fn0_9" href="#" (click)="goto('/mnt/application')">
+              {{ "Manage Organization Applications" | translate }}
+            </a>
 
             <div class="dropdown-divider"></div>
-            <a
-              class="dropdown-item"
-              data-target="fn0_10"
-              href="#"
-              (click)="goto('/application/manage-data')"
-              >{{ "Case Investigation" | translate }}</a
-            >
+            <a class="dropdown-item" data-target="fn0_10" href="#" (click)="goto('/application/manage-data')">
+              {{ "Case Investigation" | translate }}
+            </a>
 
             <div class="dropdown-divider"></div>
-            <a
-              class="dropdown-item"
-              data-target="fn0_5"
-              href="#"
-              (click)="goto('/mnt/lookup/language')"
-              >{{ "Maintain Lookup Codes" | translate }}</a
-            >
-            <a
-              class="dropdown-item"
-              data-target="fn0_11"
-              href="#"
-              (click)="goto('/mnt/system-param/system')"
-              >{{ "Manage Parameters" | translate }}</a
-            >
+            <a class="dropdown-item" data-target="fn0_5" href="#" (click)="goto('/mnt/lookup/language')">
+              {{ "Maintain Lookup Codes" | translate }}
+            </a>
+            <a class="dropdown-item" data-target="fn0_11" href="#" (click)="goto('/mnt/system-param/system')">
+              {{ "Manage Parameters" | translate }}
+            </a>
           </div>
         </li>
 
-        <li
-          class="nav-item dropdown"
-          [class.active]="headerid === 'fn5'"
-          id="fn5"
-        >
-          <a
-            class="nav-link dropdown-toggle"
-            data-target="fn5"
-            href
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            >{{ "Reports" | translate }}</a
-          >
+        <li class="nav-item dropdown" [class.active]="headerid === 'fn5'" id="fn5">
+          <a class="nav-link dropdown-toggle" data-target="fn5" href data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            {{ "Reports" | translate }}
+          </a>
           <div class="dropdown-menu p-0" aria-labelledby="fn5">
-            <a
-              class="dropdown-item"
-              data-target="fn5_1"
-              href="#"
-              (click)="goto('/application/reports/mgmt')"
-              >{{ "Primary Management Report" | translate }}</a
-            >
+            <a class="dropdown-item" data-target="fn5_1" href="#" (click)="goto('/application/reports/mgmt')">
+              {{ "Primary Management Report" | translate }}
+            </a>
           </div>
         </li>
       </ul>
 
       <ul class="nav navbar-nav xnavbar-right">
         <li class="nav-item dropdown">
-          <a
-            href
-            class="nav-link dropdown-toggle"
-            data-target="fnprof"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
+          <a href class="nav-link dropdown-toggle" data-target="fnprof" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <i class="fa fa-user fa-lg"></i> KC
           </a>
           <ul class="dropdown-menu dropdown-menu-right p-0">
@@ -176,12 +88,8 @@
                       kiancheong.lam&#64;nova-hub.com
                     </p>
                     <p class="m-0 text-center pt-2">
-                      <a
-                        class="py-0 btn btn-primary xbtn-block btn-sm"
-                        data-target="fnprof1"
-                        href="#"
-                        (click)="goto('/mnt/user')"
-                      >
+                      <a class="py-0 btn btn-primary xbtn-block btn-sm" data-target="fnprof1" href="#"
+                        (click)="goto('/mnt/user')">
                         {{ "Account Info" | translate }}
                       </a>
                     </p>
@@ -193,24 +101,14 @@
         </li>
 
         <li class="nav-item" id="fn7">
-          <a
-            class="nav-link"
-            data-target="fn7"
-            href="#"
-            title="Help"
-            (click)="onAbout()"
-            ><i class="fas fa-question xtext-white xfa-lg"></i>
+          <a class="nav-link" data-target="fn7" href="#" title="Help" (click)="onAbout()">
+            <i class="fas fa-question xtext-white xfa-lg"></i>
           </a>
         </li>
 
         <li class="nav-item" id="fn8">
-          <a
-            class="nav-link"
-            data-target="fn8"
-            href="#"
-            title="Log Out"
-            (click)="goto('/')"
-            ><i class="fas fa-sign-out-alt xtext-white fa-lg"></i>
+          <a class="nav-link" data-target="fn8" href="#" title="Log Out" (click)="goto('/')">
+            <i class="fas fa-sign-out-alt xtext-white fa-lg"></i>
           </a>
         </li>
       </ul>
@@ -226,12 +124,8 @@
       <div class="row container-fluid align-items-center">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-md-right"></div>
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-          <select
-            class="form-control custom-select d-none"
-            name="collect_company_id"
-            id="collect_company_id"
-            style="width: 95%"
-          >
+          <select class="form-control custom-select d-none" name="collect_company_id" id="collect_company_id"
+            style="width: 95%">
             <option value selected></option>
             <option value="1">EyRIS</option>
           </select>

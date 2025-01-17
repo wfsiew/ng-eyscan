@@ -1,45 +1,21 @@
-<app-header
-  [reload]="'/application/home'"
-  [headerid]="'fn1'"
-  [title]="'Home' | translate"
-></app-header>
+<app-header [reload]="'/application/home'" [headerid]="'fn1'" [title]="'Home' | translate"></app-header>
 
-<div
-  class="modal fade"
-  id="__nhPopWindow"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="__nhPopWindow_title"
-  aria-hidden="true"
->
+<div class="modal fade" id="__nhPopWindow" tabindex="-1" role="dialog" aria-labelledby="__nhPopWindow_title"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="
+    <div class="modal-content" style="
         border-top-left-radius: 0.5rem !important;
         border-top-right-radius: 0.5rem !important;
-      "
-    >
+      ">
       <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
         <h5 class="modal-title" id="__nhPopWindow_title"></h5>
-        <button
-          id="__nhPopWindow_close"
-          type="button"
-          class="close btn-md m-1 p-0 bg-header text-white"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button id="__nhPopWindow_close" type="button" class="close btn-md m-1 p-0 bg-header text-white"
+          data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body m-0 p-0">
-        <iframe
-          id="__nhPopWindow_iframe"
-          xwidth="500px"
-          xheight="400px"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+        <iframe id="__nhPopWindow_iframe" xwidth="500px" xheight="400px" scrolling="no" frameborder="0"></iframe>
       </div>
       <div class="modal-footer d-none">
         <button id="__nhPopWindow_ok" type="button" class="btn btn-primary">
@@ -56,35 +32,19 @@
   </div>
 </div>
 
-<div
-  class="modal"
-  id="__nhAnimator"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
-  style="
+<div class="modal" id="__nhAnimator" tabindex="-1" role="dialog" aria-hidden="true" style="
     position: absolute;
     max-height: 140px;
     max-width: 120px;
     overflow: hidden;
-  "
->
+  ">
   <div class="modal-dialog" role="document">
-    <div
-      class="modal-content"
-      style="background-color: rgba(0, 0, 0, 0.0001); border: none"
-    >
-      <div
-        class="modal-header m-0 p-1 bg-header text-white"
-        style="display: none; overflow: hidden"
-      ></div>
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.0001); border: none">
+      <div class="modal-header m-0 p-1 bg-header text-white" style="display: none; overflow: hidden"></div>
       <div class="modal-body m-4 p-4">
         <div class="nhAnimator"></div>
       </div>
-      <div
-        class="modal-footer justify-content-center m-0 p-1"
-        style="display: none"
-      ></div>
+      <div class="modal-footer justify-content-center m-0 p-1" style="display: none"></div>
     </div>
   </div>
 </div>
@@ -100,83 +60,31 @@
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
             <div class="d-inline-block">
               <div class="dropdown" style="width: 220px">
-                <button
-                  class="btn btn-sm dropdown-toggle border bg-white"
-                  type="button"
-                  id="ddwn_datefilter"
-                  name="ddwn_datefilter"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                <button class="btn btn-sm dropdown-toggle border bg-white" type="button" id="ddwn_datefilter"
+                  name="ddwn_datefilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ selectedRange }}
                 </button>
-                <div
-                  class="dropdown-menu p-0"
-                  aria-labelledby="ddwn_datefilter"
-                  style="width: 220px"
-                >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'today'"
-                    data-item="1"
-                    href="#"
-                    (click)="getDateRange('today')"
-                    >{{ "Today" | translate }}</a
-                  >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'yesterday'"
-                    data-item="2"
-                    href="#"
-                    (click)="getDateRange('yesterday')"
-                    >{{ "Yesterday" | translate }}</a
-                  >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'last7'"
-                    data-item="3"
-                    href="#"
-                    (click)="getDateRange('last7')"
-                    >{{ "Last 7 Days" | translate }}</a
-                  >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'last30'"
-                    data-item="4"
-                    href="#"
-                    (click)="getDateRange('last30')"
-                    >{{ "Last 30 Days" | translate }}</a
-                  >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'tm'"
-                    data-item="5"
-                    href="#"
-                    (click)="getDateRange('tm')"
-                    >{{ "This Month" | translate }}</a
-                  >
-                  <a
-                    class="dropdown-item px-2 py-1"
-                    [class.active]="selected === 'lm'"
-                    data-item="6"
-                    href="#"
-                    (click)="getDateRange('lm')"
-                    >{{ "Last Month" | translate }}</a
-                  >
+                <div class="dropdown-menu p-0" aria-labelledby="ddwn_datefilter" style="width: 220px">
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'today'" data-item="1" href="#"
+                    (click)="getDateRange('today')">{{ "Today" | translate }}</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'yesterday'" data-item="2" href="#"
+                    (click)="getDateRange('yesterday')">{{ "Yesterday" | translate }}</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'last7'" data-item="3" href="#"
+                    (click)="getDateRange('last7')">{{ "Last 7 Days" | translate }}</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'last30'" data-item="4" href="#"
+                    (click)="getDateRange('last30')">{{ "Last 30 Days" | translate }}</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'tm'" data-item="5" href="#"
+                    (click)="getDateRange('tm')">{{ "This Month" | translate }}</a>
+                  <a class="dropdown-item px-2 py-1" [class.active]="selected === 'lm'" data-item="6" href="#"
+                    (click)="getDateRange('lm')">{{ "Last Month" | translate }}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 text-right">
-            <button
-              name="btnSubmitImg"
-              id="btnSubmitImg"
-              class="btn btn-sm bg-primary text-white"
-              value="Submit Image"
-              (click)="goto('/application/submit-image')"
-            >
+            <button name="btnSubmitImg" id="btnSubmitImg" class="btn btn-sm bg-primary text-white" value="Submit Image"
+              (click)="goto('/application/submit-image')">
               <i class="fa fa-cloud-upload-alt"></i>
               {{ "Submit Image" | translate }}
             </button>
@@ -271,9 +179,7 @@
             <div class="row">
               <div class="col bg-white xbg-light">
                 <div class="row p-2">
-                  <div
-                    class="col-lg-12 col-md-12 col-sm-12 p-1 text-center border-top"
-                  >
+                  <div class="col-lg-12 col-md-12 col-sm-12 p-1 text-center border-top">
                     No Record Found.
                   </div>
                 </div>
