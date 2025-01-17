@@ -3,6 +3,7 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-modal-lookup-create',
@@ -36,5 +37,19 @@ export class LookupCreateComponent extends GeneralForm {
 
   onSubmit() {
 
+  }
+
+  onKeyupSortSeq(ev: KeyboardEvent, field: string, ftype: number) {
+    const v = this.getValue(field);
+    const s = Helper.reject_space(v);
+    const x = Helper.chkposval(s, ftype);
+    this.setValue(field, x);
+  }
+
+  onBlurSortSeq(event: FocusEvent, field: string, ftype: number) {
+    const v = this.getValue(field);
+    const s = Helper.reject_space(v);
+    const x = Helper.chkposval(s, ftype);
+    this.setValue(field, x);
   }
 }

@@ -40,14 +40,18 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group mb-2">
-              <label class="control-label mb-1">{{ "Description" | translate }} </label>
+              <label class="control-label mb-1"
+                >{{ "Description" | translate }}
+              </label>
               <input
                 type="text"
                 class="form-control"
                 formControlName="description"
                 required
                 maxlength="200"
-                oninvalid="this.setCustomValidity('Please fill out this field.')"
+                (invalid)="
+                  setCustomValidity($event, 'Please fill out this field.')
+                "
                 oninput="setCustomValidity('')"
               />
             </div>
@@ -69,9 +73,13 @@
                             required
                             (change)="onChangeGradingId(grading_id)"
                           >
-                            <option value="P">{{ "Fully Automated" | translate }}</option>
+                            <option value="P">
+                              {{ "Fully Automated" | translate }}
+                            </option>
 
-                            <option value="S">{{ "Semi-Automated" | translate }}</option>
+                            <option value="S">
+                              {{ "Semi-Automated" | translate }}
+                            </option>
                           </select>
                         </div>
                         <div class="form-group col-5">
@@ -83,8 +91,12 @@
                             formControlName="report_ind"
                             required
                           >
-                            <option value="MC">{{ "Macula Centered" | translate }}</option>
-                            <option value="OC">{{ "Optic Disc Centered" | translate }}</option>
+                            <option value="MC">
+                              {{ "Macula Centered" | translate }}
+                            </option>
+                            <option value="OC">
+                              {{ "Optic Disc Centered" | translate }}
+                            </option>
                           </select>
                         </div>
                       </div>
@@ -97,7 +109,12 @@
                             class="form-control custom-select"
                             formControlName="parent_company_id"
                             required
-                            oninvalid="this.setCustomValidity('Please fill out this field.')"
+                            (invalid)="
+                              setCustomValidity(
+                                $event,
+                                'Please fill out this field.'
+                              )
+                            "
                             onchange="setCustomValidity('')"
                           >
                             <option value></option>
@@ -145,7 +162,12 @@
                             class="form-control custom-select"
                             formControlName="secondary_id"
                             [required]="!disabled_secondary_id"
-                            oninvalid="this.setCustomValidity('Please fill out this field.')"
+                            (invalid)="
+                              setCustomValidity(
+                                $event,
+                                'Please fill out this field.'
+                              )
+                            "
                             onchange="setCustomValidity('')"
                           >
                             <option value></option>
@@ -237,17 +259,30 @@
                             formControlName="contact_name"
                             class="form-control"
                             maxlength="200"
-                            (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')"
+                            (keyup)="
+                              onKeyupValidateSpecialChar(
+                                $event,
+                                nameSpecialChars,
+                                'contact_name'
+                              )
+                            "
                           />
                         </div>
                         <div class="form-group col-4">
-                          <label class="control-label mb-1">{{ "Email" | translate }} </label>
+                          <label class="control-label mb-1"
+                            >{{ "Email" | translate }}
+                          </label>
                           <input
                             type="email"
                             class="form-control"
                             formControlName="contact_email"
                             maxlength="50"
-                            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+                            (invalid)="
+                              setCustomValidity(
+                                $event,
+                                'Please enter a valid email address.'
+                              )
+                            "
                             oninput="setCustomValidity('')"
                             onchange="if (this.value==''){setCustomValidity('');}"
                           />
@@ -320,7 +355,9 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_1"
                                   style="cursor: pointer"
-                                  >{{ "Diabetic Retinopathy" | translate }}</label
+                                  >{{
+                                    "Diabetic Retinopathy" | translate
+                                  }}</label
                                 >
                               </div>
                             </div>
@@ -366,7 +403,10 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_3"
                                   style="cursor: pointer"
-                                  >{{ "Age-related Macular Degeneration" | translate }}</label
+                                  >{{
+                                    "Age-related Macular Degeneration"
+                                      | translate
+                                  }}</label
                                 >
                               </div>
                             </div>
@@ -397,7 +437,9 @@
                                   class="form-check-label pl-1"
                                   for="disease_cd_4"
                                   style="cursor: pointer"
-                                  >{{ "Chronic Kidney Disease" | translate }}</label
+                                  >{{
+                                    "Chronic Kidney Disease" | translate
+                                  }}</label
                                 >
                               </div>
                             </div>

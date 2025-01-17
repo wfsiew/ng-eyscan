@@ -70,7 +70,7 @@
             formControlName="txt_param_value"
             value="3650"
             required
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
             maxlength="50"
             (keyup)="onKeyupParam($event, 'txt_param_value', 2)"

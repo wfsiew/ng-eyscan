@@ -42,7 +42,7 @@
             maxlength="20"
             onchange="c_upper(this);"
             onkeyup="c_upper(this);reject_space(this);"
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
         </div>
@@ -55,7 +55,7 @@
             formControlName="description"
             required
             maxlength="200"
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
         </div>
@@ -67,7 +67,7 @@
             formControlName="english_desc"
             required
             maxlength="200"
-            oninvalid="this.setCustomValidity('Please fill out this field.')"
+            (invalid)="setCustomValidity($event, 'Please fill out this field.')"
             oninput="setCustomValidity('')"
           />
         </div>
@@ -81,9 +81,9 @@
               formControlName="sort_seq"
               required
               maxlength="5"
-              onkeyup="reject_space(this);chkposval(this, 2, 'sort_seq')"
-              onblur="reject_space(this);chkposval(this, 2, 'sort_seq')"
-              oninvalid="this.setCustomValidity('Please fill out this field.')"
+              (keyup)="onKeyupSortSeq($event, 'sort_seq', 2)"
+              (blur)="onBlurSortSeq($event, 'sort_seq', 2)"
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')"
               oninput="setCustomValidity('')"
             />
           </div>

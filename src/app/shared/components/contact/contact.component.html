@@ -1,18 +1,29 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header text-white">
-  <h5 class="modal-title" id="__nhPopWindow_title">{{ "Contact Us" | translate }}</h5>
+  <h5 class="modal-title" id="__nhPopWindow_title">
+    {{ "Contact Us" | translate }}
+  </h5>
   <button
     id="__nhPopWindow_close"
     type="button"
     class="close btn-md m-1 p-0 bg-header text-white"
     data-dismiss="modal"
     aria-label="Close"
-    (click)="onHide()">
+    (click)="onHide()"
+  >
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body m-0 p-0 ctt-modal">
   <main role="main" class="container-fluid p-0 m-0">
-    <form name="frmfeedback" id="frmfeedback" method="post">
+    <form
+      *ngIf="mform"
+      name="frmfeedback"
+      id="frmfeedback"
+      method="post"
+      [formGroup]="mform"
+      ngNativeValidate
+      (ngSubmit)="onSubmit()"
+    >
       <div class="container-fluid pt-2 pb-2 px-4 bg-light">
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12">
@@ -25,8 +36,12 @@
                 id="hstatus"
                 name="hstatus"
                 role="alert"
-                [hidden]="true">
-                {{ "Your message was sent successfully. An email notification of a copy of your message has been sent out. Please check your Spam/Junk folder if you have not received it in your inbox." | translate }}
+                [hidden]="true"
+              >
+                {{
+                  "Your message was sent successfully. An email notification of a copy of your message has been sent out. Please check your Spam/Junk folder if you have not received it in your inbox."
+                    | translate
+                }}
               </div>
             </div>
 
@@ -36,13 +51,13 @@
                   <label>{{ "Name" | translate }}</label>
                   <input
                     class="form-control"
-                    name="txtname"
-                    id="txtname"
+                    formControlName="txtname"
                     value="Kian Cheong Lam"
-                    placeholder="Your Name"
-                    required="required"
-                    title="Name"
-                    readonly />
+                    [placeholder]="'Your Name' | translate"
+                    required
+                    [title]="'Name' | translate"
+                    readonly
+                  />
                 </div>
               </div>
 
@@ -52,13 +67,13 @@
                   <input
                     type="email"
                     class="form-control"
-                    name="txtemail"
-                    id="txtemail"
+                    formControlName="txtemail"
                     value="kiancheong.lam@nova-hub.com"
-                    placeholder="Your eMail"
-                    required="required"
-                    title="eMail"
-                    readonly />
+                    [placeholder]="'Your eMail' | translate"
+                    required
+                    [title]="'eMail' | translate"
+                    readonly
+                  />
                 </div>
               </div>
 
@@ -67,13 +82,13 @@
                   <label>{{ "Organization" | translate }}</label>
                   <input
                     class="form-control"
-                    name="txtorganization"
-                    id="txtorganization"
+                    formControlName="txtorganization"
                     value="EyRIS"
-                    placeholder="Your Organization"
-                    required="required"
-                    title="Organization"
-                    readonly />
+                    [placeholder]="'Your Organization' | translate"
+                    required
+                    [title]="'Organization' | translate"
+                    readonly
+                  />
                 </div>
               </div>
             </div>
@@ -82,15 +97,17 @@
                 <div class="form-group">
                   <textarea
                     class="form-control"
-                    name="txtmessage"
-                    id="txtmessage"
+                    formControlName="txtmessage"
                     [placeholder]="'How can we help?' | translate"
-                    required="required"
+                    required
                     rows="8"
                     maxlength="2000"
-                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    (invalid)="
+                      setCustomValidity($event, 'Please fill out this field.')
+                    "
                     oninput="setCustomValidity('')"
-                    onchange="if(this.value!=''){setCustomValidity('');}"></textarea>
+                    onchange="if(this.value!=''){setCustomValidity('');}"
+                  ></textarea>
                 </div>
                 <div></div>
               </div>
@@ -104,7 +121,8 @@
         <button
           type="submit"
           class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          title="Send Message">
+          title="Send Message"
+        >
           <i class="fa fa-envelope"></i> {{ "Send Message" | translate }}
         </button>
       </div>

@@ -113,7 +113,12 @@
                         formControlName="description"
                         required
                         maxlength="200"
-                        oninvalid="this.setCustomValidity('Please fill out this field.')"
+                        (invalid)="
+                          setCustomValidity(
+                            $event,
+                            'Please fill out this field.'
+                          )
+                        "
                         oninput="setCustomValidity('')"
                         (keyup)="
                           onKeyupValidateSpecialChar(
@@ -380,7 +385,12 @@
                                 class="form-control"
                                 formControlName="contact_email"
                                 maxlength="50"
-                                oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+                                (invalid)="
+                                  setCustomValidity(
+                                    $event,
+                                    'Please enter a valid email address.'
+                                  )
+                                "
                                 oninput="setCustomValidity('')"
                                 onchange="if (this.value==''){setCustomValidity('');}"
                               />
@@ -812,7 +822,12 @@
                                     maxlength="11"
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     readonly
-                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                    (invalid)="
+                                      setCustomValidity(
+                                        $event,
+                                        'Please fill out this field.'
+                                      )
+                                    "
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
                                   />
@@ -850,7 +865,12 @@
                                     value
                                     onblur="if(!(check_date(this))){this.value='';}"
                                     readonly
-                                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                    (invalid)="
+                                      setCustomValidity(
+                                        $event,
+                                        'Please fill out this field.'
+                                      )
+                                    "
                                     oninput="setCustomValidity('')"
                                     onchange="if(this.value!=''){setCustomValidity('');}"
                                   />
