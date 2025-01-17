@@ -110,10 +110,6 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
       title: 'Information',
       code: 'SYS-00030',
       desc: this.translate.instant(_('Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.'), {ch:r})
-      // message: 
-      // `
-      // :<br>Following characters<br> ${r} <br>are not allowed in this field and will be removed.
-      // `
     };
     this.bsModalRef1 = this.modalService.show(MessageBoxComponent, { 
       class: 'msg-modal', 

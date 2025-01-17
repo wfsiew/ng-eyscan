@@ -5,6 +5,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
 import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
 import { Helper } from 'src/app/shared/utils/helper';
+import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 
 @Component({
   selector: 'app-modal-company-create',
@@ -70,10 +71,8 @@ export class CompanyCreateComponent extends GeneralForm {
   showInvalidInput(r: string) {
     const initialState = {
       title: 'Information',
-      message: 
-      `
-      SYS-00030:<br>Following characters<br> ${r} <br>are not allowed in this field and will be removed.
-      `
+      code: 'SYS-00030',
+      desc: this.translate.instant(_('Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.'), {ch:r})
     };
     this.bsModalRef1 = this.modalService.show(MessageBoxComponent, { 
       class: 'msg-modal', 

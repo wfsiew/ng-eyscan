@@ -8,6 +8,7 @@ import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { Helper } from 'src/app/shared/utils/helper';
 import { TranslateService } from '@ngx-translate/core';
 import { AppTranslateService } from 'src/app/services/app-translate.service';
+import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 
 @Component({
   selector: 'app-company',
@@ -50,10 +51,8 @@ export class CompanyComponent extends CustomRender implements OnDestroy {
   showInvalidInput(r: string) {
     const initialState = {
       title: 'Information',
-      message: 
-      `
-      SYS-00030:<br>Following characters<br> ${r} <br>are not allowed in this field and will be removed.
-      `
+      code: 'SYS-00030',
+      desc: this.translate.instant(_('Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.'), {ch:r})
     };
     this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
       class: 'msg-modal', 

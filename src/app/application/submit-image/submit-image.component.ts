@@ -119,9 +119,6 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
       title: 'Information',
       code: 'SYS-00001',
       desc: this.translate.instant(_('MAXIMUM SCREENING IMAGES ALLOWED FOR UPLOADING IS 2 PER EYE, ONLY FIRST 2 VALID IMAGES WILL BE USED.'))
-      // `
-      // SYS-00001:<br>Maximum screening images allowed for uploading is 2 per eye, only first 2 valid images will be used.
-      // `
     };
     this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
       class: 'msg-modal', 
