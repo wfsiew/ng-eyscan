@@ -265,7 +265,7 @@
               <button
                 name="btnSave"
                 id="btnSave"
-                type="button"
+                type="submit"
                 class="btn bg-primary text-white float-right mt-3"
                 [title]="'Save' | translate"
               >
@@ -292,7 +292,7 @@
               method="post"
               [formGroup]="pform"
               ngNativeValidate
-              (ngSubmit)="onSubmitp()"
+              (ngSubmit)="onSubmitChangePwd()"
             >
               <input
                 type="hidden"
@@ -330,6 +330,7 @@
                   class="form-control"
                   formControlName="new_pwd"
                   placeholder
+                  (keyup)="onKeyupNewPwd($event)"
                   autocomplete="off"
                 />
                 <input
@@ -341,27 +342,50 @@
               </div>
 
               <div id="ver_div" class="form-group mt-0 mb-3 pl-3">
-                <div id="ver1" class="col-12 small text-dark">
+                <div
+                  id="ver1"
+                  class="col-12 small text-dark"
+                  [class.text-success]="ver1"
+                  [class.text-dark]="!ver1"
+                >
                   <i class="fas fa-check-circle fa-sm"></i>
                   {{ "contains lowercase letters" | translate }}
                 </div>
-                <div id="ver2" class="col-12 small text-dark">
+                <div
+                  id="ver2"
+                  class="col-12 small"
+                  [class.text-success]="ver2"
+                  [class.text-dark]="!ver2"
+                >
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains uppercase letters" | translate }}
                 </div>
-                <div id="ver3" class="col-12 small text-dark">
+                <div
+                  id="ver3"
+                  class="col-12 small"
+                  [class.text-success]="ver3"
+                  [class.text-dark]="!ver3"
+                >
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains a number" | translate }}
                 </div>
-                <div id="ver4" class="col-12 small text-dark">
+                <div
+                  id="ver4"
+                  class="col-12 small"
+                  [class.text-success]="ver4"
+                  [class.text-dark]="!ver4"
+                >
                   <i class="fa fa-check-circle fa-sm"></i>
                   {{ "contains at least 1 special character" | translate }}
                 </div>
-                <div id="ver5" class="col-12 small text-dark">
+                <div
+                  id="ver5"
+                  class="col-12 small"
+                  [class.text-success]="ver5"
+                  [class.text-dark]="!ver5"
+                >
                   <i class="fa fa-check-circle fa-sm"></i>
-                  {{ "contains at least {{min}} and not more than
-                  {{ max }} characters (no spaces)" | translate: {min:8, max:20}
-                  }}
+                  {{ "contains at least {{min}} and not more than {{max}} characters (no spaces)" | translate: {min:8, max:20} }}
                 </div>
               </div>
 
@@ -379,8 +403,8 @@
               <button
                 name="btnChangePWD"
                 id="btnChangePWD"
-                disabled
-                type="button"
+                [disabled]="disableChangePwd"
+                type="submit"
                 class="btn bg-primary text-white float-right mt-3"
                 [title]="'Save' | translate"
               >

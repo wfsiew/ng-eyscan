@@ -418,7 +418,7 @@
   "User List Summary Report": "Relatório de resumo da lista de usuários",
   "No apparent retinopathy/Mild non-proliferative DR": "Sem retinopatia aparente / Retinoplatia degenerativa não proliferativa leve",
   "MAXIMUM SCREENING IMAGES ALLOWED FOR UPLOADING IS 2 PER EYE, ONLY FIRST 2 VALID IMAGES WILL BE USED.": "O MÁXIMO DE IMAGENS DE TRIAGEM PERMITIDO PARA CARREGAMENTO É DE 2 POR OLHO, SOMENTE AS PRIMEIRAS 2 IMAGENS VÁLIDAS SERÃO USADAS.",
-  "%1 IS MANDATORY.": "% 1 É OBRIGATÓRIO.",
+  "{{field}} IS MANDATORY.": "{{field}} É OBRIGATÓRIO.",
   "PLEASE UPLOAD RETINAL IMAGES.": "CARREGUE AS IMAGENS RETINAIS.",
   "THE DATE FORMAT IS INVALID.": "O FORMATO DA DATA É INVÁLIDO.",
   "INVALID TIME. PLEASE TRY AGAIN.": "HORÁRIO INVÁLIDO. POR FAVOR, TENTE NOVAMENTE.",
@@ -446,7 +446,7 @@
   "Password has been used previously. Please choose another.": "A senha foi usada anteriormente. Por favor escolha outra.",
   "Email has already been used.": "Email já foi usado.",
   "%1 already exists.": "% 1 já existe.",
-  "Following characters<br> %1 <br>are not allowed in this field and will be removed.": "Os seguintes caracteres <br>% 1 <br> não são permitidos neste campo e serão removidos.",
+  "Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.": "Os seguintes caracteres <br> {{ch}} <br> não são permitidos neste campo e serão removidos.",
   "Your user account has been locked after %1 failed authentication attempts. Please click on 'Forgot password' in login page and try again.": "Sua conta de usuário foi bloqueada após% 1 tentativas de autenticação malsucedidas. Clique em 'Esqueci a senha' na página de login e tente novamente.",
   "Only pdf file of size not greater than 10mb is allowed.": "Somente arquivos PDF com tamanho não superior a 10 MB são permitidos.",
   "Invalid uploaded image (both width and height should be 512 pixels or greater).": "Imagem enviada inválida (largura e altura devem ser 512 pixels ou mais).",
@@ -489,18 +489,10 @@
   "Subscription has expired, please renew subscription if you wish to continue using EySCAN/SELENA+.": "A assinatura expirou, renove a assinatura se desejar continuar usando EySCAN / SELENA +.",
   "Case Reference ID is mandatory.": "O ID de referência do caso é obrigatório.",
   "Your user account has been suspended. Please click on 'Forgot password' in login page and try again.": "Sua conta de usuário foi suspensa. Clique em 'Esqueci a senha' na página de login e tente novamente.",
-  "SELENA+ Expiry Date Reached. Please contact your administrator or send an email to CustomerCare": {
-    "eyris.io.": " Data de expiração do SELENA + atingida. Entre em contato com seu administrador ou envie um e-mail para CustomerCare@eyris.io."
-  },
-  "System has detected that an unauthorized SELENA+ was used. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "O sistema detectou que um SELENA + não autorizado foi usado. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io."
-  },
-  "Incorrect number of threshold parameters. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "Número incorreto de parâmetros de limite. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io."
-  },
-  "Inconsistent threshold values. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "Valores de limite inconsistentes. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io."
-  },
+  "SELENA+ Expiry Date Reached. Please contact your administrator or send an email to CustomerCare@eyris.io.": " Data de expiração do SELENA + atingida. Entre em contato com seu administrador ou envie um e-mail para CustomerCare@eyris.io.",
+  "System has detected that an unauthorized SELENA+ was used. Please contact your administrator or send an email to customerCare@eyris.io.": "O sistema detectou que um SELENA + não autorizado foi usado. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io.",
+  "Incorrect number of threshold parameters. Please contact your administrator or send an email to customerCare@eyris.io.": "Número incorreto de parâmetros de limite. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io.",
+  "Inconsistent threshold values. Please contact your administrator or send an email to customerCare@eyris.io.": "Valores de limite inconsistentes. Entre em contato com seu administrador ou envie um e-mail para customerCare@eyris.io.",
   "Invalid file format, only valid image file is allowed.": "Formato de arquivo inválido. Apenas arquivos de imagem válidos são permitidos.",
   "Invalid file format, only valid pdf file is allowed.": "Formato de arquivo inválido, apenas arquivos PDF válidos são permitidos.",
   "Report is not available. Error encountered during image submission.": "O relatório não está disponível. Erro encontrado durante o envio da imagem.",

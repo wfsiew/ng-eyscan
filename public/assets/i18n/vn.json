@@ -418,7 +418,7 @@
   "User List Summary Report": "Báo cáo tổng hợp danh sách người dùng",
   "No apparent retinopathy/Mild non-proliferative DR": "Không có bệnh lý võng mạc rõ ràng / bệnh võng mạc tiểu đường chưa tăng sinh nhẹ",
   "MAXIMUM SCREENING IMAGES ALLOWED FOR UPLOADING IS 2 PER EYE, ONLY FIRST 2 VALID IMAGES WILL BE USED.": "ĐƯỢC PHÉP TẢI LÊN TỐI ĐA 2 ẢNH SÀNG LỌC CHO MỖI MẮT, CHỈ 2 ẢNH HỢP LỆ ĐẦU TIÊN SẼ ĐƯỢC SỬ DỤNG.",
-  "%1 IS MANDATORY.": "%1 LÀ BẮT BUỘC.",
+  "{{field}} IS MANDATORY.": "{{field}} LÀ BẮT BUỘC.",
   "PLEASE UPLOAD RETINAL IMAGES.": "VUI LÒNG TẢI ẢNH VÕNG MẠC.",
   "THE DATE FORMAT IS INVALID.": "ĐỊNH DẠNG NGÀY KHÔNG HỢP LỆ.",
   "INVALID TIME. PLEASE TRY AGAIN.": "GIỜ CHƯA ĐÚNG, VUI LÒNG THỬ LẠI.",
@@ -446,7 +446,7 @@
   "Password has been used previously. Please choose another.": "Mật khẩu này đã được sử dụng. Vui lòng chọn mật khẩu khác.",
   "Email has already been used.": "Địa chỉ Email này đã được sử dụng.",
   "%1 already exists.": "%1 đã tồn tại.",
-  "Following characters<br> %1 <br>are not allowed in this field and will be removed.": "Các ký tự sau đây <br> %1 <br> không được nhập vào mục này và sẽ bị xóa.",
+  "Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.": "Các ký tự sau đây <br> {{ch}} <br> không được nhập vào mục này và sẽ bị xóa.",
   "Your user account has been locked after %1 failed authentication attempts. Please click on 'Forgot password' in login page and try again.": "Tài khoản người dùng của bạn đã bị khóa sau %1 lần xác thực không thành công. Vui lòng nhấp vào 'Quên mật khẩu' trong trang đăng nhập và thử lại.",
   "Only pdf file of size not greater than 10mb is allowed.": "Chỉ cho phép tệp pdf có kích thước từ 10mb trở xuống.",
   "Invalid uploaded image (both width and height should be 512 pixels or greater).": "Ảnh được tải lên không hợp lệ (cả chiều rộng và chiều cao phải là 512 pixel trở lên)",
@@ -489,18 +489,10 @@
   "Subscription has expired, please renew subscription if you wish to continue using EySCAN/SELENA+.": "Đăng ký đã hết hạn, vui lòng gia hạn đăng ký nếu bạn muốn tiếp tục sử dụng EySCAN / SELENA +",
   "Case Reference ID is mandatory.": "ID tham chiếu của trường hợp là bắt buộc.",
   "Your user account has been suspended. Please click on 'Forgot password' in login page and try again.": "Tài khoản người dùng của bạn đã bị treo. Vui lòng nhấp vào 'Quên mật khẩu' trong trang đăng nhập và thử lại.",
-  "SELENA+ Expiry Date Reached. Please contact your administrator or send an email to CustomerCare": {
-    "eyris.io.": "Selena + đã đến ngày hết hạn. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến CustomerCare@eyris.io."
-  },
-  "System has detected that an unauthorized SELENA+ was used. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "Hệ thống đã phát hiện ra rằng một SELENA + trái phép đang sử dụng. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io."
-  },
-  "Incorrect number of threshold parameters. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "Số tham số ngưỡng không chính xác. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io"
-  },
-  "Inconsistent threshold values. Please contact your administrator or send an email to customerCare": {
-    "eyris.io.": "Giá trị ngưỡng không nhất quán. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io"
-  },
+  "SELENA+ Expiry Date Reached. Please contact your administrator or send an email to CustomerCare@eyris.io.": "Selena + đã đến ngày hết hạn. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến CustomerCare@eyris.io.",
+  "System has detected that an unauthorized SELENA+ was used. Please contact your administrator or send an email to customerCare@eyris.io.": "Hệ thống đã phát hiện ra rằng một SELENA + trái phép đang sử dụng. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io.",
+  "Incorrect number of threshold parameters. Please contact your administrator or send an email to customerCare@eyris.io.": "Số tham số ngưỡng không chính xác. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io",
+  "Inconsistent threshold values. Please contact your administrator or send an email to customerCare@eyris.io.": "Giá trị ngưỡng không nhất quán. Vui lòng liên hệ với quản trị viên của bạn hoặc gửi email đến customerCare@eyris.io",
   "Invalid file format, only valid image file is allowed.": "Định dạng file không hợp lệ, chỉ cho phép file hình ảnh hợp lệ",
   "Invalid file format, only valid pdf file is allowed.": "Định dạng file không hợp lệ, chỉ cho phép file pdf",
   "Report is not available. Error encountered during image submission.": "Không có báo cáo. Đã gặp lỗi trong khi gửi hình ảnh.",

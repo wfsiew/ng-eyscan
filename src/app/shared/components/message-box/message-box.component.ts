@@ -12,7 +12,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 export class MessageBoxComponent {
 
   title: string = '';
-  message: string = '';
+  code: string = '';
+  desc: string = '';
   onClose!: Subject<any>;
 
   constructor(public bsModalRef: BsModalRef) {

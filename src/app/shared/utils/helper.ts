@@ -8,15 +8,15 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
 export class Helper {
 
-  public static nameSpecialChars = "~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?";
-  public static descSpecialChars = "~`#%^&*-_+={}[]|\:;,.<>/?";
+  static nameSpecialChars = "~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?";
+  static descSpecialChars = "~`#%^&*-_+={}[]|\:;,.<>/?";
 
-  public static toDateStr(dt: Date) {
+  static toDateStr(dt: Date) {
     const formattedDate = format(dt, 'dd-MMM-yyyy');
     return formattedDate;
   }
 
-  public static chkposval(val: string, ftype: number): string {
+  static chkposval(val: string, ftype: number): string {
     let s = val;
       
     //check for positive values to 2 decimal places
@@ -172,7 +172,7 @@ export class Helper {
     return s;
   }//end function
 
-  public static chkphoneval(val: string) {
+  static chkphoneval(val: string) {
     let pfv, s;
     pfv = val.trim();
     
@@ -191,7 +191,7 @@ export class Helper {
     return s;
   }
 
-  public static validateSpecialCharacters(val: string, excludeSpecialChars: string, excludeDoubleQuote: string, excludeSingleQuote: string) {
+  static validateSpecialCharacters(val: string, excludeSpecialChars: string, excludeDoubleQuote: string, excludeSingleQuote: string) {
     let invalid = excludeSpecialChars;
     let ok = true;
     let validStr = '';
@@ -223,7 +223,7 @@ export class Helper {
     return [s, ok, invalid];
   }
 
-  public static reject_space(str: string) {
+  static reject_space(str: string) {
     let arr = str.split(' ');
     let ls: string[] = [];
     let s = '';
@@ -238,7 +238,7 @@ export class Helper {
     return s;
   }
 
-  public static c_upper(val: string) {
+  static c_upper(val: string) {
     return val.toUpperCase();
   }
 
@@ -269,7 +269,7 @@ export class AppManager {
 
   private constructor() {}
 
-  public static get instance(): AppManager {
+  static get instance(): AppManager {
     if (!AppManager.mInstance) {
       AppManager.mInstance = new AppManager();
     }
@@ -277,7 +277,8 @@ export class AppManager {
     return AppManager.mInstance;
   }
 
-  public addBeforeUnload() {
+  addBeforeUnload() {
+    return;
     this.beforeUnloadListener = (event: any) => {
       event.preventDefault();
       return event.returnValue = 'Please use log out instead of close window directly';
@@ -285,7 +286,7 @@ export class AppManager {
     addEventListener('beforeunload', this.beforeUnloadListener, { capture: false });
   }
 
-  public removeBeforeUnload() {
+  removeBeforeUnload() {
     removeEventListener('beforeunload', this.beforeUnloadListener, { capture: false });
   }
 }

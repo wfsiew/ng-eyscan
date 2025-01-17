@@ -1,6 +1,6 @@
 <div class="modal-header m-0 p-1 pl-2 bg-header xbg-dark text-white">
   <h5 class="modal-title" id="__nhMessageBox_title">
-    {{ title }}
+    {{ title | translate }}
   </h5>
   <button
     type="button"
@@ -21,7 +21,9 @@
       <div class="container">
         <div class="row pt-3 d-flex">
           <div class="col-2 justify-content-center"><img src="assets/img/eyris_logo.png" class="nhxlogo"></div>
-          <div class="col-10 nhxmsg" [innerHTML]="message | safehtml"></div>
+          <div class="col-10 nhxmsg">
+            {{ code }}:<br>{{ desc }}
+          </div>
         </div>
       </div>
     </div>
@@ -31,7 +33,7 @@
         <input
           type="button"
           align="middle"
-          value="OK"
+          [value]="'OK' | translate"
           name="btnOk"
           class="btn bg-button text-white"
           (click)="onHide()"
