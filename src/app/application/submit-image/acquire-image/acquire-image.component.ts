@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-modal-acquire-img',
@@ -51,5 +51,15 @@ export class AcquireImageComponent implements OnInit {
   get isEmpty() {
     const b = Object.values(this.listx).every(x => x === false);
     return b;
+  }
+
+  static showModal(modalService: BsModalService, initialState: any) {
+    const m = modalService.show(AcquireImageComponent, { 
+      class: 'acquire-image-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhPopWindow_title', 
+      initialState 
+    });
+    return m;
   }
 }

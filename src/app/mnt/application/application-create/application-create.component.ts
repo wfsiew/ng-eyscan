@@ -100,4 +100,14 @@ export class ApplicationCreateComponent extends GeneralForm {
     this.bsModalRef.hide();
     return false;
   }
+
+  static showModal(modalService: BsModalService, initialState: any) {
+    const m = modalService.show(ApplicationCreateComponent, { 
+      class: 'create-application-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhPopWindow_title', 
+      initialState 
+    });
+    return m;
+  }
 }

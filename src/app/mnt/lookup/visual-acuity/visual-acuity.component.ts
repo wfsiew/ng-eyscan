@@ -35,12 +35,7 @@ export class VisualAcuityComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'New Lookup Code'
     };
-    this.bsModalRef = this.modalService.show(LookupCreateComponent, { 
-      class: 'create-lookup-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = LookupCreateComponent.showModal(this.modalService, initialState);
     // this.bsModalRef.content.onClose.subscribe((res: any) => {
     //   if (res.result === true) {
     //     this.onContact();
@@ -52,12 +47,7 @@ export class VisualAcuityComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'Edit Lookup Code'
     };
-    this.bsModalRef = this.modalService.show(LookupCreateComponent, { 
-      class: 'create-lookup-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = LookupCreateComponent.showModal(this.modalService, initialState);
     return false;
   }
 }

@@ -363,12 +363,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
     const initialState = {
       list: []
     };
-    this.bsModalRef = this.modalService.show(AcquireImageComponent, { 
-      class: 'acquire-image-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = AcquireImageComponent.showModal(this.modalService, initialState);
     this.bsModalRef.content.onClose.subscribe((res: any) => {
       if (res.result === true) {
         const s = res.list.join(',');
@@ -392,12 +387,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
     const initialState = {
 
     };
-    this.bsModalRef = this.modalService.show(GuideComponent, { 
-      class: 'guide-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = GuideComponent.showModal(this.modalService, initialState);
   }
 
   onKeyupDateImage(event: KeyboardEvent) {

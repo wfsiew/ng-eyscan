@@ -35,12 +35,7 @@ export class AdminUserComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'New User Account'
     };
-    this.bsModalRef = this.modalService.show(AccountsCreateComponent, { 
-      class: 'create-accounts-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = AccountsCreateComponent.showModal(this.modalService, initialState);
     // this.bsModalRef.content.onClose.subscribe((res: any) => {
     //   if (res.result === true) {
     //     this.onContact();
@@ -52,12 +47,7 @@ export class AdminUserComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'Edit User Account'
     };
-    this.bsModalRef = this.modalService.show(AccountsCreateComponent, { 
-      class: 'create-accounts-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef =AccountsCreateComponent.showModal(this.modalService, initialState);
     return false;
   }
 }

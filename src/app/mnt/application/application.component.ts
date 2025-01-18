@@ -36,12 +36,7 @@ export class ApplicationComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'New Application'
     };
-    this.bsModalRef = this.modalService.show(ApplicationCreateComponent, { 
-      class: 'create-application-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = ApplicationCreateComponent.showModal(this.modalService, initialState);
     // this.bsModalRef.content.onClose.subscribe((res: any) => {
     //   if (res.result === true) {
     //     this.onContact();
@@ -53,12 +48,7 @@ export class ApplicationComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'Edit Application'
     };
-    this.bsModalRef = this.modalService.show(ApplicationCreateComponent, { 
-      class: 'create-application-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = ApplicationCreateComponent.showModal(this.modalService, initialState);
     return false;
   }
 }

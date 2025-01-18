@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { GeneralForm } from 'src/app/shared/classes/general-form';
 import { Helper } from 'src/app/shared/utils/helper';
 
@@ -51,5 +51,15 @@ export class LookupCreateComponent extends GeneralForm {
     const s = Helper.reject_space(v);
     const x = Helper.chkposval(s, ftype);
     this.setValue(field, x);
+  }
+
+  static showModal(modalService: BsModalService, initialState: any) {
+    const m = modalService.show(LookupCreateComponent, { 
+      class: 'create-lookup-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhPopWindow_title', 
+      initialState 
+    });
+    return m;
   }
 }

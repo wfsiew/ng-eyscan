@@ -61,12 +61,7 @@ export class CompanyComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'New Organization'
     };
-    this.bsModalRef = this.modalService.show(CompanyCreateComponent, { 
-      class: 'create-company-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = CompanyCreateComponent.showModal(this.modalService, initialState);
     // this.bsModalRef.content.onClose.subscribe((res: any) => {
     //   if (res.result === true) {
     //     this.onContact();
@@ -78,12 +73,7 @@ export class CompanyComponent extends CustomRender implements OnDestroy {
     const initialState = {
       title: 'Edit Organization'
     };
-    this.bsModalRef = this.modalService.show(CompanyCreateComponent, { 
-      class: 'create-company-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhPopWindow_title', 
-      initialState 
-    });
+    this.bsModalRef = CompanyCreateComponent.showModal(this.modalService, initialState);
     return false;
   }
 

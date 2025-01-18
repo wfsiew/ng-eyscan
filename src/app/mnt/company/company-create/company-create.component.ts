@@ -127,4 +127,14 @@ export class CompanyCreateComponent extends GeneralForm {
     this.bsModalRef.hide();
     return false;
   }
+
+  static showModal(modalService: BsModalService, initialState: any) {
+    const m = modalService.show(CompanyCreateComponent, { 
+      class: 'create-company-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhPopWindow_title', 
+      initialState 
+    });
+    return m;
+  }
 }
