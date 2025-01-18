@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-message-box',
@@ -23,5 +23,15 @@ export class MessageBoxComponent {
   onHide() {
     this.onClose.next({ result: false });
     this.bsModalRef.hide();
+  }
+
+  static showModal(modalService: BsModalService, initialState: any) {
+    const m = modalService.show(MessageBoxComponent, { 
+      class: 'msg-modal', 
+      backdrop: 'static', 
+      ariaLabelledBy: '__nhMessageBox_title', 
+      initialState 
+    });
+    return m;
   }
 }

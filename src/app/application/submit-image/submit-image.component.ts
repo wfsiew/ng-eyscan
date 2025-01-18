@@ -120,12 +120,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
       code: 'SYS-00001',
       desc: this.translate.instant(_('MAXIMUM SCREENING IMAGES ALLOWED FOR UPLOADING IS 2 PER EYE, ONLY FIRST 2 VALID IMAGES WILL BE USED.'))
     };
-    this.bsModalRef = this.modalService.show(MessageBoxComponent, { 
-      class: 'msg-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhMessageBox_title', 
-      initialState 
-    });
+    this.bsModalRef = MessageBoxComponent.showModal(this.modalService, initialState);
     this.bsModalRef.content.onClose.subscribe((res: any) => {
       this.onMessageHide();
     });
@@ -383,12 +378,7 @@ export class SubmitImageComponent extends CustomRender implements OnInit, OnDest
           code: 'SYS-00105',
           desc: this.translate.instant(_('No camera is configured for the organization.'))
         };
-        this.modalService.show(MessageBoxComponent, { 
-          class: 'msg-modal', 
-          backdrop: 'static', 
-          ariaLabelledBy: '__nhMessageBox_title', 
-          initialState 
-        });
+        MessageBoxComponent.showModal(this.modalService, initialState);
       }
     });
   }

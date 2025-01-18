@@ -74,12 +74,7 @@ export class CompanyCreateComponent extends GeneralForm {
       code: 'SYS-00030',
       desc: this.translate.instant(_('Following characters<br> {{ch}} <br>are not allowed in this field and will be removed.'), {ch:r})
     };
-    this.bsModalRef1 = this.modalService.show(MessageBoxComponent, { 
-      class: 'msg-modal', 
-      backdrop: 'static', 
-      ariaLabelledBy: '__nhMessageBox_title', 
-      initialState 
-    });
+    this.bsModalRef1 = MessageBoxComponent.showModal(this.modalService, initialState);
   }
 
   onKeyupCkdIm(event: KeyboardEvent, field: string, ftype: number) {
