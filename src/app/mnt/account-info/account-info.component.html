@@ -67,7 +67,13 @@
             {{ "Personal Info" | translate }}
           </h2>
           <div class="container-fluid">
-            <form *ngIf="mform" frmMain id="frmMain" method="post" [formGroup]="mform" ngNativeValidate (ngSubmit)="onSubmit()">
+            <form 
+              *ngIf="mform" 
+              frmMain id="frmMain" 
+              method="post" 
+              [formGroup]="mform" 
+              ngNativeValidate 
+              (ngSubmit)="onSubmit()">
               <input type="hidden" name="nameSpecialChars" id="nameSpecialChars"
                 value="~`!1@2#3$4%5^6&7*8(9)0-_+={}[]|\:;,.<>/?" />
 
@@ -149,7 +155,7 @@
               </div>
 
               <button name="btnSave" id="btnSave" type="submit" class="btn bg-primary text-white float-right mt-3"
-                [title]="'Save' | translate">
+                [title]="'Save' | translate" [disabled]="mform.invalid">
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>
             </form>
@@ -161,12 +167,29 @@
             {{ "Change Password" | translate }}
           </h2>
           <div class="container-fluid">
-            <form *ngIf="pform" name="frmChangePWD" id="frmChangePWD" method="post" [formGroup]="pform" ngNativeValidate (ngSubmit)="onSubmitChangePwd()">
+            <form 
+              *ngIf="pform" 
+              name="frmChangePWD" 
+              id="frmChangePWD" 
+              method="post" 
+              [formGroup]="pform" 
+              ngNativeValidate 
+              (ngSubmit)="onSubmitChangePwd()">
               <input type="hidden" name="passwordSpecialChars" id="passwordSpecialChars" value="%" />
 
               <div class="form-group">
                 <label>{{ "Current Password" | translate }} </label>
-                <input type="password" class="form-control" formControlName="old_pwd" placeholder autocomplete="off" />
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  formControlName="old_pwd" 
+                  placeholder 
+                  required
+                  [class.is-invalid]="invalidp('old_pwd')"
+                  [class.is-valid]="!invalidp('old_pwd')"
+                  (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                  oninput="setCustomValidity('')" 
+                  autocomplete="off" />
                 <input name="old_pwd_hnd" id="old_pwd_hnd" type="hidden" value />
 
                 <input type="hidden"
@@ -180,7 +203,12 @@
                   class="form-control" 
                   formControlName="new_pwd" 
                   placeholder
+                  required
+                  [class.is-invalid]="invalidp('new_pwd')"
+                  [class.is-valid]="!invalidp('new_pwd')"
                   (keyup)="onKeyupNewPwd($event)" 
+                  (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                  oninput="setCustomValidity('')"
                   autocomplete="off" />
                 <input name="new_pwd_hnd" id="new_pwd_hnd" type="hidden" value />
               </div>
@@ -210,10 +238,20 @@
 
               <div class="form-group">
                 <label>{{ "Re-enter New Password" | translate }} </label>
-                <input type="password" class="form-control" formControlName="new_pwd_confirm" placeholder autocomplete="off" />
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  formControlName="new_pwd_confirm" 
+                  placeholder 
+                  required
+                  [class.is-invalid]="invalidp('new_pwd_confirm')"
+                  [class.is-valid]="!invalidp('new_pwd_confirm')"
+                  (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+                  oninput="setCustomValidity('')"
+                  autocomplete="off" />
               </div>
 
-              <button name="btnChangePWD" id="btnChangePWD" [disabled]="disableChangePwd" type="submit"
+              <button name="btnChangePWD" id="btnChangePWD" [disabled]="pform.invalid" type="submit"
                 class="btn bg-primary text-white float-right mt-3" [title]="'Save' | translate">
                 <i class="fa fa-save"></i> {{ "Save" | translate }}
               </button>

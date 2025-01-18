@@ -13,6 +13,7 @@
       id="frmMain" 
       method="post" 
       novalidate 
+      [class.was-validated]="mform.invalid"
       [formGroup]="mform"
       (ngSubmit)="onSubmit()">
       <input type="hidden" name="param_code" id="param_code" value="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" />
@@ -25,7 +26,7 @@
         <div class="row">
           <div class="col-12">
             <div class="form-group mb-2">
-              <label class="control-label mb-0">Parameter Description</label>
+              <label class="control-label mb-0">{{ "Parameter Description" | translate }}</label>
               <input type="text" value="Allow image download from primary care function" class="form-control"
                 formControlName="description" title="Allow image download from primary care function" readonly />
             </div>
@@ -42,7 +43,7 @@
                       <input class="form-check-input" formControlName="chk_item_all" type="checkbox"
                         style="cursor: pointer; width: 16px; height: 16px" />
                       <label class="form-check-label pl-2 text-white" for="chk_item_all">
-                        Organization / Parameter Value
+                        {{ "Organization" | translate }} / {{ "Parameter Value" | translate }}
                       </label>
                     </div>
                   </div>
@@ -64,17 +65,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Belait Hospital (TOPCON)
+                            <span class="text-primary">Brunei MOH ></span> Belait Hospital (TOPCON)
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_1"
                           datarefid="chk_item_1">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -91,17 +91,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Berakas Health Centre
+                            <span class="text-primary">Brunei MOH ></span> Berakas Health Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_2"
                           datarefid="chk_item_2">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -118,17 +117,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Brunei MOH Ocular Reading Centre
+                            <span class="text-primary">Brunei MOH ></span> Brunei MOH Ocular Reading Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_3"
                           datarefid="chk_item_3">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}{{ "" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -140,21 +138,21 @@
                         <input class="form-check-input" formControlName="chk_item_4" type="checkbox"
                           style="cursor: pointer; width: 16px; height: 16px" value="14" datarefid="param_value_4" />
                         <label class="form-check-label pl-2" for="chk_item_4" style="cursor: pointer">
-                          <p class="Xtext-muted mb-1 xsmall" style="
+                          <p class="Xtext-muted mb-1 xsmall" 
+                            style="
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Mobile Bus 1
+                            <span class="text-primary">Brunei MOH ></span> Mobile Bus 1
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_4"
                           datarefid="chk_item_4">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -171,17 +169,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Mobile Bus 2
+                            <span class="text-primary">Brunei MOH ></span> Mobile Bus 2
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_5"
                           datarefid="chk_item_5">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -198,17 +195,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span> Muara
-                            Health Centre
+                            <span class="text-primary">Brunei MOH ></span> Muara Health Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_6"
                           datarefid="chk_item_6">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -225,17 +221,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span> Rimba
-                            Health Centre
+                            <span class="text-primary">Brunei MOH ></span> Rimba Health Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_7"
                           datarefid="chk_item_7">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -247,21 +242,21 @@
                         <input class="form-check-input" formControlName="chk_item_8" type="checkbox"
                           style="cursor: pointer; width: 16px; height: 16px" value="6" datarefid="param_value_8" />
                         <label class="form-check-label pl-2" for="chk_item_8" style="cursor: pointer">
-                          <p class="Xtext-muted mb-1 xsmall" style="
+                          <p class="Xtext-muted mb-1 xsmall" 
+                            style="
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span> RIPAS
-                            Hospital (Endocrinology)
+                            <span class="text-primary">Brunei MOH ></span> RIPAS Hospital (Endocrinology)
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_8"
                           datarefid="chk_item_8">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -278,17 +273,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span> RIPAS
-                            Hospital (TOPCON)
+                            <span class="text-primary">Brunei MOH ></span> RIPAS Hospital (TOPCON)
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_9"
                           datarefid="chk_item_9">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -305,17 +299,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Sengkurong Health Centre
+                            <span class="text-primary">Brunei MOH ></span> Sengkurong Health Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_10"
                           datarefid="chk_item_10">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -327,21 +320,21 @@
                         <input class="form-check-input" formControlName="chk_item_11" type="checkbox"
                           style="cursor: pointer; width: 16px; height: 16px" value="7" datarefid="param_value_11" />
                         <label class="form-check-label pl-2" for="chk_item_11" style="cursor: pointer">
-                          <p class="Xtext-muted mb-1 xsmall" style="
+                          <p class="Xtext-muted mb-1 xsmall" 
+                            style="
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH ></span>
-                            Tutong Hospital (TOPCON)
+                            <span class="text-primary">Brunei MOH ></span> Tutong Hospital (TOPCON)
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_11"
                           datarefid="chk_item_11">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -358,17 +351,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">Brunei MOH Ocular Reading Centre ></span>
-                            Temburong Hospital
+                            <span class="text-primary">Brunei MOH Ocular Reading Centre ></span> Temburong Hospital
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_12"
                           datarefid="chk_item_12">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -380,7 +372,8 @@
                         <input class="form-check-input" formControlName="chk_item_13" type="checkbox"
                           style="cursor: pointer; width: 16px; height: 16px" value="1" datarefid="param_value_13" />
                         <label class="form-check-label pl-2" for="chk_item_13" style="cursor: pointer">
-                          <p class="Xtext-muted mb-1 xsmall" style="
+                          <p class="Xtext-muted mb-1 xsmall" 
+                            style="
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
@@ -391,9 +384,9 @@
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_13"
                           datarefid="chk_item_13">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -417,9 +410,9 @@
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_14"
                           datarefid="chk_item_14">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -436,17 +429,16 @@
                               overflow-wrap: break-word;
                               word-break: break-word;
                             ">
-                            <span class="text-primary">EyRIS ></span> zGrading
-                            Centre
+                            <span class="text-primary">EyRIS ></span> zGrading Centre
                           </p>
                         </label>
                       </div>
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_15"
                           datarefid="chk_item_15">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -470,9 +462,9 @@
                       <div class="form-group pt-1">
                         <select class="form-control custom-select parm_value" formControlName="param_value_16"
                           datarefid="chk_item_16">
-                          <option value="N">No</option>
+                          <option value="N">{{ "No" | translate }}</option>
 
-                          <option value="Y" selected>Yes</option>
+                          <option value="Y" selected>{{ "Yes" | translate }}</option>
                         </select>
                       </div>
                     </div>
@@ -488,11 +480,11 @@
       <div class="container-fluid px-0 py-2 text-center bg-white border-top">
         <button type="button" name="btnCancel" id="btnCancel" class="btn xbtn-sm bg-secondary py-1 text-white mr-1"
           title="Cancel" (click)="onHide()">
-          <i class="fa fa-times"></i> Cancel
+          <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
         <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          title="Save">
-          <i class="fa fa-save"></i> Save
+          title="Save" [disabled]="mform.invalid">
+          <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
       <div class="xbottom1"></div>

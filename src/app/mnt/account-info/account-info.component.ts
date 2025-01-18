@@ -1,6 +1,6 @@
 import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormArray, Validators, UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
+import { Validators, UntypedFormGroup, UntypedFormBuilder, AbstractControlOptions } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { TranslateService } from '@ngx-translate/core';
@@ -8,6 +8,8 @@ import { AppTranslateService } from 'src/app/services/app-translate.service';
 import { MessageBoxComponent } from 'src/app/shared/components/message-box/message-box.component';
 import { Helper } from 'src/app/shared/utils/helper';
 import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
+import { confirmPasswordValidator } from './confirm-password-validator';
+import { createPasswordStrengthValidator } from './create-password-strength-validator';
 
 @Component({
   selector: 'app-account-info',
@@ -20,7 +22,6 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
 
   mform?: UntypedFormGroup;
   pform?: UntypedFormGroup;
-  disableChangePwd = true;
   bsModalRef1?: BsModalRef;
   readonly nameSpecialChars = Helper.nameSpecialChars;
   readonly vpwdmin = 8;
@@ -59,10 +60,11 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
       timezone: ['']
     });
     this.pform = this.fb.group({
-      old_pwd: [''],
-      new_pwd: [''],
-      new_pwd_confirm: ['']
-    });
+      old_pwd: ['', [Validators.required]],
+      new_pwd: ['', [Validators.required, createPasswordStrengthValidator(this.vpwdmin, this.vpwdmax)]],
+      new_pwd_confirm: ['', [Validators.required]]
+    }, { validators: [confirmPasswordValidator()] } as AbstractControlOptions);
+    //{ validators: [confirmPasswordValidator] } as AbstractControlOptions
   }
 
   onSubmit() {
@@ -200,13 +202,13 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
       this.ver4 = false;
     }
 
-    if (vvalidation_cnt < 5) {
-      this.disableChangePwd = true;
-    }
+    // if (vvalidation_cnt < 5) {
+    //   this.disableChangePwd = true;
+    // }
 
-    else {
-      this.disableChangePwd = false;
-    }
+    // else {
+    //   this.disableChangePwd = false;
+    // }
   }
 
   onKeyupValidateSpecialChar(event: KeyboardEvent, specialChars: string, field: string) {
@@ -234,5 +236,10 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
 
   getPValue(field: string) {
     return this.pform?.get(field)?.value;
+  }
+
+  invalidp(s: string) {
+    const m = this.pform?.controls[s];
+    return m?.invalid;
   }
 }

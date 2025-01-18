@@ -13,6 +13,7 @@
       id="frmMain" 
       method="post" 
       class="xbg-secondary" 
+      [class.was-validated]="mform.invalid"
       [formGroup]="mform"
       ngNativeValidate 
       (ngSubmit)="onSubmit()">
@@ -328,7 +329,7 @@
           <i class="fa fa-times"></i> {{ "Cancel" | translate }}
         </button>
         <button type="submit" name="btnSave" id="btnSave" class="btn xbtn-sm bg-primary py-1 text-white ml-1"
-          [title]="'Save' | translate">
+          [title]="'Save' | translate" [disabled]="mform.invalid">
           <i class="fa fa-save"></i> {{ "Save" | translate }}
         </button>
       </div>
