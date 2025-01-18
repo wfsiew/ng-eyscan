@@ -13,7 +13,6 @@
       id="frmMain" 
       method="post" 
       novalidate 
-      [class.was-validated]="mform.invalid"
       [formGroup]="mform"
       (ngSubmit)="onSubmit()">
       <input type="hidden" name="param_code" id="param_code" value="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" />

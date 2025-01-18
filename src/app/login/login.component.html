@@ -51,7 +51,7 @@
         autocomplete="off" />
     </div>
     <div class="form-group">
-      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login">
+      <button type="submit" class="btn xbtn-primary xbtn-md btn-block btn_login" [disabled]="mform.invalid">
         {{ "Log In" | translate }}
       </button>
     </div>

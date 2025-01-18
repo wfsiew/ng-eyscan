@@ -28,7 +28,7 @@ export class GeneralForm {
       return false;
     }
     
-    return m.invalid && (m.dirty || m.touched);
+    return m.invalid;
   }
 
   setCustomValidity(ev: any, s: string) {
