@@ -16,7 +16,7 @@ import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 })
 export class CompanyCreateComponent extends GeneralForm {
 
-  title?: string;
+  title: string = '';
   bsModalRef1?: BsModalRef;
   readonly nameSpecialChars = Helper.nameSpecialChars;
   readonly descSpecialChars = Helper.descSpecialChars;
