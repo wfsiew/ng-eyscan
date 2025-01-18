@@ -7,7 +7,13 @@
 </div>
 <div class="modal-body m-0 p-0 create-modal">
   <main role="main" class="container-fluid p-0">
-    <form *ngIf="mform" name="frmMain" id="frmMain" method="post" novalidate [formGroup]="mform"
+    <form 
+      *ngIf="mform" 
+      name="frmMain" 
+      id="frmMain" 
+      method="post" 
+      novalidate 
+      [formGroup]="mform"
       (ngSubmit)="onSubmit()">
       <input type="hidden" name="param_code" id="param_code" value="PRIMARY_CARE_IMAGE_DOWNLOAD_FLAG" />
       <input type="hidden" name="org_count" id="org_count" value="16" />
