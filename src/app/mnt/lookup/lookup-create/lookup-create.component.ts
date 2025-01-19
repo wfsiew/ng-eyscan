@@ -53,6 +53,11 @@ export class LookupCreateComponent extends GeneralForm {
     this.setValue(field, x);
   }
 
+  onHide() {
+    this.bsModalRef.hide();
+    return false;
+  }
+
   static showModal(modalService: BsModalService, initialState: any) {
     const m = modalService.show(LookupCreateComponent, { 
       class: 'create-lookup-modal', 

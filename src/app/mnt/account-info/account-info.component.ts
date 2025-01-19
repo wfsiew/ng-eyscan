@@ -259,4 +259,32 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
   pformHasError(field: string, e: string) {
     return this.pform?.controls[field].hasError(e);
   }
+
+  getErrorp(field: string, e: string = '') {
+    let s = '';
+    const x = 'Please fill out this field.';
+    if (!this.pform) {
+      s = this.translate.instant(_(x));
+      return s;
+    }
+
+    const invalid = this.pform?.controls[field].invalid;
+    if (invalid) {
+      if (this.pform?.controls[field].hasError('required')) {
+        s = this.translate.instant(_(x));
+        return s;
+      }
+
+      if (this.pform?.controls[field].hasError('passwordStrength')) {
+        s = this.translate.instant(_('Password is weak'));
+        return s;
+      }
+
+      if (this.pform?.controls[field].hasError('passwordNoMatch')) {
+        s = this.translate.instant(_(e));
+      }
+    }
+
+    return s;
+  }
 }

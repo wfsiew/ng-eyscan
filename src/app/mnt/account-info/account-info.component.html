@@ -209,6 +209,7 @@
                   required
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')" 
+                  [title]="getErrorp('old_pwd')"
                   autocomplete="off" />
                 <input name="old_pwd_hnd" id="old_pwd_hnd" type="hidden" value />
 
@@ -229,6 +230,7 @@
                   (keyup)="onKeyupNewPwd($event)" 
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')"
+                  [title]="getErrorp('new_pwd')"
                   autocomplete="off" />
                 <input name="new_pwd_hnd" id="new_pwd_hnd" type="hidden" value />
               </div>
@@ -268,10 +270,11 @@
                   required
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')"
+                  [title]="getErrorp('new_pwd_confirm', 'New password and confirm password should be same.')"
                   autocomplete="off" />
-                <small class="badge badge-danger" *ngIf="pformHasError('new_pwd_confirm', 'passwordNoMatch')">
+                <!-- <small class="badge badge-danger" *ngIf="pformHasError('new_pwd_confirm', 'passwordNoMatch')">
                   {{ "New password and confirm password should be same." | translate }}
-                </small>
+                </small> -->
               </div>
 
               <button name="btnChangePWD" id="btnChangePWD" [disabled]="pform.invalid" type="submit"

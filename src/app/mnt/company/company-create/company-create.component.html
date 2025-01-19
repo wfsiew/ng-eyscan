@@ -61,6 +61,8 @@
                       <input 
                         type="text" 
                         class="form-control mb-0" 
+                        [class.is-invalid]="invalid('description')"
+                        [class.is-valid]="!invalid('description')"
                         formControlName="description" 
                         required
                         maxlength="200" 
@@ -79,7 +81,12 @@
                           <div class="form-row mb-1">
                             <div class="form-group col-4">
                               <label class="control-label mb-1">{{ "Screening Model" | translate }} </label>
-                              <select class="form-control custom-select" formControlName="grading_id" required>
+                              <select 
+                                class="form-control custom-select" 
+                                [class.is-invalid]="invalid('grading_id')"
+                                [class.is-valid]="!invalid('grading_id')"
+                                formControlName="grading_id" 
+                                required>
                                 <option value="P">{{ "Fully Automated" | translate }}</option>
 
                                 <option value="S">{{ "Semi-Automated" | translate }}</option>
@@ -87,7 +94,12 @@
                             </div>
                             <div class="form-group col-5">
                               <label class="control-label mb-1">{{ "Image Report Preference" | translate }} </label>
-                              <select class="form-control custom-select" formControlName="report_ind" required>
+                              <select 
+                                class="form-control custom-select" 
+                                [class.is-invalid]="invalid('report_ind')"
+                                [class.is-valid]="!invalid('report_ind')"
+                                formControlName="report_ind" 
+                                required>
                                 <option value="MC">{{ "Macula Centered" | translate }}</option>
                                 <option value="OC">{{ "Optic Disc Centered" | translate }}</option>
                               </select>
@@ -97,6 +109,8 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
+                                [class.is-invalid]="invalid('auditing_threshold')"
+                                [class.is-valid]="!invalid('auditing_threshold')"
                                 formControlName="auditing_threshold" 
                                 maxlength="4"
                                 (keyup)="onKeyupChkposval($event, 'auditing_threshold', 2)" />
@@ -154,7 +168,13 @@
 
                             <div class="form-group col-6">
                               <label class="control-label mb-1">{{ "Camera ID" | translate }} </label>
-                              <input type="text" class="form-control" formControlName="camera_id" maxlength="50" />
+                              <input 
+                                type="text" 
+                                class="form-control" 
+                                [class.is-invalid]="invalid('camera_id')"
+                                [class.is-valid]="!invalid('camera_id')"
+                                formControlName="camera_id" 
+                                maxlength="50" />
                             </div>
                           </div>
                           <div class="form-row">
@@ -261,6 +281,8 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
+                                [class.is-invalid]="invalid('contact_name')"
+                                [class.is-valid]="!invalid('contact_name')"
                                 formControlName="contact_name" 
                                 maxlength="200"
                                 (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')" />
@@ -270,6 +292,8 @@
                               <input 
                                 type="email" 
                                 class="form-control" 
+                                [class.is-invalid]="invalid('contact_email')"
+                                [class.is-valid]="!invalid('contact_email')"
                                 formControlName="contact_email" 
                                 maxlength="50"
                                 (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
@@ -281,6 +305,8 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
+                                [class.is-invalid]="invalid('description')"
+                                [class.is-valid]="!invalid('description')"
                                 formControlName="contact_no" 
                                 maxlength="20"
                                 (keyup)="onKeyupChkposval($event, 'contact_no', 2)" />
@@ -290,7 +316,11 @@
                           <div class="form-row">
                             <div class="form-group col-7">
                               <label class="control-label mb-1">{{ "Contact Address" | translate }} </label>
-                              <textarea class="form-control" formControlName="contact_address" maxlength="200" style="height: 60px"></textarea>
+                              <textarea 
+                                class="form-control" 
+                                formControlName="contact_address" 
+                                maxlength="200" 
+                                style="height: 60px"></textarea>
                             </div>
                             <div class="form-group col-2 pl-4">
                               <div class="row">

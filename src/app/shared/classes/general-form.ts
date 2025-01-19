@@ -35,4 +35,25 @@ export class GeneralForm {
     const t = this.translatex.instant(_(s));
     ev.target.setCustomValidity(t);
   }
+
+  getError(field: string, e: string = '') {
+    let s = '';
+    let x = e === '' ? 'Please fill out this field.' : e;
+
+    if (!this.mform) {
+      s = this.translatex.instant(_(x));
+      return s;
+    }
+
+    const invalid = this.mform?.controls[field].invalid;
+    if (invalid) {
+      s = this.translatex.instant(_(x));
+    }
+
+    else if (e !== '') {
+      s = this.translatex.instant(_(x));
+    }
+
+    return s;
+  }
 }

@@ -37,7 +37,8 @@
                 required 
                 maxlength="200" 
                 (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
-                oninput="setCustomValidity('')" />
+                oninput="setCustomValidity('')"
+                [title]="getError('description')" />
             </div>
 
             <div class="form-row xmb-1">
@@ -55,7 +56,8 @@
                             [class.is-valid]="!invalid('grading_id')"
                             formControlName="grading_id" 
                             required
-                            (change)="onChangeGradingId(grading_id)">
+                            (change)="onChangeGradingId(grading_id)"
+                            [title]="getError('grading_id')">
                             <option value="P">
                               {{ "Fully Automated" | translate }}
                             </option>
@@ -68,7 +70,11 @@
                         <div class="form-group col-5">
                           <label class="control-label mb-1">{{ "Image Report Preference" | translate }}
                           </label>
-                          <select class="form-control custom-select" formControlName="report_ind" required>
+                          <select 
+                            class="form-control custom-select" 
+                            formControlName="report_ind" 
+                            required
+                            [title]="getError('report_ind')">
                             <option value="MC">
                               {{ "Macula Centered" | translate }}
                             </option>
@@ -88,7 +94,8 @@
                             formControlName="parent_company_id" 
                             required
                             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
-                            onchange="setCustomValidity('')">
+                            onchange="setCustomValidity('')"
+                            [title]="getError('parent_company_id')">
                             <option value></option>
 
                             <option value="8">Belait Hospital (TOPCON)</option>
@@ -135,7 +142,8 @@
                             formControlName="secondary_id"
                             [required]="!disabled_secondary_id" 
                             (invalid)="setCustomValidity($event,'Please fill out this field.')" 
-                            onchange="setCustomValidity('')">
+                            onchange="setCustomValidity('')"
+                            [title]="getError('secondary_id')">
                             <option value></option>
 
                             <option value="8">Belait Hospital (TOPCON)</option>
@@ -235,7 +243,8 @@
                             maxlength="50"
                             (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
                             oninput="setCustomValidity('')" 
-                            onchange="if (this.value==''){setCustomValidity('');}" />
+                            onchange="if (this.value==''){setCustomValidity('');}"
+                            [title]="getError('contact_email', 'Please enter a valid email address.')" />
                         </div>
                         <div class="form-group col-4">
                           <label class="control-label mb-1">{{ "Contact Number" | translate }}</label>

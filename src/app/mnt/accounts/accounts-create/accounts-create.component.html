@@ -37,7 +37,8 @@
             required 
             maxlength="50"
             (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
-            oninput="setCustomValidity('')" />
+            oninput="setCustomValidity('')"
+            [title]="getError('email')" />
         </div>
 
         <div class="form-row">
@@ -77,7 +78,8 @@
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'first_name')"
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
-            oninput="setCustomValidity('')" />
+            oninput="setCustomValidity('')"
+            [title]="getError('first_name')" />
         </div>
         <div class="form-group">
           <label class="control-label mb-1">{{ "Last Name" | translate }} </label>
@@ -91,7 +93,8 @@
             maxlength="100"
             (keyup)="onKeyupValidateSpecialChar($event, 'last_name')"
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
-            oninput="setCustomValidity('')" />
+            oninput="setCustomValidity('')"
+            [title]="getError('last_name')" />
         </div>
 
         <div class="form-group">
@@ -104,7 +107,8 @@
             formControlName="company_id" 
             required
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
-            onchange="setCustomValidity('')">
+            onchange="setCustomValidity('')"
+            [title]="getError('company_id')">
             <option value></option>
 
             <option value="8">Belait Hospital (TOPCON)</option>
@@ -151,7 +155,10 @@
               [class.is-invalid]="invalid('user_group')"
               [class.is-valid]="!invalid('user_group')"
               formControlName="user_group" 
-              required>
+              required
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+              onchange="setCustomValidity('')"
+              [title]="getError('user_group')">
               <option value="1" selected>{{ "Primary Screener" | translate }}</option>
 
               <option value="2">{{ "Secondary Grader" | translate }}</option>
@@ -188,7 +195,8 @@
               required
               (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
               oninput="setCustomValidity('')"
-              onchange="setCustomValidity('')">
+              onchange="setCustomValidity('')"
+              [title]="getError('timezone_name')">
               <option value></option>
 
               <option value="Africa/Abidjan">Africa/Abidjan</option>
@@ -1460,7 +1468,10 @@
               [class.is-invalid]="invalid('user_status')"
               [class.is-valid]="!invalid('user_status')"
               formControlName="user_status" 
-              required>
+              required
+              (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
+              onchange="setCustomValidity('')"
+              [title]="getError('user_status')">
               <option value="A">{{ "Active" | translate }}</option>
               <option value="I">{{ "Inactive" | translate }}</option>
               <option value="S">{{ "Suspended" | translate }}</option>
