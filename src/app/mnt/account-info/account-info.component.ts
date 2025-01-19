@@ -238,9 +238,22 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
     return this.pform?.get(field)?.value;
   }
 
+  invalid(s: string) {
+    const m = this.mform?.controls[s];
+    if (!m) {
+      return false;
+    }
+
+    return m.invalid;
+  }
+
   invalidp(s: string) {
     const m = this.pform?.controls[s];
-    return m?.invalid;
+    if (!m) {
+      return false;
+    }
+
+    return m.invalid;
   }
 
   pformHasError(field: string, e: string) {

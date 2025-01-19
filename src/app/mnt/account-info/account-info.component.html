@@ -87,6 +87,8 @@
                   type="text" 
                   maxlength="20" 
                   class="form-control" 
+                  [class.is-invalid]="invalid('displayname')"
+                  [class.is-valid]="!invalid('displayname')"
                   formControlName="displayname" 
                   placeholder
                   value="KC" 
@@ -100,6 +102,8 @@
                   type="text" 
                   maxlength="100" 
                   class="form-control" 
+                  [class.is-invalid]="invalid('firstname')"
+                  [class.is-valid]="!invalid('firstname')"
                   formControlName="firstname" 
                   placeholder
                   value="Kian Cheong" 
@@ -113,6 +117,8 @@
                   type="text" 
                   maxlength="100" 
                   class="form-control" 
+                  [class.is-invalid]="invalid('lastname')"
+                  [class.is-valid]="!invalid('lastname')"
                   formControlName="lastname" 
                   placeholder
                   value="Lam" 
@@ -126,6 +132,8 @@
                   type="text" 
                   maxlength="20" 
                   class="form-control" 
+                  [class.is-invalid]="invalid('contactno')"
+                  [class.is-valid]="!invalid('contactno')"
                   formControlName="contactno" 
                   placeholder 
                   value
@@ -146,12 +154,24 @@
 
               <div class="form-group">
                 <label>{{ "Company" | translate }}</label>
-                <input type="text" class="form-control" formControlName="company" placeholder value="EyRIS" readonly />
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="company" 
+                  placeholder 
+                  value="EyRIS" 
+                  readonly />
               </div>
 
               <div class="form-group">
                 <label>{{ "Timezone" | translate }}</label>
-                <input type="text" class="form-control" formControlName="timezone" placeholder value="Singapore" readonly />
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="timezone" 
+                  placeholder 
+                  value="Singapore" 
+                  readonly />
               </div>
 
               <button name="btnSave" id="btnSave" type="submit" class="btn bg-primary text-white float-right mt-3"
@@ -182,11 +202,11 @@
                 <input 
                   type="password" 
                   class="form-control" 
+                  [class.is-invalid]="invalidp('old_pwd')"
+                  [class.is-valid]="!invalidp('old_pwd')"
                   formControlName="old_pwd" 
                   placeholder 
                   required
-                  [class.is-invalid]="invalidp('old_pwd')"
-                  [class.is-valid]="!invalidp('old_pwd')"
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')" 
                   autocomplete="off" />
@@ -201,11 +221,11 @@
                 <input 
                   type="password" 
                   class="form-control" 
+                  [class.is-invalid]="invalidp('new_pwd')"
+                  [class.is-valid]="!invalidp('new_pwd')"
                   formControlName="new_pwd" 
                   placeholder
                   required
-                  [class.is-invalid]="invalidp('new_pwd')"
-                  [class.is-valid]="!invalidp('new_pwd')"
                   (keyup)="onKeyupNewPwd($event)" 
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')"
@@ -241,11 +261,11 @@
                 <input 
                   type="password" 
                   class="form-control" 
+                  [class.is-invalid]="invalidp('new_pwd')"
+                  [class.is-valid]="!invalidp('new_pwd')"
                   formControlName="new_pwd_confirm" 
                   placeholder 
                   required
-                  [class.is-invalid]="invalidp('new_pwd_confirm')"
-                  [class.is-valid]="!invalidp('new_pwd_confirm')"
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')"
                   autocomplete="off" />

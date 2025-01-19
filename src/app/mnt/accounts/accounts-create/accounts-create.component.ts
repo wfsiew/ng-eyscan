@@ -38,7 +38,7 @@ export class AccountsCreateComponent extends GeneralForm {
       last_name: ['', [Validators.required, Validators.maxLength(100)]],
       company_id: ['', [Validators.required]],
       user_group: ['1', [Validators.required]],
-      credits_management_ind: [true],
+      credits_management_ind: [''],
       timezone_name: ['', [Validators.required]],
       user_status: ['A', [Validators.required]],
       inactive_date: ['', [Validators.maxLength(11)]]

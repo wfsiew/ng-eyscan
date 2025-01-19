@@ -31,8 +31,11 @@
           <input 
             type="email" 
             class="form-control" 
+            [class.is-invalid]="invalid('email')"
+            [class.is-valid]="!invalid('email')"
             formControlName="email" 
-            required maxlength="50"
+            required 
+            maxlength="50"
             (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
             oninput="setCustomValidity('')" />
         </div>
@@ -43,6 +46,8 @@
             <input 
               type="text" 
               class="form-control" 
+              [class.is-invalid]="invalid('display_name')"
+              [class.is-valid]="!invalid('display_name')"
               formControlName="display_name" 
               maxlength="20"
               (keyup)="onKeyupValidateSpecialChar($event, 'display_name')" />
@@ -52,6 +57,8 @@
             <input 
               type="text" 
               class="form-control" 
+              [class.is-invalid]="invalid('contact_no')"
+              [class.is-valid]="!invalid('contact_no')"
               formControlName="contact_no" 
               maxlength="20"
               (keyup)="onKeyupContact($event)" />
@@ -63,6 +70,8 @@
           <input 
             type="text" 
             class="form-control" 
+            [class.is-invalid]="invalid('first_name')"
+            [class.is-valid]="!invalid('first_name')"
             formControlName="first_name" 
             required 
             maxlength="100"
@@ -75,6 +84,8 @@
           <input 
             type="text" 
             class="form-control" 
+            [class.is-invalid]="invalid('last_name')"
+            [class.is-valid]="!invalid('last_name')"
             formControlName="last_name" 
             required 
             maxlength="100"
@@ -88,6 +99,8 @@
 
           <select 
             class="form-control custom-select" 
+            [class.is-invalid]="invalid('company_id')"
+            [class.is-valid]="!invalid('company_id')"
             formControlName="company_id" 
             required
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
@@ -133,7 +146,12 @@
         <div class="form-row">
           <div class="form-group col-7">
             <label class="control-label mb-1">{{ "Grading Group" | translate }} </label>
-            <select class="form-control custom-select" formControlName="user_group" required>
+            <select 
+              class="form-control custom-select" 
+              [class.is-invalid]="invalid('user_group')"
+              [class.is-valid]="!invalid('user_group')"
+              formControlName="user_group" 
+              required>
               <option value="1" selected>{{ "Primary Screener" | translate }}</option>
 
               <option value="2">{{ "Secondary Grader" | translate }}</option>
@@ -164,6 +182,8 @@
 
             <select 
               class="form-control custom-select" 
+              [class.is-invalid]="invalid('timezone_name')"
+              [class.is-valid]="!invalid('timezone_name')"
               formControlName="timezone_name" 
               required
               (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
@@ -1435,7 +1455,12 @@
 
           <div class="form-group col-3">
             <label class="control-label mb-1" for="user_status">{{ "Status" | translate }} </label>
-            <select class="form-control custom-select" formControlName="user_status" required>
+            <select 
+              class="form-control custom-select" 
+              [class.is-invalid]="invalid('user_status')"
+              [class.is-valid]="!invalid('user_status')"
+              formControlName="user_status" 
+              required>
               <option value="A">{{ "Active" | translate }}</option>
               <option value="I">{{ "Inactive" | translate }}</option>
               <option value="S">{{ "Suspended" | translate }}</option>
@@ -1447,6 +1472,8 @@
             <input 
               type="text" 
               class="form-control" 
+              [class.is-invalid]="invalid('inactive_date')"
+              [class.is-valid]="!invalid('inactive_date')"
               formControlName="inactive_date" 
               style="max-width: 145px"
               maxlength="11" 

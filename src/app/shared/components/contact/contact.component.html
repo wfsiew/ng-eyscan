@@ -78,6 +78,8 @@
                 <div class="form-group">
                   <textarea 
                     class="form-control" 
+                    [class.is-invalid]="invalid('txtmessage')"
+                    [class.is-valid]="!invalid('txtmessage')"
                     formControlName="txtmessage"
                     [placeholder]="'How can we help?' | translate" 
                     required 
