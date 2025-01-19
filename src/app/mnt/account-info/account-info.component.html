@@ -249,6 +249,9 @@
                   (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                   oninput="setCustomValidity('')"
                   autocomplete="off" />
+                <small class="badge badge-danger" *ngIf="pformHasError('new_pwd_confirm', 'passwordNoMatch')">
+                  {{ "New password and confirm password should be same." | translate }}
+                </small>
               </div>
 
               <button name="btnChangePWD" id="btnChangePWD" [disabled]="pform.invalid" type="submit"

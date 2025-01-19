@@ -8,7 +8,7 @@ export function confirmPasswordValidator(): ValidatorFn {
     let ret = null;
 
     if (!pw2) {
-      ret = { passwordNoMatch: true };
+      ret = { required: true };
       control.get('new_pwd_confirm')?.setErrors(ret);
       return ret;
     }
