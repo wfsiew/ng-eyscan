@@ -33,7 +33,7 @@
         class="form-control" 
         formControlName="inEmail" 
         [placeholder]="'Email Address' | translate"
-        required="required" 
+        required
         autofocus 
         (invalid)="setCustomValidity($event, 'Please enter a valid email address.')"
         oninput="setCustomValidity('')" 
@@ -41,7 +41,7 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-block">
+      <button type="submit" class="btn btn-block" [disabled]="mform.invalid">
         {{ "Reset Password" | translate }}
       </button>
     </div>
