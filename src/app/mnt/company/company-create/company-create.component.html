@@ -68,7 +68,8 @@
                         maxlength="200" 
                         (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                         oninput="setCustomValidity('')" 
-                        (keyup)="onKeyupValidateSpecialChar($event, descSpecialChars, 'description')" />
+                        (keyup)="onKeyupValidateSpecialChar($event, descSpecialChars, 'description')"
+                        [title]="getError('description')" />
                     </div>
                   </div>
                 </div>
@@ -86,7 +87,8 @@
                                 [class.is-invalid]="invalid('grading_id')"
                                 [class.is-valid]="!invalid('grading_id')"
                                 formControlName="grading_id" 
-                                required>
+                                required
+                                [title]="getError('grading_id')">
                                 <option value="P">{{ "Fully Automated" | translate }}</option>
 
                                 <option value="S">{{ "Semi-Automated" | translate }}</option>
@@ -99,7 +101,8 @@
                                 [class.is-invalid]="invalid('report_ind')"
                                 [class.is-valid]="!invalid('report_ind')"
                                 formControlName="report_ind" 
-                                required>
+                                required
+                                [title]="getError('report_ind')">
                                 <option value="MC">{{ "Macula Centered" | translate }}</option>
                                 <option value="OC">{{ "Optic Disc Centered" | translate }}</option>
                               </select>
@@ -298,7 +301,8 @@
                                 maxlength="50"
                                 (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
                                 oninput="setCustomValidity('')"
-                                onchange="if (this.value==''){setCustomValidity('');}" />
+                                onchange="if (this.value==''){setCustomValidity('');}"
+                                [title]="getError('contact_email', 'Please enter a valid email address.')" />
                             </div>
                             <div class="form-group col-4">
                               <label class="control-label mb-1">Contact Number </label>
@@ -482,6 +486,7 @@
                                     required 
                                     onkeydown="return false" 
                                     (keyup)="onKeyupDate($event, 'trial_startdate')" 
+                                    [title]="getError('trial_startdate')"
                                     #mdatepickerTrialFrom 
                                     #datepickerTrialFrom="bsDatepicker" 
                                     bsDatepicker
@@ -518,6 +523,7 @@
                                     required 
                                     onkeydown="return false" 
                                     (keyup)="onKeyupDate($event, 'trial_enddate')" 
+                                    [title]="getError('trial_enddate')"
                                     #mdatepickerTrialTo 
                                     #datepickerTrialTo="bsDatepicker" 
                                     bsDatepicker
