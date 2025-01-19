@@ -25,8 +25,11 @@
           <input 
             type="text" 
             class="form-control" 
+            [class.is-invalid]="invalid('code')"
+            [class.is-valid]="!invalid('code')"
             formControlName="code" 
-            required maxlength="20"
+            required 
+            maxlength="20"
             onchange="c_upper(this);" 
             onkeyup="c_upper(this);reject_space(this);"
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
@@ -38,6 +41,8 @@
           <input 
             type="text" 
             class="form-control" 
+            [class.is-invalid]="invalid('description')"
+            [class.is-valid]="!invalid('description')"
             formControlName="description" 
             required 
             maxlength="200"
@@ -49,8 +54,11 @@
           <input 
             type="text" 
             class="form-control" 
+            [class.is-invalid]="invalid('english_desc')"
+            [class.is-valid]="!invalid('english_desc')"
             formControlName="english_desc" 
-            required maxlength="200"
+            required 
+            maxlength="200"
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
             oninput="setCustomValidity('')" />
         </div>
@@ -61,8 +69,11 @@
             <input 
               type="text" 
               class="form-control" 
+              [class.is-invalid]="invalid('sort_seq')"
+              [class.is-valid]="!invalid('sort_seq')"
               formControlName="sort_seq" 
-              required maxlength="5"
+              required 
+              maxlength="5"
               (keyup)="onKeyupSortSeq($event, 'sort_seq', 2)" 
               (blur)="onBlurSortSeq($event, 'sort_seq', 2)"
               (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
