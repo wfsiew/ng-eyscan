@@ -30,8 +30,8 @@
             formControlName="code" 
             required 
             maxlength="20"
-            onchange="c_upper(this);" 
-            onkeyup="c_upper(this);reject_space(this);"
+            (change)="onChangeCode($event)"
+            (keyup)="onKeyupCode($event)"
             (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
             oninput="setCustomValidity('')"
             [title]="getError('code')" />

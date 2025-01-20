@@ -39,6 +39,19 @@ export class LookupCreateComponent extends GeneralForm {
 
   }
 
+  onChangeCode(ev: any) {
+    const v = this.getValue('code');
+    const s = Helper.c_upper(v);
+    this.setValue('code', s);
+  }
+
+  onKeyupCode(ev: KeyboardEvent) {
+    const v = this.getValue('code');
+    const s = Helper.c_upper(v);
+    const x = Helper.reject_space(s);
+    this.setValue('code', x);
+  }
+
   onKeyupSortSeq(ev: KeyboardEvent, field: string, ftype: number) {
     const v = this.getValue(field);
     const s = Helper.reject_space(v);
