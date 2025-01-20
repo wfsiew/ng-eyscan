@@ -112,8 +112,6 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
-                                [class.is-invalid]="invalid('auditing_threshold')"
-                                [class.is-valid]="!invalid('auditing_threshold')"
                                 formControlName="auditing_threshold" 
                                 maxlength="4"
                                 (keyup)="onKeyupChkposval($event, 'auditing_threshold', 2)" />
@@ -174,8 +172,6 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
-                                [class.is-invalid]="invalid('camera_id')"
-                                [class.is-valid]="!invalid('camera_id')"
                                 formControlName="camera_id" 
                                 maxlength="50" />
                             </div>
@@ -284,8 +280,6 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
-                                [class.is-invalid]="invalid('contact_name')"
-                                [class.is-valid]="!invalid('contact_name')"
                                 formControlName="contact_name" 
                                 maxlength="200"
                                 (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')" />
@@ -295,8 +289,6 @@
                               <input 
                                 type="email" 
                                 class="form-control" 
-                                [class.is-invalid]="invalid('contact_email')"
-                                [class.is-valid]="!invalid('contact_email')"
                                 formControlName="contact_email" 
                                 maxlength="50"
                                 (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 
@@ -309,8 +301,6 @@
                               <input 
                                 type="text" 
                                 class="form-control" 
-                                [class.is-invalid]="invalid('contact_no')"
-                                [class.is-valid]="!invalid('contact_no')"
                                 formControlName="contact_no" 
                                 maxlength="20"
                                 (keyup)="onKeyupChkposval($event, 'contact_no', 2)" />
@@ -481,6 +471,8 @@
                                     type="text" 
                                     class="form-control" 
                                     formControlName="trial_startdate"
+                                    [class.is-invalid]="invalid('trial_startdate')"
+                                    [class.is-valid]="!invalid('trial_startdate')"
                                     style="max-width: 255px" 
                                     maxlength="11" 
                                     required 
@@ -520,7 +512,6 @@
                                     formControlName="trial_enddate"
                                     style="max-width: 255px" 
                                     maxlength="11" 
-                                    required 
                                     onkeydown="return false" 
                                     (keyup)="onKeyupDate($event, 'trial_enddate')" 
                                     [title]="getError('trial_enddate')"
