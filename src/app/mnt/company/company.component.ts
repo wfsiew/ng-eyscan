@@ -81,7 +81,7 @@ export class CompanyComponent extends CustomRender implements OnDestroy {
     const f = this.mform?.value;
     const v = f.desc;
     const ls = Helper.validateSpecialCharacters(v, Helper.descSpecialChars, 'Y', 'Y');
-    this.mform?.controls['desc'].patchValue(ls[0]);
+    this.mform?.get('desc')?.patchValue(ls[0]);
     if (ls[1] === false) {
       this.showInvalidInput(ls[2] as string);
     }

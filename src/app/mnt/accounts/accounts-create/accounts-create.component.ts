@@ -62,7 +62,7 @@ export class AccountsCreateComponent extends GeneralForm {
     const f = this.mform?.value;
     const v = f[field];
     const ls = Helper.validateSpecialCharacters(v, Helper.nameSpecialChars, 'Y', 'Y');
-    this.mform?.controls[field].patchValue(ls[0]);
+    this.mform?.get(field)?.patchValue(ls[0]);
     if (ls[1] === false) {
       this.showInvalidInput(ls[2] as string);
     }

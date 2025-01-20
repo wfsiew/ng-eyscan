@@ -231,7 +231,7 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
   }
 
   setValue(field: string, val: any) {
-    this.mform?.controls[field].patchValue(val);
+    this.mform?.get(field)?.patchValue(val);
   }
 
   getPValue(field: string) {

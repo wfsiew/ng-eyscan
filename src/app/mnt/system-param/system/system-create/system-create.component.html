@@ -52,7 +52,8 @@
             oninput="setCustomValidity('')" 
             maxlength="50" 
             (keyup)="onKeyupParam($event, 'txt_param_value', 2)"
-            (blur)="onBlurParam($event, 'txt_param_value', 2)" />
+            (blur)="onBlurParam($event, 'txt_param_value', 2)"
+            [title]="getError('txt_param_value')" />
         </div>
 
         <div class="form-row">
@@ -63,7 +64,8 @@
               [class.is-invalid]="invalid('param_datatype')"
               [class.is-valid]="!invalid('param_datatype')"
               formControlName="param_datatype" 
-              required>
+              required
+              [title]="getError('param_datatype')">
               <option value="TEXT">{{ "Text" | translate }}</option>
               <option value="NUMBER" selected>{{ "Number" | translate }}</option>
               <option value="DATE">{{ "Date" | translate }}</option>

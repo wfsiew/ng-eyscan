@@ -53,7 +53,7 @@ export class SecondaryGraderNonReferComponent extends CustomRender implements On
   onKeyupDate(event: KeyboardEvent, field: string) {
     const key = event.key;
     if (key === 'Backspace') {
-      this.mform?.controls[field].patchValue('');
+      this.mform?.get(field)?.patchValue('');
     }
   }
 }

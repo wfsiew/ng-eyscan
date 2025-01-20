@@ -1,4 +1,4 @@
-import { FormBuilder, FormArray, Validators, UntypedFormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 
@@ -10,16 +10,12 @@ export class GeneralForm {
 
   }
 
-  get f() {
-    return this.mform?.controls;
-  }
-
   getValue(field: string) {
     return this.mform?.get(field)?.value;
   }
 
   setValue(field: string, val: any) {
-    this.mform?.controls[field].patchValue(val);
+    this.mform?.get(field)?.patchValue(val);
   }
 
   invalid(s: string) {
