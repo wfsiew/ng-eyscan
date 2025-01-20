@@ -31,7 +31,7 @@ export class AccountsCreateComponent extends GeneralForm {
 
   createForm() {
     this.mform = this.fb.group({
-      email: ['', [Validators.required, Validators.maxLength(50)]],
+      email: ['', [Validators.required, Validators.maxLength(50), Validators.email]],
       display_name: ['', [Validators.maxLength(20)]],
       contact_no: ['', [Validators.maxLength(20)]],
       first_name: ['', [Validators.required, Validators.maxLength(100)]],

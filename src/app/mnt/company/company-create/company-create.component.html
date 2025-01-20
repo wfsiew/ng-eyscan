@@ -289,6 +289,8 @@
                               <input 
                                 type="email" 
                                 class="form-control" 
+                                [class.is-invalid]="invalid('contact_email')"
+                                [class.is-valid]="!invalid('contact_email')"
                                 formControlName="contact_email" 
                                 maxlength="50"
                                 (invalid)="setCustomValidity($event, 'Please enter a valid email address.')" 

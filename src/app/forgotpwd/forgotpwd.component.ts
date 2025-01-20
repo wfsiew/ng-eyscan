@@ -60,7 +60,7 @@ export class ForgotpwdComponent extends GeneralForm {
 
   createForm() {
     this.mform = this.fb.group({
-      inEmail: ['', [Validators.required]]
+      inEmail: ['', [Validators.required, Validators.email]]
     });
   }
 

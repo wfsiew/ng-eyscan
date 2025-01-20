@@ -42,7 +42,7 @@ export class CompanyCreateComponent extends GeneralForm {
       secondary_id: [''],
       collect_company_id: [''],
       contact_name: ['', [Validators.maxLength(200)]],
-      contact_email: ['', [Validators.maxLength(50)]],
+      contact_email: ['', [Validators.maxLength(50), Validators.email]],
       contact_no: ['', [Validators.maxLength(20)]],
       contact_address: ['', [Validators.maxLength(200)]],
       status: ['A'],

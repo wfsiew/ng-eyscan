@@ -59,7 +59,7 @@ export class LoginComponent extends GeneralForm implements OnDestroy {
 
   createForm() {
     this.mform = this.fb.group({
-      inEmail: ['', [Validators.required]],
+      inEmail: ['', [Validators.required, Validators.email]],
       inPassword: ['', [Validators.required]],
       inLang: ['en']
     });
