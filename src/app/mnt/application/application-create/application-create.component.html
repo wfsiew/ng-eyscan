@@ -227,8 +227,6 @@
                             type="text" 
                             formControlName="contact_name" 
                             class="form-control" 
-                            [class.is-invalid]="invalid('contact_name')"
-                            [class.is-valid]="!invalid('contact_name')"
                             maxlength="200"
                             (keyup)="onKeyupValidateSpecialChar($event, nameSpecialChars, 'contact_name')" />
                         </div>
@@ -251,8 +249,6 @@
                           <input 
                             type="text" 
                             class="form-control" 
-                            [class.is-invalid]="invalid('contact_no')"
-                            [class.is-valid]="!invalid('contact_no')"
                             formControlName="contact_no" 
                             maxlength="20"
                             (keyup)="onKeyupChkposval($event, 'contact_no', 2)" />
@@ -263,8 +259,6 @@
                           <label class="control-label mb-1">{{ "Contact Address" | translate }}</label>
                           <textarea 
                             class="form-control" 
-                            [class.is-invalid]="invalid('contact_address')"
-                            [class.is-valid]="!invalid('contact_address')"
                             formControlName="contact_address" 
                             maxlength="200" 
                             style="height: 60px"></textarea>
