@@ -239,7 +239,7 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
   }
 
   invalid(s: string) {
-    const m = this.mform?.controls[s];
+    const m = this.mform?.get(s);
     if (!m) {
       return false;
     }
@@ -248,7 +248,7 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
   }
 
   invalidp(s: string) {
-    const m = this.pform?.controls[s];
+    const m = this.pform?.get(s);
     if (!m) {
       return false;
     }
@@ -257,31 +257,35 @@ export class AccountInfoComponent extends CustomRender implements OnDestroy {
   }
 
   pformHasError(field: string, e: string) {
-    return this.pform?.controls[field].hasError(e);
+    return this.pform?.get(field)?.hasError(e) ?? false;
   }
 
   getErrorp(field: string, e: string = '') {
     let s = '';
     const x = 'Please fill out this field.';
+
     if (!this.pform) {
       s = this.translate.instant(_(x));
       return s;
     }
 
-    const invalid = this.pform?.controls[field].invalid;
-    if (invalid) {
-      if (this.pform?.controls[field].hasError('required')) {
-        s = this.translate.instant(_(x));
-        return s;
-      }
+    const fx = this.pform?.get(field);
+    if (fx) {
+      const invalid = fx.invalid ?? false;
+      if (invalid) {
+        if (fx.hasError('required')) {
+          s = this.translate.instant(_(x));
+          return s;
+        }
 
-      if (this.pform?.controls[field].hasError('passwordStrength')) {
-        s = this.translate.instant(_('Password is weak'));
-        return s;
-      }
+        if (fx.hasError('passwordStrength')) {
+          s = this.translate.instant(_('Password is weak'));
+          return s;
+        }
 
-      if (this.pform?.controls[field].hasError('passwordNoMatch')) {
-        s = this.translate.instant(_(e));
+        if (fx.hasError('passwordNoMatch')) {
+          s = this.translate.instant(_(e));
+        }
       }
     }
 

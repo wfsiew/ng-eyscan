@@ -23,7 +23,7 @@ export class GeneralForm {
   }
 
   invalid(s: string) {
-    const m = this.mform?.controls[s];
+    const m = this.mform?.get(s);
     if (!m) {
       return false;
     }
@@ -45,7 +45,7 @@ export class GeneralForm {
       return s;
     }
 
-    const invalid = this.mform?.controls[field].invalid;
+    const invalid = this.mform?.get(field)?.invalid ?? false;
     if (invalid) {
       s = this.translatex.instant(_(x));
     }
