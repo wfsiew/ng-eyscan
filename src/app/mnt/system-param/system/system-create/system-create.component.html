@@ -93,8 +93,6 @@
             <input 
               type="text" 
               class="form-control" 
-              [class.is-invalid]="invalid('param_length')"
-              [class.is-valid]="!invalid('param_length')"
               formControlName="param_length" 
               maxlength="3"
               (keyup)="onKeyupParam($event, 'param_length', 2)"
@@ -105,8 +103,6 @@
             <input 
               type="text" 
               class="form-control" 
-              [class.is-invalid]="invalid('param_datamin')"
-              [class.is-valid]="!invalid('param_datamin')"
               #mparam_datamin 
               formControlName="param_datamin" 
               maxlength="5"
@@ -118,8 +114,6 @@
             <input 
               type="text" 
               class="form-control" 
-              [class.is-invalid]="invalid('param_datamax')"
-              [class.is-valid]="!invalid('param_datamax')"
               #mparam_datamax 
               formControlName="param_datamax" 
               maxlength="5"
