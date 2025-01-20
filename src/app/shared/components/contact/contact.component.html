@@ -87,7 +87,8 @@
                     maxlength="2000" 
                     (invalid)="setCustomValidity($event, 'Please fill out this field.')" 
                     oninput="setCustomValidity('')" 
-                    onchange="if(this.value!=''){setCustomValidity('');}">
+                    onchange="if(this.value!=''){setCustomValidity('');}"
+                    [title]="getError('txtmessage')">
                   </textarea>
                 </div>
                 <div></div>
