@@ -1,1 +1,9 @@
 <router-outlet></router-outlet>
+<ngx-ui-loader
+  [fgsTemplate]="foregroundSpinner"
+></ngx-ui-loader>
+
+<ng-template #foregroundSpinner>
+  <!-- Your awesome foreground spinner defined here -->
+  <div class="nhAnimator"></div>
+</ng-template>

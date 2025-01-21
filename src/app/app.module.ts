@@ -14,6 +14,14 @@ import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 import { AppTranslateService } from './services/app-translate.service';
 import { HttpLoaderFactory, SharedModule } from './shared/shared.module';
 
+import {
+  NgxUiLoaderModule,
+  NgxUiLoaderConfig,
+  SPINNER,
+  POSITION,
+  PB_DIRECTION,
+} from 'ngx-ui-loader';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +34,9 @@ import { HttpLoaderFactory, SharedModule } from './shared/shared.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxUiLoaderModule.forRoot({
+      bgsPosition: POSITION.centerCenter,
+    }),
     SharedModule,
 
     TranslateModule.forRoot({

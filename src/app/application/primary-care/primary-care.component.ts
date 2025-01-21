@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { CustomRender } from 'src/app/shared/classes/custom-render';
 import { TranslateService } from '@ngx-translate/core';
@@ -21,6 +22,7 @@ export class PrimaryCareComponent extends CustomRender implements OnInit, OnDest
     protected renderer2: Renderer2,
     protected translate: TranslateService,
     protected appTranslate: AppTranslateService,
+    private ngxService: NgxUiLoaderService,
     private fb: UntypedFormBuilder
   ) {
     super(router, renderer2, translate, appTranslate);
@@ -51,5 +53,13 @@ export class PrimaryCareComponent extends CustomRender implements OnInit, OnDest
     if (key === 'Backspace') {
       this.mform?.get(field)?.patchValue('');
     }
+  }
+
+  onSearch() {
+    this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId
+    // Stop the foreground loading after 5s
+    setTimeout(() => {
+      this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
+    }, 5000);
   }
 }
